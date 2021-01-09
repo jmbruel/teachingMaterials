@@ -24,8 +24,8 @@ index.html: README.adoc
 	$(DOCTOR) $<
                 
 %.slides.html: %.adoc 
-	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
-	bundle exec asciidoctor-revealjs -a slides -o $@ $<
+	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
+	asciidoctor-revealjs -a slides -o $@ $<
 
 
 check: $(CHECK_RES)

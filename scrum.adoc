@@ -1,0 +1,259 @@
+//---------------------------------
+// Cours sur Scrum
+// (c) JMB - 2014-2021
+//---------------------------------
+[[scrumm]]
+= La méthode Agile SCRUM
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+ifndef::jmbtopic[]
+:linkcss:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc-title: Table des matières
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teachingMaterials/scrum.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== Pour suivre en live... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+{siteurl}
+
+
+
+endif::slides[]
+
+// ------
+[{intro}]
+== Généralités
+
+ifdef::slides[=== {nbsp}]
+
+[{incremental}]
+- {Scrum} est un processus *agile* qui permet de produire la *plus grande valeur métier* dans la *durée la plus courte*.
+- Du logiciel *qui fonctionne* est produit à chaque sprint (toutes les 2 à 4 semaines).
+- Le métier définit les *priorités*.
+
+ifdef::slides[=== {nbsp}]
+[{incremental}]
+- L'équipe *s'organise elle-même* pour déterminer la meilleure façon de produire les exigences les plus prioritaires.
+- À chaque fin de sprint, tout le monde peut voir *fonctionner le produit* courant et décider soit de le livrer dans l'état,
+soit de continuer à l'améliorer pendant un sprint supplémentaire.
+
+// ------
+[{topic}]
+== Les Acteurs SCRUM
+
+Les acteurs dans {SCRUM} sont :
+
+[{incremental}]
+le *Product Owner*:: le client ou son représentant qui fait partie de l'équipe
+le *SCRUM Master*:: un animateur, facilitateur [detail]#plutôt qu'un chef (de projet)#
+l'*équipe*:: capable de mettre en oeuvre toutes les compétences
+[detail]#(architecture, conception, développement, IHM, tests, documentation, etc.)#
+
+// ------
+[{topic}]
+=== Rôles du Product Owner
+
+[{incremental}]
+- Définit les *fonctionnalités* du produit
+- Choisit la date et le contenu de la *release* [detail]#(version livrée aux utilisateurs réalisée en plusieurs sprints)#
+- Est responsable du *retour sur investissement* [detail]#(de la valeur métier)#
+
+ifdef::slides[]
+[{topic}]
+=== Rôles du Product Owner (suite)
+[{incremental}]
+endif::slides[]
+- Définit les *priorités* dans le backlog [detail]#en fonction de la valeur « métier »#
+- *Ajuste* les fonctionnalités et les priorités à chaque sprint [detail]#si nécessaire#
+- *Accepte* ou *rejette* les résultats
+
+[{topic}]
+=== Rôles du SCRUM Master
+
+[{incremental}]
+- Assure le *management* du projet
+- Fait *appliquer* par l’équipe les valeurs et les pratiques de Scrum
+- Résout des problèmes
+
+ifdef::slides[]
+[{topic}]
+=== Rôles du SCRUM Master (suite)
+[{incremental}]
+endif::slides[]
+- S'assure que l'équipe est complètement fonctionnelle et *productive*
+- Facilite une *coopération* poussée entre tous les rôles et fonctions
+- *Protège* l'équipe des interférences extérieures
+
+[{topic}]
+=== L'équipe SCRUM
+
+[{incremental}]
+- Comprend de 5 à 10 personnes, de préférence à plein temps sur le projet
+- Regroupe tous les rôles [detail]#Architecte, concepteur, développeur, spécialiste IHM, testeur, etc.#
+- S’organise par elle-même
+- La composition de l’équipe ne doit pas changer pendant un Sprint
+
+[{topic}]
+== Déroulement d'un projet SCRUM
+
+image::scrum1.jpg[width=100%]
+
+ifdef::slides[=== {nbsp}]
+
+* Planification du sprint suivant
+[{incremental}]
+** Choix des items du backlog de produit qui seront réalisés durant le sprint
+** Identification des tâches et définition du backlog de sprint estimé en heures
+
+ifdef::slides[=== {nbsp}]
+
+* SCRUM quotidien (15mn)
+[{incremental}]
+** qu'ai-je fait hier ?
+** que vais-je faire aujourd'hui ?
+** y-a-t-il des problèmes particuliers ?
+
+ifdef::slides[=== {nbsp}]
+
+* Revue de SPRINT (15-30mn)
+[{incremental}]
+** Présentation de l'application à l'équipe et à toute personne invitée
+** Calcul de la vélocité de l'équipe
+
+ifdef::slides[=== {nbsp}]
+
+* Rétrospective de SPRINT (15mn)
+[{incremental}]
+** L'équipe (client compris) revient sur ses modes de fonctionnement
+** Qu'est-ce qui marche : on continue à l'identique
+** Qu'est-ce qui ne marche pas : comment fait-on désormais ?
+** Y-a-t-il des choses à ne plus faire ?
+
+ifdef::slides[=== {nbsp}]
+
+* Planification de Release
+[{incremental}]
+** Définit les exigences du *backlog de produit* qui constitueront la release
+** Définit le nombre de sprints et la date de livraison de la release
+** Effectuée avant le premier sprint si la vélocité de l'équipe est connue
+** Actualisée à chaque fin de sprint
+
+[{topic}]
+== Les artefacts SCRUM
+
+[{incremental}]
+Le backlog de produit:: la liste des *exigences* métier ordonnée par la valeur
+métier [detail]#(l'importance métier pour le Product Owner)#
+Les backlogs de sprint:: les listes des *tâches à réaliser* pour répondre aux exigences métier choisies pour le sprint
+Les burndowns du projet:: les graphiques montrant l'*avancement* du projet
+
+[{topic}]
+=== Le backlog de produit
+
+[{incremental}]
+- Il est fourni par le *Product Owner* au démarrage du projet
+- Il est une liste ordonnée d'exigences (stories) classées [detail]#selon leur importance métier#
+- Le classement de chaque exigence pourra être révisé à chaque revue de sprint [detail]#par le Product Owner#
+- Des exigences pourront être ajoutées/retirées à chaque revue de sprint [detail]#par le Product Owner#
+
+
+[{topic}]
+=== Les backlogs de sprint
+
+[{incremental}]
+- Définis lors de la planification des sprints
+- Ensemble des tâches à effectuer pour réaliser
+les exigences choisies pour le sprint [detail]#dans le backlog de produit#
+
+ifdef::slides[]
+[{topic}]
+=== Les backlogs de sprint (suite)
+[{incremental}]
+endif::slides[]
+- Les tâches ont estimées en heures
+- L'estimation des tâches sont réestimées à chaque SCRUM (mélée quotidienne)
+- La définition des tâches conduit souvent à réaliser collectivement une conception de haut niveau
+
+[{topic}]
+=== Les burndowns du projet
+
+- Les valeurs du backlog de produit et les estimations du backlog de sprint
+permettent de produire les courbes d'avancement du projet
+
+[{topic}]
+==== Burndown de sprint
+
+[{incremental}]
+- Actualisé chaque jour
+- Indique le nombre d'heures restantes [detail]#pour toutes les tâches du sprint#
+
+image::sprint-burndown.jpg[link="http://www.scrum-institute.org/Burndown_Chart.php",width=40%]
+
+NOTE: le *burndown de sprint* n'est pas
+nécessairement décroissant si des tâches sont ajoutées ou bien réévaluées
+à la hausse pour leur durée.
+
+[{topic}]
+==== Burndown de produit (ou de release)
+
+- Évalue à chaque fin de sprint la quantité du backlog de produit qui reste à faire
+
+image::productBurndown.jpg[link="http://www.scrum-institute.org/Burndown_Chart.php",width=70%]
+
+NOTE: le *backlog de release* pouvant évoluer, la courbe n'est pas
+nécessairement décroissante.
+
+TIP: permet d'en déduire une estimation de la date de fin de release
+ou une estimation de la quantité du backlog de produit qui ne sera pas
+réalisée à une date donnée.
+
+[{topic}]
+=== Indicateurs
+
+[{incremental}]
+Vélocité:: quantité du backlog de produit réalisée par l'équipe pendant un sprint [detail]#(calculée en points)#
+Capacité:: quantité du backlog de produit qui sera réalisée lors du prochain sprint

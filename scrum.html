@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="J.-M. Bruel">
+<title>La méthode Agile SCRUM</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="scrumm" class="article toc2 toc-left">
+<div id="header">
+<h1>La méthode Agile SCRUM</h1>
+<div class="details">
+<span id="author" class="author">J.-M. Bruel</span><br>
+<span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
+<span id="revnumber">version 21.1 2021-01-09</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table des matières</div>
+<ul class="sectlevel1">
+<li><a href="#_généralités">1. Généralités</a></li>
+<li><a href="#_les_acteurs_scrum">2. Les Acteurs SCRUM</a>
+<ul class="sectlevel2">
+<li><a href="#_rôles_du_product_owner">2.1. Rôles du Product Owner</a></li>
+<li><a href="#_rôles_du_scrum_master">2.2. Rôles du SCRUM Master</a></li>
+<li><a href="#_léquipe_scrum">2.3. L&#8217;équipe SCRUM</a></li>
+</ul>
+</li>
+<li><a href="#_déroulement_dun_projet_scrum">3. Déroulement d&#8217;un projet SCRUM</a></li>
+<li><a href="#_les_artefacts_scrum">4. Les artefacts SCRUM</a>
+<ul class="sectlevel2">
+<li><a href="#_le_backlog_de_produit">4.1. Le backlog de produit</a></li>
+<li><a href="#_les_backlogs_de_sprint">4.2. Les backlogs de sprint</a></li>
+<li><a href="#_les_burndowns_du_projet">4.3. Les burndowns du projet</a></li>
+<li><a href="#_indicateurs">4.4. Indicateurs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_généralités">1. Généralités</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)">Scrum</a> est un processus <strong>agile</strong> qui permet de produire la <strong>plus grande valeur métier</strong> dans la <strong>durée la plus courte</strong>.</p>
+</li>
+<li>
+<p>Du logiciel <strong>qui fonctionne</strong> est produit à chaque sprint (toutes les 2 à 4 semaines).</p>
+</li>
+<li>
+<p>Le métier définit les <strong>priorités</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;équipe <strong>s&#8217;organise elle-même</strong> pour déterminer la meilleure façon de produire les exigences les plus prioritaires.</p>
+</li>
+<li>
+<p>À chaque fin de sprint, tout le monde peut voir <strong>fonctionner le produit</strong> courant et décider soit de le livrer dans l&#8217;état,
+soit de continuer à l&#8217;améliorer pendant un sprint supplémentaire.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_acteurs_scrum">2. Les Acteurs SCRUM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les acteurs dans <a href="http://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)">Scrum</a> sont :</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">le <strong>Product Owner</strong></dt>
+<dd>
+<p>le client ou son représentant qui fait partie de l&#8217;équipe</p>
+</dd>
+<dt class="hdlist1">le <strong>SCRUM Master</strong></dt>
+<dd>
+<p>un animateur, facilitateur <span class="detail">plutôt qu&#8217;un chef (de projet)</span></p>
+</dd>
+<dt class="hdlist1">l'<strong>équipe</strong></dt>
+<dd>
+<p>capable de mettre en oeuvre toutes les compétences
+<span class="detail">(architecture, conception, développement, IHM, tests, documentation, etc.)</span></p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_rôles_du_product_owner">2.1. Rôles du Product Owner</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Définit les <strong>fonctionnalités</strong> du produit</p>
+</li>
+<li>
+<p>Choisit la date et le contenu de la <strong>release</strong> <span class="detail">(version livrée aux utilisateurs réalisée en plusieurs sprints)</span></p>
+</li>
+<li>
+<p>Est responsable du <strong>retour sur investissement</strong> <span class="detail">(de la valeur métier)</span></p>
+</li>
+<li>
+<p>Définit les <strong>priorités</strong> dans le backlog <span class="detail">en fonction de la valeur « métier »</span></p>
+</li>
+<li>
+<p><strong>Ajuste</strong> les fonctionnalités et les priorités à chaque sprint <span class="detail">si nécessaire</span></p>
+</li>
+<li>
+<p><strong>Accepte</strong> ou <strong>rejette</strong> les résultats</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rôles_du_scrum_master">2.2. Rôles du SCRUM Master</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Assure le <strong>management</strong> du projet</p>
+</li>
+<li>
+<p>Fait <strong>appliquer</strong> par l’équipe les valeurs et les pratiques de Scrum</p>
+</li>
+<li>
+<p>Résout des problèmes</p>
+</li>
+<li>
+<p>S&#8217;assure que l&#8217;équipe est complètement fonctionnelle et <strong>productive</strong></p>
+</li>
+<li>
+<p>Facilite une <strong>coopération</strong> poussée entre tous les rôles et fonctions</p>
+</li>
+<li>
+<p><strong>Protège</strong> l&#8217;équipe des interférences extérieures</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_léquipe_scrum">2.3. L&#8217;équipe SCRUM</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Comprend de 5 à 10 personnes, de préférence à plein temps sur le projet</p>
+</li>
+<li>
+<p>Regroupe tous les rôles <span class="detail">Architecte, concepteur, développeur, spécialiste IHM, testeur, etc.</span></p>
+</li>
+<li>
+<p>S’organise par elle-même</p>
+</li>
+<li>
+<p>La composition de l’équipe ne doit pas changer pendant un Sprint</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_déroulement_dun_projet_scrum">3. Déroulement d&#8217;un projet SCRUM</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/scrum1.jpg" alt="scrum1" width="100%">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planification du sprint suivant</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Choix des items du backlog de produit qui seront réalisés durant le sprint</p>
+</li>
+<li>
+<p>Identification des tâches et définition du backlog de sprint estimé en heures</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>SCRUM quotidien (15mn)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>qu&#8217;ai-je fait hier ?</p>
+</li>
+<li>
+<p>que vais-je faire aujourd&#8217;hui ?</p>
+</li>
+<li>
+<p>y-a-t-il des problèmes particuliers ?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Revue de SPRINT (15-30mn)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Présentation de l&#8217;application à l&#8217;équipe et à toute personne invitée</p>
+</li>
+<li>
+<p>Calcul de la vélocité de l&#8217;équipe</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Rétrospective de SPRINT (15mn)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;équipe (client compris) revient sur ses modes de fonctionnement</p>
+</li>
+<li>
+<p>Qu&#8217;est-ce qui marche : on continue à l&#8217;identique</p>
+</li>
+<li>
+<p>Qu&#8217;est-ce qui ne marche pas : comment fait-on désormais ?</p>
+</li>
+<li>
+<p>Y-a-t-il des choses à ne plus faire ?</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Planification de Release</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Définit les exigences du <strong>backlog de produit</strong> qui constitueront la release</p>
+</li>
+<li>
+<p>Définit le nombre de sprints et la date de livraison de la release</p>
+</li>
+<li>
+<p>Effectuée avant le premier sprint si la vélocité de l&#8217;équipe est connue</p>
+</li>
+<li>
+<p>Actualisée à chaque fin de sprint</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_artefacts_scrum">4. Les artefacts SCRUM</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Le backlog de produit</dt>
+<dd>
+<p>la liste des <strong>exigences</strong> métier ordonnée par la valeur
+métier <span class="detail">(l&#8217;importance métier pour le Product Owner)</span></p>
+</dd>
+<dt class="hdlist1">Les backlogs de sprint</dt>
+<dd>
+<p>les listes des <strong>tâches à réaliser</strong> pour répondre aux exigences métier choisies pour le sprint</p>
+</dd>
+<dt class="hdlist1">Les burndowns du projet</dt>
+<dd>
+<p>les graphiques montrant l'<strong>avancement</strong> du projet</p>
+</dd>
+</dl>
+</div>
+<div class="sect2">
+<h3 id="_le_backlog_de_produit">4.1. Le backlog de produit</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Il est fourni par le <strong>Product Owner</strong> au démarrage du projet</p>
+</li>
+<li>
+<p>Il est une liste ordonnée d&#8217;exigences (stories) classées <span class="detail">selon leur importance métier</span></p>
+</li>
+<li>
+<p>Le classement de chaque exigence pourra être révisé à chaque revue de sprint <span class="detail">par le Product Owner</span></p>
+</li>
+<li>
+<p>Des exigences pourront être ajoutées/retirées à chaque revue de sprint <span class="detail">par le Product Owner</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_backlogs_de_sprint">4.2. Les backlogs de sprint</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Définis lors de la planification des sprints</p>
+</li>
+<li>
+<p>Ensemble des tâches à effectuer pour réaliser
+les exigences choisies pour le sprint <span class="detail">dans le backlog de produit</span></p>
+</li>
+<li>
+<p>Les tâches ont estimées en heures</p>
+</li>
+<li>
+<p>L&#8217;estimation des tâches sont réestimées à chaque SCRUM (mélée quotidienne)</p>
+</li>
+<li>
+<p>La définition des tâches conduit souvent à réaliser collectivement une conception de haut niveau</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_les_burndowns_du_projet">4.3. Les burndowns du projet</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Les valeurs du backlog de produit et les estimations du backlog de sprint
+permettent de produire les courbes d&#8217;avancement du projet</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_burndown_de_sprint">4.3.1. Burndown de sprint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Actualisé chaque jour</p>
+</li>
+<li>
+<p>Indique le nombre d&#8217;heures restantes <span class="detail">pour toutes les tâches du sprint</span></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="http://www.scrum-institute.org/Burndown_Chart.php"><img src="images/sprint-burndown.jpg" alt="sprint burndown" width="40%"></a>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+le <strong>burndown de sprint</strong> n&#8217;est pas
+nécessairement décroissant si des tâches sont ajoutées ou bien réévaluées
+à la hausse pour leur durée.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_burndown_de_produit_ou_de_release">4.3.2. Burndown de produit (ou de release)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Évalue à chaque fin de sprint la quantité du backlog de produit qui reste à faire</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="http://www.scrum-institute.org/Burndown_Chart.php"><img src="images/productBurndown.jpg" alt="productBurndown" width="70%"></a>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+le <strong>backlog de release</strong> pouvant évoluer, la courbe n&#8217;est pas
+nécessairement décroissante.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+permet d&#8217;en déduire une estimation de la date de fin de release
+ou une estimation de la quantité du backlog de produit qui ne sera pas
+réalisée à une date donnée.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_indicateurs">4.4. Indicateurs</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Vélocité</dt>
+<dd>
+<p>quantité du backlog de produit réalisée par l&#8217;équipe pendant un sprint <span class="detail">(calculée en points)</span></p>
+</dd>
+<dt class="hdlist1">Capacité</dt>
+<dd>
+<p>quantité du backlog de produit qui sera réalisée lors du prochain sprint</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 21.1 2021-01-09<br>
+Last updated 2021-01-09 17:01:28 +0100
+</div>
+</div>
+</body>
+</html>
