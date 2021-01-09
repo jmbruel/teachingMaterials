@@ -1,6 +1,7 @@
 {
     "ignorePatterns": [
-        { "pattern": "^http://jmbruel.github.io/teachingMaterials/" }
+        { "pattern": "^http://jmbruel.github.io/teachingMaterials/" },
+        { "pattern": "^http://jmbruel.github.io/teachingMaterials" }
     ]
 
 }
