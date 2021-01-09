@@ -6,7 +6,6 @@
 = Gestion de version avec git
 J.-M. Bruel <jbruel@gmail.com>
 v21.1 {localdate}
-:slides:
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
@@ -31,6 +30,16 @@ ifndef::jmbtopic[]
 :statement:
 :incremental: %step
 :source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
 // ------------------------------------------ definitions
 ifndef::definitions[]
@@ -76,7 +85,7 @@ ifndef::slides[.Client graphique ({thisref})]
 image::sourcetree.png[width=50%,link="{thisref}"]
 ifdef::slides[NOTE: [detail]#{thisref}#]
 
-== !
+ifdef::slides[== !]
 
 ifndef::slides[.Lignes de commande]
 image::git-term.png[width=49%]
@@ -154,8 +163,6 @@ Your branch is ahead of 'origin/master' by 1 commit.
 // ------
 [{intro}]
 == Scénario *classique* (et idéal)
-
-ifndef::slides[:leveloffset: +1]
 
 // ------
 [{topic}]

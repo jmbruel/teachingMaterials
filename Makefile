@@ -6,7 +6,7 @@ CHECK_RES       = check-results.txt
 DOCTOR			= asciidoctor
 DOCTOR-PDF		= asciidoctor-web-pdf
 STYLE			= jmb.css
-TEMPLATE		= ./template.js
+TEMPLATE		= ./book.js
 #-----------------------------------------------------
 
 all: *.html *.slides.html *.pdf

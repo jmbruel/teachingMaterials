@@ -34,8 +34,8 @@ endif::[]
 
 include::definitions.txt[]
 
-:us-icon: image:icons/usa.svg[width=30%]
-:fr-icon: image:icons/france.svg[width=30%]
+:us-icon: image:icons/usa.svg[width=20%]
+:fr-icon: image:icons/france.svg[width=20%]
 :iu: https://innopolis.university/en/[Innnopolis University]
 :iut: https://www.iut-blagnac.fr/[IUT Blagnac]
 :mobileModeling: https://jmbruel.github.io/MobileModeling
@@ -133,3 +133,14 @@ endif::[]
 == Contributing
 
 If you want to contribute, read link:CONTRIBUTING.adoc[this].
+
+//-------------------------------------
+== About...
+
+**********************************************************************
+Document made by mailto:jbruel@gmail.com[JMB] using http://asciidoctor.org/[Asciidoctor]
+(version `2.0.12`) from 'Dan Alen'. 'Licence Creative Commons'.
+image:icons/88x31.png["Licence Creative
+Commons",style="border-width:0",link="http://creativecommons.org/licenses/by-sa/3.0/"]
+http://creativecommons.org/licenses/by-sa/3.0/[licence Creative Commons Paternité - Partage à l&#39;Identique 3.0 non transposé].
+**********************************************************************
