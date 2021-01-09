@@ -9,7 +9,7 @@ STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
 
-all: *.pdf *.html *.slides.html
+all: *.pdf *.html
 
 index.html: README.adoc
 	@echo '==> Generating index'
@@ -23,9 +23,9 @@ index.html: README.adoc
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
 	$(DOCTOR) $<
                 
-%.slides.html: %.adoc 
-	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
-	asciidoctor-revealjs -a slides -o $@ $<
+# %.slides.html: %.adoc 
+# 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
+# 	asciidoctor-revealjs -a slides -o $@ $<
 
 
 check: $(CHECK_RES)
