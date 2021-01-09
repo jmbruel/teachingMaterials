@@ -1,0 +1,42 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+interface ComportementCancan {
+cancaner()
+}
+
+class Cancan{
+cancaner() {// implémentation du cancanement de canard}
+}
+
+class Coincoin{
+cancaner() {// implémentation le coincoin}
+}
+class CanardMuet{
+cancaner() {// ne rien faire}
+}
+
+abstract class Canard {
+nager()
+  abstract afficher()
+  abstract effectuerCancan()
+  abstract effectuerVol()
+}
+
+ComportementCancan <|.. Cancan
+ComportementCancan <|.. Coincoin
+ComportementCancan <|.. CanardMuet
+
+
+Canard o--> "1" ComportementCancan
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+
+state gazeux
+gazeux --> plasma : ionisation
+plasma --> gazeux : désionisation
+gazeux --> liquide : liquéfaction
+gazeux --> solide : condensation
+solide --> gazeux : sublimation
+solide --> liquide : fusion
+liquide --> gazeux : évaporation
+liquide --> solide : solidification
+@enduml

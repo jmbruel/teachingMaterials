@@ -1,0 +1,15 @@
+@startuml
+
+' definitions
+' -----------
+
+Pizzeria  ..>  PizzaFromageStyleBrest
+Pizzeria  ..>  PizzaFromageStyleStrasbourg
+Pizzeria  ..>  PizzaFruitsDeMerStyleBrest
+Pizzeria  ..>  PizzaFruitsDeMerStyleStrasbourg
+Pizzeria  ..>  PizzaPoivronsStyleBrest
+Pizzeria  ..>  PizzaPoivronsStyleStrasbourg
+Pizzeria  ..>  PizzaVegetarienneStyleBrest
+Pizzeria  ..>  PizzaVegetarienneStyleStrasbourg
+
+@enduml

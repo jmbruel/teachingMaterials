@@ -17,6 +17,8 @@ v21.1 {localdate}
 :dollar: icon:dollar[]
 :giturl: http://git-scm.com/
 :git: link:{giturl}[icon:git[]]
+:us-icon: image:icons/usa.svg[width=20%]
+:fr-icon: image:icons/france.svg[width=20%]
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -37,8 +39,6 @@ endif::[]
 
 include::definitions.txt[]
 
-:us-icon: image:icons/usa.svg[width=20%]
-:fr-icon: image:icons/france.svg[width=20%]
 :iu: https://innopolis.university/en/[Innnopolis University]
 :iut: https://www.iut-blagnac.fr/[IUT Blagnac]
 :mobileModeling: https://jmbruel.github.io/MobileModeling
@@ -87,6 +87,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 
 | Scrum  | {beginner} {graduation-icon} {fr-icon}| link:scrum.adoc[source] link:scrum.html[HTML] link:scrum.slides.html[slides] link:scrum.pdf[PDF] 
 | Basic of the Scrum agile method
+
+| Refactoring  | {advanced} {graduation-icon} {us-icon}| link:refactoring.adoc[source] link:refactoring.html[HTML] link:refactoring.slides.html[slides] link:refactoring.pdf[PDF] 
+| Principle of refactoring
 
 |===
 //-------------------------------------

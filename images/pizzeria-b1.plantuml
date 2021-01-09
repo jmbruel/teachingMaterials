@@ -1,0 +1,36 @@
+@startuml
+
+' definitions
+' -----------
+
+abstract Pizza
+class PizzaFromageStyleBrest
+class PizzaFromageStyleStrasbourg
+class "..." as p
+
+Pizzeria  ..>  Pizza
+
+abstract class Pizzeria {
+  {abstract} creerPizza()
+  {abstract} commanderPizza()
+}
+
+class PizzeriaStyleStrasbourg extends Pizzeria {
+  creerPizza()
+}
+
+class PizzeriaStyleBrest extends Pizzeria {
+  creerPizza()
+}
+
+' Pizza:
+Pizza : void preparer()
+Pizza : void cuire()
+Pizza : void couper()
+Pizza : void emballer()
+
+Pizza <|-- PizzaFromageStyleBrest
+Pizza <|-- PizzaFromageStyleStrasbourg
+Pizza <|-- p
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+abstract class c as "Createur" {
+}
+note right: produit = fabrique();
+
+abstract class p as "Produit"
+
+c : {abstract} +fabrique()
+c : +uneOperation()
+
+class CreateurConcret {
+	+fabrique()
+}
+note right: return new ProduitConcret();
+
+p <|-- ProduitConcret
+c <|-- CreateurConcret
+
+p "+produit" <- c
+ProduitConcret <. CreateurConcret
+
+@enduml

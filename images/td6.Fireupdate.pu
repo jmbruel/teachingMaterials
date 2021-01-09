@@ -1,0 +1,40 @@
+@startuml
+
+participant "table:JTable" as table
+participant "dataModel:SimpleTableModel" as dataModel
+participant ":ApplicationModel" as am
+
+am -> dataModel : modifyStudent(stud, row)
+dataModel -> dataModel : find (row)
+dataModel -> dataModel : modify(row, stud)
+
+dataModel -> dataModel : fireTableDataChanged()
+note left: Un appel à fireTableRowsUpdated(row, row) eut été mieux ...
+
+dataModel -> table : tableChanged (tableModelEvent)
+note right: Méthode de l'observateur pour être prévenu
+
+table -> dataModel : nr = getRowCount();
+table -> dataModel : nc = getColumnCount();
+table -> table : nvr = maxViewableRows();
+note left
+	nvr = min(nvr, nv)
+end note
+table -> table : nvc = maxViewableColumns();
+note left
+	nvc = min(nvc, nv)
+end note
+
+loop nvc times
+	table -> dataModel : String t = getColumnName(currentCol)
+	table -> table : drawAtScreen(t)
+end
+
+loop nvr times
+    loop nvc times
+		table -> dataModel : Object o = getValueAt(currentRow, currentCol)
+		table -> table : drawAtScreen(o)
+	end
+end
+
+@enduml 

@@ -1,0 +1,21 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+participant a as ":ConcreteSubject"
+participant b as ":ConcreteObserver"
+participant c as ":ConcreteObserver"
+
+-> a : setState()
+a -> a : notify()
+par 
+	a -> b : update()
+	b -> a : getState()
+else
+	a -> c : update()
+	c -> a : getState()
+end
+@enduml

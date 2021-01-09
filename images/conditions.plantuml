@@ -1,0 +1,12 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+state mdp as "E0"
+mdp --> E1 : [x<0]
+mdp --> E2 : [x==0]
+mdp --> E3 : [x>0]
+@enduml

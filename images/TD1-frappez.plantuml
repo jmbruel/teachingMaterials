@@ -1,0 +1,154 @@
+@startuml
+
+' definitions
+' -----------
+
+package "ComportementArme" {
+interface ComportementArmeDeTir
+interface ComportementArmeDeuxMains
+interface ComportementArmeUneMain
+}
+
+package "Arme" {
+class Arbalete
+class Arc
+class Bouclier
+class Claymore
+class Dague
+class Epee
+class Massue
+}
+
+package "Monstre" {
+class Orc
+class Bandit
+class Squelette
+class Ogre
+}
+
+package "Menu" {
+class Menu
+}
+
+package "Base" {
+class Berserker
+class Chevalier
+class Humain
+abstract Personnage
+class Ranger
+class Rodeur
+class Troll
+class Voleur
+}
+
+' content
+' -------
+
+' Arc:
+ComportementArmeDeTir <|.. Arc
+Arc : void UtiliserArme()
+Arc : String toString()
+
+' ComportementArmeUneMain:
+ComportementArmeUneMain : void UtiliserArme()
+
+' ComportementArmeDeuxMains:
+ComportementArmeDeuxMains : void UtiliserArme()
+
+' Troll:
+Personnage <|-- Troll
+
+' Bouclier:
+ComportementArmeUneMain <|.. Bouclier
+Bouclier : void UtiliserArme()
+Bouclier : String toString()
+
+' Personnage:
+Personnage --> "1" ComportementArmeDeuxMains
+Personnage --> "1" ComportementArmeDeTir
+Personnage --> "1" ComportementArmeUneMain
+Personnage : void CombattreAuCac()
+Personnage : void CombattreADistance()
+Personnage : void ChangerMain()
+Personnage : void SetArme(ComportementArmeDeuxMains)
+Personnage : void SetArmeDroite(ComportementArmeUneMain)
+Personnage : void SetArmeGauche(ComportementArmeUneMain)
+Personnage : void SetArmeDistance(ComportementArmeDeTir)
+Personnage : ComportementArmeDeuxMains GetArmeDeuxMains()
+Personnage : ComportementArmeUneMain GetArmeMainGauche()
+Personnage : ComportementArmeUneMain GetArmeMainDroite()
+Personnage : ComportementArmeDeTir GetArmeDistance()
+Personnage : String toString()
+
+' Orc:
+Personnage <|- Orc
+
+' Humain:
+Personnage <|-- Humain
+
+' ComportementArmeDeTir:
+ComportementArmeDeTir : void UtiliserArme()
+
+' Voleur:
+Personnage <|-- Voleur
+
+' Chevalier:
+Personnage <|-- Chevalier
+
+' Arbalete:
+ComportementArmeDeTir <|.. Arbalete
+Arbalete : void UtiliserArme()
+Arbalete : String toString()
+
+' Rodeur:
+Personnage <|-- Rodeur
+
+' Berserker:
+Personnage <|-- Berserker
+
+' Ogre:
+Personnage <|- Ogre
+
+' Ranger:
+Personnage <|-- Ranger
+
+' Menu:
+Menu : Scanner sc
+Menu ..> Personnage
+Menu : void Menu()
+Menu : void etape0()
+Menu : void etape1()
+Menu : void etape2()
+Menu : void etape3()
+Menu : void etape4()
+Menu : void quitter()
+Menu : void main(String)
+Menu : void LancementDuJeu()
+
+' Bandit:
+Personnage <|- Bandit
+
+' Epee:
+ComportementArmeUneMain <|.. Epee
+Epee : void UtiliserArme()
+Epee : String toString()
+
+' Claymore:
+ComportementArmeDeuxMains <|.. Claymore
+Claymore : void UtiliserArme()
+Claymore : String toString()
+
+' Squelette:
+Personnage <|- Squelette
+
+' Dague:
+ComportementArmeUneMain <|.. Dague
+Dague : void UtiliserArme()
+Dague : String toString()
+
+' Massue:
+ComportementArmeDeuxMains <|.. Massue
+Massue : void UtiliserArme()
+Massue : String toString()
+
+@enduml

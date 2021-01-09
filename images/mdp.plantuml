@@ -1,0 +1,16 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+state mdp as "Saisie de mot de passe"
+mdp : entry / set echo invisible
+mdp : exit / set echo normal
+mdp : char / traiter char
+mdp : help / afficher aide
+mdp : clear / raz du mdp et raz chrono
+mdp : after(20s) / exit
+
+@enduml

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="145px" preserveAspectRatio="none" style="width:211px;height:145px;" version="1.1" viewBox="0 0 211 145" width="211px" zoomAndPan="magnify"><defs><filter height="300%" id="fxo5sf6o6uqsk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[ed0c63156f1c728f406b106d88d9af45]
+class Canard--><rect codeLine="7" fill="#F0F8FF" filter="url(#fxo5sf6o6uqsk)" height="32" id="Canard" rx="5" ry="5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="73" x="62" y="7"/><ellipse cx="77" cy="23" fill="#A9DCDF" rx="11" ry="11" style="stroke: #2F4F4F; stroke-width: 1.0;"/><path d="M76.8633,18.3481 L75.7095,23.4199 L78.0254,23.4199 Z M75.3691,16.1069 L78.3657,16.1069 L81.7109,28.5 L79.2622,28.5 L78.4985,25.437 L75.2197,25.437 L74.4727,28.5 L72.0239,28.5 Z "/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="41" x="91" y="26.2402">Canard</text><!--MD5=[6aadc5b7719e054ab02810ef317c56ff]
+class Colvert--><rect fill="#F0F8FF" filter="url(#fxo5sf6o6uqsk)" height="32" id="Colvert" rx="5" ry="5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="71" x="7" y="99"/><ellipse cx="22" cy="115" fill="#ADD1B2" rx="11" ry="11" style="stroke: #2F4F4F; stroke-width: 1.0;"/><path d="M24.4731,121.1431 Q23.8921,121.4419 23.2529,121.5913 Q22.6138,121.7407 21.9082,121.7407 Q19.4014,121.7407 18.0815,120.0889 Q16.7617,118.437 16.7617,115.3159 Q16.7617,112.1865 18.0815,110.5347 Q19.4014,108.8828 21.9082,108.8828 Q22.6138,108.8828 23.2612,109.0322 Q23.9087,109.1816 24.4731,109.4805 L24.4731,112.2031 Q23.8423,111.6221 23.2488,111.3523 Q22.6553,111.0825 22.0244,111.0825 Q20.6797,111.0825 19.9949,112.1492 Q19.3101,113.2158 19.3101,115.3159 Q19.3101,117.4077 19.9949,118.4744 Q20.6797,119.541 22.0244,119.541 Q22.6553,119.541 23.2488,119.2712 Q23.8423,119.0015 24.4731,118.4204 Z "/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="39" x="36" y="118.2402">Colvert</text><!--MD5=[e551c43ddeaca69aba01c3c259800a34]
+class Mandarin--><rect fill="#F0F8FF" filter="url(#fxo5sf6o6uqsk)" height="32" id="Mandarin" rx="5" ry="5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="84" x="113.5" y="99"/><ellipse cx="128.5" cy="115" fill="#ADD1B2" rx="11" ry="11" style="stroke: #2F4F4F; stroke-width: 1.0;"/><path d="M130.9731,121.1431 Q130.3921,121.4419 129.7529,121.5913 Q129.1138,121.7407 128.4082,121.7407 Q125.9014,121.7407 124.5815,120.0889 Q123.2617,118.437 123.2617,115.3159 Q123.2617,112.1865 124.5815,110.5347 Q125.9014,108.8828 128.4082,108.8828 Q129.1138,108.8828 129.7612,109.0322 Q130.4087,109.1816 130.9731,109.4805 L130.9731,112.2031 Q130.3423,111.6221 129.7488,111.3523 Q129.1553,111.0825 128.5244,111.0825 Q127.1797,111.0825 126.4949,112.1492 Q125.8101,113.2158 125.8101,115.3159 Q125.8101,117.4077 126.4949,118.4744 Q127.1797,119.541 128.5244,119.541 Q129.1553,119.541 129.7488,119.2712 Q130.3423,119.0015 130.9731,118.4204 Z "/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="52" x="142.5" y="118.2402">Mandarin</text><!--MD5=[bfd6c37e7992d2ecfcd701d9418aae25]
+reverse link Canard to Colvert--><path codeLine="8" d="M78.17,56.67 C69.17,71.13 59.02,87.44 51.86,98.96 " fill="none" id="Canard-backto-Colvert" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="none" points="72.49,52.55,89,39.27,84.38,59.95,72.49,52.55" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[47f6b827752a63e804fa76586bec03ea]
+reverse link Canard to Mandarin--><path codeLine="9" d="M118.88,56.18 C128.12,70.77 138.6,87.31 145.97,98.96 " fill="none" id="Canard-backto-Mandarin" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="none" points="112.96,59.91,108.17,39.27,124.78,52.42,112.96,59.91" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[e918d35eb7f2bf68406b0f246cd1e33c]
+@startuml
+'- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+' Refactoring illustrated
+' JMB 2020
+'- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+!include config.cfg
+
+abstract class Canard
+Canard <|- - Colvert
+Canard <|- - Mandarin
+
+@enduml
+
+@startuml
+
+hide empty members
+hide empty methods
+
+
+skinparam classAttributeIconSize 0
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam roundcorner 10
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+abstract class Canard
+Canard <|- - Colvert
+Canard <|- - Mandarin
+
+@enduml
+
+PlantUML version 1.2020.18(Wed Sep 30 21:40:44 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

@@ -1,0 +1,40 @@
+@startuml
+
+participant "spjt:SimpleJPanelTable" as spjt
+participant ":JScrollPane" as jsp
+participant "table:JTable" as table
+participant "dataModel:SimpleTableModel" as dataModel
+
+note over spjt, jsp
+	On suppose démarrer en ligne 0 et colonne 0 !!
+	Le JTable et le JScrollPane gèrent les scrolls correctement ...
+	L'algorithme réel est plus complexe ...
+end note
+
+spjt -> jsp : paint()
+jsp -> table : paint()
+
+table -> dataModel : nr = getRowCount();
+table -> dataModel : nc = getColumnCount();
+table -> table : nvr = maxViewableRows();
+note left
+	nvr = min(nvr, nv)
+end note
+table -> table : nvc = maxViewableColumns();
+note left
+	nvc = min(nvc, nv)
+end note
+
+loop nvc times
+	table -> dataModel : String t = getColumnName(currentCol)
+	table -> table : drawAtScreen(t)
+end
+
+loop nvr times
+    loop nvc times
+		table -> dataModel : Object o = getValueAt(currentRow, currentCol)
+		table -> table : drawAtScreen(o)
+	end
+end
+
+@enduml 

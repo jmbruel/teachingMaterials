@@ -1,0 +1,16 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+state liquide
+liquide --> solide : solidification
+solide --> liquide : fusion
+liquide --> gazeux : évaporation
+gazeux --> liquide : condensation
+gazeux --> solide  : condensation solide
+solide --> gazeux : sublimation
+
+@enduml

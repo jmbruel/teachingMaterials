@@ -1,0 +1,25 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+abstract class Sujet
+Sujet : {abstract} +requete()
+
+class SujetReel {
++requete()
+}
+
+class Procuration {
++requete()
+}
+note right: sujetReel.requete();
+
+Sujet <|-- SujetReel
+Sujet <|-- Procuration
+
+SujetReel "+sujetReel" <-- Procuration
+
+@enduml

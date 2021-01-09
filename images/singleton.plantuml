@@ -1,0 +1,23 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+'skinparam classAttributeIconSize 0
+
+class Singleton {
+{static} uniqueInstance : Singleton
+# Singleton()
+{static} + getInstance() : Singleton
+}
+
+Singleton --> "uniqueInstance" Singleton
+note "if uniqueInstance == null {\n  uniqueInstance = new Singleton();\n}\nreturn uniqueInstance;" as N
+Singleton .. N
+
+@enduml

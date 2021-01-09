@@ -1,0 +1,34 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+class Worker {
+
+	public void work();
+
+}
+
+class Manager {
+
+	public void setWorker(Worker);
+
+	public void manage();
+
+}
+note bottom : public void manage(){worker.work();}
+
+Manager -> "worker" Worker
+
+class SuperWorker {
+	public void work();
+}
+note bottom : introduction of new class is complex
+
+legend right
+  <i>Dependency Inversion Principle - Bad example</i>
+endlegend
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+' Default settings
+'-----------------------------------
+' left to right direction 'does not work for sequence diagrams :-(
+hide circle
+hide empty members
+hide methods	
+
+' Colors & Fonts
+'-----------------------------------
+'Colors => see http://plantuml.com/color
+'skinparam monochrome true
+'skinparam monochrome reverse
+'skinparam handwritten true
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam roundcorner 10
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+' PlantUML stdlib now includes Icon-Font Sprites! See https://github.com/tupadr3/plantuml-icon-font-sprites
+' see also https://tupadr3.de/plantuml-icon-font-sprites/
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v1.0.0
+
+'!include ../Defs.txt
+
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/font-awesome/server.puml
+!includeurl ICONURL/font-awesome/database.puml
+
+'title Styling example
+
+' Attribute and name values (for translation purpose).
+'-----------------------------------
+!define RECT "Rectangle"
+!define SQUARE "Carré"
+'!define RECT "Rectangle"
+'!define SQUARE "Square"
+
+' Usefull functions
+'-----------------------------------
+!define objet(nom,type) class "<u>nom : type"
+
+
+class Duck{
+	name
+}
+class Animal
+Animal <|-- Duck
+@enduml

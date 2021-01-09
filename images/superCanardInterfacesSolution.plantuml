@@ -1,0 +1,49 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+hide empty members
+hide empty methods
+
+
+interface Cancaneur {
+cancaner()
+}
+
+interface Volant {
+voler()
+}
+
+abstract class Canard {
+nager()
+afficher()
+}
+
+class Colvert {
+}
+
+class Mandarin {
+}
+
+class CanardEnPlastique {
+}
+
+class Leurre {
+}
+
+Canard <|-- Leurre
+Canard <|-- CanardEnPlastique
+Canard <|-- Mandarin
+Canard <|-- Colvert
+
+Volant <|..Colvert
+Volant <|..Mandarin
+
+Cancaneur <|..Colvert
+Cancaneur <|..Mandarin
+Cancaneur <|..CanardEnPlastique
+
+@enduml

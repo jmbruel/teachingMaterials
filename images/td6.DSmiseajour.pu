@@ -1,0 +1,34 @@
+@startuml
+
+participant "table:JTable" as table
+participant "dataModel:SimpleTableModel" as dataModel
+
+-> table : enteringUpdateMode()\n(focus ou clic souris)
+table -> table : row = getSelectedRow()
+table -> table : col = getSelectedColumn()
+table -> dataModel : editable = isCellEditable(row, col)
+note right: call of  isCellEditable()
+
+alt		editable == false 
+	note over table, dataModel
+		if when not editable : avoid updating at screen level
+	end note
+	<- table : denyUpdateMode()
+else	editable == true
+	note over table, dataModel
+		if editable : wait for escape or validation
+	end note
+	<- table : enterUpdateMode()
+	-> table : endOfUpdateMode(value)
+	alt	escape
+		table -> dataModel : Object o = getValueAt(row, col)
+		table -> table : drawAtScreen(o)
+	else	some data is entered
+		table -> dataModel : setValueAt(value, row, col)
+		note right: call of  setValueAt()
+		table -> dataModel : Object o = getValueAt(row, col)
+		table -> table : drawAtScreen(o)
+	end
+end
+
+@enduml 

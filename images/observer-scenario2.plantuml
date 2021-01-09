@@ -1,0 +1,18 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+participant main as ":Main"
+participant a as ":ConcreteSubject"
+
+create b as "c1:ConcreteObserver1"
+main -> b : new()
+main -> a : attacher (c1)
+create c as "c2:ConcreteObserver2"
+main -> c : new()
+main -> a : attacher (c2)
+
+@enduml

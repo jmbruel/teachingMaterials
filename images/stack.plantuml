@@ -1,0 +1,17 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> Vide
+Vide --> Courant : push()
+Vide --> Vide : pull()
+Courant --> Plein : push() [size() = MAX-1]
+Courant --> Courant : push()  [size() < MAX-1]
+Plein --> Courant : pull()
+Plein --> Plein : push()
+Courant --> Courant : pull() [size() > 1]
+Courant --> Vide : pull() [size() = 1]
+@enduml

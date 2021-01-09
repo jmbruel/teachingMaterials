@@ -1,0 +1,17 @@
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+@startuml
+' File where const and funcitons are defined:
+!include Defs.txt
+'-----------------------------------
+
+class VisibilityKind <<enumeration>> {
+	public
+	private
+	protected
+	package
+}
+
+@enduml

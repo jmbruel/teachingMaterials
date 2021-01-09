@@ -1,0 +1,12 @@
+@startuml
+'-----------------------------------
+' Refactoring illustrated
+' JMB 2020
+'-----------------------------------
+!include config.cfg
+
+abstract class Canard
+Canard <|-- Colvert
+Canard <|-- Mandarin
+
+@enduml

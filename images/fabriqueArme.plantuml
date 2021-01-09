@@ -1,0 +1,42 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+abstract class Personnage {
+ComportementArme arme
+combattre() {this.arme.utiliserArme();}
+setArme(ComportementArme a) {this.arme = a;}
+}
+class ComportementEpee {
+}
+interface ComportementArme{
+{abstract} utiliserArme()
+}
+class Chevalier {
+combattre() {...}
+}
+
+class SimpleFabriqueArme {
+	{static} creerComportementArme(String type) : ComportementArme
+}
+
+Main *--> "1" SimpleFabriqueArme
+Main *--> "*" Personnage
+
+Personnage <|-- Chevalier
+Personnage o--> "1..*" ComportementArme
+
+ComportementArme <|.. ComportementEpee
+ComportementArme <.. SimpleFabriqueArme
+
+ComportementEpee <-- Chevalier
+
+@enduml

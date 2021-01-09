@@ -1,0 +1,12 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+state E1
+E1 --> Destination : événement1 / action
+E2 --> Destination : événement2 / action
+
+@enduml

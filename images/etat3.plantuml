@@ -1,0 +1,12 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> Vide
+Vide --> Plein : remplir()
+Plein --> Vide : vider()
+
+@enduml

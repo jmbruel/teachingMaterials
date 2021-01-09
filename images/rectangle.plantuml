@@ -1,0 +1,25 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+hide circle
+hide empty members
+hide empty methods
+
+
+class Carré {
+  int largeur
+}
+
+class Rectangle extends Carré {
+  int longueur
+}
+
+legend right
+  <i>Un rectangle est un carré avec une dimension de plus...</i>
+endlegend
+
+@enduml

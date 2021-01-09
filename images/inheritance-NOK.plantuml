@@ -1,0 +1,12 @@
+@startuml
+'-----------------------------------
+' Refactoring illustrated
+' JMB 2020
+'-----------------------------------
+!include config.cfg
+
+abstract class "Un truc \nqui vole" as a
+a <|-- Canard
+a <|-- Avion
+
+@enduml

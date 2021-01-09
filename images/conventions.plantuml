@@ -1,0 +1,28 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+skinparam classAttributeIconSize 0
+
+interface MyInterface
+note "Ceci est une interface" as NInter
+MyInterface .. NInter
+
+abstract class AbstractClass
+note "Ceci est une classe abstraite" as NAbstr
+AbstractClass .. NAbstr
+
+class MyClass
+note "Ceci est une classe normale" as N
+MyClass .. N
+
+AbstractClass <|-- MyClass
+MyInterface <|.. AbstractClass : << implements >>
+
+@enduml

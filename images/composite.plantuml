@@ -1,0 +1,29 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+abstract class Composant {
++{abstract} operation()
++{abstract} ajouter(x : Composant)
++{abstract} retirer(x : Composant)
++{abstract} getEnfant(x : int)
+}
+
+
+Client -> Composant
+
+Composant <|-- Feuille
+Composant <|-- Composite
+
+class Composite {
++operation()
++ajouter(x : Composant)
++retirer(x : Composant)
++getEnfant(x : int)
+}
+
+Composite ----> "enfants" Composant
+@enduml

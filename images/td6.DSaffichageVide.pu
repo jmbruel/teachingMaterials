@@ -1,0 +1,16 @@
+@startuml
+
+participant "spjt:SimpleJPanelTable" as spjt
+participant ":JScrollPane" as jsp
+participant "table:JTable" as table
+participant "dataModel:SimpleTableModel" as dataModel
+
+note over spjt, jsp
+	On suppose démarrer en ligne 0 et colonne 0 !!
+	Le JTable et le JScrollPane gèrent les scrolls correctement ...
+end note
+
+spjt -> jsp : paint()
+jsp -> table : paint()
+
+@enduml 

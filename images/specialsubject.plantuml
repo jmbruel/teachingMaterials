@@ -1,0 +1,32 @@
+@startuml
+
+package java.util {
+interface Observer
+class Observable
+}
+class ParentClass
+class SpecialSubject extends ParentClass {
+  private String name;
+  private float price;
+
+  public SpecialSubject(String name, float price);
+  public String getName();
+  public float getPrice();
+  public Observable getObservable();
+  public void setName(String name);
+  public void setPrice(float price);
+ }
+
+class DelegatedObservable extends Observable {
+  public void clearChanged();
+  public void setChanged();
+}
+
+DelegatedObservable "1" <- SpecialSubject
+
+class PriceObserver  implements Observer
+class NameObserver  implements Observer
+PriceObserver : void update(Observable o, Object arg);
+NameObserver : void update(Observable o, Object arg);
+
+@enduml

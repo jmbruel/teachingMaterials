@@ -1,0 +1,15 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> Ready
+Ready --> Running
+Running --> Waiting
+Running -> Ready
+Waiting -> Running
+Running --> [*]
+
+@enduml

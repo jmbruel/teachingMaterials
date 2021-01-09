@@ -1,0 +1,11 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+state Source
+Source --> Destination : événement [condition] / action
+
+@enduml

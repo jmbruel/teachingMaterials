@@ -1,0 +1,279 @@
+// ------------------------------------------
+//  Created by Jean-Michel Bruel on 2020-12
+//  Copyright (c) 2020 IRIT/U. Toulouse. All rights reserved.
+// ------------------------------------------
+= Refactoring
+Jean-Michel Bruel <jbruel@gmail.com>
+v20.1, {localdate} (started on 2020-12-08)
+:lang: uk
+:icons: font
+:experimental:
+:status:
+:imagesdir: images
+:siteurl: http://bit.ly/jmb-cpoa
+//:revealjs_theme: beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: night
+:revealjs_slideNumber: true
+:revealjs_showSlideNumber: all
+//:revealjs_transition: none, fade, slide, convex, concave, zoom
+:revealjs_transition: slide
+:customcss: jmb.css
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+== Introduction
+
+image::refactoring.png[Refactoring,width=50%,link="https://refactoring.guru/refactoring"]
+
+
+== Easy example (before)
+
+[source,java]
+public boolean max(int a, int b) {
+    if(a > b) {
+        return true;
+    } else if (a == b) {
+        return false;
+    } else {
+        return false;
+    }
+}
+
+=== Easy example (after)
+
+[source,java]
+public boolean max(int a, int b) {
+     return a > b;
+}
+
+== Why ?
+
+[%step]
+- Improve *understanding* of code
+- Help find and fix *bugs*
+- Accelerate the *speed* of development
+- Improve *design*
+
+== Code smells (basic)
+
+[%step]
+- Large class
+- Long methods
+- Too many parameters
+- Using a lot of primitive data types (`String`, `float`, ...)
+
+== Code smells (OO)
+
+[%step]
+- Switch case
+- Temporary field (`null`)
+- Parallel inheritance hierarchies
+- Wrong use of inheritance
+
+
+=== Use of inheritance
+
+image::inheritance-OK.svg[OK,width=80%]
+
+=== Wrong use of inheritance
+
+image::inheritance-NOK.svg[NOK,width=60%]
+
+== Garbage Smells
+
+[%step]
+- Too many comments
+- Duplicated code
+- Lazy class
+- Unused code
+
+== Excessive connectivity
+
+[%step]
+- External methods
+- Dependency with another class' implementation details
+- Long class call
+
+
+== Refactoring techniques
+
+[%step]
+- Extract a class
+- Extract a method
+- Passing an entire object
+
+== Extract a class
+
+[source,java]
+-----
+class Human {
+    private String name;
+    private String age;
+    private String country;
+    private String city;
+    private String street;
+    private String house;
+    private String quarter;
+
+    public String getFullAddress() {
+        StringBuilder result = new StringBuilder();
+        return result
+                        .append(country)
+                        .append(", ")
+                        .append(city)
+                        .append(", ")
+                        .append(street)
+                        .append(", ")
+                        .append(house)
+                        .append(" ")
+                        .append(quarter).toString();
+    }
+ }
+-----
+
+=== !
+
+[source,java]
+-----
+class Human {
+   private String name;
+   private String age;
+   private Address address;
+
+   private String getFullAddress() {
+       return address.getFullAddress();
+   }
+}
+class Address {
+   private String country;
+   private String city;
+   private String street;
+   private String house;
+   private String quarter;
+
+   public String getFullAddress() {
+       StringBuilder result = new StringBuilder();
+       return result
+                       .append(country)
+                       .append(", ")
+                       .append(city)
+                       .append(", ")
+                       .append(street)
+                       .append(", ")
+                       .append(house)
+                       .append(" ")
+                       .append(quarter).toString();
+   }
+}
+-----
+
+== Extract a method
+
+[source,java]
+-----
+public void calcQuadraticEq(double a, double b, double c) {
+    double D = b * b - 4 * a * c;
+    if (D > 0) {
+        double x1, x2;
+        x1 = (-b - Math.sqrt(D)) / (2 * a);
+        x2 = (-b + Math.sqrt(D)) / (2 * a);
+        System.out.println("x1 = " + x1 + ", x2 = " + x2);
+    }
+    else if (D == 0) {
+        double x;
+        x = -b / (2 * a);
+        System.out.println("x = " + x);
+    }
+    else {
+        System.out.println("Equation has no roots");
+    }
+}
+-----
+
+=== !
+
+[source,java]
+-----
+public void calcQuadraticEq(double a, double b, double c) {
+    double D = b * b - 4 * a * c;
+    if (D > 0) {
+        dGreaterThanZero(a, b, D);
+    }
+    else if (D == 0) {
+        dEqualsZero(a, b);
+    }
+    else {
+        dLessThanZero();
+    }
+}
+-----
+
+== Passing an entire object
+
+[source,java]
+-----
+public void employeeMethod(Employee employee) {
+    // Some actions
+    double yearlySalary = employee.getYearlySalary();
+    double awards = employee.getAwards();
+    double monthlySalary = getMonthlySalary(yearlySalary, awards);
+    // Continue processing
+}
+
+public double getMonthlySalary(double yearlySalary, double awards) {
+     return (yearlySalary + awards)/12;
+}
+-----
+
+=== !
+
+[source,java]
+-----
+public void employeeMethod(Employee employee) {
+    // Some actions
+    double monthlySalary = getMonthlySalary(employee);
+    // Continue processing
+}
+
+public double getMonthlySalary(Employee employee) {
+    return (employee.getYearlySalary() + employee.getAwards())/12;
+}
+-----
+
+
+== Advice for the project
+
+=== Issues to list the ideas
+
+image::issues.png[width=80%]
+
+=== Describe / Explain each idea
+
+image::issueExample.png[width=50%]
+
+=== 1 refactoring = 1 branch
+
+image::git-flow-jmb.svg[width=50%]
+
+=== Professional `README`
+
+link:exempleProjet2020.pdf[]
+
+== Ressources
+
+- https://refactoring.guru/fr/refactoring
+- https://codegym.cc/groups/posts/196-how-refactoring-works-in-java
+
+//[background-color="yellow"]
+== Ready for a quiz?
+
+//----------------------------- Question ------------------
+// - http://www.socrative.com/ (*student* login)
+// - Room *JMB42*
+
+// image::socrative1.png[width=60%,link=http://www.socrative.com/]
+
+make refa

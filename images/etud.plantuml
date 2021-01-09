@@ -1,0 +1,17 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> 1A
+1A --> 2A : exam [succès]
+1A --> 1A : exam [échec]
+2A --> [*] : exam [succès]
+2A --> 2A : exam [échec]
+'------ expulsion
+1A --> [*] : expulsion
+2A --> [*] : expulsion
+
+@enduml

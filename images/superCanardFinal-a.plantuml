@@ -1,0 +1,34 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2017
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+interface ComportementVol {
+voler()
+}
+class VolerAvecDesAiles {
+voler() {// implémentation du vol de canard}
+}
+class NePasVoler {
+voler() {// ne rien faire}
+}
+abstract class Canard {
+nager()
+  abstract afficher()
+  abstract effectuerCancan()
+  abstract effectuerVol()
+}
+
+ComportementVol <|.. NePasVoler
+ComportementVol <|.. VolerAvecDesAiles
+
+Canard o--> "1" ComportementVol
+
+@enduml

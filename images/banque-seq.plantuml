@@ -1,0 +1,57 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+title ApplicationAgenceBancaire
+'autonumber
+
+'-- début
+actor User
+participant main as ":Main"
+participant acces as "AccesAgenceBancaire"
+main -> acces : getAgenceBancaire()
+create monag as ": AgenceBancaire"
+acces -> monag : new
+acces --> main : monAg
+loop continuer
+
+	alt choix=='q'
+		User <-- main : "ByeBye"
+		main -> main : continuer = false	
+	else choix=='l'
+		main --> monag : afficher()
+		monag --> User
+	else choix=='v'
+		User <-- main : "num cpt?"
+		User --> main : numero
+		main -> monag : getCompte(numero)
+		monag --> main : c
+		alt c==null
+			User <-- main : "compte inexistant"
+		else else
+			participant c as ": Compte"
+			main -> c : afficher
+			c --> User
+		end
+	else choix=='p'
+		User <-- main : "proprio?"
+		User --> main : nom
+		participant ApplicationAgenceBancaire
+		group ref comptesDUnPropretaire
+			main -> ApplicationAgenceBancaire
+			ApplicationAgenceBancaire --> main
+		end
+	else choix=='d'
+		
+	else choix=='r'
+	
+	else default
+	
+	end
+
+end
+
+@enduml

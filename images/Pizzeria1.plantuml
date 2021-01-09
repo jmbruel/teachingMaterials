@@ -1,0 +1,32 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+hide circle
+hide empty members
+hide empty methods
+
+class p as "Pizzeria" {
+  ~SimpleFabriqueDePizzas fabrique
+  +void Pizzeria(SimpleFabriqueDePizzas fabrique)
+  ~Pizza commanderPizza(String type)
+}
+
+class f as "SimpleFabriqueDePizzas" {
+  +Pizza creerPizza(String type)
+}
+
+class Pizza {
+  +void preparer()
+  +void cuire()
+  +void couper()
+  +void emballer()
+}
+
+p --> "fabrique" f
+f --> "pizza" Pizza
+
+@enduml

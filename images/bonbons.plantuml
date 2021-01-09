@@ -1,0 +1,14 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> pasDePiece
+pasDePiece --> aUnePiece : inserer piece
+aUnePiece --> pasDePiece : ejecter piece
+aUnePiece --> bonbonVendu : tourner poignee
+bonbonVendu --> pasDePiece : delivrer bonbon [nbBonbons > 0]
+bonbonVendu --> plusDeBonbon : delivrer bonbon [nbBonbons = 0]
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+
+' definitions
+' -----------
+class "..." as p
+Pizzeria  ..>  PizzaFromageStyleBrest
+Pizzeria  ..>  PizzaFromageStyleStrasbourg
+Pizzeria  ..>  PizzaPoivronsStyleBrest
+Pizzeria  ..>  p
+
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+abstract class STATE {
+    execute_state()
+    display()
+    read()
+    correct()
+    messsage()
+    process()
+}
+class INITIAL {
+    display()
+    read()
+    correct()
+    messsage()
+    process()
+}
+class FLIGHT_QUERY{
+    display()
+    read()
+    correct()
+    messsage()
+    process()
+}
+class RESERVATION{
+    display()
+    read()
+    correct()
+    messsage()
+    process()
+}
+
+STATE <|-- INITIAL
+STATE <|-- FLIGHT_QUERY
+STATE <|-- RESERVATION 
+@enduml

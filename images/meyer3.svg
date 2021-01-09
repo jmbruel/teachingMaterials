@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="187px" preserveAspectRatio="none" style="width:326px;height:187px;" version="1.1" viewBox="0 0 326 187" width="326px" zoomAndPan="magnify"><defs><filter height="300%" id="f10mcybtfjhd7p" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class State--><rect fill="#FEFECE" filter="url(#f10mcybtfjhd7p)" height="83.9531" id="State" style="stroke: #A80036; stroke-width: 1.5;" width="94" x="123" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="28" x="156" y="24.6016">State</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="124" x2="216" y1="32.1328" y2="32.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="129" y="46.7676">execute_state()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="46" x="129" y="59.7227">display()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="32" x="129" y="72.6777">read()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="17" x="129" y="85.6328">...()</text><!--class Initial--><rect fill="#FEFECE" filter="url(#f10mcybtfjhd7p)" height="24.1328" id="Initial" style="stroke: #A80036; stroke-width: 1.5;" width="36" x="6" y="152"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="9" y="168.6016">Initial</text><!--class Flight_Query--><rect fill="#FEFECE" filter="url(#f10mcybtfjhd7p)" height="24.1328" id="Flight_Query" style="stroke: #A80036; stroke-width: 1.5;" width="76" x="77" y="152"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="70" x="80" y="168.6016">Flight_Query</text><!--class Reservation--><rect fill="#FEFECE" filter="url(#f10mcybtfjhd7p)" height="24.1328" id="Reservation" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="188.5" y="152"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="67" x="191.5" y="168.6016">Reservation</text><!--class etc--><rect fill="#FEFECE" filter="url(#f10mcybtfjhd7p)" height="24.1328" id="etc" style="stroke: #A80036; stroke-width: 1.5;" width="18" x="297" y="152"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="12" x="300" y="168.6016">...</text><!--link State to Initial--><path d="M106.6966,99.4287 C81.9826,118.7259 55.7592,139.2017 39.6289,151.7966 " fill="none" id="State-Initial" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="102.5261,93.8039,122.598,87.0125,111.1423,104.8386,102.5261,93.8039" style="stroke: #A80036; stroke-width: 1.0;"/><!--link State to Flight_Query--><path d="M140.9242,110.2661 C133.2683,126.1347 125.7759,141.6646 120.8306,151.9147 " fill="none" id="State-Flight_Query" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="134.6811,107.097,149.6763,92.1255,147.2903,113.1804,134.6811,107.097" style="stroke: #A80036; stroke-width: 1.0;"/><!--link State to Reservation--><path d="M199.0758,110.2661 C206.7317,126.1347 214.2241,141.6646 219.1694,151.9147 " fill="none" id="State-Reservation" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="192.7097,113.1804,190.3237,92.1255,205.3189,107.097,192.7097,113.1804" style="stroke: #A80036; stroke-width: 1.0;"/><!--link State to etc--><path d="M232.8648,102.6955 C257.7739,123.5752 283.6072,145.2296 296.8928,156.366 " fill="none" id="State-etc" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="228.0151,107.7643,217.1845,89.5517,237.0088,97.0351,228.0151,107.7643" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+hide circle
+hide empty members
+hide empty methods
+
+abstract class State {
+	execute_state()
+	display()
+	read()
+	...()
+}
+class Initial extends State
+class Flight_Query extends State
+class Reservation extends State
+class etc as "..." extends State
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 19:02:59 CEST 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_152-b16
+Operating System: Mac OS X
+OS Version: 10.14.1
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

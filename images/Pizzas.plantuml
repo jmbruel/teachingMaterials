@@ -1,0 +1,23 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+abstract class Pizza {
+}
+
+class PizzaFromage extends Pizza
+class PizzaGrecque extends Pizza
+class PizzaPoivrons extends Pizza
+
+class PizzaFromageStyleCorse as "..." {
+}
+Pizza <|-- PizzaFromageStyleCorse
+
+@enduml

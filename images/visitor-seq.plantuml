@@ -1,0 +1,16 @@
+@startuml
+participant ":ObjectStructure" as o
+participant ":ConcreteElementA" as ca
+participant ":ConcreteElementB" as cb
+participant ":ConcreteVisitor1" as v1
+participant ":ConcreteVisitor2" as v2
+
+o -> ca : accept()
+ca -> v1 : visitConcreteElementA()
+v1 --> ca : operationCall()
+
+o -> cb : accept()
+cb -> v2 : visitConcreteElementB()
+v2 --> cb : operationCall()
+
+@enduml

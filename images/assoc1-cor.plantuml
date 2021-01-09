@@ -1,0 +1,64 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class AgenceBancaire1 {
+	-String nom
+	-String loc
+	-ArrayList<Compte> alCptes
+	+String getProprietaire()
+	+int getNbComptes()
+	...()
+	+void addCompte(Compte pCompteAAjouter)
+}
+
+class Compte {
+}
+
+class AgenceBancaire2 {
+	-String nom
+	-String loc
+	-ArrayList<Compte> alCptes
+	+String getProprietaire()
+	+int getNbComptes()
+	...()
+	+void addCompte() {... new Compte(...)...}
+}
+
+class AgenceBancaire3 {
+	-String nom
+	-String loc
+	+ArrayList<Compte> alCptes
+	+String getProprietaire()
+	+int getNbComptes()
+	...()
+	+void addCompte(Compte pCompteAAjouter)
+}
+
+class AgenceBancaire4 {
+	-String nom
+	-String loc
+	+String getProprietaire()
+	...()
+	+void addCompte(Compte pCompteAAjouter)
+}
+
+class AgenceBancaire5 {
+	-String nom
+	-String loc
+	-Compte compte
+	+String getProprietaire()
+	...()
+	+void addCompte(Compte pCompteAAjouter)
+}
+
+
+' Structural relationships
+
+AgenceBancaire1 o-> "*" Compte
+Compte "*" <-* AgenceBancaire2
+Compte "*" <--o AgenceBancaire3
+Compte <.. AgenceBancaire4
+Compte "1" <-- AgenceBancaire5
+
+@enduml

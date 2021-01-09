@@ -1,0 +1,52 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+title comptesDUnPropretaire
+'autonumber
+
+'public static void comptesDUnPropretaire (AgenceBancaire ag, String nomProprietaire) {
+'  Compte []  t;
+'
+'  t = ag.getComptesDe(nomProprietaire);
+'  if (t.length == 0) {
+'    System.out.println("pas de compte à ce nom ...");
+'  } else {
+'    System.out.println("  " + t.length + " comptes pour " + nomProprietaire);
+'    for (int @i=0; i<t.length; i++)
+'    t[i].afficher();
+'  }
+'}
+
+
+'-- début
+participant agence as "ApplicationAgenceBancaire"
+-> agence : comptesDUnPropretaire (ag, nomProprietaire)
+
+'  t = ag.getComptesDe(nomProprietaire);
+participant ag as "ag : AgenceBancaire"
+agence -> ag : getComptesDe(nomProprietaire)
+ag --> agence : Comptes [] t
+
+'  if (t.length == 0) {
+alt t.length() == 0
+<-- agence : 'pas de compte a ce nom ...'
+
+else else
+
+'    System.out.println("  " + t.length + " comptes pour " + nomProprietaire);
+'    for (int i=0; i<t.length; i++)
+'    t[i].afficher();
+
+<-- agence : '... comptes pour ...'
+loop i<t.length
+participant cpt as "t[i] : Comptes"
+agence -> cpt : afficher()
+end
+
+end
+
+@enduml

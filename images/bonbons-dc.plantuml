@@ -1,0 +1,39 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+interface Etat
+Etat : {abstract} insererPiece()
+Etat : {abstract} ejecterPiece()
+Etat : {abstract} tournerPoignee()
+Etat : {abstract} delivrer()
+
+class pasDePiece implements Etat
+class aUnePiece implements Etat
+class bonbonVendu implements Etat
+class plusDeBonbon  implements Etat
+
+pasDePiece : insererPiece()
+pasDePiece : ejecterPiece()
+pasDePiece : tournerPoignee()
+pasDePiece : delivrer()
+
+aUnePiece : insererPiece()
+aUnePiece : ejecterPiece()
+aUnePiece : tournerPoignee()
+aUnePiece : delivrer()
+
+bonbonVendu : insererPiece()
+bonbonVendu : ejecterPiece()
+bonbonVendu : tournerPoignee()
+bonbonVendu : delivrer()
+
+plusDeBonbon : insererPiece()
+plusDeBonbon : ejecterPiece()
+plusDeBonbon : tournerPoignee()
+plusDeBonbon : delivrer()
+
+@enduml

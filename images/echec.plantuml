@@ -1,0 +1,35 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+[*] --> EnCours
+state "En cours" as EnCours {
+  [*] -> tb
+  state "Trait aux \nBlancs" as tb
+  state "Trait aux \nnoirs" as tn
+  tb -> tn : coup blanc \n[mat = false]
+  tn -> tb : coup noir \n[mat = false]
+}
+state EnCours : entry: position initiale
+state Nulle
+state "Victoire des \nBlancs" as vb
+state "Victoire des \nNoirs" as vn
+
+EnCours --> Nulle : pat
+EnCours --> Nulle : repetitions
+
+EnCours --> vb : coup blanc \n[mat = true]
+EnCours --> vb : abandon noir
+EnCours --> vn : coup noir \n[mat = false]
+EnCours --> vn : abandon blanc
+Nulle -> [*]
+vb --> [*]
+vn --> [*]
+'Nulle -> EnCours : revanche
+'vb --> EnCours : revanche
+'vn --> EnCours : revanche
+
+@enduml

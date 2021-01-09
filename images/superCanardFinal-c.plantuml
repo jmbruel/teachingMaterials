@@ -1,0 +1,37 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+abstract class Canard {
+nager()
+  abstract afficher()
+  abstract effectuerCancan()
+  abstract effectuerVol()
+}
+class Colvert {
+afficher()
+}
+class Mandarin {
+afficher()
+}
+class CanardEnPlastique {
+afficher()
+}
+class Leurre {
+afficher()
+}
+
+Canard <|-- Colvert
+Canard <|-- Mandarin
+Canard <|-- Leurre
+Canard <|-- CanardEnPlastique
+
+@enduml

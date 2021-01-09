@@ -1,0 +1,39 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+interface IWorker {
+
+	public void work();
+
+}
+
+class Worker implements IWorker {
+
+	public void work() {...}
+
+}
+
+class SuperWorker  implements IWorker{
+	public void work() {...}
+}
+
+class Manager {
+	IWorker worker;
+
+	public void setWorker(IWorker w) {...}
+}
+note bottom : public void manage(){worker.work();}
+
+note left of Manager : public void setWorker(IWorker w) {worker = w;}
+
+Manager -> "worker" IWorker
+
+legend right
+  <i>Dependency Inversion Principle - Good example</i>
+endlegend
+
+@enduml

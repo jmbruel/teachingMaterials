@@ -1,0 +1,28 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+abstract class p as "Pizzeria" {
+  ...
+  ...
+}
+
+class PizzeriaStyleStrasbourg extends p {
+  ...
+  ...
+}
+
+class PizzeriaStyleBrest extends p {
+  ...
+  ...
+}
+
+
+@enduml

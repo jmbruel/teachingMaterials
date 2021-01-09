@@ -1,0 +1,20 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+interface Etat
+Etat : {abstract} gerer()
+
+class Contexte --> "+etat" Etat
+Contexte : requete() {etat.gerer();}
+
+class EtatConcret1 implements Etat
+class EtatConcret2 implements Etat
+
+EtatConcret1 : gerer()
+EtatConcret2 : gerer()
+
+@enduml

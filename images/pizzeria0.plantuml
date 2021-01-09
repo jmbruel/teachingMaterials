@@ -1,0 +1,34 @@
+@startuml
+
+' definitions
+' -----------
+
+abstract Pizza
+
+class SimpleFabriqueDePizzas {
+  SimpleFabriqueDePizzas()
+  Pizze creerPizza(String)
+}
+
+class Pizzeria {
+  Pizzeria(SimpleFabriqueDePizzas)
+  Pizza commanderPizza(String)
+}
+
+Pizzeria  ..>  Pizza
+Pizzeria --> "fabrique" SimpleFabriqueDePizzas
+Pizza <|-- PizzaFruitsDeMer
+
+
+' Pizza:
+Pizza : Pizza()
+Pizza : void preparer()
+Pizza : void cuire()
+Pizza : void couper()
+Pizza : void emballer()
+
+Pizza <|-- PizzaVegetarienne
+Pizza <|-- PizzaFromage
+Pizza <|-- PizzaPoivrons
+
+@enduml

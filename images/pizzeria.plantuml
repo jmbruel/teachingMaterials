@@ -1,0 +1,47 @@
+@startuml
+
+' definitions
+' -----------
+
+abstract Pizza
+class PizzaFromageStyleBrest
+class PizzaFromageStyleStrasbourg
+class PizzaFruitsDeMerStyleBrest
+class PizzaFruitsDeMerStyleStrasbourg
+class PizzaPoivronsStyleBrest
+class PizzaPoivronsStyleStrasbourg
+class PizzaVegetarienneStyleBrest
+class PizzaVegetarienneStyleStrasbourg
+
+Pizzeria  ..>  Pizza
+
+Pizza <|-- PizzaFruitsDeMerStyleStrasbourg
+
+abstract class Pizzeria {
+  {abstract} creerPizza()
+  {abstract} commanderPizza()
+}
+
+class PizzeriaStyleStrasbourg extends Pizzeria {
+  creerPizza()
+}
+
+class PizzeriaStyleBrest extends Pizzeria {
+  creerPizza()
+}
+
+' Pizza:
+Pizza : void preparer()
+Pizza : void cuire()
+Pizza : void couper()
+Pizza : void emballer()
+
+Pizza <|-- PizzaVegetarienneStyleStrasbourg
+Pizza <|-- PizzaFromageStyleBrest
+Pizza <|-- PizzaFruitsDeMerStyleBrest
+Pizza <|-- PizzaPoivronsStyleStrasbourg
+Pizza <|-- PizzaFromageStyleStrasbourg
+Pizza <|-- PizzaPoivronsStyleBrest
+Pizza <|-- PizzaVegetarienneStyleBrest
+
+@enduml

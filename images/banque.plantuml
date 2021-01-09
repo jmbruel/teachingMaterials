@@ -1,0 +1,58 @@
+@startuml
+
+class AgenceBancaire {
+	-String nom
+	-String loc
+	-ArrayList<Compte> alCptes
+	+AgenceBancaire(String pNomAgence, String pLocAgence)
+	+String getNomAgence()
+	+String getLocAgence()
+	+int getNbComptes()
+	+Compte getCompte(String pNumCompte)
+	+Compte[] getComptesDe(String pNomProprietaire)
+	+void afficher()
+	+String toString()
+	+void addCompte(Compte pCompteAAjouter)
+	+void removeCompte(String pNumCompte)
+	-Compte trouveCompte(String pNC)
+}
+
+class AccesAgenceBancaire {
+	-AccesAgenceBancaire()
+	{static} +AgenceBancaire getAgenceBancaire ()
+}
+
+class Compte {
+	-String proprietaire
+	-String numCompte
+	-double debits
+	-double credits
+	-int nbDebits
+	-int nbCredits
+	+Compte()
+	+Compte(String pNumCompte, String pNomProp)
+	+double soldeCompte()
+	+String getProprietaire()
+	+String getNumCompte()
+	+void afficher()
+	+String toString()
+	+void retirer(double pSomme)
+	+void deposer(double pSomme)
+	+void setProprietaire(String pNomProp)
+}
+
+class main as "ApplicationAgenceBancaire" {
+	{static} +void main(String[] args)
+	{static} +void comptesDUnPropretaire (AgenceBancaire ag, String nomProprietaire)
+	{static} ...()
+}
+
+' Structural relationships
+
+AgenceBancaire o--> "alCptes" Compte
+
+main ..> AgenceBancaire
+main .> AccesAgenceBancaire
+AccesAgenceBancaire ..> AgenceBancaire
+
+@enduml

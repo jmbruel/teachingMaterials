@@ -1,0 +1,45 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+'hide circle
+hide empty members
+hide empty methods
+
+
+abstract class s as "Sujet" {
+	-ArrayList<Observateur> observateurs
+	+attacher(o: Observateur)
+	+detacher(o: Observateur)
+	+notifier()
+}
+note left: pour chaque observateur o {\n o.update();\n}
+
+abstract class o as "Observateur" {
+}
+
+o : {abstract} +update()
+
+class SujetConcret {
+	-etatSujet
+	+getEtat()
+}
+note left: return etatSujet;
+
+class ObservateurConcret {
+	-etatObservateur
+	+update()
+}
+note right: etatObservateur = sujet.getEtat();
+
+
+'s -> "*" o
+'SujetConcret "+sujet" <- ObservateurConcret
+
+'o <|-- ObservateurConcret
+'s <|-- SujetConcret
+
+@enduml

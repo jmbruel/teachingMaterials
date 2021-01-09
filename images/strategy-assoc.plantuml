@@ -1,0 +1,22 @@
+@startuml
+
+'-----------------------------------
+' UML patterns illustrated
+' JMB 2014
+'-----------------------------------
+
+hide circle
+hide empty members
+hide empty methods
+
+class Contexte {
++contexte() {strategie.algorithme();}
+}
+
+abstract class Strategie {
+{abstract} +algorithme()
+}
+
+Contexte --> "+strategie" Strategie
+
+@enduml

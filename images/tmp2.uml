@@ -1,0 +1,18 @@
+@startuml
+
+'----- etudiant lamda
+[*] --> 1A
+1A --> 2A : exam [OK]
+2A --> [*]
+
+'redoublant
+1A --> 1A : exam [KO]
+2A --> 2A : exam [KO]
+'1A : exam [KO] / redoubler
+'demission
+1A --> [*] : demission
+2A --> [*] : demission
+1A --> [*] : exclusion
+2A --> [*] : exclusion
+
+@enduml

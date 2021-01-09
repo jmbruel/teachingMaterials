@@ -1,0 +1,58 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+title Diagramme de séquence illustrant Singleton et //Strategy//
+'autonumber
+
+'-- début
+participant main as ":Main"
+
+'Chevalier perso = new Chevalier("JMI");
+create perso as ":Chevalier"
+main -> perso : new
+
+'SimpleFabriqueArme fabrique = new SimpleFabriqueArme();
+create fabrique as ":**SimpleFabriqueArme**" #LightBlue
+main -> fabrique : new
+
+'perso.setArme(fabrique.creerComportementArme("Epee"));
+main -> fabrique : c = creerComportementArme("Epee")
+'		ComportementArme compAdequat = null;
+'		if (type.equals("Epee")) {
+alt "Epee"
+
+'			compAdequat = new ComportementEpee();
+create compAdequat as ":ComportementEpee" #LightGreen
+fabrique -> compAdequat : new
+
+'		}
+'		else if (type.equals("Arc")) {
+
+else "Arc"
+
+'			compAdequat = new ComportementArc();
+create compAdequat2 as ":ComportementArc"
+fabrique -> compAdequat2 : new
+'		}
+'		else compAdequat = new ComportementArmeless();
+
+else else
+
+create compAdequat3 as ":ComportementArmless"
+fabrique -> compAdequat3 : new
+
+'		return compAdequat;
+end
+fabrique --> main
+main -> perso : setArme(c)
+
+'perso.frapper();
+main -> perso : frapper()
+
+'		this.comportementArme.attaque();
+perso -> compAdequat : attaque()
+@enduml

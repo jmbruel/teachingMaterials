@@ -1,0 +1,21 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+hide circle
+hide empty members
+hide empty methods
+
+
+class Rectangle {
+}
+
+class Carré {
+}
+
+Rectangle <|-- Carré
+
+@enduml

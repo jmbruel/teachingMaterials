@@ -1,0 +1,51 @@
+'-----------------------------------
+' UML concepts illustrated
+' Definitions file (to be included by !include Defs.txt)
+' JMB 2014
+'-----------------------------------
+@startuml
+
+' Default settings
+'-----------------------------------
+' left to right direction 'does not work for sequence diagrams :-(
+hide circle
+hide empty members
+hide methods
+hide footbox
+
+' Attribute and name values (for translation purpose). Add anything you need, but don't modify!
+'-----------------------------------
+!define ABSTRACTION <<abstraction>>
+!define ACTOR ":Actor"
+!define ARRAYLIST ArrayList
+!define CANCEL Cancel
+!define CAR Car
+!define CLIENTS Client
+!define COLLECTION Collection
+!define COMPOSITE "State 1"
+!define COMPUTER Computer
+!define CONFIG "State 3"
+!define EMPLOYE Employee
+!define EXTENDS << extends >>
+!define GROUP Group
+!define IDLE "State 2"
+!define INCLUDE << include >>
+!define INIT init
+!define LOGIN	Login
+!define MESSAGE message
+!define NOM lastName
+!define OWNS owns
+!define PERSONNE Person
+!define PROCESSOR Processor
+!define PRENOM firstName
+!define SALAIRE income
+!define SOLDE balance
+!define STUDENT Student
+!define SYSTEM ":System"
+!define UPDATE	Update
+
+' Usefull functions
+'-----------------------------------
+!define objet(nom,type) class "<u>nom : type"
+	
+@enduml
