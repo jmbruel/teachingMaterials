@@ -1,0 +1,33 @@
+name: Checks
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        config-file: 'config.json'
+
+  asciidoc-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+    - run: npm install -g asciidoc-link-check
+    - run: asciidoc-link-check *.adoc -c config.json
+
+  ruby-tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Run tests
+      run: bundle exec rake
