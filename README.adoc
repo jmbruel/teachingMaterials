@@ -1,4 +1,4 @@
-= Teaching materials
+= Teaching materials image:{baseURL}/workflows/Checks/badge.svg[Checks] image:{baseURL}/workflows/Tests/badge.svg[Tests]
 J.-M. Bruel <jbruel@gmail.com>
 v21.1 {localdate}
 //------------------------------------ variables de configuration
@@ -42,7 +42,6 @@ include::definitions.txt[]
 //------------------------------------ variables de configuration
 
 //------------------------------------ Badges --------
-image:{baseURL}/workflows/Checks/badge.svg[Checks]
 image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
