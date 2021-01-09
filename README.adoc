@@ -6,10 +6,9 @@ v21.1 {localdate}
 :imagesdir: images
 :icons: font
 :toc:
-:numbered!:
 :base: http://jmbruel.github.io/teachingMaterials/
 :website: http://jmbruel.github.io/teachingMaterials
-:baseURL: http://github.com/jmbruel/teachingMaterials.git
+:baseURL: http://github.com/jmbruel/teachingMaterials
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -42,6 +41,11 @@ include::definitions.txt[]
 :ittdublin: http://www.it-tallaght.ie/[ITT Dublin]
 :masterITT: http://www.it-tallaght.ie/index.cfm/page/course?id=128[Masters of Engineering in Electronic Engineering in Electronic System Design]
 //------------------------------------ variables de configuration
+
+//------------------------------------ Badges --------
+image:{baseURL}/workflows/Checks/badge.svg[Checks]
+image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
+//------------------------------------ Badges --------
 
 :numbered!:
 == About this document / Avant-Propos
