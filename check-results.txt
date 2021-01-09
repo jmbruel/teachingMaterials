@@ -4,8 +4,3 @@ FILE: CONTRIBUTING.adoc
 [✓] https://help.github.com/articles
 [✓] https://gist.github.com
 [✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
-
-FILE: exempleREADME-Git4school.md
-[✓] https://code.visualstudio.com/
-
-1 links checked.
