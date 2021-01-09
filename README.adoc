@@ -5,37 +5,40 @@ v21.1 {localdate}
 // only used when master document
 :imagesdir: images
 :icons: font
-:toc:
+:toc: left
 :base: http://jmbruel.github.io/teachingMaterials/
 :website: http://jmbruel.github.io/teachingMaterials
 :baseURL: http://github.com/jmbruel/teachingMaterials
-:flask-icon: pass:[<i class="fa fa-flask"></i>]
+:graduation-icon: pass:[<i class="fa fa-graduation-cap"></i>]
+:cogs-icon: pass:[<i class="fa fa-cogs"></i>]
+:beginner: icon:star-o[]
+:advanced: icon:star-half-o[]
+:expert: icon:star[]
+:dollar: icon:dollar[]
 
 // Specific to GitHub
 ifdef::env-github[]
+:toc:
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
-:flask-icon: :beetle:
+:graduation-icon: :mortar_board:
+:cogs-icon: :writing_hand:
+:beginner: :arrow_right:
+:advanced: :arrow_upper_right:
+:expert: :arrow_up:
+:dollar: :dollar:
 endif::[]
 
 include::definitions.txt[]
 
-:us-icon: image:united-states.png[]
-:fr-icon: image:france.png[]
+:us-icon: image:icons/usa.svg[width=30%]
+:fr-icon: image:icons/france.svg[width=30%]
 :iu: https://innopolis.university/en/[Innnopolis University]
 :iut: https://www.iut-blagnac.fr/[IUT Blagnac]
 :mobileModeling: https://jmbruel.github.io/MobileModeling
-:vpuml: link:http://www.visual-paradigm.com/product/vpuml[VP-UML]
-:nomagic: link:http://www.nomagic.com/[No Magic]
-:magicdraw: link:https://www.nomagic.com/products/magicdraw/[MagicDraw]
-:lucidchart: link:https://www.lucidchart.com/[LucidChart]
-:jetbrains: link:http://www.jetbrains.com/[JetBrains]
-:rubymine: link:href="http://www.jetbrains.com/ruby/[RubyMine]
-:intellij: link:href="http://www.jetbrains.com/idea/[IntelliJ]
-:pycharm: link:http://www.jetbrains.com/pycharm/[PyCharm]
 :apsio: link:https://www.iut-blagnac.fr/fr/formations/lp-apsio[Licence APSIO]
 :ice: link:http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/[Master ICE]
 :ntie: Master NTIE
@@ -47,26 +50,58 @@ include::definitions.txt[]
 image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
-WARNING: Site under construction!! {flask-icon}
+WARNING: Site under construction!! 
 
 :numbered!:
+//-------------------------------------
 == About this document / Avant-Propos
+//-------------------------------------
 
 === US image:icons/usa.svg[width=20] vs FR image:icons/fr.svg[width=20]
 
 image:icons/fr.svg[width=20] Ce site est en anglais pour permettre une plus large diffusion.
-Si vous êtes allergique à l'anglais et que vous êtes un de mes étudiants en informatique : changez d'orientation
-tout de suite...
+Si vous êtes allergique à l'anglais et que vous êtes un de mes étudiants en informatique : changez d'orientation tout de suite...
 
 The following courses are in English except those with the French flag image:icons/fr.svg[width=20].
 
 === Conventions
 
 Level of difficulty::
-I've graded from easy/beginner (icon:star-o[]) to advanced (icon:star[])
+I've graded from easy/beginner ({beginner}) to advanced ({advanced}) or expert ({expert}).
 
 Definitions/Theory vs Practical::
-Courses with icon:graduation-cap[] are more theoretical than those with icon:cogs[]
+Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
+
+
+//-------------------------------------
+== List of materials
+//-------------------------------------
+
+[cols="1,1,4,6"]
+|===
+| {git}  | {beginner} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.slides.html[slides] link:git.pdf[PDF] 
+| Basic of {git} principles and commands
+|===
+//-------------------------------------
+== List of courses
+//-------------------------------------
+
+
+[appendix]
+//-------------------------------------
+== {dollar} Academic partnerships
+
+[cols="1,8"]
+|===
+| image:https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png[width=80,link="https://wiki.eclipse.org/Papyrus_for_Education/"]
+  | I am leader of the {p4e} initiative at {eclipse},
+  that aims at promoting the use of the open source {Papyrus} modeler for teaching {UML}/{SysML}. Thanks {cea}, for your constant support.
+
+| image:professorcat.png[width=80,link="https://github.com/edu"]
+  | Through link:https://github.com/edu[GitHub Educational Account], my students have assignments repositories on {GitHub} classrooms.
+
+|===
+
 
 [appendix]
 //-------------------------------------
@@ -74,13 +109,13 @@ Courses with icon:graduation-cap[] are more theoretical than those with icon:cog
 
 - Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/[https://www.flaticon.com/] is licensed by http://creativecommons.org/licenses/by/3.0/[CC 3.0 BY]
 
-ifdef::pdf-backend[]
 [appendix]
 //-------------------------------------
 == Checks results and issues
 
 === URLs 
 
+ifdef::pdf-backend[]
 .Checking URLs result (last update: {localdate}):
 [source,shell]
 --
@@ -88,13 +123,13 @@ include::check-results.txt[]
 --
 endif::[]
 ifndef::pdf-backend[]
-[appendix]
-//-------------------------------------
-=== Checks results and issues
-
-=== URLs
-
 Checking URLs result (last update: {localdate}):
 
 See the following file: link:check-results.txt[]
 endif::[]
+
+[appendix]
+//-------------------------------------
+== Contributing
+
+If you want to contribute, read link:CONTRIBUTING.adoc[this].

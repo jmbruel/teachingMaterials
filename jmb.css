@@ -1,0 +1,43 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:100,200,300';
+
+@page {
+  margin: 1cm 1.5cm 1cm 1.5cm;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  }
+
+.logo {
+  margin-left: -1cm;
+  height: 80px;
+}
+
+.logo img {
+  height: 6cm;
+  width: auto;
+}
+
+.signature img {
+  height: 3cm;
+  margin-left: 0.5cm;
+  width: auto;
+}
+
+.recipient {
+  text-align: right;
+  margin: 1em auto 2em;
+}
+
+.main-text {
+  text-align: justify;
+}
+
+.opening, .closing {
+  margin: 50px 0 20px 0;
+}
+
+.object {
+  margin: 150px 0 20px 0;
+}
