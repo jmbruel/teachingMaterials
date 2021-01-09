@@ -9,6 +9,7 @@ v21.1 {localdate}
 :base: http://jmbruel.github.io/teachingMaterials/
 :website: http://jmbruel.github.io/teachingMaterials
 :baseURL: http://github.com/jmbruel/teachingMaterials
+:flask-icon: pass:[<i class="fa fa-flask"></i>]
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -17,6 +18,7 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
+:flask-icon: :beetle:
 endif::[]
 
 include::definitions.txt[]
@@ -45,17 +47,29 @@ include::definitions.txt[]
 image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
+WARNING: Site under construction!! {flask-icon}
+
 :numbered!:
 == About this document / Avant-Propos
 
-image:icons/fr.svg[width=30] Ce site est en anglais pour permettre une plus large diffusion.
+=== US image:icons/usa.svg[width=20] vs FR image:icons/fr.svg[width=20]
+
+image:icons/fr.svg[width=20] Ce site est en anglais pour permettre une plus large diffusion.
 Si vous êtes allergique à l'anglais et que vous êtes un de mes étudiants en informatique : changez d'orientation
 tout de suite...
 
 The following courses are in English except those with the French flag image:icons/fr.svg[width=20].
 
-WARNING: Site under construction!!
+=== Conventions
 
+Level of difficulty::
+I've graded from easy/beginner (icon:star-o[]) to advanced (icon:star[])
+
+Definitions/Theory vs Practical::
+Courses with icon:graduation-cap[] are more theoretical than those with icon:cogs[]
+
+[appendix]
+//-------------------------------------
 == Credits
 
 - Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/[https://www.flaticon.com/] is licensed by http://creativecommons.org/licenses/by/3.0/[CC 3.0 BY]
