@@ -9,20 +9,20 @@ STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
 
-all: *.html *.slides.html *.pdf
+all: *.pdf *.html *.slides.html
 
 index.html: README.adoc
 	@echo '==> Generating index'
 	$(DOCTOR) README.adoc -o index.html 
 
-%.html: %.adoc 
-	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
-	$(DOCTOR) $<
-                
 %.pdf: %.adoc
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate PDF'
 	$(DOCTOR-PDF) -a stylesheet="$(STYLE)" --require $(TEMPLATE) $<
 
+%.html: %.adoc 
+	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
+	$(DOCTOR) $<
+                
 %.slides.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
 	bundle exec asciidoctor-revealjs -a slides -o $@ $<

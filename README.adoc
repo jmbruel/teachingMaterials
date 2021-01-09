@@ -53,7 +53,7 @@ include::definitions.txt[]
 image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
-WARNING: Site under construction!! 
+WARNING: Site under construction!! Please look at the published version : {website}/index.html.
 
 :numbered!:
 //-------------------------------------
@@ -82,7 +82,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 
 [cols="1,1,4,6"]
 |===
-| {git}  | {beginner} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.slides.html[slides] link:git.pdf[PDF] 
+| {git}  | {beginner} {cogs-icon} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.slides.html[slides] link:git.pdf[PDF] 
 | Basic of {git} principles and commands
 |===
 //-------------------------------------
