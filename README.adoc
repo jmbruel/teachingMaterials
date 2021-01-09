@@ -79,7 +79,7 @@ ifndef::pdf-backend[]
 //-------------------------------------
 === Checks results and issues
 
-=== URLs image:https://github.com/FormalRequirements/requirements-handbook/workflows/Check%20Markdown%20links/badge.svg[Check Markdown links]
+=== URLs
 
 Checking URLs result (last update: {localdate}):
 
