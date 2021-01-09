@@ -24,18 +24,17 @@ include::definitions.txt[]
 :us-icon: image:united-states.png[]
 :fr-icon: image:france.png[]
 :iu: https://innopolis.university/en/[Innnopolis University]
-:iut: https://iut-blagnac.fr[IUT Blagnac]
+:iut: https://www.iut-blagnac.fr/[IUT Blagnac]
 :mobileModeling: https://jmbruel.github.io/MobileModeling
-:duplm: link:https://www.phosforea.com/ups-du/du-plm.php[DU PLM]
 :vpuml: link:http://www.visual-paradigm.com/product/vpuml[VP-UML]
 :nomagic: link:http://www.nomagic.com/[No Magic]
-:magicdraw: link:http://www.nomagic.com/products/magicdraw.html/[MagicDraw]
+:magicdraw: link:https://www.nomagic.com/products/magicdraw/[MagicDraw]
 :lucidchart: link:https://www.lucidchart.com/[LucidChart]
 :jetbrains: link:http://www.jetbrains.com/[JetBrains]
 :rubymine: link:href="http://www.jetbrains.com/ruby/[RubyMine]
 :intellij: link:href="http://www.jetbrains.com/idea/[IntelliJ]
 :pycharm: link:http://www.jetbrains.com/pycharm/[PyCharm]
-:apsio: link:http://www.iut-blagnac.fr/spip.php?mot1&id_article=2[Licence APSIO]
+:apsio: link:https://www.iut-blagnac.fr/fr/formations/lp-apsio[Licence APSIO]
 :ice: link:http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/[Master ICE]
 :ntie: Master NTIE
 :ittdublin: http://www.it-tallaght.ie/[ITT Dublin]
@@ -60,7 +59,7 @@ WARNING: Site under construction!!
 
 == Credits
 
-- Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/[www.flaticon.com] is licensed by http://creativecommons.org/licenses/by/3.0/[CC 3.0 BY]
+- Flags Icons made by https://www.freepik.com[Freepik] from https://www.flaticon.com/[https://www.flaticon.com/] is licensed by http://creativecommons.org/licenses/by/3.0/[CC 3.0 BY]
 
 ifdef::pdf-backend[]
 [appendix]
