@@ -1,0 +1,146 @@
+//---------------------------------
+// Cours LPDAM
+// (c) JMB - 2021
+//---------------------------------
+= Génie Logiciel
+J.-M. Bruel <jbruel@gmail.com>
+v21.0 {localdate}
+:imagesdir: images
+:linkcss!:
+//------------------------------------ variables de configuration
+// only used when master document
+:icons: font
+:experimental:
+:toc: left
+//:revealjs_theme: beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: night
+:revealjs_slideNumber: true
+:revealjs_showSlideNumber: all
+//:revealjs_transition: none, fade, slide, convex, concave, zoom
+:revealjs_transition: slide
+:incremental: %step
+:siteurl: https://github.com/jmbruel/teachingMaterials
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+:numbered!:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ disclaimer
+// ------------------------------------------ 
+[{intro}]
+== Avant-propos
+
+icon:mobile[] icon:tablet[] icon:laptop[] {bitlysiteurl}
+
+//== Avant de démarrer...
+
+//[{incremental}]
+//- icon:laptop[] Laptops welcome!
+//- Discussions welcome... mais avec moi!
+
+== Disclaimer
+
+Désolé...
+[{incremental}]
+- ... pour les 2 journées *intensives* [detail]#(mouais)#
+- ... pour l'*anglais* [detail]#(really?)#
+- ... de ne *pas connaître la formation* [detail]#(who cares)#
+- ... que vous soyez seulement la *3ème promo* à subir ce cours 
+- ... des conditions icon:virus[]
+
+// ------------------------------------------ 
+// ------------------------------------------ 
+[{intro}]
+== icon:book[] Content
+
+// ------------------------------------------ plan
+[{topic}]
+=== Organisation 
+
+[{incremental}]
+* *Projet et Modélisation* 
+** Project Management, git, Agilé & GitLab
+** DevOps, IC
+** IS, SYSML
+* Mise en oeuvre 
+** Project organization, Requirements, UC, BDD, traceability
+
+// ------------------------------------------ plan
+[{topic}]
+=== Organisation (suite)
+
+[{incremental}]
+* *Project Management* 
+** Git, gitlab, branches
+* Mise en oeuvre 
+** Repositories, roles, etc. 
+** README, branch management, etc.
+
+// ------------------------------------------ plan
+[{topic}]
+=== Organisation (suite)
+
+[{incremental}]
+* *Project delivery* 
+** CI, milestone, kanban, Scrum meeting, doc generation
+* Mise en oeuvre 
+** Sprint 0 completed ⇒ ready to CI
+
+// ------------------------------------------
+[{topic}]
+== Cours en ligne... icon:mobile[] icon:tablet[] icon:laptop[]
+
+{bitlysiteurl}
+
+{siteurl}
+
+// ------------------------------------------
+// ------------------------------------------
+[{intro}]
+== icon:home[] Melting pot...
+
+// ------------------------------------------
+[{topic}]
+=== ... de personnes icon:users[]
+
+:thiswidth: 10%
+- image:mireille.JPG[width={thiswidth}] Mireille 
+- image:yahn.jpg[width={thiswidth}] mailto:yahn.formanczak@gmail.com[Yahn Formanczak] 
+- image:jmb-avatar.png[width={thiswidth}] mailto:jbruel@gmail.com[Jean-Michel Bruel] (alias JMB)
+- ...[detail]#(and maybe more)#
+
+// ------------------------------------------
+[{topic}]
+=== ... de cours icon:books[]
+
+- DUT Info Blagnac
+- DUT Info Nice
+- LP APSIO Blagnac
+- Master DL Toulouse 3 Paul Sabatier
+- Tutoriel RE'18 (avec Sébastien Mosser)
+- ...[detail]#(and many more)#
+
+// ------------------------------------------
+[{topic}]
+== icon:user[] Contact
+
+- icon:envelope-o[] jbruel@gmail.com
+- icon:twitter[] icon:telegram[] @jmbruel
+- icon:slack[] lp-dam-iut-nice-20-21.slack.com
+- icon:slack[] lp-iotia2021.slack.com
+
+
