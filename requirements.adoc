@@ -136,7 +136,7 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 === Behavior-Driven Development
 
 .BDD vs TDD
-image::BDD.png[BDD vs TDD]
+image::bdd.png[BDD vs TDD]
 
 === Quality Assesment
 

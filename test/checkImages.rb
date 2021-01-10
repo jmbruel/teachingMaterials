@@ -1,5 +1,6 @@
 
 re = Regexp.new("\.adoc$") # asciidoc source file
+status = 0
 
 dir = Dir.new('.')
 dir.each  {|fn|
@@ -21,13 +22,23 @@ dir.each  {|fn|
           if (!path.match(/^http/)) and (!path.match(/^{/)) 
             if (data = /({images}).*/.match(path))
               oldpath=path
-              path=path.gsub("{images}",imagesDir)
-              
-              print (File.file?("images/"+path) ? " OK " : " NOK ") + oldpath + "\n"
+              path=path.gsub("{images}",imagesDir)              
+              if (File.file?("images/"+path))
+                print " OK " + oldpath + "\n"
+              else
+                print " NOK " + oldpath + "\n"  
+                status = 1          
+              end
             else
-              print (File.file?("images/"+path) ? " OK " : " NOK ") + path + "\n"
+              if (File.file?("images/"+path))
+                print " OK " + path + "\n"
+              else
+                print " NOK " + path + "\n"  
+                status = 1          
+              end
             end
           end
         }
     end
+    exit status
 }
