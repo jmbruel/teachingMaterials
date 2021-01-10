@@ -13,7 +13,7 @@ v21.1 {localdate}
 //beige, black, league, night, serif, simple, sky, solarized, white
 //------------------------------------ variables de configuration
 // only used when master document
-:linkcss:
+:linkcss!:
 :git-version: 2.24.3
 :icons: font
 :experimental:

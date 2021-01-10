@@ -18,6 +18,7 @@ v20.1, {localdate} (started on 2020-12-08)
 //:revealjs_transition: none, fade, slide, convex, concave, zoom
 :revealjs_transition: slide
 :customcss: jmb.css
+:linkcss!:
 
 // ------------------------------------------ definitions
 ifndef::definitions[]

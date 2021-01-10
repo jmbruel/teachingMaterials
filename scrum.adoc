@@ -14,7 +14,7 @@ v21.1 {localdate}
 //------------------------------------ variables de configuration
 // only used when master document
 ifndef::jmbtopic[]
-:linkcss:
+:linkcss!:
 :git-version: 2.24.3
 :icons: font
 :experimental:
