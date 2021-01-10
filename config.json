@@ -2,7 +2,8 @@
     "ignorePatterns": [
         { "pattern": "^http://jmbruel.github.io/teachingMaterials/" },
         { "pattern": "^http://jmbruel.github.io/teachingMaterials" },
-        { "pattern": "^http://localhost:8000" }
+        { "pattern": "^http://localhost:8000" },
+        { "pattern": "^https://github.com/chaconinc/DbConnector" }
     ]
 
 }

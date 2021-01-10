@@ -20,7 +20,7 @@ v21.1 {localdate}
 :toc: left
 :numbered:
 :status:
-:siteurl: http://jmbhome.github.io/teachingMaterials/requirements.html
+:siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
 //------------------------------------ Slides uniquement
 :topic:

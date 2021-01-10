@@ -21,7 +21,7 @@ v21.1 {localdate}
 :toc: left
 :numbered:
 :status:
-:siteurl: http://jmbhome.github.io/teachingMaterials/git.html
+:siteurl: http://jmbruel.github.io/teachingMaterials/git.html
 :bitlysiteurl: http://bit.ly/jmb-git
 //------------------------------------ Slides uniquement
 :topic:
@@ -1005,7 +1005,7 @@ Le site de référence::
 Les "hébergeurs"::
 * icon:github[] GitHub
   - {githuburl}[le site officiel]
-  - https://stories.devacademy.la/how-to-use-github-like-a-proper-human-being-1a9c895c4e13#.ewxiz5w8l[l'étiquette]
+  - https://medium.com/@takouhai/how-to-use-github-like-a-proper-human-being-1a9c895c4e13[l'étiquette]
 * gitlab
   - {gitlaburl}[le site officiel]
 Un excellent livre en ligne sur {Git}::

@@ -113,7 +113,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 
 [cols="1,8"]
 |===
-| image:https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png[width=80,link="https://wiki.eclipse.org/Papyrus_for_Education/"]
+| image:https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png[width=80,link="https://wiki.eclipse.org/Papyrus_for_Education"]
   | I am leader of the {p4e} initiative at {eclipse},
   that aims at promoting the use of the open source {Papyrus} modeler for teaching {UML}/{SysML}. Thanks {cea}, for your constant support.
 

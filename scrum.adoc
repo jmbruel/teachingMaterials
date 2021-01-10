@@ -22,7 +22,7 @@ ifndef::jmbtopic[]
 :toc: left
 :numbered:
 :status:
-:siteurl: http://jmbhome.github.io/teachingMaterials/scrum.html
+:siteurl: http://jmbruel.github.io/teachingMaterials/scrum.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
 //------------------------------------ Slides uniquement
 :topic:

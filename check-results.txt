@@ -1,6 +1,99 @@
+Dim 10 jan 2021 22:45:46 CET
+------------------------
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
 [✓] https://help.github.com/articles
 [✓] https://gist.github.com
 [✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
+
+FILE: IdeesTD.adoc
+[✓] https://idetido.wordpress.com/2014/06/04/exercice-de-story-mapping/
+
+FILE: README.adoc
+[~] http://jmbruel.github.io/teachingMaterials/
+[~] http://jmbruel.github.io/teachingMaterials
+[✓] http://github.com/jmbruel/teachingMaterials
+[✓] http://git-scm.com/
+[✓] https://innopolis.university/en/
+[✓] https://www.iut-blagnac.fr/
+[✓] https://jmbruel.github.io/MobileModeling
+[✓] https://www.iut-blagnac.fr/fr/formations/lp-apsio
+[✓] http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/
+[✓] http://www.it-tallaght.ie/
+[✓] http://www.it-tallaght.ie/index.cfm/page/course?id=128
+[✓] https://img.shields.io/badge/License-MIT-yellow.svg
+[✓] https://opensource.org/licenses/MIT
+[✓] https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png
+[✓] https://wiki.eclipse.org/Papyrus_for_Education
+[✓] https://github.com/edu
+[✓] https://www.freepik.com
+[✓] https://www.flaticon.com/
+[✓] http://creativecommons.org/licenses/by/3.0/
+[✓] http://asciidoctor.org/
+[✓] http://creativecommons.org/licenses/by-sa/3.0/
+
+FILE: about.adoc
+[✓] http://asciidoctor.org/
+[✓] http://creativecommons.org/licenses/by-sa/3.0/
+
+FILE: git.adoc
+[~] http://jmbruel.github.io/teachingMaterials/git.html
+[✓] http://bit.ly/jmb-git
+[✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
+[✓] https://www.sourcetreeapp.com/
+[✓] http://try.github.com/levels/1/challenges/1
+[✓] http://try.github.com
+[✓] http://nvie.com/posts/a-successful-git-branching-model/
+[✓] http://git-scm.com/book
+[✓] https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[✓] http://git-school.github.io/visualizing-git/
+[~] https://github.com/chaconinc/DbConnector
+[✓] http://danielkummer.github.io/git-flow-cheatsheet/
+[✓] http://osteele.com
+[✓] http://git-scm.com/
+[✓] https://medium.com/@takouhai/how-to-use-github-like-a-proper-human-being-1a9c895c4e13
+[✓] http://learngitbranching.js.org/
+[✓] http://rogerdudler.github.io/git-guide/
+[✓] https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
+[✓] https://fr.wikipedia.org/wiki/SHA-1
+
+FILE: intro.adoc
+[✓] https://github.com/jmbruel/teachingMaterials
+[✓] http://bit.ly/jmb-teaching
+
+FILE: quotes.adoc
+[✓] https://twitter.com/scottwambler/status/1141865339015315457?ref_src=twsrc%5Etfw
+[✓] https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
+[✓] https://www.researchgate.net/publication/3207453
+[✓] https://en.wikiquote.org/wiki/George_E._P._Box
+[✓] https://www.instagram.com/p/BGL5CLZQPWF/
+[✓] https://cacm.acm.org/blogs/blog-cacm/224351-empirical-answers-to-important-software-engineering-questions-part-1-of-2/fulltext
+[✓] https://books.google.fr/books?id=tdZod1zaIeQC&pg=PA76&lpg=PA76&dq=A+system+is+an+open+set+of+complementary
+[✓] https://twitter.com/CodeWisdom
+[✓] https://en.wikiquote.org/wiki/C._A._R._Hoare
+[✓] https://twitter.com/housecor/status/400479246713229312?lang=en
+
+FILE: refactoring.adoc
+[✓] http://bit.ly/jmb-cpoa
+[✓] https://refactoring.guru/refactoring
+[✓] https://refactoring.guru/fr/refactoring
+[✓] https://codegym.cc/groups/posts/196-how-refactoring-works-in-java
+[✓] http://www.socrative.com/
+
+FILE: requirements.adoc
+[~] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
+[✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
+[✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
+[✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
+
+FILE: scrum.adoc
+[~] http://jmbruel.github.io/teachingMaterials/scrum.html
+[✓] http://bit.ly/jmb-teaching
+[✓] http://www.scrum-institute.org/Burndown_Chart.php
+
+FILE: tests.adoc
+[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
