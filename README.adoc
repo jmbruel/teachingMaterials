@@ -82,13 +82,13 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 
 [cols="1,1,4,6"]
 |===
-| {git}  | {beginner} {cogs-icon} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.slides.html[slides] link:git.pdf[PDF] 
+| {git}  | {beginner} {cogs-icon} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.pdf[PDF] 
 | Basic of {git} principles and commands
 
-| Scrum  | {beginner} {graduation-icon} {fr-icon}| link:scrum.adoc[source] link:scrum.html[HTML] link:scrum.slides.html[slides] link:scrum.pdf[PDF] 
+| Scrum  | {beginner} {graduation-icon} {fr-icon}| link:scrum.adoc[source] link:scrum.html[HTML] link:scrum.pdf[PDF] 
 | Basic of the Scrum agile method
 
-| Refactoring  | {advanced} {graduation-icon} {us-icon}| link:refactoring.adoc[source] link:refactoring.html[HTML] link:refactoring.slides.html[slides] link:refactoring.pdf[PDF] 
+| Refactoring  | {advanced} {graduation-icon} {us-icon}| link:refactoring.adoc[source] link:refactoring.html[HTML]  link:refactoring.pdf[PDF] 
 | Principle of refactoring
 
 |===
