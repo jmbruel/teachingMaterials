@@ -1,0 +1,95 @@
+//---------------------------------
+// Cours sur Git
+// (c) JMB - 2014-2021
+//---------------------------------
+[[requirements]]
+= Requirements and DevOps
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbhome.github.io/teachingMaterials/requirements.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== To folow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+{siteurl}
+endif::slides[]
+
+// -----------------------------------------------------------
+== DevOps / Agile / Test / Requirements
+
+- Plan, Test, OK
+- But… towards WHAT 
+
+.Tests in DevOps
+image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-devops-culture/"]
+
+// -----------------------------------------------------------
+=== Example of approach (RE'18 tutorial)
+
+- Express requirements through User Stories
+- Express formally US acceptance tests (TDD)
+- Use CI/CD to ensure feature availability
+
+
+[appendix]
+// -----------------------------------------------------------
+== Useful links
+
+
+// -----------------------------------------------------------
+== Credits
+
+Images taken from:
+
+- https://abstracta.us/blog/devops/testing-driver-devops-culture/
+- http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
+
+ifdef::slides[]
+[{intro}]
+== *The End*
+endif::slides[]
