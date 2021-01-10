@@ -3,7 +3,7 @@
 // (c) JMB - 2014-2021
 //---------------------------------
 [[requirements]]
-= Requirements and DevOps
+= Big Picture
 J.-M. Bruel <jbruel@gmail.com>
 v21.1 {localdate}
 :imagesdir: images
@@ -56,7 +56,6 @@ ifdef::slides[]
 [{statement}]
 {bitlysiteurl}
 
-{siteurl}
 endif::slides[]
 
 // -----------------------------------------------------------
@@ -72,14 +71,119 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 === Example of approach (RE'18 tutorial)
 
 - Express requirements through User Stories
-- Express formally US acceptance tests (TDD)
+- Express formally US acceptance tests (BDD/TDD)
 - Use CI/CD to ensure feature availability
 
+=== Requirements Engineering Process
+
+- Requirements Elicitation
+- Requirements Analysis & Negociation 
+- Requirements Validation
+- Requirements Documentation
+- Requirements Management
+
+.Requirements Engineering Process (source [Sommerville & Sawyer 1997])
+image::reqProcess.png[Requirements Engineering Process]
+
+Expected properties vs. description
+
+.Expected properties vs. description (source http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf[CESAM])
+image::expectedProperties.png[Expected properties vs. description]
+
+=== Problems...
+
+- Readability?
+- Compliance with the specs?
+- Maintainability?
+- Extension to fulfil the specs?
+- Testability?
+
+== Situation overview
+
+=== Typical situation
+
+.DevOps Quality Assesment
+image::devopsQA.png[DevOps Quality Assesment]
+
+=== Who will use the product?
+
+Persona = Name + Bio + Objectives
+
+=== Writing Epics & Stories
+
+Specifying in an agile way
+
+=== Specifying with Stories
+
+EPIC = Persona + Action + Benefits
+
+Story = Epic + Acceptance criteria + Tests (+ Estimations)
+
+== Testing
+
+.Tests in DevOps
+image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-devops-culture/"]
+
+=== Test-Driven Development
+
+[{incremental}]
+. (Write  an issue about bug, with details)
+. Write a failing test (reproduce the bug)
+. Correct the bug
+. Make the test pass
+. (close the issue)
+
+=== Behavior-Driven Development
+
+.BDD vs TDD
+image::BDD.png[BDD vs TDD]
+
+=== Quality Assesment
+
+image::bonnesPratiques.png[]
+
+=== Automation (and CI)
+
+image::buildsstatus.png[]
+
+== Who's your clients?
+
+=== Your client
+
+image::MPA2018-1.png[]
+
+=== Your teacher(s)
+
+image::MPA2018-2.png[]
+
+=== At the same time!
+
+image::MPA2018.png[]
+
+=== Minimal Viable Product (usual)
+
+.Minimal Viable Product (by Henrik Kniberg)
+image::mvp-classic.png[]
+
+=== Minimal Viable Product (improved)
+
+.A more accurate representation (source https://altkomsoftware.pl/en/blog/mvp-insurance/)
+image::minimum-viable-product.png[]
+
+=== MVP & EPICS
+
+image::mvp-priorities.png[]
+
+ifdef::slides[=== !]
+
+image::mvp.png[]
 
 [appendix]
 // -----------------------------------------------------------
 == Useful links
 
+Gail Murphy's keynote at RE'2018::
+https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 
 // -----------------------------------------------------------
 == Credits
@@ -88,6 +192,9 @@ Images taken from:
 
 - https://abstracta.us/blog/devops/testing-driver-devops-culture/
 - http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
+- https://altkomsoftware.pl/en/blog/mvp-insurance/
+- http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf 
+
 
 ifdef::slides[]
 [{intro}]

@@ -9,7 +9,7 @@ STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
 
-all: *.pdf *.html
+all: index.html Makefile
 
 index.html: README.adoc
 	@echo '==> Generating index'

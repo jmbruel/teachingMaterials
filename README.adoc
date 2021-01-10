@@ -53,7 +53,7 @@ include::definitions.txt[]
 image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
-WARNING: Site under construction!! Please look at the published version : {website}/index.html.
+WARNING: Site under construction!! Please look at the published version : {website} or the {baseURL}[GitHub version].
 
 :numbered!:
 //-------------------------------------
@@ -91,11 +91,21 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Refactoring  | {advanced} {graduation-icon} {us-icon}| link:refactoring.adoc[source] link:refactoring.html[HTML]  link:refactoring.pdf[PDF] 
 | Principle of refactoring
 
+| Requirements  | {advanced} {graduation-icon} {us-icon}| link:requirements.adoc[source] link:requirements.html[HTML]  link:requirements.pdf[PDF] 
+| Principle of refactoring
+
 |===
+
 //-------------------------------------
 == List of courses
 //-------------------------------------
 
+[cols="1,1,4,6"]
+|===
+| LP-DAM-IOTIA  | {advanced} {cogs-icon} {us-icon}| link:intro.adoc[source] link:intro.html[HTML]
+| Introduction to the 2018-2021 GL course.
+
+|===
 
 [appendix]
 //-------------------------------------
