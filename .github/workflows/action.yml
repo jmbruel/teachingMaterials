@@ -30,4 +30,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g asciidoc-link-check
-    - run: asciidoc-link-check *.adoc -c config.json
+    - run: asciidoc-link-check README.adoc -c config.json
+    - run: asciidoc-link-check CONTRIBUTING.adoc -c config.json
+    - run: asciidoc-link-check git.adoc -c config.json
+    - run: asciidoc-link-check intro.adoc -c config.json
+    - run: asciidoc-link-check refactoring.adoc -c config.json
+    - run: asciidoc-link-check requirements.adoc -c config.json
