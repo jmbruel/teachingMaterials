@@ -94,6 +94,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Requirements  | {advanced} {graduation-icon} {us-icon}| link:requirements.adoc[source] link:requirements.html[HTML]  link:requirements.pdf[PDF] 
 | Principle of refactoring
 
+| Tests  | {beginner} {graduation-icon} {fr-icon}| link:tests.adoc[source] link:tests.html[HTML]  link:tests.pdf[PDF] 
+| Principle on tests
+
 |===
 
 //-------------------------------------

@@ -28,6 +28,7 @@ v21.1 {localdate}
 :statement:
 :incremental: %step
 :source:
+:slides:
 
 // Specific to GitHub
 ifdef::env-github[]

@@ -1,0 +1,206 @@
+//---------------------------------
+// Cours sur Git
+// (c) JMB - 2014-2021
+//---------------------------------
+[[tests]]
+= Tests
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== To folow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+endif::slides[]
+[{intro}]
+== Les Tests
+
+ifdef::slides[== {nbsp}]
+
+Quelle que soit la méthode de développement choisie,
+les Tests sont le *seul moyen de garantir* que le produit livré
+est *conforme aux exigences du client*.
+
+[{topic}]
+=== Tests unitaires
+
+Ce sont les plus simples.
+Et pourtant il s'agit ...
+
+[{incremental}]
+* d'oublier les approches 'manuelles'
+* d'expliciter les 'limites'
+* de traiter le 'qualitatif' et le 'quantitatif'
+
+ifdef::slides[===  !]
+
+Le programme de test fourni est :
+
+[{incremental}]
+* un outil de *détection des régressions*
+** qui pourraient intervenir à la suite d'une modification du code
+* une _documentation_ de *spécification*
+** précise et concise
+* une _documentation_ pour les *programmeurs*
+** opérationnelle
+
+[{topic}]
+=== Tests d'intégration
+
+image::titanic.jpg[width=100%]
+
+ifdef::slides[=== Test d'intégration]
+
+Plus délicat, il s'agit :
+
+[{incremental}]
+* de tester les exigences du client
+* de tester les intéractions système
+* de ne pas refaire les tests unitaires
+
+ifdef::slides[=== {nbsp}]
+
+[source,java]
+.Programme de Test du programme `JourSuivantAvecLibDate.class`
+----
+include::src/JourSuivantAvecLibDateTest.java[]
+----
+<1> nom de l'application (du programme) à tester
+<2> Process (Processus) = programme en cours d'exécution
+<3> lien vers l'écran du programme en cours d'exécution
+<4> lien vers le clavier du programme en cours d'exécution
+<5> récupération *portable* du retour à la ligne
+<6> lancement de toutes les fonctions débutant par 'test'
+<7> fonction (ré-)exécutée avant chaque fonction de test et qui exécute le programme à tester
+<8> lance le programme
+<9> se connecte à l'écran (sortie standard) du programme lancé
+<10> se connecte au clavier (entrée standard) du programme lancé
+<11> lit une ligne sur l'écran du programme lancé
+<12> écrit une ligne au clavier du programme lancé
+<13> force l'envoi de la ligne au clavier (vide le tampon de sortie)
+<14> lit une autre ligne sur l'écran du programme lancé
+
+
+[{topic}]
+=== Les tests implémentent des algorithmes simples
+
+ifndef::slides[]
+[source,java]
+.given/when/then
+endif::slides[]
+----
+public void test_dates_invalides() {
+  int[][] tabJeuDEssaiDatesInvalides = {  // <1>
+      {1,1,1581},{0,1,2013},{99,99,2099},
+      {32,1,2013},{29,2,2013},{32,3,2013},
+      {31,4,2013},{32,5,2013},{31,6,2013},
+      {32,7,2013},{32,8,2013},{31,9,2013},
+      {32,10,2013},{31,11,2013},{32,12,2013},
+      {29,2,1900},{30,2,2000}
+  } ;
+  for ( int indice = 0, taille = tabJeuDEssaiDatesInvalides.length;
+        indice < taille ;
+        indice = indice + 1){
+    int[] date = tabJeuDEssaiDatesInvalides[indice] ;
+    assertFalse(date[0]+"/"+date[1]+"/"+date[2]+" est invalide"
+    , LibDate.dateValide(date[0],date[1],date[2])); // <2> <3>
+  }
+  bilanAssertions = bilanAssertions + tabJeuDEssaiDatesInvalides.length ;
+}
+----
+<1> *given* : dans les situations suivantes
+<2> *when* : quand on vérifie la validité de la date
+<3> *then* : on doit obtenir `false`
+
+
+[{topic}]
+=== Tout est-il testable ?
+
+[{incremental}]
+- les librairies
+- les intéractions systèmes [detail]#(concurrence, etc.)#
+- les services réseau
+- les interfaces graphiques [detail]#(html, java, flash, etc.)#
+- ...
+- PEUT-ETRE PAS, mais seulement après avoir essayé!
+
+[{topic}]
+=== Toutes les manières de faire sont exploitables
+
+[{incremental}]
+- Ecrire le programme qui fasse passer les tests fournis
+- Ecrire les tests d'un programme fourni
+- Coder une fonctionnalité et ajouter le test correspondant
+- Ajouter un test et intégrer la fonctionnalité correspondante (TDD)
+- Retrouver l'équilibre du couple Programme / Programme de Test
+
+== Behavioural-Driven Development
+
+=== Principes
+
+- Étant donné : _Given_
+- Quand : _When_
+- Alors : _Then_
+- Et : _And_
+
+=== Exemple
+
+image::featureExample.png[]
+
+=== Conceils
+
+Suivre le tutoriel:
+
+ https://cucumber.io/docs/guides/10-minute-tutorial/
+
+
+
+[{topic}]
+=== Les erreurs les plus courantes
+
+http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
