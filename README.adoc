@@ -97,6 +97,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Tests  | {beginner} {graduation-icon} {fr-icon}| link:tests.adoc[source] link:tests.html[HTML]  link:tests.pdf[PDF] 
 | Principle on tests
 
+| Testing & CI  | {advanced} {cogs-icon} {fr-icon}| link:testingCI.adoc[source] link:testingCI.html[HTML]  link:testingCI.pdf[PDF] 
+| Integrate your tests in your CI
+
 |===
 
 //-------------------------------------

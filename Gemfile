@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'asciidoctor'
-gem 'asciidoctor-revealjs' # latest released version
+gem 'asciidoctor-revealjs' 
+gem 'cucumber'
 
 # for "https://github.com/asciidoctor/asciidoctor-pdf"
 # & "https://github.com/asciidoctor/asciidoctor-epub3"
