@@ -40,5 +40,5 @@ dir.each  {|fn|
           end
         }
     end
-    exit status
 }
+exit status

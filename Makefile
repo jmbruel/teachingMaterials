@@ -33,8 +33,16 @@ check: $(CHECK_RES)
 $(CHECK_RES): *.adoc
 	@echo "========================================"
 	@echo "==> checking the fix "
-	asciidoc-link-check *.adoc -c $(EXCLUDE_URLS) > $(CHECK_RES)
-	markdown-link-check *.md -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check CONTRIBUTING.adoc -c $(EXCLUDE_URLS) > $(CHECK_RES)
+	asciidoc-link-check README.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check ci.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check git.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check intro.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check refactoring.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check requirements.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check tests.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check testingCI.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+#	markdown-link-check *.md -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 
 deploy: check
 	@echo "========================================"
