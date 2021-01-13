@@ -95,18 +95,16 @@ ifdef::slides[:leveloffset: -1]
 [{topic}]
 === Pour livrer le *bon produit*
 
-:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-ifndef::slides[.Un produit qui fait ce qu'il est censé faire (crédit photo {thisref})]
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Un produit qui fait ce qu'il est censé faire]
 image::why1.png[width=50%]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 [{topic}]
 === Ce qui marche pour *1* ne marche pas nécessairement pour *100*
 
-:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-ifndef::slides[.Passage à l'échelle (crédit photo {thisref})]
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Passage à l'échelle]
 image::why2.jpg[width=50%]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 [{topic}]
 === La loi de *Murphy*
@@ -114,26 +112,23 @@ ifdef::slides[NOTE: [detail]#{thisref}#]
 [quote,Edward A. Murphy Jr.]
 Tout ce qui est susceptible de mal tourner tournera nécessairement mal.
 
-:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-ifndef::slides[.Murphy's law (crédit photo {thisref})]
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Murphy's law]
 image::why3.jpg[width=50%]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 [{topic}]
 === Différents *OS* ou différents *terminaux*
 
-:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-ifndef::slides[.Diversité (crédit photo {thisref})]
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Diversité]
 image::why4.png[width=50%]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 [{topic}]
 === Pour donner *le meilleur*
 
-:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-ifndef::slides[.Faire de son mieux (crédit photo {thisref})]
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Faire de son mieux]
 image::why5.jpg[width=50%]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 ifdef::slides[:leveloffset: 0]
 
