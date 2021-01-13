@@ -1,4 +1,4 @@
-Mer 13 jan 2021 08:51:52 CET
+Mer 13 jan 2021 09:08:05 CET
 ------------------------
 
 FILE: CONTRIBUTING.adoc
@@ -11,6 +11,8 @@ FILE: IdeesTD.adoc
 [✓] https://idetido.wordpress.com/2014/06/04/exercice-de-story-mapping/
 
 FILE: README.adoc
+[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
+[✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
 [✓] http://jmbruel.github.io/teachingMaterials/
 [✓] http://jmbruel.github.io/teachingMaterials
 [✓] http://github.com/jmbruel/teachingMaterials

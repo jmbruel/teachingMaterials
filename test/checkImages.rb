@@ -4,7 +4,7 @@ status = 0
 
 dir = Dir.new('.')
 dir.each  {|fn|
-    if ( fn =~ re ) then
+    if ( fn =~ re ) 
         print "----------------------------------\n"
         print "asciidoc source : " + fn + "\n"
         paths = []
@@ -20,7 +20,7 @@ dir.each  {|fn|
         # test that path is a file
         paths.flatten.each {|path|
           if (!path.match(/^http/)) and (!path.match(/^{/)) 
-            if (data = /({images}).*/.match(path))
+            if (/({images}).*/.match(path))
               oldpath=path
               path=path.gsub("{images}",imagesDir)              
               if (File.file?("images/"+path))
