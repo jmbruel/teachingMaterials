@@ -47,7 +47,8 @@ $(CHECK_RES): *.adoc
 deploy: check
 	@echo "========================================"
 	@echo "==> Deploy updates "
-	rake && git commit -am ":memo: Deploy updates"; git pull; git push
+#	rake && git commit -am ":memo: Deploy updates"; git pull; git push
+	rake && git commit -am ":robot: Deploy updates"; git pull; git push
 
 clean:
 	rm *.html
