@@ -83,8 +83,32 @@ FILE: refactoring.adoc
 FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[✖] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
+
+FILE: tests.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
+[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+FILE: testingCI.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[~] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+[~] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+[✓] https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc
+[✓] https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
+[✓] http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test
+[✓] http://infinitest.github.io/
+[✓] http://stackoverflow.com/questions/16411823/junit-tests-for-gui-in-java
+[✓] https://marketplace.eclipse.org/content/swingcorder
+[✓] http://www.eclemma.org/
+[✓] http://rpouiller.developpez.com/tutoriels/java/tests-unitaires-junit4/
+[✓] https://jmbruel.github.io/teaching/topics/agile.html#_les_tests
+[✓] http://www.vogella.com/tutorials/JUnit/article.html
+[✓] http://junit.org
+[✓] https://www.quora.com/How-do-you-get-developers-to-love-testing-their-code
