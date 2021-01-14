@@ -44,6 +44,10 @@ include::definitions.txt[]
 endif::definitions[]
 :baseURL: http://github.com/jmbruel/teachingMaterials
 
+[%notitle]
+== test
+image::pixabay.com.QA.jpg[background, size=cover]
+
 ifdef::slides[]
 // ------------------------------------------ disclaimer
 :numbered!:

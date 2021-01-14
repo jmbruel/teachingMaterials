@@ -23,7 +23,7 @@ FILE: README.adoc
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
 [✓] https://www.univ-cotedazur.fr
-[✖] https://lms.univ-cotedazur.fr/course/view.php?id=16573
+[~] https://lms.univ-cotedazur.fr/course/view.php?id=16573
 [✓] https://www.iut-blagnac.fr
 [✓] https://webetud.iut-blagnac.fr/course/view.php?id=352
 [✓] http://iut-blagnac.github.io/POO/
@@ -35,3 +35,93 @@ FILE: README.adoc
 [✓] http://creativecommons.org/licenses/by/3.0/
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
+
+FILE: ci.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://circleci.com/
+[✓] https://github.com/ligurio/awesome-ci
+[✓] https://about.gitlab.com/gitlab-ci/
+[✓] http://yaml.org/
+[✓] https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software
+[✓] http://cruisecontrol.sourceforge.net/
+[✓] https://travis-ci.org/
+[✓] https://jenkins.io/
+[✓] https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
+[✓] http://infinitest.github.io/
+[✓] https://docs.gitlab.com/ee/ci/lint.html
+[✓] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
+
+FILE: git.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/git.html
+[✓] http://bit.ly/jmb-git
+[✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
+[✓] https://www.sourcetreeapp.com/
+[✓] http://try.github.com/levels/1/challenges/1
+[✓] http://try.github.com
+[✓] http://nvie.com/posts/a-successful-git-branching-model/
+[✓] http://git-scm.com/book
+[✓] https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[✓] http://git-school.github.io/visualizing-git/
+[~] https://github.com/chaconinc/DbConnector
+[✓] http://danielkummer.github.io/git-flow-cheatsheet/
+[✓] http://osteele.com
+[✓] http://git-scm.com/
+[✓] https://medium.com/@takouhai/how-to-use-github-like-a-proper-human-being-1a9c895c4e13
+[✓] http://learngitbranching.js.org/
+[✓] http://rogerdudler.github.io/git-guide/
+[✓] https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
+[✓] https://fr.wikipedia.org/wiki/SHA-1
+
+FILE: intro.adoc
+[✓] https://github.com/jmbruel/teachingMaterials
+[✓] http://bit.ly/jmb-teaching
+
+FILE: refactoring.adoc
+[✓] http://bit.ly/jmb-cpoa
+[✓] https://refactoring.guru/refactoring
+[✓] https://refactoring.guru/fr/refactoring
+[✓] https://codegym.cc/groups/posts/196-how-refactoring-works-in-java
+[✓] http://www.socrative.com/
+
+FILE: requirements.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
+[✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
+[✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
+[✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
+
+FILE: tests.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
+[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+FILE: testingCI.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[~] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+[~] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+[✓] https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc
+[✓] https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
+[✓] http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test
+[✓] http://infinitest.github.io/
+[✓] http://stackoverflow.com/questions/16411823/junit-tests-for-gui-in-java
+[✓] https://marketplace.eclipse.org/content/swingcorder
+[✓] http://www.eclemma.org/
+[✓] http://rpouiller.developpez.com/tutoriels/java/tests-unitaires-junit4/
+[✓] https://jmbruel.github.io/teaching/topics/agile.html#_les_tests
+[✓] http://www.vogella.com/tutorials/JUnit/article.html
+[✓] http://junit.org
+[✓] https://www.quora.com/How-do-you-get-developers-to-love-testing-their-code
+
+FILE: qualityAssessment.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] http://github.com/jmbruel/teachingMaterials
+[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
+[✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
+[✓] https://img.shields.io/badge/License-MIT-yellow.svg
+[✓] https://opensource.org/licenses/MIT
