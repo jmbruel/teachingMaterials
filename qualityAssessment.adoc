@@ -1,0 +1,92 @@
+//---------------------------------
+// Course on Quality Assessment
+// (c) JMB - 2021
+//---------------------------------
+= Quality Assessment
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+:baseURL: http://github.com/jmbruel/teachingMaterials
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== To folow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+// --------------------------------------- Plan
+[{intro}]
+== Plan
+
+[ToDo]
+endif::slides[]
+
+== Technical Debt
+
+Software Engineering term for _Procrastination_!
+
+image::techDebt.png[width=20%]
+
+== Commit messages
+
+Have the same policy in the project:
+
+- `[Fix|Feature|...] [Issue_Number]: Sentence with Capital letter and verb for the first word.``
+- image:commitMessagesIcons.png[width=50%]
+
+== Use badges
+
+image:{baseURL}/workflows/Checks/badge.svg[Checks] 
+image:{baseURL}/workflows/Tests/badge.svg[Tests] 
+image:https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c[link="https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade"]
+image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
+
+
+ifdef::slides[== !]
+
+[{intro}]
+== *The End* {nbsp}{nbsp}{nbsp}(for now)
+
+endif::slides[]

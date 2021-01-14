@@ -42,6 +42,7 @@ $(CHECK_RES): *.adoc
 	asciidoc-link-check requirements.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 	asciidoc-link-check tests.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 	asciidoc-link-check testingCI.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check qualityAssessment.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 #	markdown-link-check *.md -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 
 deploy: check index.html

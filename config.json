@@ -4,7 +4,8 @@
         { "pattern": "^https://github.com/chaconinc/DbConnector" },
         { "pattern": "^https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/"},
         { "pattern": "^http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/"},
-        { "pattern": "^https://abstracta.us/blog/devops/testing-driver-devops-culture/"}
+        { "pattern": "^https://abstracta.us/blog/devops/testing-driver-devops-culture/"},
+        { "pattern": "^https://lms.univ-cotedazur.fr"}
     ]
 
 }
