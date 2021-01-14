@@ -44,7 +44,7 @@ $(CHECK_RES): *.adoc
 	asciidoc-link-check testingCI.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 #	markdown-link-check *.md -c $(EXCLUDE_URLS) >> $(CHECK_RES)
 
-deploy: check
+deploy: check index.html
 	@echo "========================================"
 	@echo "==> Deploy updates "
 #	rake && git commit -am ":memo: Deploy updates"; git pull; git push

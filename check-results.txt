@@ -1,5 +1,3 @@
-Mer 13 jan 2021 09:08:05 CET
-------------------------
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -7,12 +5,10 @@ FILE: CONTRIBUTING.adoc
 [✓] https://gist.github.com
 [✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
 
-FILE: IdeesTD.adoc
-[✓] https://idetido.wordpress.com/2014/06/04/exercice-de-story-mapping/
-
 FILE: README.adoc
 [✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
 [✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
+[✓] https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&metric=sqale_index
 [✓] http://jmbruel.github.io/teachingMaterials/
 [✓] http://jmbruel.github.io/teachingMaterials
 [✓] http://github.com/jmbruel/teachingMaterials
@@ -26,16 +22,13 @@ FILE: README.adoc
 [✓] http://www.it-tallaght.ie/index.cfm/page/course?id=128
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] http://iut-blagnac.github.io/POO/
 [✓] https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png
 [✓] https://wiki.eclipse.org/Papyrus_for_Education
 [✓] https://github.com/edu
 [✓] https://www.freepik.com
 [✓] https://www.flaticon.com/
 [✓] http://creativecommons.org/licenses/by/3.0/
-[✓] http://asciidoctor.org/
-[✓] http://creativecommons.org/licenses/by-sa/3.0/
-
-FILE: about.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
@@ -80,18 +73,6 @@ FILE: intro.adoc
 [✓] https://github.com/jmbruel/teachingMaterials
 [✓] http://bit.ly/jmb-teaching
 
-FILE: quotes.adoc
-[✓] https://twitter.com/scottwambler/status/1141865339015315457?ref_src=twsrc%5Etfw
-[✓] https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
-[✓] https://www.researchgate.net/publication/3207453
-[✓] https://en.wikiquote.org/wiki/George_E._P._Box
-[✓] https://www.instagram.com/p/BGL5CLZQPWF/
-[✓] https://cacm.acm.org/blogs/blog-cacm/224351-empirical-answers-to-important-software-engineering-questions-part-1-of-2/fulltext
-[✓] https://books.google.fr/books?id=tdZod1zaIeQC&pg=PA76&lpg=PA76&dq=A+system+is+an+open+set+of+complementary
-[✓] https://twitter.com/CodeWisdom
-[✓] https://en.wikiquote.org/wiki/C._A._R._Hoare
-[✓] https://twitter.com/housecor/status/400479246713229312?lang=en
-
 FILE: refactoring.adoc
 [✓] http://bit.ly/jmb-cpoa
 [✓] https://refactoring.guru/refactoring
@@ -102,41 +83,8 @@ FILE: refactoring.adoc
 FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[✓] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✖] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
-
-FILE: scrum.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/scrum.html
-[✓] http://bit.ly/jmb-teaching
-[✓] http://www.scrum-institute.org/Burndown_Chart.php
-
-FILE: test.adoc
-No hyperlinks found!
-
-
-FILE: testingCI.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
-[✓] http://bit.ly/jmb-teaching
-[~] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
-[~] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
-[✓] https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc
-[✓] https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
-[✓] http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test
-[✓] http://infinitest.github.io/
-[✓] http://stackoverflow.com/questions/16411823/junit-tests-for-gui-in-java
-[✓] https://marketplace.eclipse.org/content/swingcorder
-[✓] http://www.eclemma.org/
-[✓] http://rpouiller.developpez.com/tutoriels/java/tests-unitaires-junit4/
-[✓] https://jmbruel.github.io/teaching/topics/agile.html#_les_tests
-[✓] http://www.vogella.com/tutorials/JUnit/article.html
-[✓] http://junit.org
-[✓] https://www.quora.com/How-do-you-get-developers-to-love-testing-their-code
-
-FILE: tests.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
-[✓] http://bit.ly/jmb-teaching
-[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
-[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
