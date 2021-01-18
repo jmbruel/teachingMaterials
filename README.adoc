@@ -114,7 +114,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | https://www.univ-cotedazur.fr[LP-DAM-IOTIA] : https://lms.univ-cotedazur.fr/course/view.php?id=16573[TLEDAM11]  | {advanced} {cogs-icon} {us-icon}| link:intro.adoc[source] link:intro.html[HTML]
 | Introduction to Software Engineering | since 2018
 
-| https://www.iut-blagnac.fr[DUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=352[BCOO (M2105)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
+| https://www.iut-blagnac.fr[DUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=352[BCOO (M2104)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
 | Introduction to OO design (UML) | since 2008
 
 |===

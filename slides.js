@@ -10,4 +10,4 @@ module.exports = {
 ${node.getContent()}
 </body>`,
   image: (node) => `<div class="image ${node.getRoles().join(' ')}"><img src="${node.getImageUri(node.getAttribute('target'))}"/></div>`
-}
+};

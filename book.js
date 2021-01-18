@@ -18,4 +18,4 @@ module.exports = {
   ${node.getContent()}
   </body>`,
     image: (node) => `<img class="image ${node.getRoles().join(' ')}" src="${node.getImageUri(node.getAttribute('target'))}"/>`
-  }
+  };
