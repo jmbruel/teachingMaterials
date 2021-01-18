@@ -1,4 +1,4 @@
-Lun 18 jan 2021 18:49:57 CET
+Lun 18 jan 2021 18:53:39 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
