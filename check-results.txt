@@ -1,13 +1,10 @@
-Lun 18 jan 2021 18:26:29 CET
+Lun 18 jan 2021 18:49:57 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
 [✓] https://help.github.com/articles
 [✓] https://gist.github.com
 [✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
-
-FILE: IdeesTD.adoc
-[✓] https://idetido.wordpress.com/2014/06/04/exercice-de-story-mapping/
 
 FILE: README.adoc
 [✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
@@ -37,10 +34,6 @@ FILE: README.adoc
 [✓] https://www.freepik.com
 [✓] https://www.flaticon.com/
 [✓] http://creativecommons.org/licenses/by/3.0/
-[✓] http://asciidoctor.org/
-[✓] http://creativecommons.org/licenses/by-sa/3.0/
-
-FILE: about.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
@@ -77,18 +70,6 @@ FILE: qualityAssessment.adoc
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
 
-FILE: quotes.adoc
-[✓] https://twitter.com/scottwambler/status/1141865339015315457?ref_src=twsrc%5Etfw
-[✓] https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html
-[✓] https://www.researchgate.net/publication/3207453
-[✓] https://en.wikiquote.org/wiki/George_E._P._Box
-[✓] https://www.instagram.com/p/BGL5CLZQPWF/
-[✓] https://cacm.acm.org/blogs/blog-cacm/224351-empirical-answers-to-important-software-engineering-questions-part-1-of-2/fulltext
-[✓] https://books.google.fr/books?id=tdZod1zaIeQC&pg=PA76&lpg=PA76&dq=A+system+is+an+open+set+of+complementary
-[✓] https://twitter.com/CodeWisdom
-[✓] https://en.wikiquote.org/wiki/C._A._R._Hoare
-[✓] https://twitter.com/housecor/status/400479246713229312?lang=en
-
 FILE: refactoring.adoc
 [✓] http://bit.ly/jmb-cpoa
 [✓] https://refactoring.guru/refactoring
@@ -104,25 +85,6 @@ FILE: requirements.adoc
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
-
-FILE: scrum.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/scrum.html
-[✓] http://bit.ly/jmb-teaching
-[✓] http://www.scrum-institute.org/Burndown_Chart.php
-
-FILE: sprintQA.adoc
-[✓] https://github.com/xblanc33/QualiteDev
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/issue
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/tache
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/doc
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/test
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/code
-[✓] https://github.com/xblanc33/QualiteDev/blob/master/release
-[✓] http://bit.ly/jmb-teaching
-
-FILE: test.adoc
-No hyperlinks found!
-
 
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
