@@ -36,3 +36,5 @@ jobs:
     - run: asciidoc-link-check intro.adoc -c config.json
     - run: asciidoc-link-check refactoring.adoc -c config.json
     - run: asciidoc-link-check requirements.adoc -c config.json
+    - run: asciidoc-link-check test.adoc -c config.json
+    - run: asciidoc-link-check testingCI.adoc -c config.json

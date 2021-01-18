@@ -100,6 +100,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Testing & CI  | {advanced} {cogs-icon} {fr-icon}| link:testingCI.adoc[source] link:testingCI.html[HTML]  link:testingCI.pdf[PDF] 
 | Integrate your tests in your CI
 
+| Sprint Quality Assessment  | {beginner} {cogs-icon} {us-icon}/{fr-icon}| link:sprintQA.adoc[source] link:sprintQA.html[HTML]  link:sprintQA.pdf[PDF] 
+| Integrate your tests in your CI
+
 |===
 
 //-------------------------------------
@@ -161,11 +164,10 @@ endif::[]
 //-------------------------------------
 == Contributing
 
-If you want to contribute, read link:CONTRIBUTING.adoc[this].
+If you want to contribute, check this link: link:CONTRIBUTING.adoc[CONTRIBUTING.adoc].
 
 //-------------------------------------
 == About...
-htt://toto.com.out
 
 **********************************************************************
 Document made by mailto:jbruel@gmail.com[JMB] using http://asciidoctor.org/[Asciidoctor]

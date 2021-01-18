@@ -1,0 +1,59 @@
+// ------------------------------------------
+//  Created by Jean-Michel Bruel on 2020-09.
+//  Copyright (c) 2020 IRIT/U. Toulouse. All rights reserved.
+// ------------------------------------------
+= Sprint Evaluation
+Jean-Michel Bruel <jbruel@gmail.com>
+v2021.0, {localdate}
+:status: bottom
+:inclusion:
+:experimental:
+// ------------------------------------------
+:icons: font
+:imagesdir: images
+
+
+:numbered!:
+== Assessment and rating of sprints
+
+Each Sprint (week) is evaluated by a TA.
+The evaluation will address 5 criteria and will take the following form:
+
+.Example of weekly evaluation (using JS)
+image::spiderJS.png[width=60%]
+
+These 5 criteria are taken from a course on software quality from my Bordeaux colleague, Xavier Blanc (https://github.com/xblanc33/QualiteDev):
+
+WARNING: Sorry for the French in the following explanations.
+
+User values:: the way the goals have been captured (more details link:https://github.com/xblanc33/QualiteDev/blob/master/issue[here])
+
+US/Tasks:: the way Goals, US and tasks are linked and trace link:https://github.com/xblanc33/QualiteDev/blob/master/tache[here])
+
+Documentation:: Technical and user documentations (more details link:https://github.com/xblanc33/QualiteDev/blob/master/doc[here])
+
+Tests/Quality:: How well are supported/explained the verification activities (more details link:https://github.com/xblanc33/QualiteDev/blob/master/test[here]). I have integrated in this criterion a 6th thar Xavier is using, "Source code", where he evaluates quality attributes (more details link:https://github.com/xblanc33/QualiteDev/blob/master/code[here]).
+
+Build/CI/Release:: How professional and automated are the build, automated testing, deploy (more details link:https://github.com/xblanc33/QualiteDev/blob/master/release[here])
+
+== Project classical evaluation sheet
+
+Here is the provisional scale:
+
+[align="center", width="90%", cols="6,^1", options="header"]
+|==========================================================
+| Criterion | %
+| Respect for the Scrum method | 20%
+| "Professional" character of dev | 20%
+| Successive deliveries | 20%
+| Tests / Documentations / Readme / wiki | 20%
+| Code and application quality | 10%
+| Final Customer Satisfaction | 10%
+|==========================================================
+
+TIP: I advise you to add such a table in your readme and self-evaluate your project.
+
+== Useful links
+
+- The materials for the course: http://bit.ly/jmb-teaching
+- The initial course about quality development: https://github.com/xblanc33/QualiteDev
