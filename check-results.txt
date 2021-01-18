@@ -1,3 +1,4 @@
+Ven 15 jan 2021 12:20:45 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -53,29 +54,21 @@ FILE: ci.adoc
 [✓] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
 
 FILE: git.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/git.html
-[✓] http://bit.ly/jmb-git
-[✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
-[✓] https://www.sourcetreeapp.com/
-[✓] http://try.github.com/levels/1/challenges/1
-[✓] http://try.github.com
-[✓] http://nvie.com/posts/a-successful-git-branching-model/
-[✓] http://git-scm.com/book
-[✓] https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
-[✓] http://git-school.github.io/visualizing-git/
-[~] https://github.com/chaconinc/DbConnector
-[✓] http://danielkummer.github.io/git-flow-cheatsheet/
-[✓] http://osteele.com
-[✓] http://git-scm.com/
-[✓] https://medium.com/@takouhai/how-to-use-github-like-a-proper-human-being-1a9c895c4e13
-[✓] http://learngitbranching.js.org/
-[✓] http://rogerdudler.github.io/git-guide/
-[✓] https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
-[✓] https://fr.wikipedia.org/wiki/SHA-1
+No hyperlinks found!
+
 
 FILE: intro.adoc
 [✓] https://github.com/jmbruel/teachingMaterials
 [✓] http://bit.ly/jmb-teaching
+
+FILE: qualityAssessment.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] http://github.com/jmbruel/teachingMaterials
+[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
+[✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
+[✓] https://img.shields.io/badge/License-MIT-yellow.svg
+[✓] https://opensource.org/licenses/MIT
 
 FILE: refactoring.adoc
 [✓] http://bit.ly/jmb-cpoa
@@ -92,12 +85,6 @@ FILE: requirements.adoc
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
-
-FILE: tests.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
-[✓] http://bit.ly/jmb-teaching
-[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
-[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
 
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
@@ -117,11 +104,8 @@ FILE: testingCI.adoc
 [✓] http://junit.org
 [✓] https://www.quora.com/How-do-you-get-developers-to-love-testing-their-code
 
-FILE: qualityAssessment.adoc
+FILE: tests.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[✓] http://github.com/jmbruel/teachingMaterials
-[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
-[✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
-[✓] https://img.shields.io/badge/License-MIT-yellow.svg
-[✓] https://opensource.org/licenses/MIT
+[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
+[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer

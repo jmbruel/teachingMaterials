@@ -112,7 +112,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Introduction to Software Engineering | since 2018
 
 | https://www.iut-blagnac.fr[DUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=352[BCOO (M2105)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
-| Introduction to OO design (UML). | since 2008
+| Introduction to OO design (UML) | since 2008
 
 |===
 
@@ -165,6 +165,7 @@ If you want to contribute, read link:CONTRIBUTING.adoc[this].
 
 //-------------------------------------
 == About...
+htt://toto.com.out
 
 **********************************************************************
 Document made by mailto:jbruel@gmail.com[JMB] using http://asciidoctor.org/[Asciidoctor]

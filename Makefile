@@ -11,7 +11,7 @@ TEMPLATE		= ./book.js
 
 all: index.html Makefile
 
-index.html: README.adoc
+index.html: README.adoc check
 	@echo '==> Generating index'
 	$(DOCTOR) README.adoc -o index.html 
 
@@ -30,20 +30,17 @@ index.html: README.adoc
 
 check: $(CHECK_RES)
 
-$(CHECK_RES): *.adoc
+checks/%.txt: %.adoc
 	@echo "========================================"
 	@echo "==> checking the fix "
-	asciidoc-link-check CONTRIBUTING.adoc -c $(EXCLUDE_URLS) > $(CHECK_RES)
-	asciidoc-link-check README.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check ci.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check git.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check intro.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check refactoring.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check requirements.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check tests.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check testingCI.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-	asciidoc-link-check qualityAssessment.adoc -c $(EXCLUDE_URLS) >> $(CHECK_RES)
-#	markdown-link-check *.md -c $(EXCLUDE_URLS) >> $(CHECK_RES)
+	asciidoc-link-check $ -c $(EXCLUDE_URLS) $< > $@
+
+
+$(CHECK_RES): checks/*.txt
+	@echo "========================================"
+	@echo "==> checking the fix "
+	@echo `date` > $(CHECK_RES)
+	cat checks/*.txt >> $(CHECK_RES)
 
 deploy: check index.html
 	@echo "========================================"
