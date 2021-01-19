@@ -101,7 +101,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Integrate your tests in your CI
 
 | Sprint Quality Assessment  | {beginner} {cogs-icon} {us-icon}/{fr-icon}| link:sprintQA.adoc[source] link:sprintQA.html[HTML]  link:sprintQA.pdf[PDF] 
-| Spider Web Evaluation (link:radaChart.html[example])
+| Spider Web Evaluation (link:radarChart.html[example])
 
 |===
 
