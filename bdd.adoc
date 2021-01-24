@@ -1,5 +1,5 @@
 //---------------------------------
-// Cours sur Git
+// Cours sur BDD
 // (c) JMB - 2014-2021
 //---------------------------------
 = Behavioral-Driven Development
@@ -86,6 +86,50 @@ ifdef::slides[== !]
 include::src/android.feature[]
 ----
 
+=== Angular example
+
+==== A "Getting Started" app
+
+https://github.com/petermorlion/angular-getting-started
+
+.An Angular example app
+image::angular.png[Angular App Example, width=50%,link="https://github.com/petermorlion/angular-getting-started"]
+
+==== Some feature description
+
+.Some feature example
+image::angular-feature.png[Cucumber feature]
+
+==== Running Cucumber (fail)
+
+.First run of the tests
+image::cucumber-fail.png[]
+
+==== Write Steps definitions
+
+This is code linking the assertions with the running code.
+
+.Steps definition
+[source,javascript]
+----
+import { When, Then } from 'cucumber';
+ 
+When('we request the products list', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+});
+ 
+Then('we should receive', function (dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+});
+----
+
+==== Running Cucumber (pass)
+
+.New run of the tests
+image::cucumber-pass.png[]
+
 === Remember to find a plugin for your IDE
 
 .Cucumber plugin in use in VS Code
@@ -95,6 +139,7 @@ image::android-feature.png[Feature in IDE]
 
 - https://cucumber.io/docs/guides/10-minute-tutorial/[A 10' tutorial]
 - https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[An Android example]
+- https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/[An Angular example]
 
 
 [{topic}]

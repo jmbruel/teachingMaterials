@@ -1,4 +1,4 @@
-Dim 24 jan 2021 18:07:09 CET
+Dim 24 jan 2021 23:20:50 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -51,7 +51,7 @@ FILE: ci.adoc
 [✓] https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
 [✓] http://infinitest.github.io/
 [✓] https://docs.gitlab.com/ee/ci/lint.html
-[✓] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
+[✖] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
 
 FILE: git.adoc
 No hyperlinks found!
@@ -80,7 +80,7 @@ FILE: refactoring.adoc
 FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[✓] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://bmtoolbox.net/tools/value-network/
@@ -90,8 +90,8 @@ FILE: requirements.adoc
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[~] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
-[~] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+[✖] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+[✖] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
 [✓] https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc
 [✓] https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
 [✓] http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test
