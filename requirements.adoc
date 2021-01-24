@@ -28,7 +28,7 @@ v21.1 {localdate}
 :statement:
 :incremental: %step
 :source:
-:slides:
+:slides!:
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -63,7 +63,7 @@ endif::slides[]
 == DevOps / Agile / Test / Requirements
 
 - Plan, Test, OK
-- But… towards WHAT 
+- But towards WHAT?
 
 .Tests in DevOps
 image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-devops-culture/"]
@@ -72,13 +72,13 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 === Example of approach (RE'18 tutorial)
 
 - Express requirements through User Stories
-- Express formally US acceptance tests (BDD/TDD)
+- Formally express US acceptance tests (BDD/TDD)
 - Use CI/CD to ensure feature availability
 
 === Requirements Engineering Process
 
 - Requirements Elicitation
-- Requirements Analysis & Negociation 
+- Requirements Analysis & Negotiation
 - Requirements Validation
 - Requirements Documentation
 - Requirements Management
@@ -96,14 +96,14 @@ image::expectedProperties.png[Expected properties vs. description]
 - Readability?
 - Compliance with the specs?
 - Maintainability?
-- Extension to fulfil the specs?
+- Extension to fulfill the specs?
 - Testability?
 
 == Situation overview
 
 === Typical situation
 
-.DevOps Quality Assesment
+.DevOps Quality Assessment
 image::devopsQA.png[DevOps Quality Assesment]
 
 === Who will use the product?
@@ -128,7 +128,7 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 === Test-Driven Development
 
 [{incremental}]
-. (Write  an issue about bug, with details)
+. (Write an issue about the bug, with details)
 . Write a failing test (reproduce the bug)
 . Correct the bug
 . Make the test pass
@@ -147,9 +147,9 @@ image::bonnesPratiques.png[]
 
 image::buildsstatus.png[]
 
-== Who's your clients?
+== Who are your clients?
 
-=== Your client
+=== Your client(s)
 
 image::MPA2018-1.png[]
 
@@ -179,6 +179,30 @@ ifdef::slides[=== !]
 
 image::mvp.png[]
 
+// -----------------------------------------------------------
+[.columns]
+== Back to the requirements
+
+[.column]
+--
+MOA
+
+Req = _Stakeholders Needs_
+--
+
+[.column]
+--
+MOE
+
+Req = _Systems Needs_
+--
+
+// -----------------------------------------------------------
+[.columns]
+== Stakeholders Value Networks
+
+image::svn.png[SVN, link="https://bmtoolbox.net/tools/value-network/"]
+
 [appendix]
 // -----------------------------------------------------------
 == Useful links
@@ -186,6 +210,7 @@ image::mvp.png[]
 Gail Murphy's keynote at RE'2018::
 https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 
+[appendix]
 // -----------------------------------------------------------
 == Credits
 
