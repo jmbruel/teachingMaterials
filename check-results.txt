@@ -1,4 +1,4 @@
-Mar 19 jan 2021 09:37:51 CET
+Dim 24 jan 2021 18:07:09 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -24,7 +24,7 @@ FILE: README.adoc
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
 [✓] https://www.univ-cotedazur.fr
-[~] https://lms.univ-cotedazur.fr/course/view.php?id=16573
+[✖] https://lms.univ-cotedazur.fr/course/view.php?id=16573
 [✓] https://www.iut-blagnac.fr
 [✓] https://webetud.iut-blagnac.fr/course/view.php?id=352
 [✓] http://iut-blagnac.github.io/POO/
@@ -80,9 +80,10 @@ FILE: refactoring.adoc
 FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✓] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
+[✓] https://bmtoolbox.net/tools/value-network/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
 

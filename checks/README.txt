@@ -17,7 +17,7 @@ FILE: README.adoc
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
 [✓] https://www.univ-cotedazur.fr
-[~] https://lms.univ-cotedazur.fr/course/view.php?id=16573
+[✖] https://lms.univ-cotedazur.fr/course/view.php?id=16573
 [✓] https://www.iut-blagnac.fr
 [✓] https://webetud.iut-blagnac.fr/course/view.php?id=352
 [✓] http://iut-blagnac.github.io/POO/

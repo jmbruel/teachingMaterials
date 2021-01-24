@@ -43,7 +43,6 @@ ifdef::env-github[]
 :cogs:
 endif::[]
 
-:slides:
 // ------------------------------------------ definitions
 ifndef::definitions[]
 include::definitions.txt[]
@@ -308,6 +307,12 @@ doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
 # TEST.
 tst = "!f() { git cap \"✅ TEST: $@\"; }; f"
 ----
+
+// ------------------------------------------ 
+ifdef::slides[=== !]
+
+.Example of emoji usage convention
+image::commitMessagesIcons.png[]
 
 // ------------------------------------------ 
 ifndef::slides[]

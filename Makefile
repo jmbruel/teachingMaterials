@@ -4,7 +4,7 @@
 EXCLUDE_URLS    = config.json
 CHECK_RES       = check-results.txt
 DOCTOR			= asciidoctor
-DOCTOR-PDF		= asciidoctor-web-pdf
+DOCTOR-PDF		= asciidoctor-pdf
 STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
