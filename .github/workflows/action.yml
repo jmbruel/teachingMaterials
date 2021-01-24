@@ -38,4 +38,4 @@ jobs:
     # - run: asciidoc-link-check requirements.adoc -c config.json
     # - run: asciidoc-link-check test.adoc -c config.json
     # - run: asciidoc-link-check testingCI.adoc -c config.json
-    - run: find . -name \*.adoc -exec asciidoc-link-check -p {} \;
+    - run: find . -name \*.adoc -exec asciidoc-link-check -c config.json {} \;
