@@ -446,7 +446,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.1 2021-01-10</span>
+<span id="revnumber">version 21.1 2021-01-24</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -474,9 +474,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_automation_and_ci">3.4. Automation (and CI)</a></li>
 </ul>
 </li>
-<li><a href="#_whos_your_clients">4. Who&#8217;s your clients?</a>
+<li><a href="#_who_are_your_clients">4. Who are your clients?</a>
 <ul class="sectlevel2">
-<li><a href="#_your_client">4.1. Your client</a></li>
+<li><a href="#_your_clients">4.1. Your client(s)</a></li>
 <li><a href="#_your_teachers">4.2. Your teacher(s)</a></li>
 <li><a href="#_at_the_same_time">4.3. At the same time!</a></li>
 <li><a href="#_minimal_viable_product_usual">4.4. Minimal Viable Product (usual)</a></li>
@@ -484,8 +484,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_mvp_epics">4.6. MVP &amp; EPICS</a></li>
 </ul>
 </li>
+<li><a href="#_back_to_the_requirements">5. Back to the requirements</a></li>
+<li><a href="#_stakeholders_value_networks">6. Stakeholders Value Networks</a></li>
 <li><a href="#_useful_links">Appendix A: Useful links</a></li>
-<li><a href="#_credits">5. Credits</a></li>
+<li><a href="#_credits">Appendix B: Credits</a></li>
 </ul>
 </div>
 </div>
@@ -499,7 +501,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Plan, Test, OK</p>
 </li>
 <li>
-<p>But… towards WHAT</p>
+<p>But towards WHAT?</p>
 </li>
 </ul>
 </div>
@@ -517,7 +519,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Express requirements through User Stories</p>
 </li>
 <li>
-<p>Express formally US acceptance tests (BDD/TDD)</p>
+<p>Formally express US acceptance tests (BDD/TDD)</p>
 </li>
 <li>
 <p>Use CI/CD to ensure feature availability</p>
@@ -533,7 +535,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Requirements Elicitation</p>
 </li>
 <li>
-<p>Requirements Analysis &amp; Negociation</p>
+<p>Requirements Analysis &amp; Negotiation</p>
 </li>
 <li>
 <p>Requirements Validation</p>
@@ -576,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Maintainability?</p>
 </li>
 <li>
-<p>Extension to fulfil the specs?</p>
+<p>Extension to fulfill the specs?</p>
 </li>
 <li>
 <p>Testability?</p>
@@ -595,7 +597,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="images/devopsQA.png" alt="DevOps Quality Assesment">
 </div>
-<div class="title">Figure 4. DevOps Quality Assesment</div>
+<div class="title">Figure 4. DevOps Quality Assessment</div>
 </div>
 </div>
 <div class="sect2">
@@ -635,7 +637,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>(Write  an issue about bug, with details)</p>
+<p>(Write an issue about the bug, with details)</p>
 </li>
 <li>
 <p>Write a failing test (reproduce the bug)</p>
@@ -656,7 +658,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h3 id="_behavior_driven_development">3.2. Behavior-Driven Development</h3>
 <div class="imageblock">
 <div class="content">
-<img src="images/BDD.png" alt="BDD vs TDD">
+<img src="images/bdd.png" alt="BDD vs TDD">
 </div>
 <div class="title">Figure 6. BDD vs TDD</div>
 </div>
@@ -680,10 +682,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_whos_your_clients">4. Who&#8217;s your clients?</h2>
+<h2 id="_who_are_your_clients">4. Who are your clients?</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_your_client">4.1. Your client</h3>
+<h3 id="_your_clients">4.1. Your client(s)</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/MPA2018-1.png" alt="MPA2018 1">
@@ -739,6 +741,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
+<div class="sect1 columns">
+<h2 id="_back_to_the_requirements">5. Back to the requirements</h2>
+<div class="sectionbody">
+<div class="openblock column">
+<div class="content">
+<div class="paragraph">
+<p>MOA</p>
+</div>
+<div class="paragraph">
+<p>Req = <em>Stakeholders Needs</em></p>
+</div>
+</div>
+</div>
+<div class="openblock column">
+<div class="content">
+<div class="paragraph">
+<p>MOE</p>
+</div>
+<div class="paragraph">
+<p>Req = <em>Systems Needs</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 columns">
+<h2 id="_stakeholders_value_networks">6. Stakeholders Value Networks</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://bmtoolbox.net/tools/value-network/"><img src="images/svn.png" alt="SVN"></a>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_useful_links">Appendix A: Useful links</h2>
 <div class="sectionbody">
@@ -753,7 +790,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_credits">5. Credits</h2>
+<h2 id="_credits">Appendix B: Credits</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Images taken from:</p>
@@ -779,8 +816,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.1 2021-01-10<br>
-Last updated 2021-01-10 22:20:29 +0100
+Version 21.1 2021-01-24<br>
+Last updated 2021-01-24 18:24:32 +0100
 </div>
 </div>
 </body>

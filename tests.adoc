@@ -51,7 +51,7 @@ ifdef::slides[]
 == Avant-propos
 
 [{topic}]
-== To folow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+== To follow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
 
 [{statement}]
 {bitlysiteurl}

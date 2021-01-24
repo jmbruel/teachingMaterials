@@ -2,8 +2,8 @@
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
-[~] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
-[~] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+[✖] https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+[✖] http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
 [✓] https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc
 [✓] https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
 [✓] http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test

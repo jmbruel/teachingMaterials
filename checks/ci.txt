@@ -13,4 +13,4 @@ FILE: ci.adoc
 [✓] https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
 [✓] http://infinitest.github.io/
 [✓] https://docs.gitlab.com/ee/ci/lint.html
-[✓] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
+[✖] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808

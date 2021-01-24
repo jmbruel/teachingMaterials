@@ -1,0 +1,103 @@
+//---------------------------------
+// Cours sur Git
+// (c) JMB - 2014-2021
+//---------------------------------
+= Behavioral-Driven Development
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/bdd.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== To follow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+endif::slides[]
+
+// ------------------------------------------ 
+== Principles
+
+- Given
+- When
+- Then
+- And
+
+== Examples
+
+=== No code
+
+.Review PhD feature
+image::featureExample.png[PhD Feature]
+
+
+=== Android example
+
+.An Android app (source https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[here])
+image::sample_video.gif[Android app,link="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample"]
+
+ifdef::slides[== !]
+
+.A feature for this app (source https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[here])
+[source, gherkin]
+----
+include::src/android.feature[]
+----
+
+=== Remember to find a plugin for your IDE
+
+.Cucumber plugin in use in VS Code
+image::android-feature.png[Feature in IDE]
+
+== Useful links
+
+- https://cucumber.io/docs/guides/10-minute-tutorial/[A 10' tutorial]
+- https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[An Android example]
+
+
+[{topic}]
+=== Les erreurs les plus courantes
+
+http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
