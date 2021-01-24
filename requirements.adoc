@@ -1,5 +1,5 @@
 //---------------------------------
-// Cours sur Git
+// Course on Requirements
 // (c) JMB - 2014-2021
 //---------------------------------
 [[requirements]]

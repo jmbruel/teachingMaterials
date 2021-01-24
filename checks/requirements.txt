@@ -1,0 +1,9 @@
+
+FILE: requirements.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
+[✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
+[✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
+[✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/

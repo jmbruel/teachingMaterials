@@ -1,0 +1,7 @@
+
+FILE: refactoring.adoc
+[✓] http://bit.ly/jmb-cpoa
+[✓] https://refactoring.guru/refactoring
+[✓] https://refactoring.guru/fr/refactoring
+[✓] https://codegym.cc/groups/posts/196-how-refactoring-works-in-java
+[✓] http://www.socrative.com/

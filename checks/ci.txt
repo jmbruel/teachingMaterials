@@ -1,0 +1,16 @@
+
+FILE: ci.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://circleci.com/
+[✓] https://github.com/ligurio/awesome-ci
+[✓] https://about.gitlab.com/gitlab-ci/
+[✓] http://yaml.org/
+[✓] https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software
+[✓] http://cruisecontrol.sourceforge.net/
+[✓] https://travis-ci.org/
+[✓] https://jenkins.io/
+[✓] https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
+[✓] http://infinitest.github.io/
+[✓] https://docs.gitlab.com/ee/ci/lint.html
+[✓] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808

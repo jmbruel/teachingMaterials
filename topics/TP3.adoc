@@ -1,0 +1,141 @@
+:moduleTitle: MPA
+:authorDefault:  DUT-Info-S3/M3301
+// include::lib/globals.asc[] // temporairement
+:tdnum: Sprint0
+include::../definitions.txt[]
+:weekNumber: 37
+
+:doctitle:  {moduleTitle} - Sujet {tdnum} (semaine {weekNumber})
+ifdef::prof[]
+:doctitle: {moduleTitle} - Support {tdnum} (semaine {weekNumber})
+endif::prof[]
+
+= {doctitle}
+{authorDefault}, v1.0, {localdate}
+:lang: fr
+:incremental:
+:icons: font
+:imagesdir: images
+:experimental:
+
+//----------- définitions --------------
+:sitecours: http://webetud.iut-blagnac.fr/[Support de Cours]
+:pre: Pré-Requis
+:objtd: Objectif
+:duree: Durée
+:depot: À rendre
+:lien: Lien
+:img: img
+:tuleapVersion: 6.0
+
+
+//-------------------- Warning si correction -----------
+ifdef::prof[]
+[IMPORTANT]
+.icon:graduation-cap[] Version corrigée - Support du prof
+=====
+Cette version comporte des indications pour les
+réponses aux exercices, ainsi que des consignes pour les
+enseignants.
+=====
+
+:numbered!:
+== icon:graduation-cap[] Penser à faire l'appel!
+:numbered:
+
+endif::prof[]
+
+//-------------------- Cartouche d'en-tête -----------
+[[cartouche]]
+[align="left",cols="2,10",width="90%"]
+|======================
+| {pre}		|
+1.	Je connais les concepts principaux de {scrum}
+2.  J'ai configuré mon environnement de travail (tuleap, gitlab, eclipse, etc.)
+| {objtd}	| Mettre en place les outils de documentation et de build.
+| {duree}	| *1 ou 2 séance(s)* de 1,5h (selon ce qu'il vous reste)
+|======================
+
+== Découverte du sujet de projet
+
+=== Les besoins du client
+
+Cf. fichier Projet sous Moodle.
+
+=== Déroulement
+
+Le projet se déroulera en deux _Releases_ :
+
+- V1 (deadline livraison 5 octobre soit à 2 semaines)
+- V2 (deadline livraison 26 octobre soit à 3 semaines de plus)
+
+Chaque sprint donnera lieu à la livraison d'un nouveau code
+opérationnel et convenant au client, conformément au Sprint Backlog
+qui aura été produit avec lui.
+
+=== Evaluation
+
+L'évaluation de votre projet portera bien sûr sur la qualité du produit final, mais surtout sur votre capacité à mettre en oeuvre les principes agiles dans vos 7 semaines d'activités.
+
+== Plannification des Stories, Releases et Sprints
+
+NOTE: Le Scrum Master icon:user-md[] vérifiera que l'équipe suit bien
+le plan ci-dessous et les conseils {gitlab} (cf. TP1).
+
+En prenant connaissance du sujet du projet et des besoins clients :
+
+. icon:users[] Créez toutes les User Stories
+. icon:users[] Organisez-les par priorité client (utilisez les tags si besoin)
+. icon:users[] Faites les estimations en points des User Stories
+. icon:users[] Créez et planifiez les Releases telles qu'attendues par le client
++
+NOTE: Vous devrez pour cette étape évaluer la *capacité* de l'équipe. À vous de voir
+par rapport à ce que vous vous sentez de faire dans le 1er sprint à donner une valeur
+réaliste. Pensez au nombre que vous êtes et ne soyez pas trop ambitieux le premier
+coup en vous rappelant que chaque Sprint inclut des tâches de test et de documentation.
++
+. icon:users[] Créez les Sprints (_Milestones_)
+. icon:users[] Ajoutez le Sprint 0 après avoir ajouté des Stories liées à la mise en place
+de l'infrastructure initiale
+. icon:users[] Commencez à vous demander comment vous allez occuper le Sprint 0 et créez les
+tâches associées
+. icon:user-md[] Faites valider tout ça par le prof icon:graduation-cap[]
+
+:numbered!:
+
+== Lier gitlab et eclipse
+
+Votre {eclipse} sur les machines de l'IUT doit avoir le plug-in git déjà
+intégré.
+
+Si ce n'est pas le cas ou si vous souhaitez l'installer également sur votre machine
+personnelle :
+
+. Allez dans menu:Help[Eclipse Marketplace...]
+. Cherchez `EGit`
+. Installez le plug-in
+. Ajouter un serveur de tâches
++
+WARNING: Cette association des tâches {gitlab} dans {eclipse} ne fonctionne plus depuis
+la version `11` (cf. https://marketplace.eclipse.org/content/mylyn-gitlab-connector).
++
+image:serveurMylyn0.png[width=50%]
++
+. Sélectionner le connecteur GitLab
++
+image:gitlab/serveurMylyn.png[width=50%]
++
+. Entrez comme serveur le nom de votre projet {Gitlab}
+. Entrez vos login/password
+. Constatez que les modifications dans l'un ou l'autre ({gitlab}/{eclipse}) ont
+bien des répercussions automatiquement dans l'autre.
+
+
+== Liens utiles
+
+- La doc {gitlab} : https://docs.gitlab.com/ee/README.html
+
+== Contact
+
+En cas de soucis, n'hésitez pas à poser vos questions sur le forum {discordMPA}
+ou en dernier recours à {jmb}.

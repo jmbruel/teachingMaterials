@@ -1,0 +1,4 @@
+
+FILE: intro.adoc
+[✓] https://github.com/jmbruel/teachingMaterials
+[✓] http://bit.ly/jmb-teaching

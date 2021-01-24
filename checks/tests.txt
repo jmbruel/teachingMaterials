@@ -1,0 +1,6 @@
+
+FILE: tests.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
+[✓] http://bit.ly/jmb-teaching
+[✓] https://cucumber.io/docs/guides/10-minute-tutorial/
+[✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer

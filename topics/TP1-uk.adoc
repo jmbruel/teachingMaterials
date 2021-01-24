@@ -1,0 +1,117 @@
+:moduleTitle: MAP
+:authorDefault:  DUT-Info-S3/M3301
+// include::lib/globals.asc[] // temporairement
+:tdnum: Sprint-1
+include::../definitions.txt[]
+:weekNumber: 36
+
+:doctitle:  {moduleTitle} - Project {tdnum} (semaine {weekNumber})
+ifdef::prof[]
+:doctitle: {moduleTitle} - Support {tdnum} (semaine {weekNumber})
+endif::prof[]
+
+= {doctitle}
+{authorDefault}, v1.1, {localdate}
+:lang: fr
+:incremental:
+:icons: font
+:imagesdir: images
+:experimental:
+
+//----------- définitions --------------
+:sitecours: http://webetud.iut-blagnac.fr/[Support de Cours]
+:pre: Pre-Requisite
+:objtd: Goal
+:duree: Duration
+:depot: Expected production
+:lien: Link
+:img: img
+:tuleapVersion: 6.0
+
+
+//-------------------- Warning si correction -----------
+ifdef::prof[]
+[IMPORTANT]
+.icon:graduation-cap[] Teacher Support
+=====
+This is a teacher version.
+=====
+
+endif::prof[]
+
+//-------------------- Cartouche d'en-tête -----------
+[[cartouche]]
+[align="left",cols="2,10",width="90%"]
+|======================
+| {pre}		|
+1.	I know the basics of {scrum}
+| {objtd}	| Setup the repository for future devs.
+| {duree}	| *1 or 2 session(s)* of 1,5h (depending on heat!)
+|======================
+
+
+== (Self-)Organize in groups
+
+Validate your group of students with your TD/TP teacher.
+
+NOTE: Don't rush on code, this is for later!
+
+== icon:gitlab[] Gitlab
+
+. Connect (icon:users[] all the group members)
++
+[NOTE]
+=====
+- Use your _Active Directory_ credentials.
+- If the server is off, use the classical `gitlab.com` server for now.
+=====
++
+. icon:users[] Play with the environment, menus, etc.
+. icon:users[] Désign a Scrum Master icon:user-md[] (at least for this practical work)
+. icon:user-md[] Scrum Master create a repository with this naming protocol: `MPA2019-G1[A|B][1|2|3]`.
+  Where A or B is your TP group,
+  followed by a group number (don't choose yourself!)
+. icon:user-md[] Scrum Master add the other team members in the project,
+as well as {jmb} as a Product Owner icon:male[].
++
+NOTE: We will use {discordMPA} as a forum. This will be the official mean of communication with the ProductOwner.
++
+. Detail the project properties
+. Start a `README.adoc` or `README.md` for your project.
+. Check that your project uses the (menu:Issues[Boards]) Agile option
++
+image:gitlab/boards.png[width=50%]
+
+== Planning of Stories, Releases & Sprints
+
+NOTE: The Scrum Master icon:user-md[] will follow the {scrum} process (advices available https://about.gitlab.com/features/issueboard/[here]).
+
+WARNING: This Sprint -1 is special because all these steps are done once
+in a real team.
+
+Play with the tools with a very simple "HelloWorld" program (Java, C, ...):
+
+. icon:users[] Create some User Stories
+. icon:users[] Organize them by client' priority
+. icon:users[] Estimate their values
+. icon:users[] Create and plan a release
++
+NOTE: You don't know yet your velocity, estimate it (1/3 of the "manpower")
++
+. icon:users[] Create Sprints
+. icon:users[] Add a Sprint 0 after adding to the product backlog Stories
+dedicated to the initial infrastructure
+. icon:users[] Create the tasks for this Sprint
+. icon:user-md[] Make me icon:graduation-cap[] validate your work
+
+== Coding and release
+
+. icon:users[] Code the HelloWorld app following the identified tasks
+. icon:users[] Realize at least one test and a minimal documentation (e.g. {javadoc})
+. icon:users[] Update the tasks status (Doing/Done/...)
+. The Scrum Master icon:user-md[] check that everybody follow the principles
+
+== To go a step further
+
+Start thinking how you are going to build your application
+(Makefile, {ant}, etc.), if the summer break has not completely wiped out your neurones...

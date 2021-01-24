@@ -1,0 +1,9 @@
+== About...
+
+**********************************************************************
+Document made by mailto:jbruel@gmail.com[JMB] using http://asciidoctor.org/[Asciidoctor]
+(version `2.0.12`) from 'Dan Alen'. 'Licence Creative Commons'.
+image:icons/88x31.png["Licence Creative
+Commons",style="border-width:0",link="http://creativecommons.org/licenses/by-sa/3.0/"]
+http://creativecommons.org/licenses/by-sa/3.0/[licence Creative Commons Paternité - Partage à l&#39;Identique 3.0 non transposé].
+**********************************************************************

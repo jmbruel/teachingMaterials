@@ -1,0 +1,6 @@
+
+FILE: CONTRIBUTING.adoc
+[✓] https://github.com/jmbruel/teaching
+[✓] https://help.github.com/articles
+[✓] https://gist.github.com
+[✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
