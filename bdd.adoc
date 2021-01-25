@@ -238,7 +238,7 @@ Scenario Outline: eating
 
 == Language support
 
-WARNING: Don't forget the `# language: fr`
+WARNING: Don't forget the `# language: fr`!
 
 .Example of feature in French (link:french.feature[source])
 image::french-feature.png[French feature,width=80%,pdfwidth=50%]
