@@ -29,7 +29,6 @@ v21.1 {localdate}
 :source:
 //:source-highlighter: coderay
 :source-highlighter: highlightjs
-:slides:
 
 // Specific to GitHub
 ifdef::env-github[]
