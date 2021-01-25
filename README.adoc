@@ -106,6 +106,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | GitHub Trick & Tips  | {advanced} {cogs-icon} {us-icon} | link:github.adoc[source] link:github.html[HTML]  link:github.pdf[PDF] 
 | Tips to use GitHub efficiently 
 
+| BDD  | {advanced} {cogs-icon} {us-icon} | link:bdd.adoc[source] link:bdd.html[HTML]  link:bdd.pdf[PDF] 
+| Tips on Behavioral-Driven Development
+
 |===
 
 //-------------------------------------

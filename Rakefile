@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'cucumber'
+require 'cucumber/rake/task'
+
 task default: %w[test]
 
 task deploy: [:test, :check]
@@ -17,4 +21,9 @@ end
 
 rule '.html' => ['.adoc'] do |t|
   sh "asciidoctor #{t.source} -o #{t.name}"
+end
+
+
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "--format pretty" # Any valid command line option can go here.
 end

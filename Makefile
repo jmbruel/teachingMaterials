@@ -4,7 +4,8 @@
 EXCLUDE_URLS    = config.json
 CHECK_RES       = check-results.txt
 DOCTOR			= asciidoctor
-DOCTOR-PDF		= asciidoctor-pdf
+#DOCTOR-PDF		= asciidoctor-web-pdf --require $(TEMPLATE)
+DOCTOR-PDF		= asciidoctor-pdf -a pdf-backend
 STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
@@ -17,7 +18,7 @@ index.html: README.adoc check
 
 %.pdf: %.adoc
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate PDF'
-	$(DOCTOR-PDF) -a stylesheet="$(STYLE)" --require $(TEMPLATE) $<
+	$(DOCTOR-PDF) -a stylesheet="$(STYLE)"  $<
 
 %.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'

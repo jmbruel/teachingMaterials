@@ -27,6 +27,9 @@ v21.1 {localdate}
 :statement:
 :incremental: %step
 :source:
+//:source-highlighter: coderay
+:source-highlighter: highlightjs
+:slides:
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -67,18 +70,28 @@ endif::slides[]
 
 == Examples
 
-=== No code
+=== Some review activity (No code)
 
 .Review PhD feature
-image::featureExample.png[PhD Feature]
+image::featureExample.png[PhD Feature,pdfwidth=60%]
 
+=== This course materials! (No code)
+
+.Check URLs feature
+image::cheklinks-feature.png[PhD Feature,pdfwidth=60%]
 
 === Android example
 
+ifdef::pdf-backend[]
+.An Android app (source https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[here])
+image::sample_video.png[Android app,link="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample",pdfwidth=40%]
+endif::[]
+ifndef::pdf-backend[]
 .An Android app (source https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[here])
 image::sample_video.gif[Android app,link="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample"]
+endif::[]
 
-ifdef::slides[== !]
+ifdef::slides[=== !]
 
 .A feature for this app (source https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[here])
 [source, gherkin]
@@ -88,24 +101,32 @@ include::src/android.feature[]
 
 === Angular example
 
-==== A "Getting Started" app
+ifdef::slides[=== !]
+
+A "Getting Started" app
 
 https://github.com/petermorlion/angular-getting-started
 
 .An Angular example app
 image::angular.png[Angular App Example, width=50%,link="https://github.com/petermorlion/angular-getting-started"]
 
-==== Some feature description
+ifdef::slides[=== !]
+
+Some feature description
 
 .Some feature example
-image::angular-feature.png[Cucumber feature]
+image::angular-feature.png[Cucumber feature,pdfwidth=50%]
 
-==== Running Cucumber (fail)
+ifdef::slides[=== !]
+
+Running Cucumber (fail)
 
 .First run of the tests
 image::cucumber-fail.png[]
 
-==== Write Steps definitions
+ifdef::slides[=== !]
+
+Write Steps definitions
 
 This is code linking the assertions with the running code.
 
@@ -125,24 +146,109 @@ Then('we should receive', function (dataTable) {
 });
 ----
 
-==== Running Cucumber (pass)
+ifdef::slides[=== !]
+
+Running Cucumber (pass)
 
 .New run of the tests
-image::cucumber-pass.png[]
+image::cucumber-pass.png[Passing tests,width=50%,pdfwidth=30%]
 
-=== Remember to find a plugin for your IDE
+== Supported languages
+
+Ruby (origin), Java, JavaScript,
+
+- https://plugins.jetbrains.com/plugin/7212-cucumber-for-java[IntelliJ Cucumber for Java plugin]
+- https://cucumber.github.io/cucumber-eclipse/[Cucumber Eclipse plugin]
+
+== Build
+
+Make sure to integrate BDD in your build.
+
+For maven/gradle, see https://cucumber.io/docs/tools/java/#build-tools
+
+== Find a plugin for your IDE
 
 .Cucumber plugin in use in VS Code
 image::android-feature.png[Feature in IDE]
 
+Example for VS Code: https://github.com/alexkrechik/VSCucumberAutoComplete
+image:gherkin-ide.png[VS Code support,width=30%,pdfwidth=50%]
+
+== Gherkin tips
+
+=== Avoid duplication
+
+[WARNING]
+====
+[source,Gherkin]
+----
+    Given I go to the home page
+    Given I check the about page of the website 
+    Given I get the contact details
+----
+====
+
+ifdef::slides[=== !]
+
+[TIP]
+====
+[source,Gherkin]
+----
+    Given I go to the {} page
+----
+====
+
+ifdef::slides[=== !]
+
+.Generic Step definition
+[source, Java]
+----
+@Given("I go to the {string} page")
+public void i_want_to_open_page(String webpage) {
+  webpageFactory.openPage(webpage);
+}
+----
+
+=== Grouping step definitions
+
+One file for each major domain object.
+
+.Example of step definition files
+[source,shell]
+----
+EmployeeStepDefinitions.java
+EducationStepDefinitions.java
+ExperienceStepDefinitions.java
+AuthenticationStepDefinitions.java
+----
+
+== Scenario outline (template)
+
+[source,Gherkin]
+----
+Scenario Outline: eating
+  Given there are <start> cucumbers
+  When I eat <eat> cucumbers
+  Then I should have <left> cucumbers
+
+  Examples:
+    | start | eat | left |
+    |    12 |   5 |    7 |
+    |    20 |   5 |   15 |
+----
+
+== Language support
+
+WARNING: Don't forget the `# language: fr`
+
+.Example of feature in French (link:french.feature[source])
+image::french-feature.png[French feature,width=80%,pdfwidth=50%]
+
+[appendix]
 == Useful links
 
+- https://cucumber.io/[Cucumber reference site]
 - https://cucumber.io/docs/guides/10-minute-tutorial/[A 10' tutorial]
 - https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[An Android example]
 - https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/[An Angular example]
 
-
-[{topic}]
-=== Les erreurs les plus courantes
-
-http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
