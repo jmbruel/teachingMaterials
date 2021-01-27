@@ -257,3 +257,8 @@ réalisée à une date donnée.
 [{incremental}]
 Vélocité:: quantité du backlog de produit réalisée par l'équipe pendant un sprint [detail]#(calculée en points)#
 Capacité:: quantité du backlog de produit qui sera réalisée lors du prochain sprint
+
+[appendix]
+== Useful links
+
+- https://www.blogdumoderateur.com/gestion-de-projet-erreurs-a-ne-pas-commettre

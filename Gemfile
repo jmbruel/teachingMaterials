@@ -4,6 +4,7 @@ gem 'rake'
 gem 'asciidoctor'
 gem 'asciidoctor-revealjs' 
 gem 'cucumber'
+gem 'prawn-gmagick'
 
 # for "https://github.com/asciidoctor/asciidoctor-pdf"
 # & "https://github.com/asciidoctor/asciidoctor-epub3"

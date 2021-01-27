@@ -10,7 +10,7 @@ STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------
 
-all: index.html Makefile
+all: *.html *.pdf Makefile
 
 index.html: README.adoc check
 	@echo '==> Generating index'
@@ -33,7 +33,7 @@ check: $(CHECK_RES)
 
 checks/%.txt: %.adoc
 	@echo "========================================"
-	@echo "==> checking the fix "
+	@echo "==> checking the URLs "
 	asciidoc-link-check $ -c $(EXCLUDE_URLS) $< > $@
 
 
@@ -47,7 +47,7 @@ deploy: check index.html
 	@echo "========================================"
 	@echo "==> Deploy updates "
 #	rake && git commit -am ":memo: Deploy updates"; git pull; git push
-	rake && git commit -am ":robot: Deploy updates"; git pull; git push
+	rake && git commit -am "🤖 DEPLOY: last updates"; git pull; git push
 
 clean:
 	rm *.html
