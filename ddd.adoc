@@ -1,5 +1,5 @@
 //---------------------------------
-// Cours sur BDD
+// Course on BDD
 // (c) JMB - 2014-2021
 //---------------------------------
 = Domain-Driven Design
@@ -21,7 +21,7 @@ v21.1 {localdate}
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/bdd.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
-//------------------------------------ Slides uniquement
+//------------------------------------ Slides only
 :topic:
 :intro:
 :statement:
@@ -63,7 +63,7 @@ endif::slides[]
 == Principles
 
 Entity:: An object that is identified by its consistent thread of continuity.
-Value Object:: An immutable (unchangeable) object that has attributes, but no distinct identity.
+Value Object:: An immutable (unchangeable) object that has attributes but no distinct identity.
 Domain Event:: An object that is used to record a discrete event related to model activity within the system. 
 Aggregate:: A cluster of entities and value objects with defined boundaries around the group. 
 Service:: Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
