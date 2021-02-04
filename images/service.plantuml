@@ -1,0 +1,11 @@
+@startuml Service
+!include config.cfg
+!include ddd.cfg
+
+class MoneyTransfer <<Service>>
+class BankAccount
+
+MoneyTransfer -> "from" BankAccount
+MoneyTransfer -> "to" BankAccount
+
+@enduml

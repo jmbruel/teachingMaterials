@@ -3,6 +3,7 @@
 #
 EXCLUDE_URLS    = config.json
 CHECK_RES       = check-results.txt
+#DOCTOR			= asciidoctor -r asciidoctor-diagram
 DOCTOR			= asciidoctor
 #DOCTOR-PDF		= asciidoctor-web-pdf --require $(TEMPLATE)
 DOCTOR-PDF		= asciidoctor-pdf -a pdf-backend
@@ -28,6 +29,13 @@ index.html: README.adoc check
 # 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
 # 	asciidoctor-revealjs -a slides -o $@ $<
 
+images/%.svg: images/%.plantuml
+	@echo '==> Compiling plantUML files to generate SVG'
+	java -jar plantuml.jar -tsvg $<
+
+images/%.png: images/%.plantuml
+	@echo '==> Compiling plantUML files to generate SVG'
+	java -jar plantuml.jar -tpng $<
 
 check: $(CHECK_RES)
 

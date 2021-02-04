@@ -1,0 +1,12 @@
+@startuml Aggregate
+!include config.cfg
+!include ddd.cfg
+
+cloud Student {
+class Student
+class Address
+
+Student *-> Address
+}
+
+@enduml

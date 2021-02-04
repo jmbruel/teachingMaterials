@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="57px" preserveAspectRatio="none" style="width:155px;height:57px;" version="1.1" viewBox="0 0 155 57" width="155px" zoomAndPan="magnify"><defs><filter height="300%" id="f1h5sd93c0grwb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[d6181cb537bdc20c0a3007a98a56832d]
+class Student--><rect codeLine="4" fill="#C9FFC9" filter="url(#f1h5sd93c0grwb)" height="36.1328" id="Student" rx="2.5" ry="2.5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="48" x="7" y="7"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="43" x="9.5" y="23.6016">«Entity»</text><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="10" y="35.373">Student</text><!--MD5=[0f39e4cb6f03951afbf6d14bd2505654]
+class Address--><rect codeLine="5" fill="#F0F8FF" filter="url(#f1h5sd93c0grwb)" height="22" id="Address" rx="2.5" ry="2.5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="51" x="90.5" y="14"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="93.5" y="28.2402">Address</text><!--MD5=[00e992dca08112ad23f8b9656149c03e]
+link Student to Address--><path codeLine="7" d="M67.24,25 C67.24,25 74.36,25 77.33,25 " fill="none" id="Student-Address" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="90.37,25,81.37,21,85.37,25,81.37,29,90.37,25" style="stroke: #000000; stroke-width: 1.0;"/><line style="stroke: #000000; stroke-width: 1.0;" x1="85.37" x2="77.37" y1="25" y2="25"/><polygon fill="#000000" points="55.24,25,61.24,29,67.24,25,61.24,21,55.24,25" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[a423f5e75f0cb99786d99fceb658347b]
+@startuml Entity
+!include config.cfg
+!include ddd.cfg
+
+class Student <<Entity>>
+class Address
+
+Student *-> Address
+@enduml
+
+@startuml Entity
+
+hide circle
+hide empty members
+hide empty methods
+
+
+skinparam classAttributeIconSize 0
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+skinparam classAttributeIconSize 0
+
+skinparam class {
+    BackgroundColor<<Entity>> TECHNOLOGY
+    BackgroundColor<<ValueObject>> Silver
+}
+
+class Student <<Entity>>
+class Address
+
+Student *-> Address
+@enduml
+
+PlantUML version 1.2020.19(Mon Oct 12 17:10:01 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

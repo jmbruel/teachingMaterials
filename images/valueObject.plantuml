@@ -1,0 +1,9 @@
+@startuml ValueObject
+!include config.cfg
+!include ddd.cfg
+
+class Student 
+class Address <<ValueObject>>
+
+Student *-> Address
+@enduml

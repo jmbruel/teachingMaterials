@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="93px" preserveAspectRatio="none" style="width:187px;height:93px;" version="1.1" viewBox="0 0 187 93" width="187px" zoomAndPan="magnify"><defs><filter height="300%" id="f14xk66wlkq81r" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[e5d2c14ecf001bd16e44cdb6e44403d4]
+cluster Student--><path d="M14.5023,17.8508 C17.8557,12.1955 23.8539,11.8721 26.6946,18.3653 C29.4397,11.8449 34.6368,9.1755 40.133,15.4832 C43.8148,10.3009 47.3864,9.8 51.0337,15.5178 C53.9279,8.8794 60.2963,7.6225 65.0351,13.4451 C69.1917,7.7435 73.0253,7.2333 77.6206,12.9622 C81.8501,7.7681 85.9866,6 90.3395,12.8317 C94.5168,7.1198 99.0823,7.6014 102.8103,13.3219 C106.3575,6.7489 111.5714,8.0203 114.9986,13.4438 C118.7612,8.9654 123.9591,8.2485 126.766,14.4925 C131.7682,9.7616 136.2915,8.8514 139.4278,16.4144 C143.633,11.1501 149.664,10.245 152.9307,17.4322 C157.3041,12.3096 161.6252,12.3515 164.8223,18.6562 C172.3985,19.414 174.7727,25.1505 170.1077,31.1053 C176.3971,32.8701 179.6928,38.7131 173.8963,44.0226 C180.4847,50.9335 177.3246,56.5343 169.4495,59.2106 C175.0293,64.6129 171.8091,70.1218 165.2798,71.3726 C161.9367,77.4182 156.9256,77.7572 152.4438,72.6876 C149.4879,79.2801 145.8067,78.7274 140.9594,74.7408 C137.6659,81.8385 133.2414,82.0751 128.2299,76.4614 C123.9494,84.1949 119.3039,82.5408 114.3668,77.1552 C110.6733,83.5579 106.1987,82.3983 102.1232,77.5716 C98.9927,83.0304 95.5698,83.8043 90.6867,79.6584 C86.5691,86.057 80.024,85.3406 77.3369,78.2433 C71.6239,85.1076 66.5434,83.9588 63.401,75.8507 C59.4909,81.3649 54.6237,80.6322 52.2671,74.3806 C49.043,81.0011 43.4738,81.1428 39.4821,75.1592 C35.0722,79.5604 29.9767,78.9872 27.5741,72.8838 C23.1555,78.5403 16.3418,77.8572 13.4102,71.1766 C7.0838,68.1838 6.0872,62.0086 12.5793,58.1954 C6,53.1772 6.4426,48.8339 12.714,43.937 C7.3392,40.2622 7.1589,35.2723 13.1108,31.9732 C6.2472,27.0508 7.887,21.4452 14.5023,17.8508 " fill="#FFFFFF" filter="url(#f14xk66wlkq81r)" style="stroke: #2F4F4F; stroke-width: 1.5;"/><text fill="#000000" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="44" x="66.5514" y="31.5147">Student</text><!--MD5=[d6181cb537bdc20c0a3007a98a56832d]
+class Student--><rect codeLine="5" fill="#F0F8FF" filter="url(#f14xk66wlkq81r)" height="22" id="Student" rx="2.5" ry="2.5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="48" x="21.0514" y="40.2744"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="42" x="24.0514" y="54.5147">Student</text><!--MD5=[0f39e4cb6f03951afbf6d14bd2505654]
+class Address--><rect codeLine="6" fill="#F0F8FF" filter="url(#f14xk66wlkq81r)" height="22" id="Address" rx="2.5" ry="2.5" style="stroke: #2F4F4F; stroke-width: 1.5;" width="51" x="104.5514" y="40.2744"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="107.5514" y="54.5147">Address</text><!--MD5=[00e992dca08112ad23f8b9656149c03e]
+link Student to Address--><path codeLine="8" d="M81.2914,51.2744 C81.2914,51.2744 88.4114,51.2744 91.3814,51.2744 " fill="none" id="Student-Address" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="104.4214,51.2744,95.4214,47.2744,99.4214,51.2744,95.4214,55.2744,104.4214,51.2744" style="stroke: #000000; stroke-width: 1.0;"/><line style="stroke: #000000; stroke-width: 1.0;" x1="99.4214" x2="91.4214" y1="51.2744" y2="51.2744"/><polygon fill="#000000" points="69.2914,51.2744,75.2914,55.2744,81.2914,51.2744,75.2914,47.2744,69.2914,51.2744" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[9c1430a0c99782fe03cdce3610ffd112]
+@startuml Aggregate
+!include config.cfg
+!include ddd.cfg
+
+cloud Student {
+class Student
+class Address
+
+Student *-> Address
+}
+
+@enduml
+
+@startuml Aggregate
+
+hide circle
+hide empty members
+hide empty methods
+
+
+skinparam classAttributeIconSize 0
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+
+
+skinparam classAttributeIconSize 0
+
+skinparam class {
+    BackgroundColor<<Entity>> TECHNOLOGY
+    BackgroundColor<<ValueObject>> Silver
+}
+
+cloud Student {
+class Student
+class Address
+
+Student *-> Address
+}
+
+@enduml
+
+PlantUML version 1.2020.19(Mon Oct 12 17:10:01 CEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

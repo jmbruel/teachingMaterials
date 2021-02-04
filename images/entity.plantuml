@@ -1,0 +1,9 @@
+@startuml Entity
+!include config.cfg
+!include ddd.cfg
+
+class Student <<Entity>>
+class Address
+
+Student *-> Address
+@enduml
