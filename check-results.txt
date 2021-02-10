@@ -1,4 +1,4 @@
-Mer 27 jan 2021 10:59:25 CET
+Mer 10 fév 2021 13:36:33 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -56,8 +56,25 @@ FILE: ci.adoc
 [✖] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
 
 FILE: git.adoc
-No hyperlinks found!
-
+[✓] http://jmbruel.github.io/teachingMaterials/git.html
+[✓] http://bit.ly/jmb-git
+[✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
+[✓] https://www.sourcetreeapp.com/
+[✓] http://try.github.com/levels/1/challenges/1
+[✓] http://try.github.com
+[✓] http://nvie.com/posts/a-successful-git-branching-model/
+[✓] http://git-scm.com/book
+[✓] https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows
+[✓] http://git-school.github.io/visualizing-git/
+[✖] https://github.com/chaconinc/DbConnector
+[✓] http://danielkummer.github.io/git-flow-cheatsheet/
+[✓] http://osteele.com
+[✓] http://git-scm.com/
+[✓] https://medium.com/@takouhai/how-to-use-github-like-a-proper-human-being-1a9c895c4e13
+[✓] http://learngitbranching.js.org/
+[✓] http://rogerdudler.github.io/git-guide/
+[✓] https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
+[✓] https://fr.wikipedia.org/wiki/SHA-1
 
 FILE: intro.adoc
 [✓] https://github.com/jmbruel/teachingMaterials

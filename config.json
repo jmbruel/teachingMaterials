@@ -6,7 +6,8 @@
         { "pattern": "^http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/" },
         { "pattern": "^https://abstracta.us/blog/devops/testing-driver-devops-culture/" },
         { "pattern": "^https://lms.univ-cotedazur.fr" },
-        { "pattern": "^https://lms.univ-cotedazur.fr/course/view.php?id=16573" }
+        { "pattern": "^https://lms.univ-cotedazur.fr/course/view.php?id=16573" },
+        { "pattern": "^https://github.com/chaconinc/DbConnector" }
     ]
 }
 
