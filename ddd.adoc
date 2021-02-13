@@ -64,41 +64,51 @@ endif::slides[]
 
 === Basic artifacts
 
-Entity:: An object that is identified by its consistent thread of continuity.
+Entity:: 
+An entity is an object identified by its consistent thread of continuity.
 
 .Entity example (in UML, using profile annotation)
 image:entity.svg[Entity] 
 
-Value Object:: An immutable (unchangeable) object that has attributes but no distinct identity.
+Value Object:: 
+A value object is an immutable (unchangeable) object.
+It has attributes but no distinct identity.
 
 .Value Object example (in UML, using profile annotation)
 image:valueObject.svg[Value Object] 
 
-Domain Event:: An object that is used to record a discrete event related to model activity within the system. 
+Domain Event:: 
+A domain object records a discrete event related to model activity within the system. 
 
-TIP: Since they model something in the past, events are normally immutable objects.
+TIP: Since they model something in the past, events are immutable objects.
 
-Aggregate:: A cluster of entities and value objects with defined boundaries around the group. 
+Aggregate:: 
+An aggregate is a cluster of entities and value objects with defined boundaries around the group. 
 
-TIP: An aggregate should have a unique root (an Entity generally), through wich all interaction with objects of the aggregate should go.
+TIP: An aggregate should have a unique root (an Entity generally), through which all interaction with objects of the aggregate should go.
 
 .Aggregate example (in UML, using profile annotation)
 image:aggregate.svg[Aggregate] 
 
-Service:: Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
+Service:: 
+Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
 
 
 .Service example (in UML, using profile annotation)
 image:service.svg[Service] 
 
 
-Repositories::  a service that uses a global interface to provide access to all entities and value objects that are within a particular aggregate collection. 
+Repositories::  
+A repository is a service that uses a global interface to provide access to all entities and value objects that are within a particular aggregate collection. 
 
-WARNING: Not to be confused with common version control (e.g., `git`) repositories
+WARNING: Not to be confused with version control (e.g., `git`) repositories
 
-Factories:: encapsulates the logic of creating complex objects and aggregates, ensuring that the client has no knowledge of the inner-workings of object manipulation.
+Factories:: 
+A factory encapsulates the logic of creating complex objects and aggregates.
+It ensures that the client ignores the inner-workings of object manipulation.
 
-Modules:: logical groupings of classes (by functionnalities rather than by implementation).
+Modules:: 
+Logical groupings of classes (by functionalities rather than by implementation).
 
 
 === Basic architecture

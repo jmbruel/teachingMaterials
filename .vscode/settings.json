@@ -1,5 +1,7 @@
 {
     "cSpell.words": [
+        "bitlysiteurl",
+        "highlightjs",
         "imagesdir",
         "link"
     ],
@@ -8,8 +10,27 @@
         "bdd",
         "express",
         "formally",
+        "highlightjs",
         "tdd",
         "tests",
         "us"
+    ],
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/ddd.adoc"
+            ],
+            "config": {
+                "audience": "general",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "neutral"
+                ],
+                "goals": [
+                    "inform"
+                ]
+            }
+        }
     ]
 }
