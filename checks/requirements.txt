@@ -4,6 +4,7 @@ FILE: requirements.adoc
 [✓] http://bit.ly/jmb-teaching
 [~] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
+[✓] https://visuresolutions.com/application-lifecycle-management-alm-tool
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
 [✓] https://bmtoolbox.net/tools/value-network/
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
