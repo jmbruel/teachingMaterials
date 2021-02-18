@@ -93,7 +93,6 @@ image:aggregate.svg[Aggregate] 
 Service:: 
 Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
 
-
 .Service example (in UML, using profile annotation)
 image:service.svg[Service] 
 

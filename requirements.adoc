@@ -91,6 +91,11 @@ Expected properties vs. description
 .Expected properties vs. description (source http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf[CESAM])
 image::expectedProperties.png[Expected properties vs. description]
 
+=== Requirements in industry = ALM
+
+(source https://visuresolutions.com/application-lifecycle-management-alm-tool[here])
+image::alm.jpg[ALM, link="https://visuresolutions.com/application-lifecycle-management-alm-tool"]
+
 === Problems...
 
 - Readability?
