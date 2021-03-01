@@ -1,0 +1,10 @@
+@startuml Aggregate
+!include config.cfg
+
+class Student
+class Address
+
+Student *-> Address
+class TitleFontStyle
+
+@enduml
