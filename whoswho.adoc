@@ -5,32 +5,18 @@
 :imagesdir: images/whoswho
 
 //------------------------------------
-== Bertrand Meyer (1950 - )
+== Martin Fowler (1963 - )
 //------------------------------------
-:ref: https://en.wikipedia.org/wiki/Bertrand_Meyer
+:ref: https://en.wikipedia.org/wiki/Martin_Fowler
 
 [cols="1,2"]
 |====
-a|image:meyer.jpg[link={ref},width={size}]
+a|image:fowler.jpg[link={ref},width={size}]
 a|
-- Design by Contract
-- Eiffel language
+- UML, Design Patterns
 - link:{ref}[WikiPedia]
 |====
 
-//------------------------------------
-== Ward Cunningham (1949 - )
-//------------------------------------
-:ref: https://en.wikipedia.org/wiki/Ward_Cunningham
-
-[cols="1,2"]
-|====
-a|image:cunningham.jpg[link={ref},width={size}]
-a|
-- Agile Manifesto
-- WiKi
-- link:{ref}[WikiPedia]
-|====
 
 //------------------------------------
 == Kent Beck (1961 - )
@@ -63,15 +49,30 @@ a|
 
 
 //------------------------------------
-== Martin Fowler (1963 - )
+== Bertrand Meyer (1950 - )
 //------------------------------------
-:ref: https://en.wikipedia.org/wiki/Martin_Fowler
+:ref: https://en.wikipedia.org/wiki/Bertrand_Meyer
 
 [cols="1,2"]
 |====
-a|image:fowler.jpg[link={ref},width={size}]
+a|image:meyer.jpg[link={ref},width={size}]
 a|
-- UML, Design Patterns
+- Design by Contract
+- Eiffel language
+- link:{ref}[WikiPedia]
+|====
+
+//------------------------------------
+== Ward Cunningham (1949 - )
+//------------------------------------
+:ref: https://en.wikipedia.org/wiki/Ward_Cunningham
+
+[cols="1,2"]
+|====
+a|image:cunningham.jpg[link={ref},width={size}]
+a|
+- Agile Manifesto
+- WiKi
 - link:{ref}[WikiPedia]
 |====
 
@@ -85,6 +86,19 @@ a|
 a|image:hoare.jpg[link={ref},width={size}]
 a|
 - Hoare Logic, CSP, Quick Sort, null reference
+- link:{ref}[WikiPedia]
+|====
+
+//------------------------------------
+== Edsger W. Dijkstra (1930 - 2002)
+//------------------------------------
+:ref: https://en.wikipedia.org/wiki/Edsger_W._Dijkstra
+
+[cols="1,2"]
+|====
+a|image:dijkstra.jpg[link={ref},width={size}]
+a|
+- Dijkstra's algorithm
 - link:{ref}[WikiPedia]
 |====
 
@@ -108,7 +122,7 @@ a|
 
 [cols="1,2"]
 |====
-a|image:vonNeumann.gif[link={ref},width={size}]
+a|image:vonNeumann.png[link={ref},width={size}]
 a|
 - Computer architecture
 - link:{ref}[WikiPedia]
