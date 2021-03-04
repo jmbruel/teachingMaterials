@@ -65,3 +65,8 @@ And the other way is to make it so complicated that there are no obvious deficie
 //-----------------
 [quote, Cory House, Twitter - 2013]
 Code is like humor. When you have to explain it, it’s bad.
+
+//-----------------
+// https://twitter.com/scottwambler/status/1141865339015315457?ref_src=twsrc%5Etfw
+[quote, Richard Feynman, supposedly]
+Good days give happiness, bad days give experiences, worst days give lessons, and best days give memories.
