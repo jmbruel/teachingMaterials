@@ -7,3 +7,6 @@ FILE: qualityAssessment.adoc
 [✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] https://pic.twitter.com/ICGb9qKnRN
+
+8 links checked.

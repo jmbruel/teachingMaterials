@@ -62,77 +62,22 @@ endif::slides[]
 // ------------------------------------------ 
 == Principles
 
-=== Basic artifacts
+Entity:: An object that is identified by its consistent thread of continuity.
 
-Entity:: 
-An entity is an object identified by its consistent thread of continuity.
+Value Object:: An immutable (unchangeable) object that has attributes but no distinct identity.
 
-.Entity example (in UML, using profile annotation)
-image:entity.svg[Entity] 
+Domain Event:: An object that is used to record a discrete event related to model activity within the system. 
 
-Value Object:: 
-A value object is an immutable (unchangeable) object.
-It has attributes but no distinct identity.
+Aggregate:: A cluster of entities and value objects with defined boundaries around the group. 
 
-.Value Object example (in UML, using profile annotation)
-image:valueObject.svg[Value Object] 
+Service:: Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
 
-Domain Event:: 
-A domain object records a discrete event related to model activity within the system. 
+Repositories::  a service that uses a global interface to provide access to all entities and value objects that are within a particular aggregate collection. 
++
+WARNING: Not be confused with common version control (e.g., `git`) repositories
 
-TIP: Since they model something in the past, events are immutable objects.
+Factories:: encapsulates the logic of creating complex objects and aggregates, ensuring that the client does not know the inner-workings of object manipulation.
 
-Aggregate:: 
-An aggregate is a cluster of entities and value objects with defined boundaries around the group. 
-
-TIP: An aggregate should have a unique root (an Entity generally), through which all interaction with objects of the aggregate should go.
-
-.Aggregate example (in UML, using profile annotation)
-image:aggregate.svg[Aggregate] 
-
-Service:: 
-Essentially, a service is an operation or form of business logic that doesn’t naturally fit within the realm of objects. 
-
-.Service example (in UML, using profile annotation)
-image:service.svg[Service] 
-
-
-Repositories::  
-A repository is a service that uses a global interface to provide access to all entities and value objects that are within a particular aggregate collection. 
-
-WARNING: Not to be confused with version control (e.g., `git`) repositories
-
-Factories:: 
-A factory encapsulates the logic of creating complex objects and aggregates.
-It ensures that the client ignores the inner-workings of object manipulation.
-
-Modules:: 
-Logical groupings of classes (by functionalities rather than by implementation).
-
-
-=== Basic architecture
-
-.Basic Architecture 
-image:dddArchitecture.svg[Architecture] 
-
-== Representing the model
-
-=== Using language
-
-=== Using code
-
-=== Using diagrams
-
-== Ubiquitous Language
-
-.Point of View
-image::6-9-pointOfView.jpg[Point of View]
-
-== Strategic design
-
-=== Bounded context
-
-=== Context maps
 
 ifdef::slides[== !]
 
@@ -141,4 +86,3 @@ ifdef::slides[== !]
 
 - The https://www.amazon.com/gp/product/0321125215?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321125215[reference book] by Eric Evans
 - https://airbrake.io/blog/software-design/domain-driven-design
-- https://blog.engineering.publicissapient.fr/2018/06/25/craft-les-patterns-tactiques-du-ddd/

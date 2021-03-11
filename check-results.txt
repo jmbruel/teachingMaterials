@@ -1,4 +1,4 @@
-Jeu 18 fév 2021 16:53:39 CET
+Mer 10 mar 2021 18:56:24 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -88,6 +88,9 @@ FILE: qualityAssessment.adoc
 [✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] https://pic.twitter.com/ICGb9qKnRN
+
+8 links checked.
 
 FILE: refactoring.adoc
 [✓] http://bit.ly/jmb-cpoa
