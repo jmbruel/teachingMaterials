@@ -1,0 +1,26 @@
+@startuml useCases
+!include config.cfg
+class UC as "UseCase" {
+  id
+  description
+}
+
+class S as "Stakeholder"
+class C as "Condition"
+class E as "Event"
+
+UC -- "primary" Actors
+UC -- "supporting" Actors
+
+UC -up- S
+
+UC -up- "pre" C
+UC -up- "postOK" C
+UC -up- "postNOK" C
+
+E -- UC
+
+UC -- UC : includes
+UC -- UC : extends
+
+@enduml

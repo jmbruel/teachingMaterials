@@ -4,7 +4,7 @@ status = 0
 
 dir = Dir.new('.')
 dir.each  {|fn|
-    if ( fn =~ re ) 
+    if ( fn =~ re ) && (fn != "whoswho.adoc")
         print "----------------------------------\n"
         print "asciidoc source : " + fn + "\n"
         paths = []
