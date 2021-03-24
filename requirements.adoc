@@ -9,8 +9,8 @@ v21.1 {localdate}
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
-:revealjs_theme: night
-//beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: blood
+//beige, black, blood, league, moon, night, serif, simple, sky, solarized, white
 //------------------------------------ variables de configuration
 // only used when master document
 :linkcss!:
@@ -22,13 +22,13 @@ v21.1 {localdate}
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
-//------------------------------------ Slides uniquement
+//------------------------------------ Slides only
 :topic:
 :intro:
 :statement:
 :incremental: %step
 :source:
-:slides!:
+:slides:
 
 // Specific to GitHub
 ifdef::env-github[]
@@ -75,6 +75,11 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 - Formally express US acceptance tests (BDD/TDD)
 - Use CI/CD to ensure feature availability
 
+=== Common situation
+
+.The way of all projects (source https://pic.twitter.com/TVlUV3cpl0[Twitter])
+image::shipIt.png[The Way, link="https://pic.twitter.com/TVlUV3cpl0"]
+
 === Requirements Engineering Process
 
 - Requirements Elicitation
@@ -83,8 +88,12 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 - Requirements Documentation
 - Requirements Management
 
+ifdef::slides[=== !]
+
 .Requirements Engineering Process (source [Sommerville & Sawyer 1997])
 image::reqProcess.png[Requirements Engineering Process]
+
+ifdef::slides[=== !]
 
 Expected properties vs. description
 
@@ -109,7 +118,7 @@ image::alm.jpg[ALM, link="https://visuresolutions.com/application-lifecycle-mana
 === Typical situation
 
 .DevOps Quality Assessment
-image::devopsQA.png[DevOps Quality Assesment]
+image::devopsQA.png[DevOps Quality Assessment]
 
 === Who will use the product?
 
@@ -144,7 +153,7 @@ image::devops-test.jpg[link="https://abstracta.us/blog/devops/testing-driver-dev
 .BDD vs TDD
 image::bdd.png[BDD vs TDD]
 
-=== Quality Assesment
+=== Quality Assessment
 
 image::bonnesPratiques.png[]
 

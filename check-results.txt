@@ -1,4 +1,4 @@
-Lun 22 mar 2021 15:39:12 CET
+Mer 24 mar 2021 14:11:57 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -103,6 +103,7 @@ FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
 [/] https://abstracta.us/blog/devops/testing-driver-devops-culture/
+[✓] https://pic.twitter.com/TVlUV3cpl0
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
 [✓] https://visuresolutions.com/application-lifecycle-management-alm-tool
 [✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
@@ -111,7 +112,7 @@ FILE: requirements.adoc
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
 
-10 links checked.
+11 links checked.
 
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html

@@ -25,9 +25,9 @@ index.html: README.adoc check
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
 	$(DOCTOR) $<
                 
-# %.slides.html: %.adoc 
-# 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
-# 	asciidoctor-revealjs -a slides -o $@ $<
+%.slides.html: %.adoc 
+	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
+	asciidoctor-revealjs -a slides -o $@ $<
 
 images/%.svg: images/%.plantuml
 	@echo '==> Compiling plantUML files to generate SVG'
