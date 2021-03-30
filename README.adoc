@@ -119,6 +119,11 @@ WARNING: Very incomplete list...
 
 [cols="3,2,2,5,2"]
 |===
+
+| https://innopolis.university/[Innopolis University] : 
+https://moodle.innopolis.university/course/view.php?id=724[Modern Application Production]  | {advanced} {cogs-icon} {us-icon}| link:https://jmbruel.github.io/InnopolisModernApplicationProduction/[Web Page] 
+| Scrum/Tests/Git/CI/... | since 2017
+
 | https://www.univ-cotedazur.fr[LP-DAM-IOTIA] : https://lms.univ-cotedazur.fr/course/view.php?id=16573[TLEDAM11]  | {advanced} {cogs-icon} {us-icon}| link:intro.adoc[source] link:intro.html[HTML]
 | Introduction to Software Engineering | since 2018
 
@@ -126,6 +131,9 @@ WARNING: Very incomplete list...
 | Introduction to OO design (UML) | since 2008
 
 |===
+
+
+
 
 [appendix]
 //-------------------------------------

@@ -18,8 +18,11 @@ FILE: README.adoc
 [✓] https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] https://innopolis.university/
+[✓] https://moodle.innopolis.university/course/view.php?id=724
+[✓] https://jmbruel.github.io/InnopolisModernApplicationProduction/
 [✓] https://www.univ-cotedazur.fr
-[✖] https://lms.univ-cotedazur.fr/course/view.php?id=16573
+[/] https://lms.univ-cotedazur.fr/course/view.php?id=16573
 [✓] https://www.iut-blagnac.fr
 [✓] https://webetud.iut-blagnac.fr/course/view.php?id=352
 [✓] http://iut-blagnac.github.io/POO/
@@ -31,3 +34,5 @@ FILE: README.adoc
 [✓] http://creativecommons.org/licenses/by/3.0/
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
+
+34 links checked.
