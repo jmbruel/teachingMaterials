@@ -8,7 +8,9 @@
         { "pattern": "^https://lms.univ-cotedazur.fr" },
         { "pattern": "^https://lms.univ-cotedazur.fr/course/view.php?id=16573" },
         { "pattern": "^https://github.com/chaconinc/DbConnector" },
-        { "pattern": "^https://www.gittip.com/imakewebthings/" }
+        { "pattern": "^https://www.gittip.com/imakewebthings/" },
+        { "pattern": "^http://www.it-tallaght.ie/index.cfm/page/course?id=128" }
+
     ]
 }
 

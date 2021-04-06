@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Jean-Michel Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
 <span id="revnumber">version 2021.0,</span>
-<span id="revdate">2021-01-18</span>
+<span id="revdate">2021-04-06</span>
 </div>
 </div>
 <div id="content">
@@ -464,8 +464,25 @@ The evaluation will address 5 criteria and will take the following form:</p>
 </div>
 <div class="title">Figure 1. Example of weekly evaluation (using JS)</div>
 </div>
-<div class="paragraph">
-<p>These 5 criteria are taken from a course on software quality from my Bordeaux colleague, Xavier Blanc (<a href="https://github.com/xblanc33/QualiteDev" class="bare">https://github.com/xblanc33/QualiteDev</a>):</p>
+<div class="sect2">
+<h3 id="_from_6_artifacts_to_5_criteria">From 6 artifacts to 5 criteria</h3>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://github.com/xblanc33/QualiteDev/"><img src="images/artifacts.svg" alt="artifacts" width="80%"></a>
+</div>
+<div class="title">Figure 2. The initial 6 artifacts (Source <a href="https://github.com/xblanc33/QualiteDev/">here</a>)</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+These artifacts come from a course on software quality from my colleague Xavier Blanc (<a href="https://github.com/xblanc33/QualiteDev" class="bare">https://github.com/xblanc33/QualiteDev</a>).
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -474,39 +491,99 @@ The evaluation will address 5 criteria and will take the following form:</p>
 <i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
-Sorry for the French in the following explanations.
+Sorry for the French in the linked explanations.
 </td>
 </tr>
 </table>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">User values</dt>
-<dd>
-<p>the way the goals have been captured (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/issue">here</a>)</p>
-</dd>
-<dt class="hdlist1">US/Tasks</dt>
-<dd>
-<p>the way Goals, US and tasks are linked and trace <a href="https://github.com/xblanc33/QualiteDev/blob/master/tache">here</a>)</p>
-</dd>
-<dt class="hdlist1">Documentation</dt>
-<dd>
+</div>
+<div class="sect2">
+<h3 id="_example_of_profiles">Example of "profiles"</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/profiles.png" alt="profiles" width="50%">
+</div>
+<div class="title">Figure 3. Examples of typical team profiles</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_values">User values</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The way the goals have been captured (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/issue">here</a>)</p>
+</li>
+<li>
+<p>Evaluated by the <em>Product Owner</em></p>
+</li>
+<li>
+<p>Should never decrease</p>
+</li>
+<li>
+<p>Sometimes very low added value (Spikes, refactoring sprints)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ustasks">US/Tasks</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The way Goals, US, and tasks are linked and traced <a href="https://github.com/xblanc33/QualiteDev/blob/master/tache">here</a>)</p>
+</li>
+<li>
+<p>Very tool-dependent (e.g., blocking issues, task lists, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>Can (should?) reach high level pretty early</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_documentation">Documentation</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>Technical and user documentations (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/doc">here</a>)</p>
-</dd>
-<dt class="hdlist1">Tests/Quality</dt>
-<dd>
-<p>How well are supported/explained the verification activities (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/test">here</a>). I have integrated in this criterion a 6th thar Xavier is using, "Source code", where he evaluates quality attributes (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/code">here</a>).</p>
-</dd>
-<dt class="hdlist1">Build/CI/Release</dt>
-<dd>
+</li>
+<li>
+<p>As much automated as possible (javadoc, <code>.md</code>/<code>.adoc</code>, &#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testsquality">Tests/Quality</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>How well are supported/explained the verification activities (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/test">here</a>)</p>
+</li>
+<li>
+<p>Clearly address/differentiate unit tests and integration tests</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_buildcirelease">Build/CI/Release</h3>
+<div class="ulist">
+<ul>
+<li>
 <p>How professional and automated are the build, automated testing, deploy (more details <a href="https://github.com/xblanc33/QualiteDev/blob/master/release">here</a>)</p>
-</dd>
-</dl>
+</li>
+<li>
+<p>Can (should?) reach high level pretty early</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_project_classical_evaluation_sheet">Project classical evaluation sheet</h2>
+<h2 id="_project_typical_evaluation_sheet">Project typical evaluation sheet</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Here is the provisional scale:</p>
@@ -564,6 +641,57 @@ I advise you to add such a table in your readme and self-evaluate your project.
 </div>
 </div>
 <div class="sect1">
+<h2 id="_useful_tips">Useful tips</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_technical_debt">Technical Debt</h3>
+<div class="paragraph">
+<p>Software Engineering term for <em>Procrastination</em>!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/techDebt.png" alt="techDebt" width="20%">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_commit_messages">Commit messages</h3>
+<div class="paragraph">
+<p>Have the same policy in the project:</p>
+</div>
+<div class="paragraph">
+<p><code>[Fix|Feature|&#8230;&#8203;] [Issue_Number]: Use a sentence with capital letter and verb for the first word.`</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/commitMessagesIcons.png" alt="commitMessagesIcons" width="50%">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_badges">Use badges</h3>
+<div class="paragraph">
+<p><span class="image"><img src="http://github.com/jmbruel/teachingMaterials/workflows/Checks/badge.svg" alt="Checks"></span>
+<span class="image"><img src="http://github.com/jmbruel/teachingMaterials/workflows/Tests/badge.svg" alt="Tests"></span>
+<span class="image"><a class="image" href="https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jmbruel/teachingMaterials&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c" alt="550a9c47c3d6426c9122765e45097a3c"></a></span>
+<span class="image"><a class="image" href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comments_in_code">Comments in code</h3>
+<div class="paragraph">
+<p>Avoid useless comments!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://pic.twitter.com/ICGb9qKnRN"><img src="images/uselessComment.png" alt="uselessComment" width="60%"></a>
+</div>
+<div class="title">Figure 4. (source : <a href="https://pic.twitter.com/ICGb9qKnRN" class="bare">https://pic.twitter.com/ICGb9qKnRN</a>)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_useful_links">Useful links</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -582,7 +710,7 @@ I advise you to add such a table in your readme and self-evaluate your project.
 <div id="footer">
 <div id="footer-text">
 Version 2021.0<br>
-Last updated 2021-01-18 13:24:24 +0100
+Last updated 2021-04-06 15:18:23 +0200
 </div>
 </div>
 </body>

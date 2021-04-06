@@ -6,7 +6,7 @@ CHECK_RES       = check-results.txt
 #DOCTOR			= asciidoctor -r asciidoctor-diagram
 DOCTOR			= asciidoctor
 #DOCTOR-PDF		= asciidoctor-web-pdf --require $(TEMPLATE)
-DOCTOR-PDF		= asciidoctor-pdf -a pdf-backend
+DOCTOR-PDF		= asciidoctor-pdf -a pdf-backend -a slides!
 STYLE			= jmb.css
 TEMPLATE		= ./book.js
 #-----------------------------------------------------

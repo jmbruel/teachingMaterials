@@ -77,7 +77,7 @@ image::techDebt.png[width=20%]
 
 Have the same policy in the project:
 
-- `[Fix|Feature|...] [Issue_Number]: Sentence with Capital letter and verb for the first word.``
+- `[Fix|Feature|...] [Issue_Number]: Use a sentence with capital letter and verb for the first word.``
 - image:commitMessagesIcons.png[width=50%]
 
 == Use badges

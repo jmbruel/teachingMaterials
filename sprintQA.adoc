@@ -8,10 +8,16 @@ v2021.0, {localdate}
 :status: bottom
 :inclusion:
 :experimental:
+:baseURL: http://github.com/jmbruel/teachingMaterials
+// ------------------------------------------
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, league, night, serif, simple, sky, solarized, white
 // ------------------------------------------
 :icons: font
 :imagesdir: images
-
+:slides:
 
 :numbered!:
 == Assessment and rating of sprints
@@ -20,23 +26,51 @@ Each Sprint (week) is evaluated by a TA.
 The evaluation will address 5 criteria and will take the following form:
 
 .Example of weekly evaluation (using JS)
-image::spiderJS.png[width=60%]
+image::spiderJS.png[width=60%,pdfwidth=90%]
 
-These 5 criteria are taken from a course on software quality from my Bordeaux colleague, Xavier Blanc (https://github.com/xblanc33/QualiteDev):
+ifdef::slides[=== From 6 artifacts to 5 criteria]
 
-WARNING: Sorry for the French in the following explanations.
+.The initial 6 artifacts (Source https://github.com/xblanc33/QualiteDev/[here])
+image::artifacts.svg[width=80%,pdfwidth=50%,link="https://github.com/xblanc33/QualiteDev/"]
 
-User values:: the way the goals have been captured (more details link:https://github.com/xblanc33/QualiteDev/blob/master/issue[here])
+NOTE: These artifacts come from a course on software quality from my colleague Xavier Blanc (https://github.com/xblanc33/QualiteDev).
 
-US/Tasks:: the way Goals, US and tasks are linked and trace link:https://github.com/xblanc33/QualiteDev/blob/master/tache[here])
+WARNING: Sorry for the French in the linked explanations.
 
-Documentation:: Technical and user documentations (more details link:https://github.com/xblanc33/QualiteDev/blob/master/doc[here])
+ifdef::slides[=== Example of "profiles"]
 
-Tests/Quality:: How well are supported/explained the verification activities (more details link:https://github.com/xblanc33/QualiteDev/blob/master/test[here]). I have integrated in this criterion a 6th thar Xavier is using, "Source code", where he evaluates quality attributes (more details link:https://github.com/xblanc33/QualiteDev/blob/master/code[here]).
+.Examples of typical team profiles
+image::profiles.png[width=50%]
 
-Build/CI/Release:: How professional and automated are the build, automated testing, deploy (more details link:https://github.com/xblanc33/QualiteDev/blob/master/release[here])
+=== User values
 
-== Project classical evaluation sheet
+- The way the goals have been captured (more details link:https://github.com/xblanc33/QualiteDev/blob/master/issue[here])
+- Evaluated by the _Product Owner_
+- Should never decrease
+- Sometimes very low added value (Spikes, refactoring sprints)
+
+=== US/Tasks
+
+- The way Goals, US, and tasks are linked and traced link:https://github.com/xblanc33/QualiteDev/blob/master/tache[here])
+- Very tool-dependent (e.g., blocking issues, task lists, ...)
+- Can (should?) reach high level pretty early
+
+=== Documentation
+
+- Technical and user documentations (more details link:https://github.com/xblanc33/QualiteDev/blob/master/doc[here])
+- As much automated as possible (javadoc, `.md`/`.adoc`, ...)
+
+=== Tests/Quality
+
+- How well are supported/explained the verification activities (more details link:https://github.com/xblanc33/QualiteDev/blob/master/test[here])
+- Clearly address/differentiate unit tests and integration tests
+
+=== Build/CI/Release
+
+- How professional and automated are the build, automated testing, deploy (more details link:https://github.com/xblanc33/QualiteDev/blob/master/release[here])
+- Can (should?) reach high level pretty early
+
+== Project typical evaluation sheet
 
 Here is the provisional scale:
 
@@ -52,6 +86,37 @@ Here is the provisional scale:
 |==========================================================
 
 TIP: I advise you to add such a table in your readme and self-evaluate your project.
+
+== Useful tips
+
+=== Technical Debt
+
+Software Engineering term for _Procrastination_!
+
+image::techDebt.png[width=20%]
+
+=== Commit messages
+
+Have the same policy in the project:
+
+`[Fix|Feature|...] [Issue_Number]: Use a sentence with capital letter and verb for the first word.``
+
+image::commitMessagesIcons.png[width=50%]
+
+=== Use badges
+
+image:{baseURL}/workflows/Checks/badge.svg[Checks] 
+image:{baseURL}/workflows/Tests/badge.svg[Tests] 
+image:https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c[link="https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade"]
+image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
+
+=== Comments in code
+
+Avoid useless comments!
+
+.(source : https://pic.twitter.com/ICGb9qKnRN)
+image::uselessComment.png[width=60%,link="https://pic.twitter.com/ICGb9qKnRN"]
+
 
 == Useful links
 
