@@ -18,6 +18,7 @@ FILE: README.adoc
 [✓] https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png
 [✓] https://innopolis.university/
 [✓] https://moodle.innopolis.university/course/view.php?id=724
 [✓] https://jmbruel.github.io/InnopolisModernApplicationProduction/
@@ -35,5 +36,5 @@ FILE: README.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
-34 links checked.
+35 links checked.
 [✖] http://www.it-tallaght.ie/index.cfm/page/course?id=128 → Status: 0

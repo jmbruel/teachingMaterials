@@ -1,4 +1,4 @@
-Mar 6 avr 2021 15:32:26 CEST
+Mar 6 avr 2021 16:04:45 CEST
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -25,6 +25,7 @@ FILE: README.adoc
 [✓] https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f
 [✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
+[✓] https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png
 [✓] https://innopolis.university/
 [✓] https://moodle.innopolis.university/course/view.php?id=724
 [✓] https://jmbruel.github.io/InnopolisModernApplicationProduction/
@@ -42,7 +43,7 @@ FILE: README.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
-34 links checked.
+35 links checked.
 [✖] http://www.it-tallaght.ie/index.cfm/page/course?id=128 → Status: 0
 
 FILE: ci.adoc
@@ -90,13 +91,11 @@ FILE: qualityAssessment.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
 [✓] http://github.com/jmbruel/teachingMaterials
-[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
 [✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
-[✓] https://img.shields.io/badge/License-MIT-yellow.svg
 [✓] https://opensource.org/licenses/MIT
 [✓] https://pic.twitter.com/ICGb9qKnRN
 
-8 links checked.
+6 links checked.
 
 FILE: refactoring.adoc
 [✓] http://bit.ly/jmb-cpoa

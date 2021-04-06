@@ -101,7 +101,7 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Integrate your tests in your CI
 
 | Sprint Quality Assessment  | {advanced} {cogs-icon} {us-icon}/{fr-icon}| link:sprintQA.adoc[source] link:sprintQA.html[HTML]  link:sprintQA.pdf[PDF] 
-| Spider Web Evaluation (link:radarChart.html[example])
+| Spider Web Evaluation (link:https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png[example])
 
 | GitHub Trick & Tips  | {advanced} {cogs-icon} {us-icon} | link:github.adoc[source] link:github.html[HTML]  link:github.pdf[PDF] 
 | Tips to use GitHub efficiently 

@@ -19,11 +19,11 @@ index.html: README.adoc check
 
 %.pdf: %.adoc
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate PDF'
-	$(DOCTOR-PDF) -a stylesheet="$(STYLE)"  $<
+	$(DOCTOR-PDF) -a stylesheet="$(STYLE)" -a toc $<
 
 %.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
-	$(DOCTOR) $<
+	$(DOCTOR) -a slides! -a toc $<
                 
 %.slides.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'
