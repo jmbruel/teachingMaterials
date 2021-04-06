@@ -45,8 +45,8 @@ all_repos.each do |repo|
       end
 
       # Store the results
-      File.open(RESULTS, "a") { |f| 
-        f.write repo + "," \
+      File.open(RESULTS, "a") { |of| 
+        of.write repo + "," \
         + firstName[0][0] + "," \
         + lastName[0][0] + "," \
         + groupNb[0][0] + "," \
@@ -54,9 +54,9 @@ all_repos.each do |repo|
         + stat[0][1] + "," \
         + stat[0][2] + ","
         if error != [] then 
-          f.write "KO\n"
+          of.write "KO\n"
         else
-          f.write "OK\n"
+          of.write "OK\n"
         end
       }
     end

@@ -47,13 +47,13 @@ image::profiles.png[width=50%]
 - The way the goals have been captured (more details link:https://github.com/xblanc33/QualiteDev/blob/master/issue[here])
 - Evaluated by the _Product Owner_
 - Should never decrease
-- Sometimes very low added value (Spikes, refactoring sprints)
+- Sometimes no, or low, added value (Spikes, refactoring sprints)
 
 === US/Tasks
 
 - The way Goals, US, and tasks are linked and traced link:https://github.com/xblanc33/QualiteDev/blob/master/tache[here])
 - Very tool-dependent (e.g., blocking issues, task lists, ...)
-- Can (should?) reach high level pretty early
+- Can (should?) reach a high level pretty early
 
 === Documentation
 
@@ -63,12 +63,12 @@ image::profiles.png[width=50%]
 === Tests/Quality
 
 - How well are supported/explained the verification activities (more details link:https://github.com/xblanc33/QualiteDev/blob/master/test[here])
-- Clearly address/differentiate unit tests and integration tests
+- Address and differentiate unit tests and integration tests
 
 === Build/CI/Release
 
 - How professional and automated are the build, automated testing, deploy (more details link:https://github.com/xblanc33/QualiteDev/blob/master/release[here])
-- Can (should?) reach high level pretty early
+- Can (should?) reach a high level pretty early
 
 == Project typical evaluation sheet
 
@@ -99,7 +99,7 @@ image::techDebt.png[width=20%]
 
 Have the same policy in the project:
 
-`[Fix|Feature|...] [Issue_Number]: Use a sentence with capital letter and verb for the first word.`
+`[Fix|Feature|...] [Issue_Number]: Use a sentence with a capital letter and verb for the first word.`
 
 image::commitMessagesIcons.png[width=50%]
 

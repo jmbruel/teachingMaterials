@@ -21,7 +21,7 @@ v21.1 {localdate}
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
-//------------------------------------ Slides uniquement
+//------------------------------------ Slides only
 :topic:
 :intro:
 :statement:
