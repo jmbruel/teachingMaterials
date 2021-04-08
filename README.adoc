@@ -109,6 +109,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | BDD  | {advanced} {cogs-icon} {us-icon} | link:bdd.adoc[source] link:bdd.html[HTML]  link:bdd.pdf[PDF] 
 | Tips on Behavioral-Driven Development
 
+| URN  | {expert} {cogs-icon} {us-icon} | link:urn.adoc[source] link:urn.html[HTML]  link:urn.pdf[PDF] 
+| User Requirements Notation
+
 |===
 
 //-------------------------------------

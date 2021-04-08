@@ -19,7 +19,7 @@ index.html: README.adoc check
 
 %.pdf: %.adoc
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate PDF'
-	$(DOCTOR-PDF) -a stylesheet="$(STYLE)" -a toc $<
+	$(DOCTOR-PDF) -a stylesheet="$(STYLE)" -a toc -a numbered $<
 
 %.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'

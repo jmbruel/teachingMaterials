@@ -1,0 +1,209 @@
+//---------------------------------
+// Cours sur BDD
+// (c) JMB - 2014-2021
+//---------------------------------
+= URN: User Requirements Notation
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered!:
+:slides:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/bdd.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides only
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+//:source-highlighter: coderay
+:source-highlighter: highlightjs
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+:refdoc: https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301
+// ------------------------------------------ 
+== icon:tasks[] Overview of URN
+
+- Daniel Amyot, U. of Ottawa image:DanielAmyot.jpg[width=20%]
+- ITU-T (Telecom) standardization process
+
+ifdef::slides[]
+image:grl.png[width=40%] image:ucm.png[width=40%]
+endif::[]
+
+
+// ------------------------------------------ 
+== icon:map[] Principles
+
+- *User* vs. Systems requirements
+- Several notations:
+** GRL (Goal-oriented Requirement Language)
+** UCMs (Use Case Maps)
+- Graphical syntax
+
+// ------------------------------------------ 
+== icon:bullseye[] Capabilities
+
+- Capture user requirements
+- Scenarios as 1st class entities
+- Focus on elicitation and transition to design
+- Allocation of scenario responsibilities to components
+- Detection/reasoning of features
+- Address goals and NF requirements
+- Formal grammar (supports transformations and exchanges)
+
+// ------------------------------------------ 
+== GRL 
+
+ifndef::slides[.Example of GRL model (source {refdoc}[here])]
+image:grl.png[width=70%,pdfwidth=80%]
+//image::grl.png[background, size=50%]
+
+[quote]
+A *goal* is an objective or concerned used to discover and evaluate requirements.
+
+=== Basic concepts
+
+Goals:: business or system
+Alternatives means:: of achieving goals
+Rationales:: for contributions and decisions
+
+=== Basic notation
+
+ifndef::slides[.GRL Notation (source {refdoc}[here])]
+image:grl-annoted.png[width=90%,pdfwidth=80%]
+
+ifdef::slides[=== !]
+ifdef::slides[image:grl-annoted.png[width=40%,pdfwidth=80%]]
+
+1. Softgoals (fuzzy goals)
+2. Contribution link
+3. AND composition
+4. Impacts
+5. Correlation
+6. Belief
+
+TIP: More <<GRLnotation,here>>.
+
+=== Impacts
+
+- positive/negative and sufficient (make/break)
+- positive/negative but insufficient (help/hurt)
+- unkknown positive/negative (some+/some-)
+
+[.columns]
+=== Benefits
+
+[.column]
+ifndef::slides[.Evaluation of candidate solutions (source {refdoc}[here])]
+image:grl-solutions.png[width=100%,pdfwidth=80%]
+
+[.column]
+- Different level of abstractions
+- Tool supported
+- Trade-off analysis
+
+
+// ------------------------------------------ 
+== Use Case Maps 
+
+ifndef::slides[.UCMs Notation (source {refdoc}[here])]
+image:ucm.png[width=90%,pdfwidth=80%]
+
+[quote]
+A *functional requirements* is a requirement defining functions of the system.
+
+=== Capabilities
+
+- UC capturing and elicitation
+- UC validation
+- High-level architectural design
+- Test case generation
+
+=== Basic concepts
+
+Scenario:: a partial description of system usage
+Responsibilities:: scenario activities (something to be performed)
+Component:: entity (software or not) that performs a responsibility
+
+ifndef::slides[.UCMs Notation (source {refdoc}[here])]
+image:ucm.png[width=50%,pdfwidth=80%]
+
+[.columns]
+=== Basic notation
+
+[.column]
+ifdef::slides[image:ucm-annoted.png[width=100%,pdfwidth=80%]]
+ifndef::slides[TIP: More <<UCMnotation,here>>.]
+
+[.column]
+. Start point
+. Pre-condition
+. Triggering event
+. Casual paths
+. Responsibilities
+. Fork
+. Condition
+. End point
+
+[.columns]
+=== Benefits
+
+[.column]
+- UCMs can integrate many scenarios
+- To analyze potentially conflicting scenarios
+- To generate artifacts (MSCs,  SD, test cases)
+- To analyze alternatives designs
+
+[.column]
+ifndef::slides[.Alternative component structures (source {refdoc}[here])]
+image:ucm-structures.png[width=80%,pdfwidth=80%]
+
+[appendix]
+// ------------------------------------------ 
+== Appendices
+
+=== GRL Notation
+
+[[GRLnotation]]
+ifndef::slides[.GRL Notation (source {refdoc}[here])]
+image::grl-notation.png[]
+
+=== UCMs Notation
+
+[[UCMnotation]]
+ifndef::slides[.UCM Notation (source {refdoc}[here])]
+image::ucm-notation.png[]
+
+[appendix]
+// ------------------------------------------ 
+== Useful links
+
+- {refdoc}[Recent Introduction Article]
+- https://www.site.uottawa.ca/~damyot/[Daniel Amyot web page]
+
