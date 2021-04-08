@@ -206,4 +206,6 @@ image::ucm-notation.png[]
 
 - {refdoc}[Recent Introduction Article]
 - https://www.site.uottawa.ca/~damyot/[Daniel Amyot web page]
+- L'outil http://cserg0.site.uottawa.ca/ucm/bin/view/ProjetSEG/WebHome[jUCMNav]
+
 
