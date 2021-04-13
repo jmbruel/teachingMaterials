@@ -2,6 +2,7 @@
 FILE: requirements.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
+[✓] https://www.theguardian.com/world/2021/apr/09/tui-plane-serious-incident-every-miss-on-board-child-weight-birmingham-majorca
 [/] https://abstracta.us/blog/devops/testing-driver-devops-culture/
 [✓] https://pic.twitter.com/TVlUV3cpl0
 [✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
@@ -12,4 +13,4 @@ FILE: requirements.adoc
 [✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
 [✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
 
-11 links checked.
+12 links checked.

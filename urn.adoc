@@ -90,7 +90,7 @@ A *goal* is an objective or concerned used to discover and evaluate requirements
 === Basic concepts
 
 Goals:: business or system
-Alternatives means:: of achieving goals
+Alternative means:: of achieving goals
 Rationales:: for contributions and decisions
 
 === Basic notation
@@ -169,7 +169,7 @@ ifndef::slides[TIP: More <<UCMnotation,here>>.]
 . Responsibilities
 . Fork
 . Condition
-. End point
+. Endpoint
 
 [.columns]
 === Benefits

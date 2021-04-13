@@ -60,6 +60,24 @@ ifdef::slides[]
 endif::slides[]
 
 // -----------------------------------------------------------
+== Requirements failures
+
+image::why3.jpg[background]
+
+=== TUI's reservation system
+
+:pixlink: https://www.theguardian.com/world/2021/apr/09/tui-plane-serious-incident-every-miss-on-board-child-weight-birmingham-majorca
+ifndef::slides[.(source {pixlink}[here])]
+image::miss-guardian.png[width=30%,link={pixlink}]
+
+[quote]
+It was programmed in an unnamed foreign country where the title “Miss” is used for a child and “Ms” for an adult female.
+
+=== Integration vs. Unit testing
+
+image::no-integration-testing.jpg[width=70%]
+
+// -----------------------------------------------------------
 == DevOps / Agile / Test / Requirements
 
 - Plan, Test, OK

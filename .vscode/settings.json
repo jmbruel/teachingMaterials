@@ -32,6 +32,22 @@
                     "inform"
                 ]
             }
+        },
+        {
+            "files": [
+                "**/urn.adoc"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "neutral"
+                ],
+                "goals": [
+                    "inform"
+                ]
+            }
         }
     ]
 }
