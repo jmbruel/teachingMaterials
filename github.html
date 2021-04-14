@@ -440,15 +440,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
 <h1>GitHub good practices</h1>
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.1 2021-01-25</span>
+<span id="revnumber">version 21.1 2021-04-13</span>
 </div>
-<div id="toc" class="toc2">
+<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_correspondences_scrumgithubgitlab">1. <span class="icon"><i class="fa fa-map-signs"></i></span> Correspondences Scrum/GitHub/Gitlab</a></li>
@@ -456,7 +456,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_automate_issue_branches">3. Automate issue branches</a></li>
 <li><a href="#_use_tags">4. Use tags</a></li>
 <li><a href="#_meaningful_gitignore_file">5. Meaningful <code>.gitignore</code> file</a></li>
-<li><a href="#_meaningful_commit_messages">6. Meaningful commit messages</a></li>
+<li><a href="#_meaningful_commit_messages">6. Meaningful commit messages</a>
+<ul class="sectlevel2">
+<li><a href="#_burndown_charts">6.1. Burndown charts</a></li>
+</ul>
+</li>
 <li><a href="#_useful_links">7. Useful links</a></li>
 </ul>
 </div>
@@ -516,9 +520,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Milestone</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Burdown Chart</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">??</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Burdown Chart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Burndown Chart</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://radekstepan.com/">A nice app!</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Burndown Chart</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Agile board</p></td>
@@ -721,7 +725,17 @@ Gemfile.lock
 .DS_Store
 
 
-topics</code></pre>
+topics
+node_modules
+package-lock.json
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+.project
+.settings</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -774,11 +788,26 @@ doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
 tst = "!f() { git cap \"✅ TEST: $@\"; }; f"</code></pre>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_burndown_charts">6.1. Burndown charts</h3>
+<div class="paragraph">
+<p>Nice complementary app that takes a repo and draws the current milestone (not closed) burndown chart :</p>
+</div>
+<div class="paragraph">
+<p><a href="http://radekstepan.com" class="bare">http://radekstepan.com</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/burndown-radekstepan.png" alt="burndown radekstepan">
+</div>
+<div class="title">Figure 6. Example of Burndownchart (source <a href="http://radekstepan.com/burnchart/#!/rails/rails">here</a>)</div>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/commitMessagesIcons.png" alt="commitMessagesIcons">
 </div>
-<div class="title">Figure 6. Example of emoji usage convention</div>
+<div class="title">Figure 7. Example of emoji usage convention</div>
+</div>
 </div>
 </div>
 </div>
@@ -797,8 +826,8 @@ tst = "!f() { git cap \"✅ TEST: $@\"; }; f"</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.1 2021-01-25<br>
-Last updated 2021-01-24 18:24:32 +0100
+Version 21.1 2021-04-13<br>
+Last updated 2021-04-13 17:51:50 +0200
 </div>
 </div>
 </body>

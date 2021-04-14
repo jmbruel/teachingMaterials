@@ -22,7 +22,7 @@ v21.1 {localdate}
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
-//------------------------------------ Slides uniquement
+//------------------------------------ Slides only
 :topic:
 :intro:
 :statement:
@@ -59,6 +59,18 @@ ifdef::slides[]
 endif::slides[]
 [{intro}]
 == Les Tests
+
+– We don't write tests.
+– Why?
+– Because we don't have time for it.
+– Why?
+– Because there are too much work and pressure.
+– Why?
+– Because we don't move fast enough.
+– Why?
+– Because changing software has become difficult and risky.
+– Why?
+– Because we don't write tests.
 
 ifdef::slides[== {nbsp}]
 

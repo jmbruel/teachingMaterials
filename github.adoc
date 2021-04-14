@@ -21,7 +21,7 @@ v21.1 {localdate}
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/github.html
 :bitlysiteurl: http://bit.ly/jmb-teaching
-//------------------------------------ Slides uniquement
+//------------------------------------ Slides only
 :topic:
 :intro:
 :statement:
@@ -43,6 +43,7 @@ ifdef::env-github[]
 :cogs:
 endif::[]
 
+:radek: http://radekstepan.com/[A nice app!]
 // ------------------------------------------ definitions
 ifndef::definitions[]
 include::definitions.txt[]
@@ -72,13 +73,13 @@ ifndef::slides[.Correspondences between Artefacts]
 | Scrum             | GitHub        | GitLab 
 
 | User Story        | Issues        | Issues
-| Task              | Task Lists / dependency issues  | Task Lists
+| Task              | Task Lists/dependency issues  | Task Lists
 | Epic              | ??            | Epics
 | Points/Estimation | Weights ($)   | Weights
 | Product Backlog   | Issues Lists  | Issues Lists
 | Priorities        | Labels        | Labels
 | Sprint            | Milestone     | Milestone
-| Burdown Chart     | ??            | Burdown Chart
+| Burndown Chart     | {radek}            | Burndown Chart
 | Agile board       | Project board | Issue Board
 |===
 
@@ -237,7 +238,7 @@ git push origin tag 1.1.0
 Tagging practices:
 
 - You don't tag branches. You tag commits!
-- You should add a tag to mark a released version. If you then need to make bug fixes to that release you would create a branch at the tag
+- You should add a tag to mark a released version. If you then need to make bug fixes to that release, you would create a branch at the tag
 - If you checkout a tag, you will need to create a branch to start working from it
 
 More https://gist.github.com/nadeem-khan/b2739c5be0028d3d1b70[here].
@@ -307,6 +308,17 @@ doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
 # TEST.
 tst = "!f() { git cap \"✅ TEST: $@\"; }; f"
 ----
+
+// ------------------------------------------ 
+=== Burndown charts
+
+A nice add-on app that takes a repo and draws the current milestone (not closed) burndown chart : 
+
+http://radekstepan.com
+
+.Example of Burndownchart (source http://radekstepan.com/burnchart/#!/rails/rails[here])
+image::burndown-radekstepan.png[]
+
 
 // ------------------------------------------ 
 ifdef::slides[=== !]

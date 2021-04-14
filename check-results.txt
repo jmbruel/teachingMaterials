@@ -1,4 +1,4 @@
-Mar 13 avr 2021 15:17:40 CEST
+Mer 14 avr 2021 13:44:34 CEST
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -143,3 +143,5 @@ FILE: tests.adoc
 [✓] http://bit.ly/jmb-teaching
 [✓] https://cucumber.io/docs/guides/10-minute-tutorial/
 [✓] http://blog.takipi.com/the-top-10-exceptions-types-in-production-java-applications-based-on-1b-events/?utm_content=buffer0c58b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+4 links checked.
