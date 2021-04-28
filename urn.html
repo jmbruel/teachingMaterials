@@ -441,15 +441,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>URN: User Requirements Notation</h1>
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.1 2021-04-13</span>
+<span id="revnumber">version 21.1 2021-04-28</span>
 </div>
-<div id="toc" class="toc">
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview_of_urn"><span class="icon"><i class="fa fa-tasks"></i></span> Overview of URN</a></li>
@@ -469,6 +469,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_basic_concepts_2">Basic concepts</a></li>
 <li><a href="#_basic_notation_2">Basic notation</a></li>
 <li><a href="#_benefits_2">Benefits</a></li>
+</ul>
+</li>
+<li><a href="#_mapping_with_the_unified_framework">Mapping with the Unified Framework</a>
+<ul class="sectlevel2">
+<li><a href="#_the_7_kinds_of_class">The 7 kinds of class</a></li>
+<li><a href="#_references_between_classes">References between classes</a></li>
+<li><a href="#_applied_to_urn">Applied to URN</a></li>
 </ul>
 </li>
 <li><a href="#_appendices">Appendix A: Appendices</a>
@@ -788,6 +795,127 @@ More <a href="#UCMnotation">here</a>.
 </div>
 </div>
 <div class="sect1">
+<h2 id="_mapping_with_the_unified_framework">Mapping with the Unified Framework</h2>
+<div class="sectionbody">
+<div class="sect2 columns">
+<h3 id="_the_7_kinds_of_class">The 7 kinds of class</h3>
+<div class="ulist column">
+<ul>
+<li>
+<p>Requirements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Concrete Environment</p>
+</li>
+<li>
+<p>Abstract Environment</p>
+</li>
+<li>
+<p>Scenario</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist column">
+<ul>
+<li>
+<p>Design and implementation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture</p>
+</li>
+<li>
+<p>Implementation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Goals and project</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Goal</p>
+</li>
+<li>
+<p>Project</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_references_between_classes">References between classes</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/refBetweenClasses.png" alt="refBetweenClasses">
+</div>
+<div class="title">Figure 1. References between classes (source <a href="http://se.ethz.ch/~meyer/down/requirements_handbook/REQUIREMENTS.pdf">here</a>)</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_applied_to_urn">Applied to URN</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Kind of class</th>
+<th class="tableblock halign-left valign-top">URN Concept</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concrete Environment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Actor, Resource</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract Environment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Actor Boundary, Belief?</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scenario</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UCM Paths</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architecture</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Out of scope</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implementation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Out of scope</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Goal, Softgoal, Belief?</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task, Resource?</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_appendices">Appendix A: Appendices</h2>
 <div class="sectionbody">
 <div class="sect2">
@@ -796,7 +924,7 @@ More <a href="#UCMnotation">here</a>.
 <div class="content">
 <img src="images/grl-notation.png" alt="grl notation">
 </div>
-<div class="title">Figure 1. GRL Notation (source <a href="https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301">here</a>)</div>
+<div class="title">Figure 2. GRL Notation (source <a href="https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301">here</a>)</div>
 </div>
 </div>
 <div class="sect2">
@@ -805,7 +933,7 @@ More <a href="#UCMnotation">here</a>.
 <div class="content">
 <img src="images/ucm-notation.png" alt="ucm notation">
 </div>
-<div class="title">Figure 2. UCM Notation (source <a href="https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301">here</a>)</div>
+<div class="title">Figure 3. UCM Notation (source <a href="https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301">here</a>)</div>
 </div>
 </div>
 </div>
@@ -831,8 +959,8 @@ More <a href="#UCMnotation">here</a>.
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.1 2021-04-13<br>
-Last updated 2021-04-08 18:55:25 +0200
+Version 21.1 2021-04-28<br>
+Last updated 2021-04-28 17:44:00 +0200
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

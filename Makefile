@@ -23,7 +23,7 @@ index.html: README.adoc check
 
 %.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML'
-	$(DOCTOR) -a slides! -a toc $<
+	$(DOCTOR) -a slides! -a toc=left $<
                 
 %.slides.html: %.adoc 
 	@echo '==> Compiling asciidoc files with Asciidoctor to generate HTML slides'

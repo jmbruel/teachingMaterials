@@ -46,6 +46,7 @@ ifndef::definitions[]
 include::definitions.txt[]
 endif::definitions[]
 :refdoc: https://www.researchgate.net/publication/220447987_Amyot_D_Introduction_to_the_User_Requirements_Notation_Learning_by_Example_Computer_Networks_423_285-301
+:Handbook: http://se.ethz.ch/~meyer/down/requirements_handbook/REQUIREMENTS.pdf
 // ------------------------------------------ 
 == icon:tasks[] Overview of URN
 
@@ -183,6 +184,47 @@ ifndef::slides[TIP: More <<UCMnotation,here>>.]
 [.column]
 ifndef::slides[.Alternative component structures (source {refdoc}[here])]
 image:ucm-structures.png[width=80%,pdfwidth=80%]
+
+== Mapping with the Unified Framework
+
+[.columns]
+=== The 7 kinds of class
+
+[.column]
+* Requirements
+- Concrete Environment 
+- Abstract Environment
+- Scenario
+
+[.column]
+* Design and implementation
+- Architecture
+- Implementation
+
+* Goals and project
+- Goal
+- Project
+
+=== References between classes
+ 
+ifndef::slides[.References between classes (source {Handbook}[here])]
+image::refBetweenClasses.png[]
+
+=== Applied to URN
+
+[%header,cols="1,1,3"]
+|===
+s| Kind of class         | URN Concept | Details
+
+| Concrete Environment  | Actor, Resource  |
+| Abstract Environment  | Actor Boundary, Belief?  |
+| Scenario              | UCM Paths |
+| Architecture          |   | Out of scope
+| Implementation        |   | Out of scope
+| Goal                  | Goal, Softgoal, Belief?  |
+| Project               | Task, Resource?  |
+|===
+
 
 [appendix]
 // ------------------------------------------ 

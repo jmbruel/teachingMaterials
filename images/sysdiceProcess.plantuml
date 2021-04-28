@@ -1,0 +1,7 @@
+@startuml sysdiceProcess
+!include config.cfg
+
+package foo [[http://google.com/foo foo]] {
+class bar [[http://google.com/bar bar]]
+}
+@enduml

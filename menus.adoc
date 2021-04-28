@@ -1,0 +1,34 @@
+= Nice tricks in Asciidoc User Doc
+:experimental:
+
+WARNING: Don't forget the `:experimental:` command in your asciidoc file.
+
+== Keyboard macros
+
+|===
+|Shortcut |Purpose
+
+|kbd:[F11]
+|Toggle fullscreen
+
+|kbd:[Ctrl+T]
+|Open a new tab
+
+|kbd:[Ctrl+Shift+N]
+|New incognito window
+
+|kbd:[\ ]
+|Used to escape characters
+
+|kbd:[Ctrl+\]]
+|Jump to keyword
+
+|kbd:[Ctrl + +]
+|Increase zoom
+|===
+
+== Menus
+
+Press the btn:[OK] button when you are finished.
+
+Select a file in the file navigator and click btn:[Open].
