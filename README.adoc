@@ -94,6 +94,12 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Requirements  | {advanced} {graduation-icon} {us-icon}| link:requirements.adoc[source] link:requirements.html[HTML]  link:requirements.pdf[PDF] 
 | Principle of requirements
 
+| Continuous Integration | {graduation-icon} {cogs-icon} {fr-icon}| link:ci-fr.adoc[source] link:ci-fr.html[HTML]  link:ci-fr.pdf[PDF] 
+| Principles of CI (mainly GitLab)
+
+| Continuous Integration | {graduation-icon} {cogs-icon} {us-icon}| link:ci.adoc[source] link:ci.html[HTML]  link:ci.pdf[PDF] 
+| Principles of CI (mainly GitHub)
+
 | Tests  | {beginner} {graduation-icon} {fr-icon}| link:tests.adoc[source] link:tests.html[HTML]  link:tests.pdf[PDF] 
 | Principle on tests
 

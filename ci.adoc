@@ -3,9 +3,9 @@
 // (c) JMB - 2016-2021
 //---------------------------------
 [[ci]]
-= Intégration continue avec GitHub
+= Continuous Integration with GitHub
 J.-M. Bruel <jbruel@gmail.com>
-v21.1 {localdate}
+v21.2 {localdate}
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
@@ -44,13 +44,18 @@ endif::[]
 ifndef::definitions[]
 include::definitions.txt[]
 endif::definitions[]
+:action: https://github.com/features/actions[Actions]
 :circleci: https://circleci.com/[circleci]
+:cruise: http://cruisecontrol.sourceforge.net/[Cruise Control]
+:gitlab-ci: https://about.gitlab.com/gitlab-ci/[Gitlab CI]
+:jenkins: https://www.jenkins.io/[Jenkins]
+:swagger: https://swagger.io/[Swagger]
+:travis: https://travis-ci.org/[Travis CI]
+
+
 ifdef::slides[]
 // ------------------------------------------ disclaimer
 :numbered!:
-[{intro}]
-== Avant-propos
-
 [{topic}]
 == To follow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
 
@@ -61,59 +66,57 @@ endif::slides[]
 
 // ------
 [{intro}]
-== Objectifs
-
-ifndef::slides[:leveloffset: +1]
+== What for?
 
 // ------
 [{topic}]
-== Une vérification *systématique* de l'état du code
+=== Continuous code verification
 
-ifndef::slides[.Résultats visibles et tracés]
+ifndef::slides[.Traced and visible results]
 image::builds_status.png[width=100%]
-ifdef::slides[NOTE: [detail]#Résultats visibles et tracés#]
 
 // ------
 [{topic}]
-== Environnement
+=== Environment
 
-On utilise ici l'intégration continue fournie avec {github} : Actions, mais on peut coupler d'autres outils avec son compte {github} :
+We illustrate here the possibilities linked with {github}, {action}, but others can be used:
 
 - {circleci}
-- 
+- {jenkins} (previously Hudson)
+- {cruise}
+- {travis}
+- {gitlab-ci}
 
-TIP: Liste exhaustive ici : https://github.com/ligurio/awesome-ci
+TIP: Here is a complete list: https://github.com/ligurio/awesome-ci, and here is a comparison: https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software[Wikipedia]
 
 // ------
 [{topic}]
-== e**X**treme **P**rogramming
+=== e**X**treme **P**rogramming
 
 [quote,Martin Fowler]
 Continuous Integration is a software development practice where members of a team integrate their work frequently, [...] leading to multiple integrations per day.
 
 // ------
 [{topic}]
-== Principe général
+=== Principles
 
-ifndef::slides[.Exemple d'Intégration Continue (github-travis)]
+ifndef::slides[.Typical architecture (e.g., github-travis)]
 image::travis.png[width=100%]
-ifdef::slides[NOTE: [detail]#Exemple d'Intégration Continue (github-travis)#]
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
 :thisref: https://about.gitlab.com/gitlab-ci/
 ifndef::slides[.Architecture GitLab-CI ({thisref})]
 image::arch1.jpg[width=80%,link="{thisref}"]
-ifdef::slides[NOTE: [detail]#{thisref}#]
 
 // ------
 [{topic}]
-== YAML
+=== YAML
 :yaml: http://yaml.org/[YAML]
 
 {yaml}: **Y**AML **A**in't **M**arkup **L**anguage
 
-.Exemple de fihier `.yml`
+.Example of `.yml` file
 .............
 ---
 receipt:     Oz-Ware Purchase Invoice
@@ -123,112 +126,120 @@ customer:
     family_name:  Gale
 .............
 
-NOTE: Utiliser des espaces et non des tabulations.
-
-ifndef::slides[:leveloffset: 0]
+NOTE: Use spaces but not tabs.
 
 // --------------------------------------------------------------------
 [{topic}]
-== Utilisation
-
-Un serveur d’intégration continue peut permettre de :
+=== Usage
 
 [{incremental}]
--  Faire les opérations type git [detail]#(pull, checkout, push)#
--  Compiler du code source => *build*
--  Créer des archives
--  Déployer du code sur une machine de test
--  Exécuter une suite de *tests* [detail]#(Junit, Audit de code source, test IHM, ...)#
--  Notifier des résultats [detail]#(mail, RSS)#
+-  Compile source code => *build*
+-  Execute *tests* suites [detail]#(Junit, Audit de code source, test IHM, ...)#
+-  Create archives
+-  Do some git operations [detail]#(pull, checkout, push)#
+-  Deploy code on a production machine
+-  Notify results [detail]#(mail, RSS)#
 -  etc.
-
-// --------------------------------------------------------------------
-[{topic}]
-== Services connus
-
-Les serveurs d’intégration les plus connus (https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software[Wikipedia] en compte plus de 40!) :
-
--   http://cruisecontrol.sourceforge.net/[Cruise Control]
--   https://travis-ci.org/[Travis CI]
--   https://jenkins.io/[Jenkins] (anciennement Hudson)
--   https://about.gitlab.com/gitlab-ci/[Gitlab CI]
 
 
 // --------------------------------------------------------------------
 [{intro}]
-== Pour notre environnement (GitLab)
-
-ifndef::slides[:leveloffset: +1]
+== Concrete illustration (GitHub)
 
 // ------
 [{topic}]
-== Processus type
+=== Processus type
 
 [{incremental}]
-. Créer à la racine du projet un fichier `.gitlab-ci.yml`
-. Y décrire ce que l'on souhaite réaliser
-. "Pousser" dans le dépôt {gitlab} ses modifications
-. Contrôler les résultats
+. Add some specific files at a specific place
+. Describe what needs to be done in those files
+. "push" in the repo
+. Check results
 
 
 // ------
 [{topic}]
-== Exemple (MPA2016-1B2)
+=== Example (this repo: page generation, source: https://github.com/jmbruel/teachingMaterials/blob/master/.github/workflows/jekyll.yml[here])
 
 ..........
-image: node:4.2.2   <1>
+name: Jekyll site CI <1>
+
+on: <2>
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest <3>
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: | <4>
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+..........
+<1> Name of the CI (to ckech on github)
+<2> Specification of which branches are concerned
+<3> Name of the "runner" (virtual machine)
+<4> Instructions (here running jekyll pages generation)
+
+ifdef::slides[=== Result]
+
+ifndef::slides[.Result from previous script]
+image::ciresult.png[width=80%]
+
+// ------
+[{topic}]
+=== icon:warning[] Danger Zone
+
+..........
+image: node:4.2.2  
 
 all_tests:
-  script:           <2>
+  script:          
    - npm install express --save
    - node ./myapp.js
+
 ..........
-<1> Nom du "runner"
-<2> Instructions à réaliser sur la machine
 
-ifdef::slides[== {nbsp}]
+ifndef::slides[.Non terminating script]
+image::gitlabCI-1B2-1.png[width=40%]
 
-Résultat avec le fichier `.gitlab-ci.yml` précédent :
+=== Solution
 
-ifndef::slides[.Attention au code infini]
-image::gitlabCI-1B2-1.png[width=50%]
-ifdef::slides[NOTE: [detail]#Attention au code infini#]
-
-ifdef::slides[== {nbsp}]
-
-Avec un fichier `.gitlab-ci.yml` plus conforme (exécution de tests) :
+Here is a correct `.gitlab-ci.yml` (executing tests):
 
 ..........
    - npm install express --save
    - node ./specs/start.js ./specs/async.spec.js
 ..........
 
-ifndef::slides[.Le build est un succès]
+ifndef::slides[.Build success]
 image::gitlabCI-1B2-2.png[width=50%]
-ifdef::slides[NOTE: [detail]#Le build est un succès#]
-
-test_async:   stage: test   script:    - npm install    - node ./specs/start.js ./specs/async.spec.js
 
 // ------
 [{topic}]
-== Exemple HelloWorld
+== HelloWorld example
 
-. Code java
-. Petit `main` de test (pas unitaire)
-. Compilation manuelle
-. Build ant
-. Améliorations
+. Java Code
+. Main to test
+. Manual Compilation
+. ant Build
+. Improvements
 . Tests
 . Eclipse
-. Intégration continue
-
-ifndef::slides[:leveloffset: +1]
+. Continue Integration
 
 // ------
 [{topic}]
-== Code java
+=== Java code
 
-NOTE: Consultez le tutoriel {ant} : https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
+NOTE: Tutorial for {ant}  https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html[here].
 
 ifndef::slides[]
 .src/HelloWorld.java
@@ -240,7 +251,7 @@ include::HelloWorld/src/HelloWorld.java[]
 
 // ------
 [{topic}]
-== Petit `main` de test (pas unitaire)
+=== Testing with a main
 
 ifndef::slides[]
 .src/Main.java
@@ -252,7 +263,7 @@ include::HelloWorld/src/Main.java[]
 
 // ------
 [{topic}]
-== Compilation manuelle
+=== Manual compilation
 
 [source]
 -----
@@ -265,7 +276,7 @@ Hello JMB!
 
 // ------
 [{topic}]
-== Build ant
+=== Ant build
 
 .build.xml
 [source,xml]
@@ -273,7 +284,7 @@ Hello JMB!
 include::HelloWorld/build.xml[]
 -----
 
-ifdef::slides[== Exécution manuelle du build]
+=== Manual build
 
 [source]
 -----
@@ -290,15 +301,15 @@ Total time: 0 seconds
 
 // ------
 [{topic}]
-== Améliorations
+=== Improvements
 
-.build.xml (amélioré)
+.build.xml (improved)
 [source,xml]
 -----
 include::HelloWorld/build1.xml[]
 -----
 
-ifdef::slides[== Exécution manuelle du build]
+=== Manual build (improved)
 
 [source]
 -----
@@ -327,7 +338,7 @@ Total time: 1 second
 
 // ------
 [{topic}]
-== Tests
+=== Tests
 
 ifndef::slides[]
 .src/TestHelloWorld.java (failing)
@@ -337,7 +348,7 @@ endif::slides[]
 include::HelloWorld/src/TestHelloWorld.java[]
 -----
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
 .build.xml (librairies extérieures)
 [source,xml]
@@ -345,7 +356,7 @@ ifdef::slides[== {nbsp}]
 include::HelloWorld/build2.xml[]
 -----
 
-ifdef::slides[== Exécution manuelle du build]
+=== Manual build (again)
 
 [source]
 -----
@@ -365,89 +376,79 @@ BUILD SUCCESSFUL
 Total time: 1 second
 -----
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
 ifndef::slides[]
-.src/TestHelloWorld.java (un vrai ce coup-ci)
-[source,java]
+.src/TestHelloWorld.java
 endif::slides[]
 -----
 include::HelloWorld/src/TestHelloWorldReal.java[]
 -----
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
-ifndef::slides[.Un test exécuté sous eclipse]
+ifndef::slides[.Test under eclipse]
 image::eclipseTest.png[width=90%]
-ifdef::slides[NOTE: [detail]#Un test exécuté sous eclipse#]
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
 [NOTE]
 ======
-Ne pas hésiter à utiliser le plugin http://infinitest.github.io/[infinitest].
+Do not hesitate to use the http://infinitest.github.io/[infinitest] plugin.
 
-ifndef::slides[.Utilisation d'infinitest sous eclipse]
-image::infinitest.png[width=90%]
-ifdef::slides[NOTE: [detail]#Utilisation d'infinitest sous eclipse#]
+ifndef::slides[.Infinitest plugin]
+image::infinitest.png[width=80%]
 
 ======
 
 // ------
 [{topic}]
-== Eclipse
+=== Eclipse
 
-Profiter de la génération de fichier de build {ant} par {eclipse}!
+Directly generate the build {ant} with {eclipse}!
 
-ifndef::slides[.Export du bild ant sous eclipse]
+ifndef::slides[.Export with eclipse]
 image::exportAnt.png[width=100%]
-ifdef::slides[NOTE: [detail]#Utilisation d'infinitest sous eclipse#]
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
-.build.xml (généré par eclipse)
+.build.xml (export from eclipse)
 [source,xml]
 -----
 include::HelloWorld/buildEclipse.xml[]
 -----
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
-ifndef::slides[.Run de ant sous eclipse]
+ifndef::slides[.Run ant with eclipse]
 image::runAnt.png[width=100%]
-ifdef::slides[NOTE: [detail]#Run de ant sous eclipse#]
 
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== !]
 
-Autre avantage de junit, la génération de pages web (répertoire `junit`, ouvrir `index.html`).
+Another advantage of junit web doc generation (`junit` repo, open the `index.html` file).
 
-ifndef::slides[.Présentation des résultats de test]
+ifndef::slides[.Testing results]
 image::junitreport.png[width=90%]
-ifdef::slides[NOTE: [detail]#Présentation des résultats de test#]
 
 // ------
 [{topic}]
-== Integration Continue
+=== Continue Integration
 
-.{nbsp}.gitlab-ci.yml (ajouté à la racine du projet git)
+.!.gitlab-ci.yml (added on a GitLab project)
 [source,yml]
 -----
 include::.gitlab-ci.yml[]
 -----
 
-WARNING: Il faut modifier éventuellement le `build.xml`, souvent trop lié à {eclipse}.
-
-ifndef::slides[:leveloffset: 0]
+WARNING: The `build.xml` might have to be updated because sometimes too linked to {eclipse}.
 
 // --------------------------------------------------------------------
 [{intro}]
-== Divers
-
-ifndef::slides[:leveloffset: +1]
+== Tips
 
 // ------
 [{topic}]
-== Quand on ne veux pas lancer l'IC
+=== How NOT to run CI
 
 [source]
 ------
@@ -456,28 +457,84 @@ git commit -m "Blabla... [ci skip]"
 
 // ------
 [{topic}]
-== Pour vérifier la syntaxe de son fichier YAML
-
-Possibilité de tester son fichier `gitlab-ci.yml` :
+=== To check YAML syntax
 
 https://docs.gitlab.com/ee/ci/lint.html
 
-ifndef::slides[.Validation de son code YAML]
+ifndef::slides[.Check of YAML syntax]
 image::lint.png[width=50%]
-ifdef::slides[NOTE: [detail]#Validation de son code YAML#]
 
-ifndef::slides[:leveloffset: 0]
+// ------
+[{topic}]
+== GitHub CI = Actions
+
+=== Click and install
+
+ifndef::slides[.Choose your weapon]
+image::githubactions.png[]
+
+=== Lots of help and documentation
+
+ifndef::slides[.Tune your actions]
+image::githubactions-help.png[]
+
+
+=== Where to check/tune?
+
+`.github/workflows/`
+
+
+// ------
+[{topic}]
+== 2021 (awesome!) examples
+
+image::ius21group.png[]
+
+ifdef::slides[=== Lots of possibilities]
+
+----
+├── build.yml <1>
+├── doxygen.yml <2>
+├── linter.yml <3>
+├── tests.yml <4>
+└── uml.yml <5>
+----
+<1> Build the app
+<2> Generate documentation
+<3> Check code quality
+<4> Launch tests
+<5> Generate UML diagrams from code
+
+ifdef::slides[=== Tests through CI]
+
+ifndef::slides[.Tests through CI]
+image::uis21-tests.png[]
+
+ifdef::slides[=== Results checking]
+
+ifndef::slides[.Easy results checking through badges]
+image::uis21-badges.png[]
+
+ifdef::slides[=== Documentation generation]
+
+ifndef::slides[.API documentation generation using {swagger}]
+image::uis21-swagger.png[]
+
+ifdef::slides[=== Web pages generation]
+
+ifndef::slides[.GitHub pages generation]
+image::uis21-pages.png[width=80%]
 
 ifndef::slides[]
 
 // ------
 [{topic}]
-== Liens utiles
+== Useful links
 
-Le site de référence::
-  https://about.gitlab.com/gitlab-ci/
+CI for Gitlab::
+  {gitlab-ci}
 
-Un tuto en français sur l'IC sous {gitlab} (merci icon:twitter[] @npm_kader)::
-  https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
+CI for GitHub::
+  {action}
 
 endif::slides[]

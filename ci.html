@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="J.-M. Bruel">
+<title>Continuous Integration with GitHub</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="ci" class="article toc2 toc-left">
+<div id="header">
+<h1>Continuous Integration with GitHub</h1>
+<div class="details">
+<span id="author" class="author">J.-M. Bruel</span><br>
+<span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
+<span id="revnumber">version 21.2 2021-05-04</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_what_for">1. What for?</a>
+<ul class="sectlevel2">
+<li><a href="#_continuous_code_verification">1.1. Continuous code verification</a></li>
+<li><a href="#_environment">1.2. Environment</a></li>
+<li><a href="#_extreme_programming">1.3. e<strong>X</strong>treme <strong>P</strong>rogramming</a></li>
+<li><a href="#_principles">1.4. Principles</a></li>
+<li><a href="#_yaml">1.5. YAML</a></li>
+<li><a href="#_usage">1.6. Usage</a></li>
+</ul>
+</li>
+<li><a href="#_concrete_illustration_github">2. Concrete illustration (GitHub)</a>
+<ul class="sectlevel2">
+<li><a href="#_processus_type">2.1. Processus type</a></li>
+<li><a href="#_example_this_repo_page_generation_source_here">2.2. Example (this repo: page generation, source: here)</a></li>
+<li><a href="#_danger_zone">2.3. <span class="icon"><i class="fa fa-warning"></i></span> Danger Zone</a></li>
+<li><a href="#_solution">2.4. Solution</a></li>
+</ul>
+</li>
+<li><a href="#_helloworld_example">3. HelloWorld example</a>
+<ul class="sectlevel2">
+<li><a href="#_java_code">3.1. Java code</a></li>
+<li><a href="#_testing_with_a_main">3.2. Testing with a main</a></li>
+<li><a href="#_manual_compilation">3.3. Manual compilation</a></li>
+<li><a href="#_ant_build">3.4. Ant build</a></li>
+<li><a href="#_manual_build">3.5. Manual build</a></li>
+<li><a href="#_improvements">3.6. Improvements</a></li>
+<li><a href="#_manual_build_improved">3.7. Manual build (improved)</a></li>
+<li><a href="#_tests">3.8. Tests</a></li>
+<li><a href="#_manual_build_again">3.9. Manual build (again)</a></li>
+<li><a href="#_eclipse">3.10. Eclipse</a></li>
+<li><a href="#_continue_integration">3.11. Continue Integration</a></li>
+</ul>
+</li>
+<li><a href="#_tips">4. Tips</a>
+<ul class="sectlevel2">
+<li><a href="#_how_not_to_run_ci">4.1. How NOT to run CI</a></li>
+<li><a href="#_to_check_yaml_syntax">4.2. To check YAML syntax</a></li>
+</ul>
+</li>
+<li><a href="#_github_ci_actions">5. GitHub CI = Actions</a>
+<ul class="sectlevel2">
+<li><a href="#_click_and_install">5.1. Click and install</a></li>
+<li><a href="#_lots_of_help_and_documentation">5.2. Lots of help and documentation</a></li>
+<li><a href="#_where_to_checktune">5.3. Where to check/tune?</a></li>
+</ul>
+</li>
+<li><a href="#_2021_awesome_examples">6. 2021 (awesome!) examples</a></li>
+<li><a href="#_useful_links">7. Useful links</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_what_for">1. What for?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_continuous_code_verification">1.1. Continuous code verification</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/builds_status.png" alt="builds status" width="100%">
+</div>
+<div class="title">Figure 1. Traced and visible results</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_environment">1.2. Environment</h3>
+<div class="paragraph">
+<p>We illustrate here the possibilities linked with <a href="https://github.com/">GitHub</a>, <a href="https://github.com/features/actions">Actions</a>, but others can be used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://circleci.com/">circleci</a></p>
+</li>
+<li>
+<p><a href="https://www.jenkins.io/">Jenkins</a> (previously Hudson)</p>
+</li>
+<li>
+<p><a href="http://cruisecontrol.sourceforge.net/">Cruise Control</a></p>
+</li>
+<li>
+<p><a href="https://travis-ci.org/">Travis CI</a></p>
+</li>
+<li>
+<p><a href="https://about.gitlab.com/gitlab-ci/">Gitlab CI</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Here is a complete list: <a href="https://github.com/ligurio/awesome-ci" class="bare">https://github.com/ligurio/awesome-ci</a>, and here is a comparison: <a href="https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software">Wikipedia</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extreme_programming">1.3. e<strong>X</strong>treme <strong>P</strong>rogramming</h3>
+<div class="quoteblock">
+<blockquote>
+Continuous Integration is a software development practice where members of a team integrate their work frequently, [&#8230;&#8203;] leading to multiple integrations per day.
+</blockquote>
+<div class="attribution">
+&#8212; Martin Fowler
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_principles">1.4. Principles</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/travis.png" alt="travis" width="100%">
+</div>
+<div class="title">Figure 2. Typical architecture (e.g., github-travis)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://about.gitlab.com/gitlab-ci/"><img src="images/arch1.jpg" alt="arch1" width="80%"></a>
+</div>
+<div class="title">Figure 3. Architecture GitLab-CI (<a href="https://about.gitlab.com/gitlab-ci/" class="bare">https://about.gitlab.com/gitlab-ci/</a>)</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_yaml">1.5. YAML</h3>
+<div class="paragraph">
+<p><a href="http://yaml.org/">YAML</a>: <strong>Y</strong>AML <strong>A</strong>in&#8217;t <strong>M</strong>arkup <strong>L</strong>anguage</p>
+</div>
+<div class="literalblock">
+<div class="title">Example of <code>.yml</code> file</div>
+<div class="content">
+<pre>---
+receipt:     Oz-Ware Purchase Invoice
+date:        2012-08-06
+customer:
+    first_name:   Dorothy
+    family_name:  Gale</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Use spaces but not tabs.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage">1.6. Usage</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Compile source code &#8658; <strong>build</strong></p>
+</li>
+<li>
+<p>Execute <strong>tests</strong> suites <span class="detail">(Junit, Audit de code source, test IHM, &#8230;&#8203;)</span></p>
+</li>
+<li>
+<p>Create archives</p>
+</li>
+<li>
+<p>Do some git operations <span class="detail">(pull, checkout, push)</span></p>
+</li>
+<li>
+<p>Deploy code on a production machine</p>
+</li>
+<li>
+<p>Notify results <span class="detail">(mail, RSS)</span></p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concrete_illustration_github">2. Concrete illustration (GitHub)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_processus_type">2.1. Processus type</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add some specific files at a specific place</p>
+</li>
+<li>
+<p>Describe what needs to be done in those files</p>
+</li>
+<li>
+<p>"push" in the repo</p>
+</li>
+<li>
+<p>Check results</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_this_repo_page_generation_source_here">2.2. Example (this repo: page generation, source: <a href="https://github.com/jmbruel/teachingMaterials/blob/master/.github/workflows/jekyll.yml">here</a>)</h3>
+<div class="literalblock">
+<div class="content">
+<pre>name: Jekyll site CI <i class="conum" data-value="1"></i><b>(1)</b>
+
+on: <i class="conum" data-value="2"></i><b>(2)</b>
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest <i class="conum" data-value="3"></i><b>(3)</b>
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the site in the jekyll/builder container
+      run: | <i class="conum" data-value="4"></i><b>(4)</b>
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll &amp;&amp; jekyll build --future"</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Name of the CI (to ckech on github)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Specification of which branches are concerned</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Name of the "runner" (virtual machine)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Instructions (here running jekyll pages generation)</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ciresult.png" alt="ciresult" width="80%">
+</div>
+<div class="title">Figure 4. Result from previous script</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_danger_zone">2.3. <span class="icon"><i class="fa fa-warning"></i></span> Danger Zone</h3>
+<div class="literalblock">
+<div class="content">
+<pre>image: node:4.2.2
+
+all_tests:
+  script:
+   - npm install express --save
+   - node ./myapp.js</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/gitlabCI-1B2-1.png" alt="gitlabCI 1B2 1" width="40%">
+</div>
+<div class="title">Figure 5. Non terminating script</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_solution">2.4. Solution</h3>
+<div class="paragraph">
+<p>Here is a correct <code>.gitlab-ci.yml</code> (executing tests):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>   - npm install express --save
+   - node ./specs/start.js ./specs/async.spec.js</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/gitlabCI-1B2-2.png" alt="gitlabCI 1B2 2" width="50%">
+</div>
+<div class="title">Figure 6. Build success</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_helloworld_example">3. HelloWorld example</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Java Code</p>
+</li>
+<li>
+<p>Main to test</p>
+</li>
+<li>
+<p>Manual Compilation</p>
+</li>
+<li>
+<p>ant Build</p>
+</li>
+<li>
+<p>Improvements</p>
+</li>
+<li>
+<p>Tests</p>
+</li>
+<li>
+<p>Eclipse</p>
+</li>
+<li>
+<p>Continue Integration</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_java_code">3.1. Java code</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tutorial for <a href="http://ant.apache.org/">ant</a>  <a href="https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html">here</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">src/HelloWorld.java</div>
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package org.jmb;
+public class HelloWorld
+{
+   private String name = "";
+   public String getName()
+   {
+      return name;
+   }
+   public String getMessage()
+   {
+      if (name == "")
+      {
+         return "Hello!";
+      }
+      else
+      {
+         return "Hello " + name + "!";
+      }
+   }
+   public void setName(String name)
+   {
+      this.name = name;
+   }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testing_with_a_main">3.2. Testing with a main</h3>
+<div class="listingblock">
+<div class="title">src/Main.java</div>
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package org.jmb;
+
+
+public class Main {
+	public static void main(String[] args) {
+	      org.jmb.HelloWorld h = new org.jmb.HelloWorld();
+	      h.setName("JMB");
+	      System.out.println(h.getMessage());
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_compilation">3.3. Manual compilation</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ javac -sourcepath src -d bin/ src/Main.java
+$ ls bin
+HelloWorld.class	Main.class
+$ java -cp bin Main
+Hello JMB!</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ant_build">3.4. Ant build</h3>
+<div class="listingblock">
+<div class="title">build.xml</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;project&gt;
+    &lt;target name="clean"&gt;
+        &lt;delete dir="bin"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="build"&gt;
+        &lt;mkdir dir="bin"/&gt;
+        &lt;javac srcdir="src" destdir="bin"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="jar"&gt;
+        &lt;mkdir dir="bin/jar"/&gt;
+        &lt;jar destfile="bin/jar/HelloWorld.jar" basedir="bin"&gt;
+            &lt;manifest&gt;
+                &lt;attribute name="Main-Class" value="Main"/&gt;
+            &lt;/manifest&gt;
+        &lt;/jar&gt;
+    &lt;/target&gt;
+
+    &lt;target name="run"&gt;
+        &lt;java jar="bin/jar/HelloWorld.jar" fork="true"/&gt;
+    &lt;/target&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_build">3.5. Manual build</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ ant clean build jar
+$ ant run
+Buildfile: /Users/bruel/HelloWorld/build.xml
+
+run:
+     [java] Hello JMB!
+
+BUILD SUCCESSFUL
+Total time: 0 seconds</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements">3.6. Improvements</h3>
+<div class="listingblock">
+<div class="title">build.xml (improved)</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;project name="HelloWorld" basedir="." default="main"&gt;
+
+    &lt;property name="src.dir"     value="src"/&gt;
+    &lt;property name="build.dir"   value="bin"/&gt;
+    &lt;property name="classes.dir" value="${build.dir}/classes"/&gt;
+    &lt;property name="jar.dir"     value="${build.dir}/jar"/&gt;
+
+    &lt;property name="main-class"  value="Main"/&gt;
+
+
+
+    &lt;target name="clean"&gt;
+        &lt;delete dir="${build.dir}"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="compile"&gt;
+        &lt;mkdir dir="${classes.dir}"/&gt;
+        &lt;javac srcdir="${src.dir}" destdir="${classes.dir}"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="jar" depends="compile"&gt;
+        &lt;mkdir dir="${jar.dir}"/&gt;
+        &lt;jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}"&gt;
+            &lt;manifest&gt;
+                &lt;attribute name="Main-Class" value="${main-class}"/&gt;
+            &lt;/manifest&gt;
+        &lt;/jar&gt;
+    &lt;/target&gt;
+
+    &lt;target name="run" depends="jar"&gt;
+        &lt;java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="clean-build" depends="clean,jar"/&gt;
+
+    &lt;target name="main" depends="clean,run"/&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_build_improved">3.7. Manual build (improved)</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ ant
+Buildfile: /Users/bruel/HelloWorld/build.xml
+
+clean:
+   [delete] Deleting directory /Users/bruel/HelloWorld/bin
+
+compile:
+    [mkdir] Created dir: /Users/bruel/HelloWorld/bin/classes
+    [javac] Compiling 2 source files to /Users/bruel/HelloWorld/bin/classes
+
+jar:
+    [mkdir] Created dir: /Users/bruel/HelloWorld/bin/jar
+      [jar] Building jar: /Users/bruel/HelloWorld/bin/jar/HelloWorld.jar
+
+run:
+     [java] Hello JMB!
+
+main:
+
+BUILD SUCCESSFUL
+Total time: 1 second</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tests">3.8. Tests</h3>
+<div class="listingblock">
+<div class="title">src/TestHelloWorld.java (failing)</div>
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">package org.jmb;
+public class TestHelloWorld extends junit.framework.TestCase {
+
+    public void testNothing() {
+    }
+
+    public void testWillAlwaysFail() {
+        fail("An error message");
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">build.xml (librairies extérieures)</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;project name="HelloWorld" basedir="." default="main"&gt;
+
+    &lt;property name="src.dir"     value="src"/&gt;
+    &lt;property name="build.dir"   value="bin"/&gt;
+    &lt;property name="classes.dir" value="${build.dir}/classes"/&gt;
+    &lt;property name="jar.dir"     value="${build.dir}/jar"/&gt;
+
+    &lt;property name="main-class"  value="Main"/&gt;
+
+    &lt;property name="lib.dir"     value="lib"/&gt;
+
+    &lt;path id="classpath"&gt;
+        &lt;fileset dir="${lib.dir}" includes="**/*.jar"/&gt;
+    &lt;/path&gt;
+
+    &lt;target name="clean"&gt;
+        &lt;delete dir="${build.dir}"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="compile"&gt;
+        &lt;mkdir dir="${classes.dir}"/&gt;
+        &lt;javac srcdir="${src.dir}" destdir="${classes.dir}"  classpathref="classpath"/&gt;
+    &lt;/target&gt;
+
+    &lt;target name="jar" depends="compile"&gt;
+        &lt;mkdir dir="${jar.dir}"/&gt;
+        &lt;jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}"&gt;
+            &lt;manifest&gt;
+                &lt;attribute name="Main-Class" value="${main-class}"/&gt;
+            &lt;/manifest&gt;
+        &lt;/jar&gt;
+    &lt;/target&gt;
+
+    &lt;path id="application" location="${jar.dir}/${ant.project.name}.jar"/&gt;
+
+    &lt;target name="run" depends="jar"&gt;
+        &lt;java fork="true" classname="${main-class}"&gt;
+            &lt;classpath&gt;
+                &lt;path refid="classpath"/&gt;
+                &lt;path refid="application"/&gt;
+                &lt;path location="${jar.dir}/${ant.project.name}.jar"/&gt;
+            &lt;/classpath&gt;
+        &lt;/java&gt;
+    &lt;/target&gt;
+
+    &lt;target name="junit" depends="jar"&gt;
+        &lt;junit printsummary="yes"&gt;
+            &lt;classpath&gt;
+                &lt;path refid="classpath"/&gt;
+                &lt;path refid="application"/&gt;
+            &lt;/classpath&gt;
+
+            &lt;batchtest fork="yes"&gt;
+                &lt;fileset dir="${src.dir}" includes="TestHelloWorld.java"/&gt;
+            &lt;/batchtest&gt;
+        &lt;/junit&gt;
+    &lt;/target&gt;
+
+    &lt;target name="clean-build" depends="clean,jar"/&gt;
+
+    &lt;target name="main" depends="clean,run"/&gt;
+
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_build_again">3.9. Manual build (again)</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ ant junit
+Buildfile: /Users/bruel/HelloWorld/build.xml
+
+compile:
+
+jar:
+
+junit:
+    [junit] Running TestHelloWorld
+    [junit] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0,003 sec
+    [junit] Test TestHelloWorld FAILED
+
+BUILD SUCCESSFUL
+Total time: 1 second</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">src/TestHelloWorld.java</div>
+<div class="content">
+<pre>package org.jmb;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class TestHelloWorldReal {
+
+   private org.jmb.HelloWorld h;
+
+   @Before
+   public void setUp() throws Exception
+   {
+      h = new org.jmb.HelloWorld();
+   }
+
+   @Test
+   public void testHelloEmpty()
+   {
+      assertEquals(h.getName(),"");
+      assertEquals(h.getMessage(),"Hello!");
+   }
+
+   @Test
+   public void testHelloWorld()
+   {
+      h.setName("World");
+      assertEquals(h.getName(),"World");
+      assertEquals(h.getMessage(),"Hello World!");
+   }
+}</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/eclipseTest.png" alt="eclipseTest" width="90%">
+</div>
+<div class="title">Figure 7. Test under eclipse</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Do not hesitate to use the <a href="http://infinitest.github.io/">infinitest</a> plugin.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/infinitest.png" alt="infinitest" width="80%">
+</div>
+<div class="title">Figure 8. Infinitest plugin</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eclipse">3.10. Eclipse</h3>
+<div class="paragraph">
+<p>Directly generate the build <a href="http://ant.apache.org/">ant</a> with <a href="http://www.eclipse.org">Eclipse</a>!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/exportAnt.png" alt="exportAnt" width="100%">
+</div>
+<div class="title">Figure 9. Export with eclipse</div>
+</div>
+<div class="listingblock">
+<div class="title">build.xml (export from eclipse)</div>
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction &lt;?eclipse.ant.import?&gt;
+              as the first entry and export the buildfile again. --&gt;&lt;project basedir="." default="build" name="HelloWorld"&gt;
+    &lt;property environment="env"/&gt;
+    &lt;property name="junit.output.dir" value="junit"/&gt;
+    &lt;property name="debuglevel" value="source,lines,vars"/&gt;
+    &lt;property name="target" value="1.8"/&gt;
+    &lt;property name="source" value="1.8"/&gt;
+    &lt;path id="JUnit 4.libraryclasspath"&gt;
+        &lt;pathelement location="../../../.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar"/&gt;
+        &lt;pathelement location="../../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/&gt;
+    &lt;/path&gt;
+    &lt;path id="HelloWorld.classpath"&gt;
+        &lt;pathelement location="bin"/&gt;
+        &lt;path refid="JUnit 4.libraryclasspath"/&gt;
+    &lt;/path&gt;
+    &lt;target name="init"&gt;
+        &lt;mkdir dir="bin"/&gt;
+        &lt;copy includeemptydirs="false" todir="bin"&gt;
+            &lt;fileset dir="src"&gt;
+                &lt;exclude name="**/*.launch"/&gt;
+                &lt;exclude name="**/*.java"/&gt;
+            &lt;/fileset&gt;
+        &lt;/copy&gt;
+    &lt;/target&gt;
+    &lt;target name="clean"&gt;
+        &lt;delete dir="bin"/&gt;
+    &lt;/target&gt;
+    &lt;target depends="clean" name="cleanall"/&gt;
+    &lt;target depends="build-subprojects,build-project" name="build"/&gt;
+    &lt;target name="build-subprojects"/&gt;
+    &lt;target depends="init" name="build-project"&gt;
+        &lt;echo message="${ant.project.name}: ${ant.file}"/&gt;
+        &lt;javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}"&gt;
+            &lt;src path="src"/&gt;
+            &lt;classpath refid="HelloWorld.classpath"/&gt;
+        &lt;/javac&gt;
+    &lt;/target&gt;
+    &lt;target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/&gt;
+    &lt;target name="Main"&gt;
+        &lt;java classname="org.jmb.Main" failonerror="true" fork="yes"&gt;
+            &lt;classpath refid="HelloWorld.classpath"/&gt;
+        &lt;/java&gt;
+    &lt;/target&gt;
+    &lt;target name="TestHelloWorld"&gt;
+        &lt;mkdir dir="${junit.output.dir}"/&gt;
+        &lt;junit fork="yes" printsummary="withOutAndErr"&gt;
+            &lt;formatter type="xml"/&gt;
+            &lt;test name="org.jmb.TestHelloWorld" todir="${junit.output.dir}"/&gt;
+            &lt;jvmarg line="-ea"/&gt;
+            &lt;classpath refid="HelloWorld.classpath"/&gt;
+        &lt;/junit&gt;
+    &lt;/target&gt;
+    &lt;target name="junitreport"&gt;
+        &lt;junitreport todir="${junit.output.dir}"&gt;
+            &lt;fileset dir="${junit.output.dir}"&gt;
+                &lt;include name="TEST-*.xml"/&gt;
+            &lt;/fileset&gt;
+            &lt;report format="frames" todir="${junit.output.dir}"/&gt;
+        &lt;/junitreport&gt;
+    &lt;/target&gt;
+&lt;/project&gt;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/runAnt.png" alt="runAnt" width="100%">
+</div>
+<div class="title">Figure 10. Run ant with eclipse</div>
+</div>
+<div class="paragraph">
+<p>Another advantage of junit web doc generation (<code>junit</code> repo, open the <code>index.html</code> file).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/junitreport.png" alt="junitreport" width="90%">
+</div>
+<div class="title">Figure 11. Testing results</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_continue_integration">3.11. Continue Integration</h3>
+<div class="listingblock">
+<div class="title">!.gitlab-ci.yml (added on a GitLab project)</div>
+<div class="content">
+<pre class="highlight"><code class="language-yml" data-lang="yml">image: asciidoctor/docker-asciidoctor
+
+variables:
+  GIT_SSL_NO_VERIFY: "1"
+
+stages:
+  - 📦build
+  - 🦄test
+
+html:
+  stage: 📦build
+  script: 
+    - asciidoctor README.adoc -o index.html
+  artifacts:
+    paths:
+    - index.html
+
+pdf_preview:
+  stage: 🦄test
+  when: manual
+  environment:
+    name: preview/$CI_COMMIT_REF_NAME
+  except:
+    - /master/
+  artifacts:
+    paths:
+    - README.pdf
+    expire_in: 1 week
+  script:
+    - asciidoctor-pdf README.adoc</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The <code>build.xml</code> might have to be updated because sometimes too linked to <a href="http://www.eclipse.org">Eclipse</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tips">4. Tips</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_not_to_run_ci">4.1. How NOT to run CI</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>git commit -m "Blabla... [ci skip]"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_to_check_yaml_syntax">4.2. To check YAML syntax</h3>
+<div class="paragraph">
+<p><a href="https://docs.gitlab.com/ee/ci/lint.html" class="bare">https://docs.gitlab.com/ee/ci/lint.html</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/lint.png" alt="lint" width="50%">
+</div>
+<div class="title">Figure 12. Check of YAML syntax</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_ci_actions">5. GitHub CI = Actions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_click_and_install">5.1. Click and install</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/githubactions.png" alt="githubactions">
+</div>
+<div class="title">Figure 13. Choose your weapon</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lots_of_help_and_documentation">5.2. Lots of help and documentation</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/githubactions-help.png" alt="githubactions help">
+</div>
+<div class="title">Figure 14. Tune your actions</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_where_to_checktune">5.3. Where to check/tune?</h3>
+<div class="paragraph">
+<p><code>.github/workflows/</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2021_awesome_examples">6. 2021 (awesome!) examples</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/ius21group.png" alt="ius21group">
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>├── build.yml <i class="conum" data-value="1"></i><b>(1)</b>
+├── doxygen.yml <i class="conum" data-value="2"></i><b>(2)</b>
+├── linter.yml <i class="conum" data-value="3"></i><b>(3)</b>
+├── tests.yml <i class="conum" data-value="4"></i><b>(4)</b>
+└── uml.yml <i class="conum" data-value="5"></i><b>(5)</b></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Build the app</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Generate documentation</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Check code quality</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Launch tests</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Generate UML diagrams from code</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/uis21-tests.png" alt="uis21 tests">
+</div>
+<div class="title">Figure 15. Tests through CI</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/uis21-badges.png" alt="uis21 badges">
+</div>
+<div class="title">Figure 16. Easy results checking through badges</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/uis21-swagger.png" alt="uis21 swagger">
+</div>
+<div class="title">Figure 17. API documentation generation using <a href="https://swagger.io/">Swagger</a></div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/uis21-pages.png" alt="uis21 pages" width="80%">
+</div>
+<div class="title">Figure 18. GitHub pages generation</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_useful_links">7. Useful links</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">CI for Gitlab</dt>
+<dd>
+<p><a href="https://about.gitlab.com/gitlab-ci/">Gitlab CI</a></p>
+</dd>
+<dt class="hdlist1">CI for GitHub</dt>
+<dd>
+<p><a href="https://github.com/features/actions">Actions</a></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 21.2 2021-05-04<br>
+Last updated 2021-05-04 09:47:02 +0200
+</div>
+</div>
+</body>
+</html>

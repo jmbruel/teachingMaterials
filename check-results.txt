@@ -1,4 +1,4 @@
-Mer 14 avr 2021 13:44:34 CEST
+Mar 4 mai 2021 09:55:03 CEST
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -49,18 +49,22 @@ FILE: README.adoc
 FILE: ci.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
 [✓] http://bit.ly/jmb-teaching
+[✓] https://github.com/features/actions
 [✓] https://circleci.com/
-[✓] https://github.com/ligurio/awesome-ci
-[✓] https://about.gitlab.com/gitlab-ci/
-[✓] http://yaml.org/
-[✓] https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software
 [✓] http://cruisecontrol.sourceforge.net/
+[✓] https://about.gitlab.com/gitlab-ci/
+[✓] https://www.jenkins.io/
+[✓] https://swagger.io/
 [✓] https://travis-ci.org/
-[✓] https://jenkins.io/
+[✓] https://github.com/ligurio/awesome-ci
+[✓] https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software
+[✓] http://yaml.org/
+[✓] https://github.com/jmbruel/teachingMaterials/blob/master/.github/workflows/jekyll.yml
 [✓] https://ant.apache.org/manual/tutorial-HelloWorldWithAnt.html
 [✓] http://infinitest.github.io/
 [✓] https://docs.gitlab.com/ee/ci/lint.html
-[✖] https://www.grafikart.fr/tutoriels/divers/gitlab-ci-docker-808
+
+16 links checked.
 
 FILE: git.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/git.html
