@@ -62,7 +62,7 @@ WARNING: Site under construction!! Please look at the published version : {websi
 == About this document / Avant-Propos
 //-------------------------------------
 
-=== US {us-icons} vs FR {fr-icon}
+=== US {us-icon} vs FR {fr-icon}
 
 {fr-icon} Ce site est en anglais pour permettre une plus large diffusion.
 Si vous êtes allergique à l'anglais et que vous êtes un de mes étudiants en informatique : changez d'orientation tout de suite...
