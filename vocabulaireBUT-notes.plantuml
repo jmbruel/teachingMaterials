@@ -1,0 +1,89 @@
+@startuml
+
+'-----------------------------------
+' UML concepts illustrated
+' JMB 2014
+'-----------------------------------
+
+' Default settings
+'-----------------------------------
+' left to right direction 'does not work for sequence diagrams :-(
+hide circle
+hide empty members
+hide methods	
+
+' Colors & Fonts
+'-----------------------------------
+'Colors => see http://plantuml.com/color
+'skinparam monochrome true
+'skinparam monochrome reverse
+'skinparam handwritten true
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam roundcorner 10
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName TrebuchetMS
+}
+skinparam arrow {
+    MessageAlign center
+}
+
+class t as "Type de \nparcours"
+class r as "Ressource"
+class s as "Savoir De\nRéférences"
+class a as "Apprentissage\nCritique"
+class p as "Parcours"
+class c as "Compétence"
+class ce as "Composante\nessentielle"
+class m as "Métier\naccessible"
+class n as "Niveau"
+class sae as "SAÉ"
+class ens as "Enseignements"
+class note as "Note"
+class etu as "Etudiant"
+class pf as "Portfolio"
+
+t "1" <-- p
+c *-> "3" n
+c *-> ce
+n *--> "*" a
+a --> "*" ce : Couvre
+
+p -> "*" c
+p --> "*" m : Donne accès à
+r *--> "*" s
+
+n *--> "*" r
+
+r --> "1..*" a : "Contribue"
+a "1..*" <-- "1..*" sae : "Met en oeuvre"
+s "1..*" <-- "1..*" sae : "Nécessite"
+
+r *--> "*" ens
+ens --> "*" note : "Met"
+ens --> "*" s : "Enseigne"
+ens --> "*" sae : "Participe"
+pf --> note : "Amène à"
+
+etu --> "*" ens : "Suit"
+etu --> "*" sae : "Travaille sur"
+etu --> pf : "Complète"
+
+Initial --|> t
+Alternance --|> t
+
+'Initial -[hidden]- Alternance
+
+@enduml
