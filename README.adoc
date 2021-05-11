@@ -120,6 +120,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | URN  | {expert} {cogs-icon} {us-icon} | link:urn.adoc[source] link:urn.html[HTML]  link:urn.pdf[PDF] 
 | User Requirements Notation
 
+| SNI  | {beginner} {cogs-icon} {fr-icon} | link:sni.adoc[source] link:sni.html[HTML]  link:sni.pdf[PDF] 
+| Schéma de Navigation d'Interfaces
+
 |===
 
 //-------------------------------------

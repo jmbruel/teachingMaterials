@@ -1,0 +1,385 @@
+//---------------------------------
+// Cours sur BDD
+// (c) JMB - 2014-2021
+//---------------------------------
+= SNI : Schéma de Navigation d'Interface
+J.-M. Bruel <jbruel@gmail.com>
+v21.1 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/bdd.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+//:source-highlighter: coderay
+:source-highlighter: highlightjs
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+== To follow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+endif::slides[]
+
+// ------------------------------------------ 
+== Un modèle conceptuel d'IHM
+
+Il n'existe pas de modèle de description d'IHM en UML (ou en Merise).
+Nous allons donc voir le SNI de la méthode MACAO.
+
+[NOTE]
+==============
+image:jbc.jpg[width=20%]
+*Jean-Bernard Crampes* (1947-2013), l'inventeur de ce langage de modélisation, était Professeur
+des Universités à l'IUT de Blagnac!!
+==============
+
+// ------------------------------------------
+[{topic}]
+== Objet
+
+Le SNI permet de concevoir et de modéliser la *logique d'enchaînement* des fonctions de l'application en fonction du comportement supposé de l'utilisateur.
+
+ifdef::slides[== !]
+
+Le SNI est purement conceptuel :
+
+[{incremental}]
+-  il est *indépendant du type d'interface* utilisé [detail]#(Windows, WEB, Multimédia...)#
+-  il ne représente *pas la manière de faire* de l'utilisateur [detail]#(menu déroulant, bouton, glisser-déposer...)#
+-  il fait *abstraction* de tout aspect matériel [detail]#(clavier, type d’écran, souris...)#
+-  il ne représente *pas les traitements* réalisés
+
+// ------------------------------------------
+[{topic}]
+== SNI et MVC
+
+Le SNI concerne de la partie "Vue" du MVC.
+
+// ------------------------------------------
+[{topic}]
+== Les Unités de Dialogue
+
+On appellera "**U**nité de **D**ialogue" (*UD*) l'ensemble des fonctions offertes
+à l'utilisateur de façon simultanée [detail]#(sur un même écran, dans une même fenêtre, dans une même page)#.
+
+Chaque UD est représentée par un ou plusieurs symboles dans le SNI.
+
+[NOTE]
+==============
+- Une UD élémentaire = un seul symbole
+- Une UD composée = plusieurs symboles
+==============
+
+// ------------------------------------------
+[{intro}]
+== Les UD élémentaires (UDE)
+
+ifdef::slides[== **U**nité de **D**ialogue **E**lementaire]
+
+[[sni-ude]]
+ifndef::slides[.Les UDE]
+image::sni-ude.png[width=80%]
+
+ifdef::slides[== **U**nité de **D**ialogue **E**lementaire (suite)]
+
+[[sni-ude-exp]]
+ifndef::slides[.Exemple d'UDE]
+image::sni-ude-exp.png["Exemple",width="80%"]
+
+ifdef::slides[== **U**nité de **D**ialogue **E**lementaire (suite)]
+
+[[sni-ude-exp2]]
+ifndef::slides[.Autre exemple d'UDE]
+image::sni-ude-exp2.png["Exemple",width="80%"]
+
+// ------------------------------------------
+[{intro}]
+== Les UD composées par juxtaposition (UDC)
+
+ifdef::slides[== **U**nité de **D**ialogue **C**omposées]
+
+[[sni-udc]]
+ifndef::slides[.Les UD composées par juxtaposition]
+image::sni-udc.png["Les UD composées par juxtaposition",width="90%"]
+
+ifdef::slides[== **U**nité de **D**ialogue **C**omposées (suite)]
+
+[[sni-udc-exp1]]
+ifndef::slides[.Exemple d'UDC]
+image::sni-udc-exp1.png["Exemple",width="90%"]
+
+// ------------------------------------------
+[{intro}]
+== Les UD composées par boîte de groupage (UDC)
+
+ifdef::slides[== **U**nité de **D**ialogue **C**omposées par boîte de groupage]
+
+[[sni-udc2]]
+ifndef::slides[.Les UD composées par boîte de groupage]
+image::sni-udc2.png["Les UD composées par boîte de groupage",width="90%"]
+
+// ------------------------------------------
+[{topic}]
+== Construction du **S**chéma **N**avigationnel d'**I**HM (SNI)
+
+Deux modes de construction :
+
+[{incremental}]
+-  Mode *esquisse* (construction progressive)
+-  Mode *conception* (construction structurée)
+
+// ------------------------------------------
+[{topic}]
+== Règles communes
+
+[TIP]
+.Règles des retours implicites
+===============================
+Après une UDE, le retour implicite s'effectue sur l'UD précédente.
+Après une option d'un menu juxtaposé à une UD (élémentaire ou composée) le retour implicite
+s'effectue sur l'UD juxtaposée.
+===============================
+
+ifdef::slides[== Règles communes]
+
+[TIP]
+.Filtres associés aux listes
+===============================
+Permet de restreindre le nombre de lignes d'une liste. +
+Un filtre porte sur certains attributs de la classe (présents ou non dans la liste).
+===============================
+
+ifndef::slides[.Exemple de filtre]
+image::filtre.png["Filtre",width="60%"]
+
+ifdef::slides[== Règles communes]
+
+[TIP]
+.Tris multiples des listes
+===============================
+Permet de trier une liste de différentes façons. +
+Les différents tris possibles sont indiqués comme pour un filtre.
+===============================
+
+ifndef::slides[.Exemple de tri]
+image::tris.png["tri",width="60%"]
+
+ifdef::slides[== Règles communes]
+
+[TIP]
+.Rôles et conditions d'accès
+===============================
+Les rôles et les conditions d'accès permettent de contraindre les accès aux menus
+(`[Rôle,...]` ou `[-Rôle,...]`, `[valeur > 1000]`).
+===============================
+
+// ------------------------------------------
+[{topic}]
+== Construction du SNI en mode *esquisse*
+
+Au cours de l’acquisition des exigences ou
+
+En rétro-conception d'IHM :
+
+* A partir des besoins des utilisateurs
+** Cas d’utilisation et fonctions
+** Droits et conditions d'accès
+** Contraintes diverses
+* Participation des utilisateurs
+
+// ------------------------------------------
+[{topic}]
+== Construction *structurée* (patrons d’IHM)
+
+* Pour les applications importantes
+* Adoption du principe OBJET-ACTION
+** Dans une approche objet-action on demande en premier lieu à l'utilisateur d'indiquer quels sont les objets sur lesquels il désire travailler puis, quelles opérations il veut leur appliquer.
+
+ifdef::slides[== Construction *structurée* (suite)]
+
+* Exemple d'illustration :
+[{incremental}]
+** Soit une base de données comportant trois types d‘objets : CLIENTS, PRODUITS, FOURNISSEURS
+** L'utilisateur désire effectuer trois types d'actions générales sur ces objets : CONSULTER, MODIFIER, SUPPRIMER
+
+ifdef::slides[== Construction *structurée* (suite)]
+
+* Il désire également réaliser trois traitements spécifiques :
+[{incremental}]
+** Lister les clients triés par régions,
+** Imprimer la fiche de stock d'un produit donné,
+** Marquer tous les fournisseurs dont le chiffre d'affaires est < 1000 €
+
+// ------------------------------------------
+[{topic}]
+== Approche Action-Objet
+
+[[sni-act-obj]]
+ifndef::slides[.Approche Action-Objet]
+image::sni-act-obj.png["Approche Action-Objet",width="90%"]
+
+// ------------------------------------------
+[{topic}]
+== Approche Objet-Action
+
+[[sni-obj-act]]
+ifndef::slides[.Approche Objet-Action]
+image::sni-obj-act.png["Approche Objet-Action",width="90%"]
+
+
+// ------------------------------------------
+[{intro}]
+== Mise en oeuvre du principe *OBJET-ACTION*
+
+// ------------------------------------------
+[{topic}]
+== Démarche
+
+*  On part du diagramme des classes métier
+**   Classes et attributs
+**  Relations (associations, compositions, spécialisations)
+** Méthodes utilisateur
+* Utilisation de patrons de conception (_Design Patterns_)
+
+ifdef::slides[== Démarche (suite)]
+
+Le SNI obtenu représente alors le squelette du SNI final.
+
+* Le squelette est complété avec
+** Les filtres
+** Les droits et conditions d'accès
+** L’accès aux fonctions
+* Le SNI est optimisé en cherchant à minimiser le nombre d'actions utilisateur (clics souris)
+
+// ------------------------------------------
+[{topic}]
+== Exemple
+
+Les exigences :
+
+- Afficher la liste de tous les étudiants classés par année, groupe et ordre alphabétique +
+- Imprimer la liste +
+- Afficher le détail d'un étudiant +
+- Modifier l'étudiant affiché
+
+ifdef::slides[=== Exemple]
+
+image::sni1.png["SNI de départ",width="80%"]
+
+ifdef::slides[=== Exemple]
+
+Complément 1 : Nouveaux étudiants et Constitution groupes
+
+ifdef::slides[=== Exemple]
+
+image::sni2.png["Complément de SNI",width="80%"]
+
+ifdef::slides[=== Exemple]
+
+Complément 2 : Gestion complète des groupes
+
+ifdef::slides[=== Exemple]
+
+image::sni3.png["Complément de SNI",width="80%"]
+
+ifdef::slides[=== Exemple]
+
+Complément 3 : Saisie des notes d’un partiel
+
+ifdef::slides[=== Exemple]
+
+image::sni4.png["Complément de SNI",width="80%"]
+
+// ------------------------------------------
+[{intro}]
+== *Patrons* d'IHM
+
+// ------------------------------------------
+[{topic}]
+== Patrons d'IHM
+
+Cinq patrons d’IHM obtenus à partir du diagramme des classes :
+
+[{incremental}]
+* Racine [detail]#(classes ciblées)#
+* Détail [detail]#(sélection d’un objet dans une liste d’objets)#
+* Liaison [detail]#(association entre plusieurs classes)#
+* Aiguillage [detail]#(spécialisation-généralisation)#
+* Administration [detail]#(mise à jour, création, suppression d’objets)#
+
+// ------------------------------------------
+[{topic}]
+=== Patron Racine
+
+Ciblage des *classes métier*
+
+Mettre en évidence les classes prépondérantes, dont les objets seront présentés au *premier niveau* de l’IHM
+
+image::sni5.png["Patron Racine",width="60%"]
+
+// ------------------------------------------
+[{topic}]
+=== Patron Détail
+
+Représenter *tous les attributs* d'un objet désigné dans une liste.
+
+image:sni6.png["Patron Détail",width="40%"] image:sni7.png["Patron Détail avec Fils",width="40%"]
+
+// ------------------------------------------
+[{topic}]
+=== Patron Liaison
+
+Suivre les *liens entre les objets* appartenant à des classes liées par des associations multiples (`*`)
+
+image:sni8.png["Patron Liaison",width="40%"] image:sni9.png["Patron Liaison avec classe-association",width="40%"]
+
+// ------------------------------------------
+[{topic}]
+=== Patron Aiguillage
+
+Utile pour présenter les détails d'une généralisation
+
+image:sni10.png["Patron Aiguillage",width="40%"]
+image:sni11.png["Patron Aiguillage",width="40%"]
+
+// ------------------------------------------
+[{topic}]
+=== Patron Administration
+Utile pour matérialiser un *CRUD* limité à l'administrateur
+
+image::sni12.png["Patron Admin",width="60%"]
