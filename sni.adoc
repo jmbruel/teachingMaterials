@@ -333,7 +333,7 @@ image::sni4.png["Complément de SNI",width="80%"]
 [{topic}]
 == Patrons d'IHM
 
-Cinq patrons d’IHM obtenus à partir du diagramme des classes :
+5 patrons d’IHM obtenus à partir du diagramme des classes :
 
 [{incremental}]
 * Racine [detail]#(classes ciblées)#
