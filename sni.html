@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.12">
 <meta name="author" content="J.-M. Bruel">
-<title>Teaching materials</title>
+<title>SNI : Schéma de Navigation d&#8217;Interface</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,10 +439,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Teaching materials</h1>
+<h1>SNI : Schéma de Navigation d&#8217;Interface</h1>
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
@@ -451,39 +452,55 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_about_this_document_avant_propos">About this document / Avant-Propos</a>
+<li><a href="#_un_modèle_conceptuel_dihm">1. Un modèle conceptuel d&#8217;IHM</a></li>
+<li><a href="#_objet">2. Objet</a></li>
+<li><a href="#_sni_et_mvc">3. SNI et MVC</a></li>
+<li><a href="#_les_unités_de_dialogue">4. Les Unités de Dialogue</a></li>
+<li><a href="#_les_ud_élémentaires_ude">5. Les UD élémentaires (UDE)</a></li>
+<li><a href="#_les_ud_composées_par_juxtaposition_udc">6. Les UD composées par juxtaposition (UDC)</a></li>
+<li><a href="#_les_ud_composées_par_boîte_de_groupage_udc">7. Les UD composées par boîte de groupage (UDC)</a></li>
+<li><a href="#_construction_du_schéma_navigationnel_dihm_sni">8. Construction du <strong>S</strong>chéma <strong>N</strong>avigationnel d'<strong>I</strong>HM (SNI)</a></li>
+<li><a href="#_règles_communes">9. Règles communes</a></li>
+<li><a href="#_construction_du_sni_en_mode_esquisse">10. Construction du SNI en mode <strong>esquisse</strong></a></li>
+<li><a href="#_construction_structurée_patrons_dihm">11. Construction <strong>structurée</strong> (patrons d’IHM)</a></li>
+<li><a href="#_approche_action_objet">12. Approche Action-Objet</a></li>
+<li><a href="#_approche_objet_action">13. Approche Objet-Action</a></li>
+<li><a href="#_mise_en_oeuvre_du_principe_objet_action">14. Mise en oeuvre du principe <strong>OBJET-ACTION</strong></a></li>
+<li><a href="#_démarche">15. Démarche</a></li>
+<li><a href="#_exemple">16. Exemple</a></li>
+<li><a href="#_patrons_dihm">17. <strong>Patrons</strong> d&#8217;IHM</a></li>
+<li><a href="#_patrons_dihm_2">18. Patrons d&#8217;IHM</a>
 <ul class="sectlevel2">
-<li><a href="#_conventions">Conventions</a></li>
+<li><a href="#_patron_racine">18.1. Patron Racine</a></li>
+<li><a href="#_patron_détail">18.2. Patron Détail</a></li>
+<li><a href="#_patron_liaison">18.3. Patron Liaison</a></li>
+<li><a href="#_patron_aiguillage">18.4. Patron Aiguillage</a></li>
+<li><a href="#_patron_administration">18.5. Patron Administration</a></li>
 </ul>
 </li>
-<li><a href="#_list_of_materials">List of materials</a></li>
-<li><a href="#_list_of_courses">List of courses</a></li>
-<li><a href="#_academic_partnerships">Appendix A: <span class="icon"><i class="fa fa-dollar"></i></span> Academic partnerships</a></li>
-<li><a href="#_credits">Appendix B: Credits</a></li>
-<li><a href="#_checks_results_and_issues">Appendix C: Checks results and issues</a>
-<ul class="sectlevel2">
-<li><a href="#_urls">URLs</a></li>
-</ul>
-</li>
-<li><a href="#_contributing">Appendix D: Contributing</a></li>
-<li><a href="#_about">About&#8230;&#8203;</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_un_modèle_conceptuel_dihm">1. Un modèle conceptuel d&#8217;IHM</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="http://github.com/jmbruel/teachingMaterials/workflows/Checks/badge.svg" alt="Checks"></span> <span class="image"><img src="http://github.com/jmbruel/teachingMaterials/workflows/Tests/badge.svg" alt="Tests"></span> <span class="image"><a class="image" href="https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jmbruel/teachingMaterials&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c" alt="550a9c47c3d6426c9122765e45097a3c"></a></span> <span class="image"><a class="image" href="https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&amp;metric=sqale_index"><img src="https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&amp;metric=sqale_index" alt="Technical Debt"></a></span> <span class="image"><a class="image" href="https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f"><img src="https://img.shields.io/badge/Cucumber-Report-yellowgreen" alt="Cucumber"></a></span> <span class="image"><a class="image" href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></span></p>
+<p>Il n&#8217;existe pas de modèle de description d&#8217;IHM en UML (ou en Merise).
+Nous allons donc voir le SNI de la méthode MACAO.</p>
 </div>
-<div class="admonitionblock caution">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Site under construction!! Please look at the published version : <a href="http://jmbruel.github.io/teachingMaterials" class="bare">http://jmbruel.github.io/teachingMaterials</a> or the <a href="http://github.com/jmbruel/teachingMaterials">GitHub version</a>.
+<div class="paragraph">
+<p><span class="image"><img src="images/jbc.jpg" alt="jbc" width="20%"></span>
+<strong>Jean-Bernard Crampes</strong> (1947-2013), l&#8217;inventeur de ce langage de modélisation, était Professeur
+des Universités à l&#8217;IUT de Blagnac!!</p>
+</div>
 </td>
 </tr>
 </table>
@@ -491,248 +508,525 @@ Site under construction!! Please look at the published version : <a href="http:/
 </div>
 </div>
 <div class="sect1">
-<h2 id="_about_this_document_avant_propos">About this document / Avant-Propos</h2>
+<h2 id="_objet">2. Objet</h2>
 <div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Ce site est en anglais pour permettre une plus large diffusion.
-Si vous êtes allergique à l&#8217;anglais et que vous êtes un de mes étudiants en informatique : changez d&#8217;orientation tout de suite&#8230;&#8203;
-The following courses are in English except those with the French flag <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span>.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Le SNI permet de concevoir et de modéliser la <strong>logique d&#8217;enchaînement</strong> des fonctions de l&#8217;application en fonction du comportement supposé de l&#8217;utilisateur.</p>
 </div>
-<div class="sect2">
-<h3 id="_conventions">Conventions</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Level of difficulty</dt>
-<dd>
-<p>I&#8217;ve graded from easy/beginner (<span class="icon"><i class="fa fa-star-o"></i></span>) to advanced (<span class="icon"><i class="fa fa-star-half-o"></i></span>) or expert (<span class="icon"><i class="fa fa-star"></i></span>).</p>
-</dd>
-<dt class="hdlist1">Definitions/Theory vs Practical</dt>
-<dd>
-<p>Courses with <i class="fa fa-graduation-cap"></i> are more theoretical than those with <i class="fa fa-cogs"></i>.</p>
-</dd>
-</dl>
+<div class="paragraph">
+<p>Le SNI est purement conceptuel :</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_list_of_materials">List of materials</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 30%;">
-<col style="width: 10%;">
-<col style="width: 20%;">
-<col style="width: 40%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="git.adoc">source</a> <a href="git.html">HTML</a> <a href="git.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Basic of <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> principles and commands</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Scrum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-graduation-cap"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="scrum.adoc">source</a> <a href="scrum.html">HTML</a> <a href="scrum.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Basic of the Scrum agile method</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Refactoring</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-graduation-cap"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="refactoring.adoc">source</a> <a href="refactoring.html">HTML</a>  <a href="refactoring.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principle of refactoring</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Requirements</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-graduation-cap"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="requirements.adoc">source</a> <a href="requirements.html">HTML</a>  <a href="requirements.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principle of requirements</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Continuous Integration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="ci-fr.adoc">source</a> <a href="ci-fr.html">HTML</a>  <a href="ci-fr.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principles of CI (mainly GitLab)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Continuous Integration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="ci.adoc">source</a> <a href="ci.html">HTML</a>  <a href="ci.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principles of CI (mainly GitHub)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tests</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-graduation-cap"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="tests.adoc">source</a> <a href="tests.html">HTML</a>  <a href="tests.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principle on tests</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Testing &amp; CI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="testingCI.adoc">source</a> <a href="testingCI.html">HTML</a>  <a href="testingCI.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integrate your tests in your CI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sprint Quality Assessment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span>/<span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="sprintQA.adoc">source</a> <a href="sprintQA.html">HTML</a>  <a href="sprintQA.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spider Web Evaluation (<a href="https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png">example</a>)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub Trick &amp; Tips</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="github.adoc">source</a> <a href="github.html">HTML</a>  <a href="github.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tips to use GitHub efficiently</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BDD</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="bdd.adoc">source</a> <a href="bdd.html">HTML</a>  <a href="bdd.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tips on Behavioral-Driven Development</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="urn.adoc">source</a> <a href="urn.html">HTML</a>  <a href="urn.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">User Requirements Notation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SNI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="sni.adoc">source</a> <a href="sni.html">HTML</a>  <a href="sni.pdf">PDF</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Schéma de Navigation d&#8217;Interfaces</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_list_of_courses">List of courses</h2>
-<div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-Very incomplete list&#8230;&#8203;
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 21.4285%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 35.7142%;">
-<col style="width: 14.2859%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://innopolis.university/">Innopolis University</a> :
-<a href="https://moodle.innopolis.university/course/view.php?id=724">Modern Application Production</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jmbruel.github.io/InnopolisModernApplicationProduction/">Web Page</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Scrum/Tests/Git/CI/&#8230;&#8203;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">since 2017</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.univ-cotedazur.fr">LP-DAM-IOTIA</a> : <a href="https://lms.univ-cotedazur.fr/course/view.php?id=16573">TLEDAM11</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-half-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/usa.svg" alt="usa" width="10%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="intro.adoc">source</a> <a href="intro.html">HTML</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Introduction to Software Engineering</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">since 2018</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iut-blagnac.fr">DUT INFO</a> : <a href="https://webetud.iut-blagnac.fr/course/view.php?id=352">BCOO (M2104)</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-star-o"></i></span> <i class="fa fa-cogs"></i> <span class="image"><img src="images/icons/france.svg" alt="france" width="4%"></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://iut-blagnac.github.io/POO/">Web Page</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Introduction to OO design (UML)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">since 2008</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_academic_partnerships">Appendix A: <span class="icon"><i class="fa fa-dollar"></i></span> Academic partnerships</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 88.8889%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><a class="image" href="https://wiki.eclipse.org/Papyrus_for_Education"><img src="https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png" alt="Papyrus4education logo" width="80"></a></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">I am leader of the <a href="https://wiki.eclipse.org/Papyrus_for_Education">Papyrus4Education</a> initiative at <a href="http://www.eclipse.org">Eclipse</a>,
-  that aims at promoting the use of the open source <a href="http://www.eclipse.org/papyrus/">Papyrus</a> modeler for teaching <a href="http://www.uml.org/">UML&#8482;</a>/<a href="http://www.omgsysml.org/">SysML&#8482;</a>. Thanks <a href="http://www-list.cea.fr/">CEA LIST</a>, for your constant support.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><a class="image" href="https://github.com/edu"><img src="images/professorcat.png" alt="professorcat" width="80"></a></span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Through <a href="https://github.com/edu">GitHub Educational Account</a>, my students have assignments repositories on <a href="https://github.com/">GitHub</a> classrooms.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_credits">Appendix B: Credits</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Flags Icons made by <a href="https://www.freepik.com">Freepik</a> from <a href="https://www.flaticon.com/">https://www.flaticon.com/</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a></p>
+<p>il est <strong>indépendant du type d&#8217;interface</strong> utilisé <span class="detail">(Windows, WEB, Multimédia&#8230;&#8203;)</span></p>
+</li>
+<li>
+<p>il ne représente <strong>pas la manière de faire</strong> de l&#8217;utilisateur <span class="detail">(menu déroulant, bouton, glisser-déposer&#8230;&#8203;)</span></p>
+</li>
+<li>
+<p>il fait <strong>abstraction</strong> de tout aspect matériel <span class="detail">(clavier, type d’écran, souris&#8230;&#8203;)</span></p>
+</li>
+<li>
+<p>il ne représente <strong>pas les traitements</strong> réalisés</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_checks_results_and_issues">Appendix C: Checks results and issues</h2>
+<h2 id="_sni_et_mvc">3. SNI et MVC</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_urls">URLs</h3>
 <div class="paragraph">
-<p>Checking URLs result (last update: 2021-05-11):</p>
-</div>
-<div class="paragraph">
-<p>See the following file: <a href="check-results.txt" class="bare">check-results.txt</a></p>
-</div>
+<p>Le SNI concerne de la partie "Vue" du MVC.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_contributing">Appendix D: Contributing</h2>
+<h2 id="_les_unités_de_dialogue">4. Les Unités de Dialogue</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you want to contribute, check this link: <a href="CONTRIBUTING.adoc">CONTRIBUTING.adoc</a>.</p>
+<p>On appellera "<strong>U</strong>nité de <strong>D</strong>ialogue" (<strong>UD</strong>) l&#8217;ensemble des fonctions offertes
+à l&#8217;utilisateur de façon simultanée <span class="detail">(sur un même écran, dans une même fenêtre, dans une même page)</span>.</p>
+</div>
+<div class="paragraph">
+<p>Chaque UD est représentée par un ou plusieurs symboles dans le SNI.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Une UD élémentaire = un seul symbole</p>
+</li>
+<li>
+<p>Une UD composée = plusieurs symboles</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_about">About&#8230;&#8203;</h2>
+<h2 id="_les_ud_élémentaires_ude">5. Les UD élémentaires (UDE)</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
+<div id="sni-ude" class="imageblock">
 <div class="content">
+<img src="images/sni-ude.png" alt="sni ude" width="80%">
+</div>
+<div class="title">Figure 1. Les UDE</div>
+</div>
+<div id="sni-ude-exp" class="imageblock">
+<div class="content">
+<img src="images/sni-ude-exp.png" alt="Exemple" width="80%">
+</div>
+<div class="title">Figure 2. Exemple d&#8217;UDE</div>
+</div>
+<div id="sni-ude-exp2" class="imageblock">
+<div class="content">
+<img src="images/sni-ude-exp2.png" alt="Exemple" width="80%">
+</div>
+<div class="title">Figure 3. Autre exemple d&#8217;UDE</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_ud_composées_par_juxtaposition_udc">6. Les UD composées par juxtaposition (UDC)</h2>
+<div class="sectionbody">
+<div id="sni-udc" class="imageblock">
+<div class="content">
+<img src="images/sni-udc.png" alt="Les UD composées par juxtaposition" width="90%">
+</div>
+<div class="title">Figure 4. Les UD composées par juxtaposition</div>
+</div>
+<div id="sni-udc-exp1" class="imageblock">
+<div class="content">
+<img src="images/sni-udc-exp1.png" alt="Exemple" width="90%">
+</div>
+<div class="title">Figure 5. Exemple d&#8217;UDC</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_ud_composées_par_boîte_de_groupage_udc">7. Les UD composées par boîte de groupage (UDC)</h2>
+<div class="sectionbody">
+<div id="sni-udc2" class="imageblock">
+<div class="content">
+<img src="images/sni-udc2.png" alt="Les UD composées par boîte de groupage" width="90%">
+</div>
+<div class="title">Figure 6. Les UD composées par boîte de groupage</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_construction_du_schéma_navigationnel_dihm_sni">8. Construction du <strong>S</strong>chéma <strong>N</strong>avigationnel d'<strong>I</strong>HM (SNI)</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Document made by <a href="mailto:jbruel@gmail.com">JMB</a> using <a href="http://asciidoctor.org/">Asciidoctor</a>
-(version <code>2.0.12</code>) from 'Dan Alen'. 'Licence Creative Commons'.
-<span class="image"><a class="image" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="images/icons/88x31.png" alt="Licence Creative Commons"></a></span>
-<a href="http://creativecommons.org/licenses/by-sa/3.0/">licence Creative Commons Paternité - Partage à l&#39;Identique 3.0 non transposé</a>.</p>
+<p>Deux modes de construction :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mode <strong>esquisse</strong> (construction progressive)</p>
+</li>
+<li>
+<p>Mode <strong>conception</strong> (construction structurée)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_règles_communes">9. Règles communes</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Règles des retours implicites</div>
+<div class="paragraph">
+<p>Après une UDE, le retour implicite s&#8217;effectue sur l&#8217;UD précédente.
+Après une option d&#8217;un menu juxtaposé à une UD (élémentaire ou composée) le retour implicite
+s&#8217;effectue sur l&#8217;UD juxtaposée.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Filtres associés aux listes</div>
+<div class="paragraph">
+<p>Permet de restreindre le nombre de lignes d&#8217;une liste.<br>
+Un filtre porte sur certains attributs de la classe (présents ou non dans la liste).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/filtre.png" alt="Filtre" width="60%">
+</div>
+<div class="title">Figure 7. Exemple de filtre</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Tris multiples des listes</div>
+<div class="paragraph">
+<p>Permet de trier une liste de différentes façons.<br>
+Les différents tris possibles sont indiqués comme pour un filtre.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/tris.png" alt="tri" width="60%">
+</div>
+<div class="title">Figure 8. Exemple de tri</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Rôles et conditions d&#8217;accès</div>
+<div class="paragraph">
+<p>Les rôles et les conditions d&#8217;accès permettent de contraindre les accès aux menus
+(<code>[Rôle,&#8230;&#8203;]</code> ou <code>[-Rôle,&#8230;&#8203;]</code>, <code>[valeur &gt; 1000]</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_construction_du_sni_en_mode_esquisse">10. Construction du SNI en mode <strong>esquisse</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Au cours de l’acquisition des exigences ou</p>
+</div>
+<div class="paragraph">
+<p>En rétro-conception d&#8217;IHM :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A partir des besoins des utilisateurs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Cas d’utilisation et fonctions</p>
+</li>
+<li>
+<p>Droits et conditions d&#8217;accès</p>
+</li>
+<li>
+<p>Contraintes diverses</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Participation des utilisateurs</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_construction_structurée_patrons_dihm">11. Construction <strong>structurée</strong> (patrons d’IHM)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Pour les applications importantes</p>
+</li>
+<li>
+<p>Adoption du principe OBJET-ACTION</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Dans une approche objet-action on demande en premier lieu à l&#8217;utilisateur d&#8217;indiquer quels sont les objets sur lesquels il désire travailler puis, quelles opérations il veut leur appliquer.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Exemple d&#8217;illustration :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Soit une base de données comportant trois types d‘objets : CLIENTS, PRODUITS, FOURNISSEURS</p>
+</li>
+<li>
+<p>L&#8217;utilisateur désire effectuer trois types d&#8217;actions générales sur ces objets : CONSULTER, MODIFIER, SUPPRIMER</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Il désire également réaliser trois traitements spécifiques :</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Lister les clients triés par régions,</p>
+</li>
+<li>
+<p>Imprimer la fiche de stock d&#8217;un produit donné,</p>
+</li>
+<li>
+<p>Marquer tous les fournisseurs dont le chiffre d&#8217;affaires est &lt; 1000 €</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approche_action_objet">12. Approche Action-Objet</h2>
+<div class="sectionbody">
+<div id="sni-act-obj" class="imageblock">
+<div class="content">
+<img src="images/sni-act-obj.png" alt="Approche Action-Objet" width="90%">
+</div>
+<div class="title">Figure 9. Approche Action-Objet</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approche_objet_action">13. Approche Objet-Action</h2>
+<div class="sectionbody">
+<div id="sni-obj-act" class="imageblock">
+<div class="content">
+<img src="images/sni-obj-act.png" alt="Approche Objet-Action" width="90%">
+</div>
+<div class="title">Figure 10. Approche Objet-Action</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mise_en_oeuvre_du_principe_objet_action">14. Mise en oeuvre du principe <strong>OBJET-ACTION</strong></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_démarche">15. Démarche</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>On part du diagramme des classes métier</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Classes et attributs</p>
+</li>
+<li>
+<p>Relations (associations, compositions, spécialisations)</p>
+</li>
+<li>
+<p>Méthodes utilisateur</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Utilisation de patrons de conception (<em>Design Patterns</em>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Le SNI obtenu représente alors le squelette du SNI final.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Le squelette est complété avec</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Les filtres</p>
+</li>
+<li>
+<p>Les droits et conditions d&#8217;accès</p>
+</li>
+<li>
+<p>L’accès aux fonctions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Le SNI est optimisé en cherchant à minimiser le nombre d&#8217;actions utilisateur (clics souris)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exemple">16. Exemple</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les exigences :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Afficher la liste de tous les étudiants classés par année, groupe et ordre alphabétique<br></p>
+</li>
+<li>
+<p>Imprimer la liste<br></p>
+</li>
+<li>
+<p>Afficher le détail d&#8217;un étudiant<br></p>
+</li>
+<li>
+<p>Modifier l&#8217;étudiant affiché</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni1.png" alt="SNI de départ" width="80%">
+</div>
+</div>
+<div class="paragraph">
+<p>Complément 1 : Nouveaux étudiants et Constitution groupes</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni2.png" alt="Complément de SNI" width="80%">
+</div>
+</div>
+<div class="paragraph">
+<p>Complément 2 : Gestion complète des groupes</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni3.png" alt="Complément de SNI" width="80%">
+</div>
+</div>
+<div class="paragraph">
+<p>Complément 3 : Saisie des notes d’un partiel</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni4.png" alt="Complément de SNI" width="80%">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_patrons_dihm">17. <strong>Patrons</strong> d&#8217;IHM</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_patrons_dihm_2">18. Patrons d&#8217;IHM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cinq patrons d’IHM obtenus à partir du diagramme des classes :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Racine <span class="detail">(classes ciblées)</span></p>
+</li>
+<li>
+<p>Détail <span class="detail">(sélection d’un objet dans une liste d’objets)</span></p>
+</li>
+<li>
+<p>Liaison <span class="detail">(association entre plusieurs classes)</span></p>
+</li>
+<li>
+<p>Aiguillage <span class="detail">(spécialisation-généralisation)</span></p>
+</li>
+<li>
+<p>Administration <span class="detail">(mise à jour, création, suppression d’objets)</span></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_patron_racine">18.1. Patron Racine</h3>
+<div class="paragraph">
+<p>Ciblage des <strong>classes métier</strong></p>
+</div>
+<div class="paragraph">
+<p>Mettre en évidence les classes prépondérantes, dont les objets seront présentés au <strong>premier niveau</strong> de l’IHM</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni5.png" alt="Patron Racine" width="60%">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patron_détail">18.2. Patron Détail</h3>
+<div class="paragraph">
+<p>Représenter <strong>tous les attributs</strong> d&#8217;un objet désigné dans une liste.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/sni6.png" alt="Patron Détail" width="40%"></span> <span class="image"><img src="images/sni7.png" alt="Patron Détail avec Fils" width="40%"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patron_liaison">18.3. Patron Liaison</h3>
+<div class="paragraph">
+<p>Suivre les <strong>liens entre les objets</strong> appartenant à des classes liées par des associations multiples (<code>*</code>)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/sni8.png" alt="Patron Liaison" width="40%"></span> <span class="image"><img src="images/sni9.png" alt="Patron Liaison avec classe-association" width="40%"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patron_aiguillage">18.4. Patron Aiguillage</h3>
+<div class="paragraph">
+<p>Utile pour présenter les détails d&#8217;une généralisation</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/sni10.png" alt="Patron Aiguillage" width="40%"></span>
+<span class="image"><img src="images/sni11.png" alt="Patron Aiguillage" width="40%"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patron_administration">18.5. Patron Administration</h3>
+<div class="paragraph">
+<p>Utile pour matérialiser un <strong>CRUD</strong> limité à l&#8217;administrateur</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/sni12.png" alt="Patron Admin" width="60%">
 </div>
 </div>
 </div>
@@ -742,8 +1036,15 @@ Very incomplete list&#8230;&#8203;
 <div id="footer">
 <div id="footer-text">
 Version 21.1 2021-05-11<br>
-Last updated 2021-05-11 09:33:36 +0200
+Last updated 2021-05-11 09:26:05 +0200
 </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
 </body>
 </html>
