@@ -16,3 +16,4 @@ package-lock.json
 build
 .project
 .settings
+settings.json
