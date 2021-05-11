@@ -55,19 +55,16 @@ include::definitions.txt[]
 image:{baseURL}/workflows/Checks/badge.svg[Checks] image:{baseURL}/workflows/Tests/badge.svg[Tests] image:https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c[link="https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade"] image:https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&metric=sqale_index[Technical Debt,link="https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&metric=sqale_index"] image:https://img.shields.io/badge/Cucumber-Report-yellowgreen[Cucumber,link="https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f"] image:https://img.shields.io/badge/License-MIT-yellow.svg[License: MIT, link="https://opensource.org/licenses/MIT"]
 //------------------------------------ Badges --------
 
-WARNING: Site under construction!! Please look at the published version : {website} or the {baseURL}[GitHub version].
+CAUTION: Site under construction!! Please look at the published version : {website} or the {baseURL}[GitHub version].
 
 :numbered!:
 //-------------------------------------
 == About this document / Avant-Propos
 //-------------------------------------
 
-=== US {us-icon} vs FR {fr-icon}
-
-{fr-icon} Ce site est en anglais pour permettre une plus large diffusion.
+WARNING: Ce site est en anglais pour permettre une plus large diffusion.
 Si vous êtes allergique à l'anglais et que vous êtes un de mes étudiants en informatique : changez d'orientation tout de suite...
-
-The following courses are in English except those with the French flag {fr-icon}.
+The following courses are in English except those with the French flag.
 
 === Conventions
 
