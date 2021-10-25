@@ -4,7 +4,7 @@
 // ------------------------------------------
 = Sprint Evaluation
 Jean-Michel Bruel <jbruel@gmail.com>
-v2021.0, {localdate}
+v2021.1, {localdate}
 :status: bottom
 :inclusion:
 :experimental:
@@ -12,8 +12,8 @@ v2021.0, {localdate}
 // ------------------------------------------
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
-:revealjs_theme: blood
-//beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: league
+//beige, black, blood, league, night, serif, simple, sky, solarized, white
 // ------------------------------------------
 :icons: font
 :imagesdir: images
@@ -22,16 +22,18 @@ v2021.0, {localdate}
 :numbered!:
 == Assessment and rating of sprints
 
-Each Sprint (week) is evaluated by a TA.
-The evaluation will address 5 criteria and will take the following form:
+NOTE: This section explains my way of evaluating sprints in most of my project-based teachings.
+
+A TA evaluates each Sprint (one per week, most of the time).
+The evaluation will address five or six criteria and will take the following form:
 
 .Example of weekly evaluation (using JS)
-image::spiderJS.png[width=60%,pdfwidth=90%]
+image::spiderJS.png[width=70%,pdfwidth=90%]
 
 ifdef::slides[=== From 6 artifacts to 5 criteria]
 
 .The initial 6 artifacts (Source https://github.com/xblanc33/QualiteDev/[here])
-image::artifacts.svg[width=90%,pdfwidth=50%,link="https://github.com/xblanc33/QualiteDev/"]
+image::artifacts.svg[width=120%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
 
 NOTE: These artifacts come from a course on software quality from my colleague Xavier Blanc (https://github.com/xblanc33/QualiteDev).
 
@@ -52,13 +54,13 @@ image::profiles.png[width=50%]
 === US/Tasks
 
 - The way Goals, US, and tasks are linked and traced link:https://github.com/xblanc33/QualiteDev/blob/master/tache[here])
-- Very tool-dependent (e.g., blocking issues, task lists, ...)
+- Very tool-dependent (e.g., blocking issues, task lists)
 - Can (should?) reach a high level pretty early
 
 === Documentation
 
 - Technical and user documentations (more details link:https://github.com/xblanc33/QualiteDev/blob/master/doc[here])
-- As much automated as possible (javadoc, `.md`/`.adoc`, ...)
+- As much automated as possible (javadoc, `.md`/`.adoc`, code included rather than copy-pasted)
 
 === Tests/Quality
 
@@ -72,7 +74,7 @@ image::profiles.png[width=50%]
 
 == Project typical evaluation sheet
 
-Here is the provisional scale:
+Here is a typical scale:
 
 [align="center", width="90%", cols="6,^1", options="header"]
 |==========================================================
