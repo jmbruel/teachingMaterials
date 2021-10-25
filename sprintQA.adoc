@@ -12,7 +12,7 @@ v2021.1, {localdate}
 // ------------------------------------------
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
-:revealjs_theme: league
+:revealjs_theme: blood
 //beige, black, blood, league, night, serif, simple, sky, solarized, white
 // ------------------------------------------
 :icons: font
@@ -22,10 +22,14 @@ v2021.1, {localdate}
 :numbered!:
 == Assessment and rating of sprints
 
+ifndef::slides[]
 NOTE: This section explains my way of evaluating sprints in most of my project-based teachings.
+endif::[]
 
 A TA evaluates each Sprint (one per week, most of the time).
 The evaluation will address five or six criteria and will take the following form:
+
+ifdef::slides[=== Sprint Evaluation]
 
 .Example of weekly evaluation (using JS)
 image::spiderJS.png[width=70%,pdfwidth=90%]
@@ -76,6 +80,7 @@ image::profiles.png[width=50%]
 
 Here is a typical scale:
 
+ifndef::slides[]
 [align="center", width="90%", cols="6,^1", options="header"]
 |==========================================================
 | Criterion | %
@@ -86,6 +91,17 @@ Here is a typical scale:
 | Code and application quality | 10%
 | Final Customer Satisfaction | 10%
 |==========================================================
+endif::slides[]
+
+ifdef::slides[]
+- Respect for the Scrum method => *20%*
+- "Professional" character of dev => *20%*
+- Successive deliveries => *20%*
+- Tests / Documentations / Readme / wiki => *20%*
+- Code and application quality => *10%*
+- Final Customer Satisfaction => *10%*
+
+endif::slides[]
 
 TIP: I advise you to add such a table in your readme and self-evaluate your project.
 
