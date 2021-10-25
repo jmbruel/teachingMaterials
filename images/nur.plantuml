@@ -1,0 +1,12 @@
+@startuml ValueObject
+!include config.cfg
+
+class Student 
+class Address
+
+enum MyEnum
+
+Address .> MyEnum
+
+Student *-> Address
+@enduml
