@@ -139,5 +139,8 @@ image::uselessComment.png[width=60%,link="https://pic.twitter.com/ICGb9qKnRN"]
 
 == Useful links
 
+* General
 - The materials for the course: http://bit.ly/jmb-teaching
 - The initial course about quality development: https://github.com/xblanc33/QualiteDev
+* Python
+- Defect prediction https://github.com/awsm-research/PyExplainer
