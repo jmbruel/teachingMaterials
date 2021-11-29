@@ -105,6 +105,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | Testing & CI  | {advanced} {cogs-icon} {fr-icon}| link:testingCI.adoc[source] link:testingCI.html[HTML]  link:testingCI.pdf[PDF] 
 | Integrate your tests in your CI
 
+| Testing & CI  | {advanced} {cogs-icon} {us-icon}| link:testingCI-uk.adoc[source] link:testingCI-uk.html[HTML]  link:testingCI-uk.pdf[PDF] 
+| Integrate your tests in your CI
+
 | Sprint Quality Assessment  | {advanced} {cogs-icon} {us-icon}/{fr-icon}| link:sprintQA.adoc[source] link:sprintQA.html[HTML]  link:sprintQA.pdf[PDF] 
 | Spider Web Evaluation (link:https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png[example])
 

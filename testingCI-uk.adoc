@@ -1,0 +1,439 @@
+//---------------------------------
+// Course on Unit Testing
+// (c) JMB - 2021
+//---------------------------------
+= Tests & Continuous Integration
+J.-M. Bruel <jbruel@gmail.com>
+v21.2 {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: night
+//beige, black, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/requirements.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+== To follow those slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+// ------------------------------------------ Plan
+[{intro}]
+== Content
+
+WHy testing?
+
+Concrete example of mandatory testing: `Asciidoctor.org`
+
+Concrete example of mandatory documentation: `Eclipse`
+
+Tests' Typologie
+
+JUnit etc.
+
+Concrete application
+endif::slides[]
+
+
+// ------------------------------------------ Pourquoi
+[{intro}]
+== *Why* testing?
+
+ifdef::slides[== {nbsp}]
+
+//https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+[quote,Yuan et al. OSDI 2014]
+A majority of the production failures (77%) can be reproduced by a unit test.
+
+:thisref: A recent tweet...
+ifndef::slides[.{thisref}]
+image::tweet-tests.png[width=30%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+NOTE: See https://blog.acolyer.org/2016/10/06/simple-testing-can-prevent-most-critical-failures/amp/
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== To deliver the  *good product*
+
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.A product does what it's supposed to do]
+image::why1.png[width=50%]
+
+[{topic}]
+=== If it works for *1* doesn't necessarily for *100*
+
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Scalability issue]
+image::why2.jpg[width=50%]
+
+[{topic}]
+=== *Murphy*'s law
+
+[quote,Edward A. Murphy Jr.]
+Everything that can go wrong will eventually go wrong.
+
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Murphy's law]
+image::why3.jpg[width=50%]
+
+[{topic}]
+=== Different *OS* or different *terms*
+
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Diversity]
+image::why4.png[width=50%]
+
+[{topic}]
+=== To give *the best*
+
+//:thisref: http://www.te52.com/testtalk/2014/08/07/5-reasons-we-need-software-testing/
+ifndef::slides[.Doing the best]
+image::why5.jpg[width=50%]
+
+ifdef::slides[:leveloffset: 0]
+
+// ------------------------------------------ Exemple
+[{intro}]
+== A concrete example of *mandatory* test
+
+ifdef::slides[== Asciidoctor]
+
+https://github.com/asciidoctor/asciidoctor/blob/master/CONTRIBUTING.adoc[Asciidoctor Contribution]
+
+:thisref: Around a beer with Dan Allen, Denver, Colorado #ILoveMyJob
+ifndef::slides[.{thisref}]
+image::danAllen.png[width=80%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[== Submitting a Pull Request]
+
+. Fork the repository.
+. Run `bundle` to install development dependencies.
+. Create a topic branch
+. Add tests for your unimplemented feature or bug fix. (See <<writing-and-executing-tests>>)
+. Run `bundle exec rake` to run the tests.
+If your tests pass, return to step 4.
+. Implement your feature or bug fix.
+. Run `bundle exec rake` to run the tests.
+If your tests fail, return to step 6.
+. Add documentation for your feature or bug fix.
+. If your changes are not 100% documented, go back to step 8.
+. Add, commit, and push your changes.
+. Submit a pull request.
+
+// ------------------------------------------ Exemple
+[{intro}]
+== Concrete example of mandatory *documentation*
+
+ifdef::slides[== Eclipse]
+
+:thisref: After a running with Gaël Blondel, Saint-Malo  #ILoveMyJob
+ifndef::slides[.{thisref}]
+image::gaelBlondelle.jpg[width=80%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[== {nbsp}]
+
+[quote,Eclipse Development Process]
+[...] an Eclipse project is providing extensible frameworks and applications accessible via documented APIs.
+
+// ------------------------------------------ Typologie
+[{intro}]
+== Tests' Typology
+
+ifdef::slides[== {nbsp}]
+
+:thisref: https://www.tutorialspoint.com/software_testing/software_testing_quick_guide.htm
+ifndef::slides[.Difference between Verification & Validation (source {thisref})]
+|====
+| Verification | Validation
+| Is the product *good*? | Is it *the good* product?
+| Are you building it right? | Are you building the right thing?
+| Mostly done by *developers* | Mostly done by *client*
+| Comes first | After verification most of the time
+|====
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+// ------------------------------------------ JUnit etc.
+[{intro}]
+== JUnit etc.
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== What to test?
+
+[align="left",cols="4,10",width="100%"]
+|======================
+| Exceptions  | [detail]#`@Test (expected = Exception.class)`#
+| Execution time | [detail]#`@Test(timeout=100)`#
+| Specific environment | [detail]#`System.getProperty("os.name").contains("Linux"));`#
+|======================
+
+[{topic}]
+=== Assertions
+
+[align="left",cols="5,5",width="100%"]
+|======================
+| [detail]#`fail([message])`# | Force the test to fail
+| [detail]#`assertTrue([message,] condition)`# | Condition is true
+| [detail]#`assertFalse([message,] condition)`# | Condition is false
+| [detail]#`assertEquals([message,] expected, actual)`# |
+Two values are equal
+| [detail]#`assertNull([message,] object)`# |
+null object 
+| [detail]#`assertSame([message,] expected, actual)`# |
+identical objects (same réf.)
+|======================
+
+
+[{topic}]
+=== Tests Strategies
+
+Considering `int add(int,int);` from class `myClass`.
+
+ifdef::slides[=== Nominal case]
+
+.(source : http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test)
+[source,java]
+-----
+//for normal addition
+@Test
+public void testAdd1Plus1() {
+  int x  = 1 ; int y = 1;
+  assertEquals(2, myClass.add(x,y));
+}
+-----
+
+ifdef::slides[=== Special cases]
+
+Examples:
+
+- _overflow_
+- `null` parameters
+- negative parameters
+- ...
+
+ifdef::slides[=== Special cases]
+ifndef::slides[.(source : http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test)]
+[source,java]
+-----
+//if you are using 0 as default for null, make sure your class works in that case.
+@Test
+public void testAdd1Plus1() {
+  int y = 1;
+  assertEquals(0, myClass.add(null,y));
+}
+-----
+
+[{topic}]
+=== Tests order
+
+None!!
+
+[quote,JUnit manual]
+JUnit assumes that all test methods can be executed in an arbitrary order. Well-written test code should not assume any order, i.e., tests should not depend on other tests.
+
+[{topic}]
+=== What about graphical interfaces?
+
+Example of the `Robot` library:
+
+ifndef::slides[.(source : http://stackoverflow.com/questions/16411823/junit-tests-for-gui-in-java)]
+[source,java]
+-----
+Robot bot = new Robot();
+bot.mouseMove(10,10);
+bot.mousePress(InputEvent.BUTTON1_MASK);
+//add time between press and release or the input event system may
+//not think it is a click
+try{Thread.sleep(250);}catch(InterruptedException e){}
+bot.mouseRelease(InputEvent.BUTTON1_MASK);
+-----
+
+ifdef::slides[=== {nbsp}]
+
+Example of the `swingcoder` {eclipse} plugin:
+
+:thisref: https://marketplace.eclipse.org/content/swingcorder
+ifndef::slides[.Simulation d'utilisation d'interface (source {thisref})]
+image::swingTest.png[width=90%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+[{topic}]
+=== Tests' coverage
+
+:thisref: http://www.eclemma.org/
+ifndef::slides[.Tests' coverage (source {thisref})]
+image::coverage.gif[width=90%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[:leveloffset: 0]
+
+// ------------------------------------------ MPA2016
+[{intro}]
+== Concrete application
+
+ifdef::slides[:leveloffset: -1]
+
+[{topic}]
+=== From `To Be Done` to `On going`
+
+:thisref: Update your kanban
+ifndef::slides[.{thisref}]
+|===
+| image:tuleap1.png[width=90%] |
+image:tuleap2.png[width=90%]
+|===
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[=== !]
+
+:thisref: Confirmation
+ifndef::slides[.{thisref}]
+image::tuleap3.png[width=80%]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+[{topic}]
+=== Create a specific branch (if new _feature_)
+
+[source,shell]
+-----
+bruel (master) $ git checkout -b US-15378
+Switched to a new branch 'US-15378'
+bruel (US-15378) $
+-----
+
+[{topic}]
+=== Write a failing test, then make it pass
+
+[{topic}]
+=== Merge and do integration testing
+
+[source,shell]
+-----
+bruel (US-15378) $ git commit -am "Adding push feature. Tests OK"
+[US-15378 78f3242] Adding push feature. Tests OK
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+bruel (US-15378) $ git checkout devs
+Switched to branch 'devs'
+bruel (devs) $ git merge US-15378
+-----
+
+[{topic}]
+=== Commit & Push in `devs`
+
+[source,shell]
+-----
+bruel (devs) $ git commit -am "..."
+...
+bruel (devs) $ git push origin devs
+...
+bruel (devs) $ git branch -D US-15378
+Deleted branch US-15378 (was f392a73).
+-----
+
+[{topic}]
+=== From `On going` to `Review`
+
+ifndef::slides[.Update your kanban]
+image::review.jpg[width=90%]
+ifdef::slides[NOTE: [detail]#Update your kanban#]
+
+
+ifndef::slides[]
+
+:numbered!:
+[{topic}]
+== To go further...
+
+- http://rpouiller.developpez.com/tutoriels/java/tests-unitaires-junit4/
+- https://jmbruel.github.io/teaching/topics/agile.html#_les_tests
+- http://www.vogella.com/tutorials/JUnit/article.html
+- http://junit.org
+- http://stackoverflow.com/questions/8751553/how-to-write-a-unit-test
+- https://www.quora.com/How-do-you-get-developers-to-love-testing-their-code
+
+endif::slides[]
+
+ifdef::slides[]
+
+:leveloffset: 0
+
+[{intro}]
+== Exemples de perles
+
+ifdef::slides[== Les références absolues!]
+
+[quote,Anonymous]
+Position yourself in the project repository (`C:\Users\Etudiant\Desktop\Nouveau dossier\MPA2020-Gxxx`)
+
+ifdef::slides[== Les instructions qui ne marchent pas...]
+
+[quote, Extrait de la Doc. Utilisateur]
+Pour lancer l'application, lancer `ant Window`
+
+[source,shell]
+----
+$ ant Window
+BUILD FAILED
+Target "Window" does not exist in the project ...
+----
+
+ifdef::slides[== Le `build.xml` qui manque...]
+
+[quote, Extrait de la Doc. Utilisateur]
+Pour lancer l'application, lancer `ant`
+
+[source,shell]
+----
+$ ant
+Buildfile: build.xml does not exist!
+----
+
+image::why3.jpg[width=30%]
+
+[{intro}]
+== *The End* {nbsp}{nbsp}{nbsp}(for now)
+
+endif::slides[]
