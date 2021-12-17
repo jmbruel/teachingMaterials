@@ -440,15 +440,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
 <h1>GitHub good practices</h1>
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.1 2021-04-13</span>
+<span id="revnumber">version 21.1 2021-12-17</span>
 </div>
-<div id="toc" class="toc">
+<div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_correspondences_scrumgithubgitlab">1. <span class="icon"><i class="fa fa-map-signs"></i></span> Correspondences Scrum/GitHub/Gitlab</a></li>
@@ -461,7 +461,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_burndown_charts">6.1. Burndown charts</a></li>
 </ul>
 </li>
-<li><a href="#_useful_links">7. Useful links</a></li>
+<li><a href="#_issue_management">7. Issue management</a></li>
+<li><a href="#_github_organizations">8. Github organizations</a></li>
+<li><a href="#_us_template_good_practice">9. US template good practice</a></li>
+<li><a href="#_useful_links">10. Useful links</a></li>
 </ul>
 </div>
 </div>
@@ -491,7 +494,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Task</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Task Lists / dependency issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task Lists/dependency issues</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Task Lists</p></td>
 </tr>
 <tr>
@@ -694,7 +697,7 @@ git push origin tag 1.1.0</code></pre>
 <p>You don&#8217;t tag branches. You tag commits!</p>
 </li>
 <li>
-<p>You should add a tag to mark a released version. If you then need to make bug fixes to that release you would create a branch at the tag</p>
+<p>You should add a tag to mark a released version. If you then need to make bug fixes to that release, you would create a branch at the tag</p>
 </li>
 <li>
 <p>If you checkout a tag, you will need to create a branch to start working from it</p>
@@ -735,7 +738,8 @@ package-lock.json
 # Ignore Gradle build output directory
 build
 .project
-.settings</code></pre>
+.settings
+settings.json</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -791,7 +795,7 @@ tst = "!f() { git cap \"✅ TEST: $@\"; }; f"</code></pre>
 <div class="sect2">
 <h3 id="_burndown_charts">6.1. Burndown charts</h3>
 <div class="paragraph">
-<p>Nice complementary app that takes a repo and draws the current milestone (not closed) burndown chart :</p>
+<p>A nice add-on app that takes a repo and draws the current milestone (not closed) burndown chart :</p>
 </div>
 <div class="paragraph">
 <p><a href="http://radekstepan.com" class="bare">http://radekstepan.com</a></p>
@@ -812,7 +816,94 @@ tst = "!f() { git cap \"✅ TEST: $@\"; }; f"</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_useful_links">7. Useful links</h2>
+<h2 id="_issue_management">7. Issue management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is very handful to connect you issues and tasks on a single project board!</p>
+</div>
+<div class="paragraph">
+<p>To access your project board or create a new one go to:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/project_buttom.png" alt="project buttom">
+</div>
+</div>
+<div class="paragraph">
+<p>To add a new issue as a task on the project board go to:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/access_issues.png" alt="access issues">
+</div>
+</div>
+<div class="paragraph">
+<p>And finally, enjoy your board with all the issues in there. Instead of simple kanban board you can even use techniques as YAGNI approach on a separate board to prioritize them.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/board.png" alt="board">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_organizations">8. Github organizations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Organizations are shared accounts where businesses and open-source projects can collaborate across many repositories at once.</p>
+</div>
+<div class="paragraph">
+<p>If working on a project for several platforms is your case, this Github feature could be very convinient to use:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/organization.png" alt="organization">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_us_template_good_practice">9. US template good practice</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Github provides with a possibilty to create templates of issues, so users will be following the same structure of US in a repository. The template should be in <code>.github/ISSUE_TEMPLATE/user-story-template.md</code></p>
+</div>
+<div class="paragraph">
+<p>Here is an example how it could look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>---
+[
+The user story should have a reason to exist: what do I need as the user described in the summary?
+This part details any detail that could not be passed by the summary.
+]
+### Acceptance Criteria
+1. [If I do A.]
+1. [B should happen.]
+[
+Also, here are a few points that need to be addressed:
+1. Constraint 1;
+1. Constraint 2;
+1. Constraint 3.
+]
+### Resources:
+* Mockups: [Here goes a URL to or the name of the mockup(s) in inVision];
+* Testing URL: [Here goes a URL to the testing branch or IP];
+* Staging URL: [Here goes a URL to the feature on staging];
+### Notes
+[Some complementary notes if necessary:]
+* &gt; Here goes a quote from an email
+* Here goes whatever useful information can exist…
+* This tenplate is taken from https://github.com/AlphaFounders/style-guide/blob/master/agile-user-story.md
+---</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_useful_links">10. Useful links</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -826,8 +917,8 @@ tst = "!f() { git cap \"✅ TEST: $@\"; }; f"</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.1 2021-04-13<br>
-Last updated 2021-04-13 17:51:50 +0200
+Version 21.1 2021-12-17<br>
+Last updated 2021-12-17 19:24:18 +0100
 </div>
 </div>
 </body>
