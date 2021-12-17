@@ -303,9 +303,9 @@ ifdef::slides[NOTE: [detail]#{thisref}#]
 [{topic}]
 === Tests' coverage
 
-:thisref: http://www.eclemma.org/
-ifndef::slides[.Tests' coverage (source {thisref})]
-image::coverage.gif[width=90%]
+:thisref: https://www.jetbrains.com/idea/
+ifndef::slides[.Tests' coverage (IntelJ IDEA: {thisref})]
+image::coverage-java.png[width=80%]
 ifdef::slides[NOTE: [detail]#{thisref}#]
 
 ifdef::slides[:leveloffset: 0]
