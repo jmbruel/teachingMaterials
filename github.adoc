@@ -326,7 +326,38 @@ ifdef::slides[=== !]
 .Example of emoji usage convention
 image::commitMessagesIcons.png[]
 
+
+
 // ------------------------------------------ 
+== Issue management
+
+It is very handful to connect you issues and tasks on a single project board!
+
+To access your project board or create a new one go to:
+
+image::project_buttom.png[]
+
+To add a new issue as a task on the project board go to:
+
+image::access_issues.png[]
+
+And finally, enjoy your board with all the issues in there. Instead of simple kanban board you can even use techniques as YAGNI approach on a separate board to prioritize them.
+
+image::board.png[]
+
+
+// ------------------------------------------ 
+== Github organizations
+
+Organizations are shared accounts where businesses and open-source projects can collaborate across many repositories at once. 
+
+If working on a project for several platforms is your case, this Github feature could be very convinient to use:
+
+image::organization.png[]
+
+
+// ------------------------------------------ 
+
 ifndef::slides[]
 == Useful links
 
