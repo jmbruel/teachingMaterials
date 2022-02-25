@@ -84,6 +84,9 @@ Courses with {graduation-icon} are more theoretical than those with {cogs-icon}.
 | {git}  | {beginner} {cogs-icon} {fr-icon}| link:git.adoc[source] link:git.html[HTML] link:git.pdf[PDF] 
 | Basic of {git} principles and commands
 
+| Maven  | {beginner} {cogs-icon} {fr-icon} | link:maven.adoc[source] link:maven.html[HTML]   
+| Builder son application avec maven
+
 | Scrum  | {beginner} {graduation-icon} {fr-icon}| link:scrum.adoc[source] link:scrum.html[HTML] link:scrum.pdf[PDF] 
 | Basic of the Scrum agile method
 

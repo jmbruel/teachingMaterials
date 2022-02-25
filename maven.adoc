@@ -1,0 +1,193 @@
+= Build
+J.-M. Bruel <jbruel@gmail.com>
+v22.1, {localdate}
+:imagesdir: images
+:font: icons
+:source-highlighter: highlightjs
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, league, night, serif, simple, sky, solarized, white
+
+:ant: http://ant.apache.org/[ant]
+:gradle: http://www.gradle.org/[Gradle]
+:maven: http://maven.apache.org/[Maven]
+
+== Compiler vs. Interpreter
+
+.Du source à l'exécution (source https://www.codewithc.com/difference-between-compiler-interpreter/)
+image::compil-inter.png["Source2code",width=80%]
+
+== Compiler c'est quoi?
+
+.Compilation Java (source https://www.quora.com/Why-does-C-compile-faster-than-Java-What-features-of-C-are-behind-this[ici])
+image::compil-java.png["Compil Java",width=50%]
+
+== !
+
+.compilation C++ (source https://hackingcpp.com/cpp/lang/separate_compilation.html[ici])
+image::compil-cpp.png["Compil C++"]
+
+== Pourquoi compiler "à la main"?
+
+== Compiler "à la main"
+
+[source,shell]
+---- 
+% javac ...
+----
+
+== Compiler intelligemment  
+
+[source,shell]
+----
+% tree src                                         jmb@mbp-jmb
+src
+├── main
+│   └── java
+│     └── Main.java
+└── test
+    └── java
+----
+
+=== make
+
+[source,shell]
+----
+% make
+----
+
+=== makefile
+
+.Exemple de Makefile
+image::makefile.png["Makefile"]
+
+== "Builder" son application
+
+
+== Outils de build
+
+- {maven}
+- {gradle}
+- {ant}
+
+== Exemple complet Maven
+
+Code de départ :
+
+.Main.java
+[source,java]
+----
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+----
+
+=== Compilation
+
+[source,shell]
+----
+% mvn clean package
+...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.613 s
+[INFO] Finished at: 2021-09-19T12:02:00-04:00
+[INFO] ------------------------------------------------------------------------
+----
+
+=== Exécution
+
+Nous allons préciser à maven d'exécuter la classe `Main`. 
+
+TIP: Pour exécuter {maven} en mode silencieux, utiliser l'option `-q` (_quiet_).
+
+[source,shell]
+----
+% mvn -q exec:java -Dexec.mainClass=Main
+Hello World!
+----
+
+=== Pas de magie
+
+[source,xml]
+----
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+        </plugins>
+    </build>
+----
+
+=== Détails
+
+[source,xml]
+----
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>16</source>
+                    <target>16</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+----
+
+=== pom.xml
+
+[source,xml]
+----
+ <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>io.github.ace-lectures</groupId>
+    <artifactId>re-21</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>RE 2021 tutorial</name>
+    <packaging>jar</packaging>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <build>
+        ...
+    </build>
+    
+</project>
+----
+
+=== Utilisations
+
+- Génération de la javadoc
+- Génération du diagramme de classe
+- Lancement des tests
+- Pas que en ligne de commande
+
+=== OK, mais si j'ai pas javac ?
+
+=> GitHub CI
+
+== GitHub
+
+Retour sur TD4 conception et futur TD4 Qualité...
+
+== Ressources
+
+- {maven} https://medium.com/@TimvanBaarsen/maven-cheat-sheet-45942d8c0b86[cheatsheet]
