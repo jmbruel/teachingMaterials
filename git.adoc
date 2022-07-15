@@ -5,7 +5,7 @@
 [[git]]
 = Gestion de version avec git
 J.-M. Bruel <jbruel@gmail.com>
-v21.1 {localdate}
+v22.1 {localdate}
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
@@ -14,7 +14,7 @@ v21.1 {localdate}
 //------------------------------------ variables de configuration
 // only used when master document
 :linkcss!:
-:git-version: 2.24.3
+:git-version: 2.32.1
 :icons: font
 :experimental:
 :toc-title: Table des matières
@@ -75,13 +75,20 @@ endif::slides[]
 ifndef::slides[]
 Vous pouvez installer {git} depuis le site officiel.
 Nous utilisons ici la version `{git-version}` en ligne de commande.
-Mais vous pouvez bien sûr utiliser un client graphique (comme https://www.sourcetreeapp.com/).
+Mais vous pouvez bien sûr utiliser un client graphique (comme {sourcetreeurl} ou {gitkraken}).
 
 endif::slides[]
 
 :thisref: {sourcetreeurl}
 ifndef::slides[.Client graphique ({thisref})]
 image::sourcetree.png[width=50%,link="{thisref}"]
+ifdef::slides[NOTE: [detail]#{thisref}#]
+
+ifdef::slides[== !]
+
+:thisref: {gitkraken}
+ifndef::slides[.Client graphique ({thisref})]
+image::gitkraken.png[width=50%,link="{thisref}"]
 ifdef::slides[NOTE: [detail]#{thisref}#]
 
 ifdef::slides[== !]
@@ -144,6 +151,7 @@ Voici un extrait link:util/.gitconfig[du mien] :
 [alias]
         co = checkout
         st = status
+        repo = config --get remote.origin.url
 ----------------------------------------------------------------------
 
 Ce qui donne :
@@ -155,6 +163,8 @@ Your branch is ahead of 'origin/master' by 1 commit.
 $ git checkout
 Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
+$ git repo
+https://github.com/jmbruel/teachingMaterials
 ----------------------------------------------------------------------
 ====
 

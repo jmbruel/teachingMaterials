@@ -53,6 +53,7 @@
 :git: link:{giturl}[icon:git[]]
 :githuburl: https://github.com/
 :github: link:{githuburl}[GitHub]
+:gitkraken: https://www.gitkraken.com/
 :gitlaburl: https://gitlab.com/
 :gitlab: icon:gitlab[]link:{gitlaburl}[GitLab]
 :gitlabIUT: icon:gitlab[]https://gitlab.iut-blagnac.fr/
