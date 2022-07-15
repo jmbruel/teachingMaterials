@@ -446,7 +446,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.1 2021-02-04</span>
+<span id="revnumber">version 22.1 2022-07-15</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table des matières</div>
@@ -525,8 +525,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="paragraph">
 <p>Vous pouvez installer <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> depuis le site officiel.
-Nous utilisons ici la version <code>2.24.3</code> en ligne de commande.
-Mais vous pouvez bien sûr utiliser un client graphique (comme <a href="https://www.sourcetreeapp.com/" class="bare">https://www.sourcetreeapp.com/</a>).</p>
+Nous utilisons ici la version <code>2.32.1</code> en ligne de commande.
+Mais vous pouvez bien sûr utiliser un client graphique (comme <a href="https://www.sourcetreeapp.com" class="bare">https://www.sourcetreeapp.com</a> ou <a href="https://www.gitkraken.com/" class="bare">https://www.gitkraken.com/</a>).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -536,9 +536,15 @@ Mais vous pouvez bien sûr utiliser un client graphique (comme <a href="https://
 </div>
 <div class="imageblock">
 <div class="content">
+<a class="image" href="https://www.gitkraken.com/"><img src="images/gitkraken.png" alt="gitkraken" width="50%"></a>
+</div>
+<div class="title">Figure 2. Client graphique (<a href="https://www.gitkraken.com/" class="bare">https://www.gitkraken.com/</a>)</div>
+</div>
+<div class="imageblock">
+<div class="content">
 <img src="images/git-term.png" alt="git term" width="49%">
 </div>
-<div class="title">Figure 2. Lignes de commande</div>
+<div class="title">Figure 3. Lignes de commande</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -549,7 +555,7 @@ Mais vous pouvez bien sûr utiliser un client graphique (comme <a href="https://
 <td class="content">
 <div class="paragraph">
 <p>Je vous recommande tout de même de connaître les commandes en ligne, c&#8217;est souvent utile!
-Pour vous familiariser avec les commandes <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> en ligne, ne pas hésiter à utiliser le site <a href="http://try.github.com/levels/1/challenges/1">http://try.github.com</a>.</p>
+Pour vous familiariser avec les commandes <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> en ligne, ne pas hésiter à utiliser le site <a href="https://learngitbranching.js.org/" class="bare">https://learngitbranching.js.org/</a>.</p>
 </div>
 </td>
 </tr>
@@ -564,7 +570,7 @@ Pour vous familiariser avec les commandes <a href="http://git-scm.com/"><span cl
 <div class="content">
 <a class="image" href="http://nvie.com/posts/a-successful-git-branching-model/"><img src="images/git-branching.png" alt="git branching" width="60%"></a>
 </div>
-<div class="title">Figure 3. Usage classique de git (<a href="http://nvie.com/posts/a-successful-git-branching-model/" class="bare">http://nvie.com/posts/a-successful-git-branching-model/</a>)</div>
+<div class="title">Figure 4. Usage classique de git (<a href="http://nvie.com/posts/a-successful-git-branching-model/" class="bare">http://nvie.com/posts/a-successful-git-branching-model/</a>)</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -616,7 +622,8 @@ $ git config --global alias.co checkout</code></pre>
         email = jbruel@gmail.com
 [alias]
         co = checkout
-        st = status</code></pre>
+        st = status
+        repo = config --get remote.origin.url</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -629,7 +636,9 @@ Your branch is ahead of 'origin/master' by 1 commit.
   (use "git push" to publish your local commits)
 $ git checkout
 Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)</code></pre>
+  (use "git push" to publish your local commits)
+$ git repo
+https://github.com/jmbruel/teachingMaterials</code></pre>
 </div>
 </div>
 </td>
@@ -1095,7 +1104,7 @@ $ git push origin master    <i class="conum" data-value="3"></i><b>(3)</b></code
 <div class="content">
 <img src="images/gf1.svg" alt="gf1" width="50%">
 </div>
-<div class="title">Figure 4. Situation initiale</div>
+<div class="title">Figure 5. Situation initiale</div>
 </div>
 <div class="paragraph">
 <p>On crée une branche (appelée <code>iss53</code> ici pour indiquer qu&#8217;elle traite de l'<em>issue</em> numéro 53) :</p>
@@ -1109,7 +1118,7 @@ $ git push origin master    <i class="conum" data-value="3"></i><b>(3)</b></code
 <div class="content">
 <img src="images/gf2.svg" alt="gf2" width="40%">
 </div>
-<div class="title">Figure 5. Création d&#8217;une branche</div>
+<div class="title">Figure 6. Création d&#8217;une branche</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1142,7 +1151,7 @@ $ git commit -m " blabla iss53"</code></pre>
 <div class="content">
 <img src="images/gf3.svg" alt="gf3" width="50%">
 </div>
-<div class="title">Figure 6. On commence à diverger de <code>master</code></div>
+<div class="title">Figure 7. On commence à diverger de <code>master</code></div>
 </div>
 <div class="paragraph">
 <p>On revient à la branche maître pour tester une autre solution :</p>
@@ -1159,7 +1168,7 @@ $ git commit -m " blabla hotfix"</code></pre>
 <div class="content">
 <img src="images/gf4.svg" alt="gf4" width="50%">
 </div>
-<div class="title">Figure 7. Maintenant on a 2 branches parallèles (en plus de <code>master</code>)</div>
+<div class="title">Figure 8. Maintenant on a 2 branches parallèles (en plus de <code>master</code>)</div>
 </div>
 <div class="paragraph">
 <p>On intègre cette solution à la branche principale :</p>
@@ -1174,7 +1183,7 @@ $ git merge hotfix</code></pre>
 <div class="content">
 <img src="images/gf5.svg" alt="gf5" width="40%">
 </div>
-<div class="title">Figure 8. Merge de deux branches (en <em>fast-forward</em>)</div>
+<div class="title">Figure 9. Merge de deux branches (en <em>fast-forward</em>)</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1217,7 +1226,7 @@ $ git commit -m " blabla iss53"</code></pre>
 <div class="content">
 <img src="images/gf6.svg" alt="gf6" width="50%">
 </div>
-<div class="title">Figure 9. On retravaille sur <code>iss53</code></div>
+<div class="title">Figure 10. On retravaille sur <code>iss53</code></div>
 </div>
 <div class="paragraph">
 <p>On intègre cette branche :</p>
@@ -1232,7 +1241,7 @@ $ git merge iss53</code></pre>
 <div class="content">
 <img src="images/gf7.svg" alt="gf7" width="50%">
 </div>
-<div class="title">Figure 10. Explications du fonctionnement du merge sans <em>fast-forward</em></div>
+<div class="title">Figure 11. Explications du fonctionnement du merge sans <em>fast-forward</em></div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1257,7 +1266,7 @@ les branches (les commits feuilles) une par une et vérifier les conflits par it
 <div class="content">
 <img src="images/gf8.svg" alt="gf8" width="50%">
 </div>
-<div class="title">Figure 11. Situation finale</div>
+<div class="title">Figure 12. Situation finale</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1294,7 +1303,7 @@ les branches (les commits feuilles) une par une et vérifier les conflits par it
 <div class="content">
 <a class="image" href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank" rel="noopener"><img src="images/git-branching.png" alt="git branching" width="70%"></a>
 </div>
-<div class="title">Figure 12. Usage classique de git (<a href="http://nvie.com/posts/a-successful-git-branching-model/" class="bare">http://nvie.com/posts/a-successful-git-branching-model/</a>)</div>
+<div class="title">Figure 13. Usage classique de git (<a href="http://nvie.com/posts/a-successful-git-branching-model/" class="bare">http://nvie.com/posts/a-successful-git-branching-model/</a>)</div>
 </div>
 </div>
 <div class="sect2">
@@ -1787,7 +1796,7 @@ Vous devez voir apparaître, en plus du répertoire cloné, un fichier <code>.gi
 <div class="content">
 <a class="image" href="http://osteele.com"><img src="images/git-resume.png" alt="git resume" width="50%"></a>
 </div>
-<div class="title">Figure 13. Résumé des commandes git (<a href="http://osteele.com" class="bare">http://osteele.com</a>)</div>
+<div class="title">Figure 14. Résumé des commandes git (<a href="http://osteele.com" class="bare">http://osteele.com</a>)</div>
 </div>
 </div>
 <div class="sect2">
@@ -1874,8 +1883,8 @@ Il s&#8217;agit donc pour <a href="http://git-scm.com/"><span class="icon"><i cl
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.1 2021-02-04<br>
-Last updated 2021-02-04 16:42:48 +0100
+Version 22.1 2022-07-15<br>
+Last updated 2022-07-15 17:28:43 +0200
 </div>
 </div>
 </body>

@@ -100,7 +100,7 @@ ifndef::slides[]
 [NOTE]
 ====
 Je vous recommande tout de même de connaître les commandes en ligne, c'est souvent utile!
-Pour vous familiariser avec les commandes {git} en ligne, ne pas hésiter à utiliser le site http://try.github.com/levels/1/challenges/1[http://try.github.com].
+Pour vous familiariser avec les commandes {git} en ligne, ne pas hésiter à utiliser le site https://learngitbranching.js.org/.
 ====
 endif::slides[]
 
