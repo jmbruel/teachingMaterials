@@ -53,14 +53,43 @@ ifdef::slides[]
 == Avant-propos
 
 [{topic}]
-== Pour suivre en live... icon:mobile[] icon:tablet[] icon:laptop[]
+=== Pour suivre en live... icon:mobile[] icon:tablet[] icon:laptop[]
 
 [{statement}]
 {bitlysiteurl}
 
 {siteurl}
 
+[{topic}]
+=== La référence absolue (selon moi) !
 
+[{statement}]
+https://git-scm.com/
+
+[{statement}]
+https://git-scm.com/book/fr/v2
+
+[{topic}]
+=== Git et le BUT...
+
+image::but-modules-git.svg[]
+
+endif::slides[]
+
+ifndef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+== Avant-propos
+
+=== La référence absolue (selon moi)
+
+[{statement}]
+https://git-scm.com/
+
+[{statement}]
+https://git-scm.com/book/fr/v2
+
+:numbered:
 
 endif::slides[]
 
@@ -84,14 +113,14 @@ ifndef::slides[.Client graphique ({thisref})]
 image::sourcetree.png[width=50%,link="{thisref}"]
 ifdef::slides[NOTE: [detail]#{thisref}#]
 
-ifdef::slides[== !]
+ifdef::slides[=== !]
 
 :thisref: {gitkraken}
 ifndef::slides[.Client graphique ({thisref})]
 image::gitkraken.png[width=50%,link="{thisref}"]
 ifdef::slides[NOTE: [detail]#{thisref}#]
 
-ifdef::slides[== !]
+ifdef::slides[=== !]
 
 ifndef::slides[.Lignes de commande]
 image::git-term.png[width=49%]
@@ -100,7 +129,7 @@ ifndef::slides[]
 [NOTE]
 ====
 Je vous recommande tout de même de connaître les commandes en ligne, c'est souvent utile!
-Pour vous familiariser avec les commandes {git} en ligne, ne pas hésiter à utiliser le site https://learngitbranching.js.org/.
+Pour vous familiariser avec les commandes {git} en ligne, ne pas hésiter à utiliser le site https://learngitbranching.js.org/ (disponible en français si besoin).
 ====
 endif::slides[]
 
@@ -123,7 +152,34 @@ endif::slides[]
 
 // ------
 [{topic}]
-== Avant de commencer
+=== Git c'est quoi ?
+
+- Un programme de gestion de version de code source (VCS -- _**V**ersion **C**ontrol **S**ystem_)
+- Gratuit et open source
+- Distribué  (contrairement à {svn} par exemple)
+- Créé à Linus Torvalds (2005)
+
+image::linus-git-quote.jpeg[width=30%]
+
+// ------
+[.columns]
+=== Concepts clefs
+
+[.column]
+--
+* Répertoire (_directory_ or _folder_)
+* CLI: _**C**ommon **L**ine **I**nterface_
+--
+
+[.column]
+--
+* Dépôt (_repository_)
+* `GitHub.com` (ou `GitLab.com` ou `gitlab.iut-blagnac.fr`) 
+--
+
+// ------
+[{topic}]
+=== Avant de commencer
 
 On initialise certaine variables (une fois pour toute en général) :
 
@@ -135,7 +191,7 @@ $ git config --global alias.co checkout
 ----------------------------------------------------------------------
 
 // ------
-ifdef::slides[== {nbsp}]
+ifdef::slides[=== {nbsp}]
 
 [TIP]
 ====
@@ -501,6 +557,27 @@ $ git clone git@github.com:jmbruel/first_app.git
 
 // ------
 [{topic}]
+== Principes de bases
+
+=== Les 3 espaces
+
+ifndef::slides[.Les 3 espaces de git]
+image::git-spaces.svg[]
+
+=== Stash
+
+ifndef::slides[.On a travaillé mais on ve revenir à une situation propre]
+image::git-stash1.svg[]
+
+ifdef::slides[=== !]
+
+ifndef::slides[.git stash]
+image::git-stash2.svg[]
+
+NOTE: Même après un `git add` !
+
+// ------
+[{topic}]
 == Illustration des branches
 
 Voici une illustration de l'utilisation des branches (tirée de http://git-scm.com/book[git-scm]).
@@ -544,7 +621,7 @@ On modifie et on commit :
 [source]
 ----------------------------------------------------------------------
 $ edit ...
-$ git commit -m " blabla iss53"
+$ git commit -m "blabla iss53"
 ----------------------------------------------------------------------
 
 ifndef::slides[.On commence à diverger de `master`]
@@ -564,7 +641,7 @@ On revient à la branche maître pour tester une autre solution :
 $ git checkout master
 $ git checkout -b hotfix
 $ edit ...
-$ git commit -m " blabla hotfix"
+$ git commit -m "blabla hotfix"
 ----------------------------------------------------------------------
 
 ifndef::slides[.Maintenant on a 2 branches parallèles (en plus de `master`)]
@@ -607,7 +684,7 @@ On continue à travailler sur la branche `iss53` :
 $ git branch -d hotfix <1>
 $ git checkout iss53
 $ edit ...
-$ git commit -m " blabla iss53"
+$ git commit -m "blabla iss53"
 ----------------------------------------------------------------------
 <1> Destruction de la branche devenue redondante avec `master`.
 

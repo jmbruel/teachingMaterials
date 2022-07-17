@@ -1,4 +1,4 @@
-Ven 15 jul 2022 17:29:14 CEST
+Dim 17 jul 2022 18:53:30 CEST
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -69,6 +69,8 @@ FILE: git.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/git.html
 [✓] http://bit.ly/jmb-git
 [✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
+[✓] https://git-scm.com/
+[✓] https://git-scm.com/book/fr/v2
 [✓] https://learngitbranching.js.org/
 [✓] http://nvie.com/posts/a-successful-git-branching-model/
 [✓] https://github.com/jmbruel/teachingMaterials
@@ -85,7 +87,7 @@ FILE: git.adoc
 [✓] https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
 [✓] https://fr.wikipedia.org/wiki/SHA-1
 
-18 links checked.
+20 links checked.
 
 FILE: intro.adoc
 [✓] https://github.com/jmbruel/teachingMaterials
