@@ -934,37 +934,78 @@ Ce qui donne le flot suivant dès que vous devez faire une amélioration (corrig
 
 ifdef::slides[=== {nbsp}]
 
-Les exemples suivants sont tirés de :
+ifndef::slides[]
 
-NOTE: {compMergeURL}
+NOTE: Les illustrations suivantes (qui sont des GIF animés dans la version Web) sont tirés de : {compMergeURL}.
+endif::[]
 
 // ------
 [{topic}]
 === Explicit `merge`
 
+ifdef::pdf-backend[]
+[cols="1a,1a"]
+|===
+|image:what-is-a-merge1.png[link={compMergeURL}]
+|image:what-is-a-merge2.png[link={compMergeURL}]
+|===
+endif::[]
+
+ifndef::pdf-backend[]
 image::what-is-a-merge.gif[width=95%,link={compMergeURL}]
-ifdef::slides[NOTE: [detail]#{compMergeURL}#]
+endif::[]
 
 // ------
 [{topic}]
-=== Implicit `merge` via `rebase` or `fast-forward`
+=== Implicit `merge` 
 
+Via `rebase`
+
+ifdef::pdf-backend[]
+[cols="1a,1a"]
+|===
+|image:what-is-a-rebase1.png[link={compMergeURL}]
+|image:what-is-a-rebase2.png[link={compMergeURL}]
+|===
+endif::[]
+
+ifndef::pdf-backend[]
 image::what-is-a-rebase.gif[width=95%,link={compMergeURL}]
-ifdef::slides[NOTE: [detail]#{compMergeURL}#]
+endif::[]
 
 // ------
 [{topic}]
-=== Implicit `merge` via `fast-forward`
+=== Implicit `merge` 
 
+Via `fast-forward`
+
+ifdef::pdf-backend[]
+[cols="1a,1a"]
+|===
+|image:what-is-a-fast-forward1.png[link={compMergeURL}]
+|image:what-is-a-fast-forward2.png[link={compMergeURL}]
+|===
+endif::[]
+
+ifndef::pdf-backend[]
 image::what-is-a-fast-forward.gif[width=95%,link={compMergeURL}]
-ifdef::slides[NOTE: [detail]#{compMergeURL}#]
+endif::[]
 
 // ------
 [{topic}]
 === Squash on `merge`
 
+ifdef::pdf-backend[]
+[cols="1a,1a"]
+|===
+|image:squash-on-merge1.png[link={compMergeURL}]
+|image:squash-on-merge2.png[link={compMergeURL}]
+|===
+endif::[]
+
+ifndef::pdf-backend[]
 image::squash-on-merge.gif[width=95%,link={compMergeURL}]
-ifdef::slides[NOTE: [detail]#{compMergeURL}#]
+endif::[]
 
 // ------
 [{topic}]
@@ -1019,6 +1060,7 @@ hello world!
 $ vi toto.txt <4>
 $ git commit <5>
 ----------------------------------------------------------
+ifndef::slides[]
 <1> Voilà où commence la différence entre la branche courante (`HEAD`)
 et la branche qu'on essaye de merger (`other_branch`)
 <2> Séparation
@@ -1028,6 +1070,7 @@ et la branche qu'on essaye de merger (`other_branch`)
 
 NOTE: Il est déconseillé d'en profiter pour faire une nouvelle modif
 dans le fichier...
+endif::slides[]
 
 // ------
 [{topic}]
