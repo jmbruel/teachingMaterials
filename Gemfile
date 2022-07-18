@@ -6,7 +6,7 @@ gem 'asciidoctor-revealjs'
 gem 'cucumber'
 # This is required on Mac: 
 # brew install GraphicsMagick
-gem 'prawn-gmagick'
+# gem 'prawn-gmagick'
 gem 'asciidoctor-diagram'
 
 # for "https://github.com/asciidoctor/asciidoctor-pdf"

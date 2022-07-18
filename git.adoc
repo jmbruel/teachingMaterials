@@ -519,6 +519,12 @@ To git@github.com:jmbruel/first_app.git
 [{topic}]
 === Etape 7 : pull request (demande)
 
+image::pull-request1.png[width="70%"]
+
+ifdef::slides[=== {nbsp}]
+
+image::pull-request2.png[width="70%"]
+
 // ------
 [{topic}]
 === Etape 7 (suite) : pull request (acceptation)
@@ -974,6 +980,7 @@ image::what-is-a-rebase.gif[width=95%,link={compMergeURL}]
 endif::[]
 
 // ------
+[[fast-forward]]
 [{topic}]
 === Implicit `merge` 
 
@@ -1156,6 +1163,7 @@ Best practices::
 _fast_forward_::
 Quand on merge une branche depuis un noeud situé  sur le même "historique".
 Il s'agit donc pour {git} d'un simple déplacement de pointeur!
+Cf. illustration <<fast-forward,ici>>.
 
 [[SHA-1]]
 SHA-1::
@@ -1163,7 +1171,11 @@ https://fr.wikipedia.org/wiki/SHA-1
 
 endif::slides[]
 
+// -----------------------------------------------------
+// -----------------------------------------------------
 ifdef::slides[]
 [{intro}]
 == *The End*
 endif::slides[]
+// -----------------------------------------------------
+// -----------------------------------------------------
