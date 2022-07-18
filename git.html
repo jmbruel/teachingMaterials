@@ -512,7 +512,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_explicit_merge">9.1. Explicit <code>merge</code></a></li>
 <li><a href="#_implicit_merge">9.2. Implicit <code>merge</code></a></li>
-<li><a href="#_implicit_merge_2">9.3. Implicit <code>merge</code></a></li>
+<li><a href="#fast-forward">9.3. Implicit <code>merge</code></a></li>
 <li><a href="#_squash_on_merge">9.4. Squash on <code>merge</code></a></li>
 <li><a href="#_merge_vs_rebase">9.5. <code>merge</code> vs. <code>rebase</code></a></li>
 </ul>
@@ -1110,7 +1110,16 @@ To git@github.com:jmbruel/first_app.git
 </div>
 <div class="sect2">
 <h3 id="pull-request">3.15. Etape 7 : pull request (demande)</h3>
-
+<div class="imageblock">
+<div class="content">
+<img src="images/pull-request1.png" alt="pull request1" width="70%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/pull-request2.png" alt="pull request2" width="70%">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_etape_7_suite_pull_request_acceptation">3.16. Etape 7 (suite) : pull request (acceptation)</h3>
@@ -1733,7 +1742,7 @@ Les illustrations suivantes (qui sont des GIF animés dans la version Web) sont 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implicit_merge_2">9.3. Implicit <code>merge</code></h3>
+<h3 id="fast-forward">9.3. Implicit <code>merge</code></h3>
 <div class="paragraph">
 <p>Via <code>fast-forward</code></p>
 </div>
@@ -1992,7 +2001,8 @@ Un excellent tutoriel en Français et dynamique :
 <dt class="hdlist1"><em>fast_forward</em></dt>
 <dd>
 <p>Quand on merge une branche depuis un noeud situé  sur le même "historique".
-Il s&#8217;agit donc pour <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> d&#8217;un simple déplacement de pointeur!</p>
+Il s&#8217;agit donc pour <a href="http://git-scm.com/"><span class="icon"><i class="fa fa-git"></i></span></a> d&#8217;un simple déplacement de pointeur!
+Cf. illustration <a href="#fast-forward">ici</a>.</p>
 </dd>
 </dl>
 </div>
@@ -2011,7 +2021,7 @@ Il s&#8217;agit donc pour <a href="http://git-scm.com/"><span class="icon"><i cl
 <div id="footer">
 <div id="footer-text">
 Version 22.1 2022-07-18<br>
-Last updated 2022-07-18 12:38:32 +0200
+Last updated 2022-07-18 13:12:47 +0200
 </div>
 </div>
 </body>
