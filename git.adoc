@@ -76,8 +76,16 @@ image::but-modules-git.svg[]
 
 endif::slides[]
 
+// ------------------------------------------ pdf author/version
+ifdef::pdf-backend[]
+Author:: {author}
+Revision number:: {revnumber}
+endif::[]
+
 ifndef::slides[]
 // ------------------------------------------ disclaimer
+
+
 :numbered!:
 == Avant-propos
 

@@ -1,6 +1,6 @@
 = Teaching materials 
 J.-M. Bruel <jbruel@gmail.com>
-v21.1 {localdate}
+v22.1 {localdate}
 //------------------------------------ variables de configuration
 // only used when master document
 :imagesdir: images
