@@ -22,7 +22,7 @@ v22.1 {localdate}
 :numbered:
 :status:
 :siteurl: http://jmbruel.github.io/teachingMaterials/git.html
-:bitlysiteurl: http://bit.ly/jmb-git
+:bitlysiteurl: http://bit.ly/jmb-teaching
 //------------------------------------ Slides uniquement
 :topic:
 :intro:
@@ -176,7 +176,7 @@ image::linus-git-quote.jpeg[width=30%]
 [.column]
 --
 * Répertoire (_directory_ or _folder_)
-* CLI: _**C**ommon **L**ine **I**nterface_
+* CLI: _**C**ommand **L**ine **I**nterface_
 --
 
 [.column]
