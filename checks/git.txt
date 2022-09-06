@@ -1,7 +1,7 @@
 
 FILE: git.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/git.html
-[✓] http://bit.ly/jmb-git
+[✓] http://bit.ly/jmb-teaching
 [✓] https://developer.atlassian.com/blog/2014/12/pull-request-merge-strategies-the-great-debate/?utm_source=twitter&utm_medium=social&utm_campaign=atlassian_pull-request-merge-strategies-the-great-debate
 [✓] https://git-scm.com/
 [✓] https://git-scm.com/book/fr/v2
