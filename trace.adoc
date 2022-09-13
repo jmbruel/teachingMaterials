@@ -1,0 +1,29 @@
+// ------------------------------------------
+//  Created by Jean-Michel Bruel on 2020-09.
+//  Copyright (c) 2020 IRIT/U. Toulouse. All rights reserved.
+// ------------------------------------------
+= Sprint Evaluation
+Jean-Michel Bruel <jbruel@gmail.com>
+v2021.1, {localdate}
+:status: bottom
+:inclusion:
+:experimental:
+:baseURL: http://github.com/jmbruel/teachingMaterials
+// ------------------------------------------
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: blood
+//beige, black, blood, league, night, serif, simple, sky, solarized, white
+// ------------------------------------------
+:icons: font
+:imagesdir: images
+:slides:
+
+:numbered!:
+== Les éléments minimaux à tracer
+
+.Artefacts (Inspiré de https://github.com/xblanc33/QualiteDev/[here])
+image::artifacts.svg[width=120%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
+
+NOTE: Vous pouvez en avoir d'autres en fonction de votre environnement de travail, votre entreprise, etc.
+

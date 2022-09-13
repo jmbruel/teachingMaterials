@@ -1,0 +1,13 @@
+@startuml artifacts
+!include config-min.cfg
+
+Release "1" o-> "*" Issue
+Issue "1" o-> "*" Task
+
+Task <|-- Code
+Task <|-- Test
+Task <|-- Doc
+
+Code .> Test : <<verify>>
+
+@enduml
