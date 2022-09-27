@@ -45,7 +45,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % student ID header
 
-\newcommand{\boxStudentID}{\fcolorbox{gray}{white}{\strut~~~~}}
+\newcommand{\boxStudentID}{\fcolorbox{gray!20}{white}{\strut~~~~}}
 \newcommand{\nbBoxesHeaderLine}{22}
 \newcommand{\nameheader}{%
 \begin{flushleft}
@@ -115,7 +115,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % QCM
 
-\newlist{qcmExam}{enumerate}{2}
+\newlist{qcmExam}{enumerate}{2}%\addtocounter{Q}{-1}
 \setlist[qcmExam,1]{labelindent=\parindent, label={\textbf{Q.\arabic{Q}\protect\stepcounter{Q}}}, leftmargin=*, before=\addtocounter{Q}{-1}}
 %,  before={\bfseries\setlength{\rightmargin}{\leftmargin}}}
 \setlist[qcmExam,2]{label={\large $\square$}, before={\normalfont}, leftmargin=0pt}
