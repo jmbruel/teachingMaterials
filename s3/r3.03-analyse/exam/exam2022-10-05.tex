@@ -1,0 +1,112 @@
+% Options:
+% withid: adds a header line for writing the student's ID
+% We recommand to keep the twoside option as it permits to add a specific header (student' name) on each new page.
+\documentclass[a4paper,twoside,withid]{exam}
+
+% packages already loaded: graphicx, geometry, listings, lastpage, fancyhdr, xcolor, mathpazo, ifthen, xstring, qcm, enumitem, amssymb, etoolbox, multido
+
+\usepackage[final,activate={true,nocompatibility},kerning=true,spacing=true]{microtype}
+\usepackage[english,french]{babel}
+\usepackage[scaled=0.9]{DejaVuSansMono}
+\usepackage{lipsum} % For demo. To remove
+
+% You can adjust the line spread of the font used in this document (mathpazo).
+%\linespread{1.05}
+
+% You can override the default page dimensions, mainly left and right (touching the other parameters may break the template):
+%\geometry{bottom=0.5cm, top=-1cm, left=1.3cm, right=1.3cm, headheight=5cm, includefoot, includehead}
+
+% You can customise the centered footpage:
+%\cfoot[\large\thepage~~/~~\pageref{LastPage}]{\large\thepage~~/~~\pageref{LastPage}}
+% but do not change the \lhead, \rhead, \lfoot, \rfoot, and \chead as they are used for page detection and IDs
+
+
+
+\title{\vspace*{-1cm}\huge R3.03 -- ANALYSE}
+\author{2022-2023\\[0.1cm]
+Une seule page A4 recto/verso manuscrite autorisée.\\[0.1cm]
+Durée : 1 heure\\[0.1cm]
+Sujet écrit sur \pageref{LastPage} pages
+}
+\date{}
+
+
+\begin{document}
+
+
+% Creates the exam header
+\begin{minipage}{\textwidth}
+   \maketitle
+\end{minipage}
+
+% The template contains several exam commands:
+% \exerciceExam{number}{title} creates a section dedicated to a given exercice. Replace 'number' by the number of points of the exam. 'title' is the title of the exercice (if no title, do not forget to put {})
+
+% \questionExam{text} creates a numbered question. Replace 'text' by the title of the question.
+
+% \begin{qcmExam}\end{qcmExam} creates a QCM environment
+
+
+\noindent\fbox{\parbox{\textwidth}{%
+\textbf{Écrivez directement sur le sujet dans les zones de réponse. Ne pas déborder de ces zones.\\
+N'oubliez pas de mettre votre nom sur chaque page.}%
+}}
+
+
+\exerciceExam{4}{}
+
+\questionExam{\lipsum[1][1]}
+
+% First argument: color (optional, by default black). The color of the dots. Put white for no dot.
+% Second parameter: the line spacing
+% Third argument: the number of lines
+% Fourth argument: the number of columns
+\answerExam[gray]{1.5}{2}{1}
+
+\questionExam{\lipsum[1][2]}
+
+\answerExam[gray]{1.5}{4}{2}
+
+\exerciceExam{4}{}
+
+\questionExam{\lipsum[1][3]}
+
+\answerExam[white]{1.5}{8}{1}
+
+\newpage
+
+% \inlineAnswerBox as one argument: the length of the box (computed in number of characters). By default 10 characters.
+\questionExam{You can also write some text with inline boxes \inlineAnswerBox{} that students must complete \inlineAnswerBox[5]{}.}
+
+\exerciceExam{8}{}
+
+\begin{qcmExam}
+\item Quelle couleur?
+	
+	\begin{qcmExam}
+		\item bleu
+		\item rouge
+	\end{qcmExam}
+\item Quelle forme ?
+	\begin{qcmExam}
+		\item rectangulaire
+		\item triangulaire
+	\end{qcmExam}
+\end{qcmExam}
+
+
+
+\medskip
+
+
+\questionExam{\lipsum[1-2]}
+
+\answerExam[white]{1.5}{18}{1}
+
+\newpage
+
+\questionExam{\lipsum[3-4]}
+
+\answerExam[white]{1.5}{18}{1}
+
+\end{document}

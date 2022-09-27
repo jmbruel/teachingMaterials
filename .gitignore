@@ -18,3 +18,10 @@ build
 .settings
 settings.json
 .vscode
+
+# Ignore Latex (for exams)
+.aux
+.fdb_latexmk
+.fls
+.log
+.synctex.gz 
