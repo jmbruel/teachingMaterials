@@ -230,6 +230,12 @@ Req = _Systems Needs_
 --
 
 // -----------------------------------------------------------
+== Ambiguities
+
+.French-only ambiguity: This is a "Mesure Sanitaire"...
+image::mesureSanitaire.jpg["Mesure Sanitaire"]
+
+// -----------------------------------------------------------
 == Stakeholders Value Networks
 
 image::svn.png[SVN, link="https://bmtoolbox.net/tools/value-network/"]
