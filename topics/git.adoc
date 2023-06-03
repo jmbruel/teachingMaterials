@@ -1053,7 +1053,10 @@ Best practices::
   https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
 Les commandes à connaitre absolument::
   https://dev.to/syedsadiqali/mastering-git-top-commands-every-developer-should-know-5hkn
-  
+Template de projet GitHub::
+  https://github.com/jlcanovas/gh-best-practices-template
+
+
 // ------
 [{topic}]
 == Glossaire
