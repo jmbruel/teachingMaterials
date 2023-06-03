@@ -1051,6 +1051,8 @@ Git pour les nuls::
   http://rogerdudler.github.io/git-guide/
 Best practices::
   https://dev.to/bholmesdev/git-github-best-practices-for-teams-opinionated-28h7
+Les commandes à connaitre absolument::
+  https://dev.to/syedsadiqali/mastering-git-top-commands-every-developer-should-know-5hkn
   
 // ------
 [{topic}]
