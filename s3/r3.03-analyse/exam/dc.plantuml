@@ -1,0 +1,23 @@
+@startuml dc1
+hide circle
+hide empty methods
+
+class Xorg {
+    abs
+    icue
+}
+
+class Schpounz {
+    llukz
+    cerciuier
+}
+
+class Plunt {
+    nhzeyBt
+}
+
+Plunt *-> "4" Schpounz
+Schpounz "*" -- "*" Xorg
+Xorg ..> Plunt
+
+@enduml
