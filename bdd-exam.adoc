@@ -1,0 +1,6 @@
+Proposez une meilleure formulation des steps suivants (en 1 seul step par exemple) :  
+
+Scenario: Bad steps definition
+    Given I go to the home page
+    Given I check the about page of the website
+    Given I get the contact details

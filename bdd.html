@@ -447,7 +447,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 21.2 2021-12-17</span>
+<span id="revnumber">version 23.1 -- 2023-12-09</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -472,6 +472,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_scenario_outline_template">7. Scenario outline (template)</a></li>
 <li><a href="#_language_support">8. Language support</a></li>
+<li><a href="#_how_to">9. How-to</a></li>
+<li><a href="#_concepts">10. Concepts</a>
+<ul class="sectlevel2">
+<li><a href="#_feature">10.1. Feature</a></li>
+<li><a href="#_background">10.2. Background</a></li>
+<li><a href="#_scenario">10.3. Scenario</a></li>
+<li><a href="#_scenario_outline">10.4. Scenario Outline</a></li>
+<li><a href="#_examples_2">10.5. Examples</a></li>
+<li><a href="#_given">10.6. Given</a></li>
+<li><a href="#_when">10.7. When</a></li>
+<li><a href="#_then">10.8. Then</a></li>
+<li><a href="#_and">10.9. And</a></li>
+</ul>
+</li>
+<li><a href="#_links_between_us_and_feature">11. Links between US and feature</a></li>
+<li><a href="#_links_between_features_and_their_implementation">12. Links between Features and their implementation</a></li>
+<li><a href="#_cicd_and_bdd">13. CI/CD and BDD</a></li>
+<li><a href="#_bdd_vs_tdd">14. BDD vs. TDD</a></li>
 <li><a href="#_useful_links">Appendix A: Useful links</a></li>
 </ul>
 </div>
@@ -657,39 +675,23 @@ Then('we should receive', function (dataTable) {
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_avoid_duplication">6.1. Avoid duplication</h3>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Gherkin hljs" data-lang="Gherkin">    Given I go to the home page
-    Given I check the about page of the website
-    Given I get the contact details</code></pre>
+<img src="images/gh-bad.png" alt="gh bad">
 </div>
 </div>
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Gherkin hljs" data-lang="Gherkin">    Given I go to the {} page</code></pre>
+<img src="images/gh-good.png" alt="gh good">
 </div>
 </div>
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Sometimes you want to relax your language, to make it flow better.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/gh-alt.png" alt="gh alt">
+</div>
 </div>
 <div class="listingblock">
 <div class="title">Generic Step definition</div>
@@ -721,17 +723,9 @@ AuthenticationStepDefinitions.java</code></pre>
 <div class="sect1">
 <h2 id="_scenario_outline_template">7. Scenario outline (template)</h2>
 <div class="sectionbody">
-<div class="listingblock">
+<div class="imageblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-Gherkin hljs" data-lang="Gherkin">Scenario Outline: eating
-  Given there are &lt;start&gt; cucumbers
-  When I eat &lt;eat&gt; cucumbers
-  Then I should have &lt;left&gt; cucumbers
-
-  Examples:
-    | start | eat | left |
-    |    12 |   5 |    7 |
-    |    20 |   5 |   15 |</code></pre>
+<img src="images/gh-outline.png" alt="gh outline" width="80%">
 </div>
 </div>
 </div>
@@ -760,6 +754,146 @@ Don&#8217;t forget the <code># language: fr</code>!
 </div>
 </div>
 <div class="sect1">
+<h2 id="_how_to">9. How-to</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<div class="title">Discovery, Formulation and Automation (Source <a href="https://cucumber.io/docs/bdd/">here</a>)</div>
+<p>image::[link="https://cucumber.io/docs/bdd/"]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concepts">10. Concepts</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_feature">10.1. Feature</h3>
+<div class="paragraph">
+<p>What follows is a basic description or name of the feature being tested or documented.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_background">10.2. Background</h3>
+<div class="paragraph">
+<p>Steps that will be ran before every scenario in the feature.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scenario">10.3. Scenario</h3>
+<div class="paragraph">
+<p>Name or basic description of a particular scenario testing the feature.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_scenario_outline">10.4. Scenario Outline</h3>
+<div class="paragraph">
+<p>The scenario will run N times for every argument listed in examples explicitly passed by column name wrapped in angled brackets.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples_2">10.5. Examples</h3>
+<div class="paragraph">
+<p>The list of static arguments that will be passed into a scenario outline.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_given">10.6. Given</h3>
+<div class="paragraph">
+<p>A given step, or precondition that is assumed before continuing.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the Arrange, Act, Assert paradigm, given represents "Arrange".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when">10.7. When</h3>
+<div class="paragraph">
+<p>A when step, or the behavior that is to be asserted against.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the Arrange, Act, Assert paradigm, given represents "Act".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_then">10.8. Then</h3>
+<div class="paragraph">
+<p>A then step, or in other words, the step in which a behavior&#8217;s result is validated.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the Arrange, Act, Assert paradigm, given represents "Assert".
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_and">10.9. And</h3>
+<div class="paragraph">
+<p>Used in conjunction with any of the keywords above.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you have two given statements, instead of explicitly calling Given twice, you can say, " Given A And B".
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links_between_us_and_feature">11. Links between US and feature</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_links_between_features_and_their_implementation">12. Links between Features and their implementation</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cicd_and_bdd">13. CI/CD and BDD</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bdd_vs_tdd">14. BDD vs. TDD</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
 <h2 id="_useful_links">Appendix A: Useful links</h2>
 <div class="sectionbody">
 <div class="ulist">
@@ -768,13 +902,22 @@ Don&#8217;t forget the <code># language: fr</code>!
 <p><a href="https://cucumber.io/">Cucumber reference site</a></p>
 </li>
 <li>
+<p><a href="https://gist.github.com/yuriiik/5728701">Plein d&#8217;astuces pour les expressions</a></p>
+</li>
+<li>
 <p><a href="https://cucumber.io/docs/guides/10-minute-tutorial/">A 10' tutorial</a></p>
+</li>
+<li>
+<p><a href="https://isabelle-blasquez.developpez.com/tutoriels/java/cucumber-test-bdd/">Un très bon tutoriel en français</a></p>
 </li>
 <li>
 <p><a href="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample">An Android example</a></p>
 </li>
 <li>
 <p><a href="https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/">An Angular example</a></p>
+</li>
+<li>
+<p><a href="https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf">Clean Code</a></p>
 </li>
 </ul>
 </div>
@@ -783,8 +926,8 @@ Don&#8217;t forget the <code># language: fr</code>!
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 21.2 2021-12-17<br>
-Last updated 2021-12-17 19:24:18 +0100
+Version 23.1 -- 2023-12-09<br>
+Last updated 2023-12-09 15:28:12 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

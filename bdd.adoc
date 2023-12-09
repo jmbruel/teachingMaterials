@@ -1,10 +1,10 @@
 //---------------------------------
 // Cours sur BDD
-// (c) JMB - 2014-2021
+// (c) JMB - 2014-2023
 //---------------------------------
 = Behavioral-Driven Development
 J.-M. Bruel <jbruel@gmail.com>
-v21.2 {localdate}
+v23.1 -- {localdate}
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
@@ -27,7 +27,7 @@ v21.2 {localdate}
 :statement:
 :incremental: %step
 :source:
-//:source-highlighter: coderay
+//:source-highlighter: rouge
 :source-highlighter: highlightjs
 
 // Specific to GitHub
@@ -177,25 +177,43 @@ image:gherkin-ide.png[VS Code support,width=30%,pdfwidth=50%]
 
 === Avoid duplication
 
-[WARNING]
-====
-[source,Gherkin]
-----
-    Given I go to the home page
-    Given I check the about page of the website 
-    Given I get the contact details
-----
-====
+// [WARNING]
+// ====
+// [source,Gherkin]
+// ----
+//     Given I go to the home page
+//     Given I check the about page of the website 
+//     Given I get the contact details
+// ----
+// ====
+
+image::gh-bad.png[]
 
 ifdef::slides[=== !]
 
-[TIP]
-====
-[source,Gherkin]
-----
-    Given I go to the {} page
-----
-====
+// [TIP]
+// ====
+// [source,Gherkin]
+// ----
+//     Given I go to the {} page
+// ----
+// ====
+
+image::gh-good.png[]
+
+ifdef::slides[=== Alternative text]
+
+Sometimes you want to relax your language, to make it flow better. 
+
+// [TIP]
+// ====
+// [source,Gherkin]
+// ----
+//     I have {int} cucumber(s) in my belly/stomach
+// ----
+// ====
+
+image::gh-alt.png[]
 
 ifdef::slides[=== !]
 
@@ -223,18 +241,20 @@ AuthenticationStepDefinitions.java
 
 == Scenario outline (template)
 
-[source,Gherkin]
-----
-Scenario Outline: eating
-  Given there are <start> cucumbers
-  When I eat <eat> cucumbers
-  Then I should have <left> cucumbers
+// [source,Gherkin]
+// ----
+// Scenario Outline: eating
+//   Given there are <start> cucumbers
+//   When I eat <eat> cucumbers
+//   Then I should have <left> cucumbers
 
-  Examples:
-    | start | eat | left |
-    |    12 |   5 |    7 |
-    |    20 |   5 |   15 |
-----
+//   Examples:
+//     | start | eat | left |
+//     |    12 |   5 |    7 |
+//     |    20 |   5 |   15 |
+// ----
+
+image::gh-outline.png[width=80%]
 
 == Language support
 
@@ -243,11 +263,71 @@ WARNING: Don't forget the `# language: fr`!
 .Example of feature in French (link:french.feature[source])
 image::french-feature.png[French feature,width=80%,pdfwidth=50%]
 
+== How-to
+
+.Discovery, Formulation and Automation (Source https://cucumber.io/docs/bdd/[here])
+image::bdd-practices-diagram.png[link="https://cucumber.io/docs/bdd/", width=80%]
+
+== Concepts
+
+=== Feature
+What follows is a basic description or name of the feature being tested or documented.
+
+=== Background
+
+Steps that will be ran before every scenario in the feature.
+
+=== Scenario
+
+Name or basic description of a particular scenario testing the feature.
+
+=== Scenario Outline
+
+The scenario will run N times for every argument listed in examples explicitly passed by column name wrapped in angled brackets.
+
+=== Examples
+
+The list of static arguments that will be passed into a scenario outline.
+
+=== Given
+
+A given step, or precondition that is assumed before continuing. 
+
+NOTE: In the Arrange, Act, Assert paradigm, given represents "Arrange".
+
+=== When
+
+A when step, or the behavior that is to be asserted against. 
+
+NOTE: In the Arrange, Act, Assert paradigm, given represents "Act".
+
+=== Then
+
+A then step, or in other words, the step in which a behavior's result is validated. 
+
+NOTE: In the Arrange, Act, Assert paradigm, given represents "Assert".
+
+=== And
+
+Used in conjunction with any of the keywords above. 
+
+NOTE: If you have two given statements, instead of explicitly calling Given twice, you can say, " Given A And B".
+
+== Links between US and feature
+
+== Links between Features and their implementation
+
+== CI/CD and BDD
+
+== BDD vs. TDD
+
 [appendix]
 == Useful links
 
 - https://cucumber.io/[Cucumber reference site]
+- https://gist.github.com/yuriiik/5728701[Plein d'astuces pour les expressions]
 - https://cucumber.io/docs/guides/10-minute-tutorial/[A 10' tutorial]
+- https://isabelle-blasquez.developpez.com/tutoriels/java/cucumber-test-bdd/[Un très bon tutoriel en français]
 - https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample[An Android example]
 - https://www.testim.io/blog/cucumber-js-for-bdd-an-introductory-tutorial-with-examples/[An Angular example]
-
+- https://www.planetgeek.ch/wp-content/uploads/2014/11/Clean-Code-V2.4.pdf[Clean Code]

@@ -9,4 +9,3 @@ Feature: Teaching Materials Quality Assemsment
 Scenario: The URLs mentioned in an Asciidoc document should be verified (non 404)
     Given An Asciidoc file
     Then All the URLs should be active        
-
