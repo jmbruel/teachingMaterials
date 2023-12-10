@@ -54,7 +54,6 @@ $(CHECK_RES): checks/*.txt
 deploy: check index.html
 	@echo "========================================"
 	@echo "==> Deploy updates "
-#	rake && git commit -am ":memo: Deploy updates"; git pull; git push
 	rake && git commit -am "🤖 DEPLOY: last updates"; git pull; git push
 
 clean:

@@ -415,6 +415,34 @@ ifdef::slides[=== BDD vs. TDD]
 image::mauerhan3.png[width=60%,pdfwidth=60%,link="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"]
 
 // ------------------------------------------ 
+== Not just for code!
+
+ifdef::slides[=== Step 1: the feature]
+image::step1.png[width=100%]
+
+ifdef::slides[=== Step 2: the testing environment]
+image::step2.png[width=100%]
+
+ifdef::slides[=== Step 3: failing feature (not implemented)]
+image::step3-1.png[width=100%]
+
+ifdef::slides[=== Step 3: failing feature (not implemented)]
+image::step3-2.png[width=100%]
+
+ifdef::slides[=== Step 4: test implementation]
+image::step4.png[width=90%]
+
+ifdef::slides[=== Step 5: failing feature (implemented)]
+image::step5.png[width=80%]
+
+ifdef::slides[=== Step 6: success feature]
+image::step6.png[width=90%]
+
+ifdef::slides[=== Step 7: systematic checking]
+image::step7.png[width=90%]
+
+
+// ------------------------------------------ 
 [appendix]
 == Useful links
 
