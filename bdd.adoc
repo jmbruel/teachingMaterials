@@ -60,6 +60,32 @@ ifdef::slides[]
 endif::slides[]
 
 // ------------------------------------------ 
+== Tests
+
+ifdef::slides[=== !]
+
+.The testing pyramid (source https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/[here])
+image::TestingPyramid.png[link="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/",width=80%]
+
+ifdef::slides[=== !]
+
+.The testing pyramid at work (source https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/[here])
+image::TestingIceberg.png[link="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/",width=80%]
+
+// ------------------------------------------ 
+== Features
+
+ifdef::slides[=== Gap between Problem & Solution]
+
+.Artifacts traceability (Inspired from https://github.com/xblanc33/QualiteDev/[here])
+image::artifacts-r303.svg[width=70%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
+
+ifdef::slides[=== Satisfaction criteria]
+
+.One more artifact
+image::artifacts-r303-bis.png[width=60%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
+
+// ------------------------------------------ 
 == Principles
 
 - Given
@@ -67,6 +93,7 @@ endif::slides[]
 - Then
 - And
 
+// ------------------------------------------ 
 == Examples
 
 === Some review activity (No code)
@@ -152,6 +179,7 @@ Running Cucumber (pass)
 .New run of the tests
 image::cucumber-pass.png[Passing tests,width=50%,pdfwidth=30%]
 
+// ------------------------------------------ 
 == Supported languages
 
 Ruby (origin), Java, JavaScript,
@@ -159,12 +187,14 @@ Ruby (origin), Java, JavaScript,
 - https://plugins.jetbrains.com/plugin/7212-cucumber-for-java[IntelliJ Cucumber for Java plugin]
 - https://cucumber.github.io/cucumber-eclipse/[Cucumber Eclipse plugin]
 
+// ------------------------------------------ 
 == Build
 
 Make sure to integrate BDD in your build.
 
 For maven/gradle, see https://cucumber.io/docs/tools/java/#build-tools
 
+// ------------------------------------------ 
 == Find a plugin for your IDE
 
 .Cucumber plugin in use in VS Code
@@ -173,6 +203,7 @@ image::android-feature.png[Feature in IDE]
 Example for VS Code: https://github.com/alexkrechik/VSCucumberAutoComplete
 image:gherkin-ide.png[VS Code support,width=30%,pdfwidth=50%]
 
+// ------------------------------------------ 
 == Gherkin tips
 
 === Avoid duplication
@@ -239,7 +270,7 @@ ExperienceStepDefinitions.java
 AuthenticationStepDefinitions.java
 ----
 
-== Scenario outline (template)
+=== Scenario outline (template)
 
 // [source,Gherkin]
 // ----
@@ -256,22 +287,34 @@ AuthenticationStepDefinitions.java
 
 image::gh-outline.png[width=80%]
 
-== Language support
+=== Language support
+
+Over 70 languages!
 
 WARNING: Don't forget the `# language: fr`!
 
 .Example of feature in French (link:french.feature[source])
-image::french-feature.png[French feature,width=80%,pdfwidth=50%]
+image::french-feature.png[French feature,width=60%,pdfwidth=50%]
 
+// ------------------------------------------ 
 == How-to
 
 .Discovery, Formulation and Automation (Source https://cucumber.io/docs/bdd/[here])
 image::bdd-practices-diagram.png[link="https://cucumber.io/docs/bdd/", width=80%]
 
+// ------------------------------------------ 
 == Concepts
 
 === Feature
+
 What follows is a basic description or name of the feature being tested or documented.
+
+=== Rule
+
+* represent a business rule that should be implemented
+* used to group together several scenarios
+
+NOTE: New concept (since Gherkin v6)
 
 === Background
 
@@ -285,9 +328,26 @@ Name or basic description of a particular scenario testing the feature.
 
 The scenario will run N times for every argument listed in examples explicitly passed by column name wrapped in angled brackets.
 
+WARNING: A Scenario Outline must contain one or more Examples
+
 === Examples
 
 The list of static arguments that will be passed into a scenario outline.
+
+=== The AAA pattern
+
+ifdef::slides[=== !]
+
+[source,java]
+----
+// arrange
+var component = ComponentFixture<UserUploadComponent>;
+var user = new User(component);
+// act
+user.Save();
+// assert
+mock.Received.SomeMethod();
+----
 
 === Given
 

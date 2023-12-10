@@ -1,13 +1,19 @@
-@startuml artifacts
+@startuml artifacts-r303-bis
 !include config-min.cfg
 
-Release "1" o-> "*" Issue
-Issue "1" o-> "*" Task
+class "User Story" as US
+
+Requirement <. US: << concern >>
+' US <.. Issue: << sastisfy >>
+US <.. Feature: << sastisfy >>
+Feature  <.. Issue: << sastisfy >>
+Release "1" -> "*" Issue
+Issue "1" -> "*" Task
 
 Task <|-- Code
 Task <|-- Test
 Task <|-- Doc
 
-Code .> Test : <<verify>>
+Code <. Test : <<verify>>
 
 @enduml
