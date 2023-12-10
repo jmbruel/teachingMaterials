@@ -447,43 +447,47 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">J.-M. Bruel</span><br>
 <span id="email" class="email"><a href="mailto:jbruel@gmail.com">jbruel@gmail.com</a></span><br>
-<span id="revnumber">version 23.1 -- 2023-12-09</span>
+<span id="revnumber">version 23.1 -- 2023-12-10</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_principles">1. Principles</a></li>
-<li><a href="#_examples">2. Examples</a>
+<li><a href="#_tests">1. Tests</a></li>
+<li><a href="#_features">2. Features</a></li>
+<li><a href="#_principles">3. Principles</a></li>
+<li><a href="#_examples">4. Examples</a>
 <ul class="sectlevel2">
-<li><a href="#_some_review_activity_no_code">2.1. Some review activity (No code)</a></li>
-<li><a href="#_this_course_materials_no_code">2.2. This course materials! (No code)</a></li>
-<li><a href="#_android_example">2.3. Android example</a></li>
-<li><a href="#_angular_example">2.4. Angular example</a></li>
+<li><a href="#_some_review_activity_no_code">4.1. Some review activity (No code)</a></li>
+<li><a href="#_this_course_materials_no_code">4.2. This course materials! (No code)</a></li>
+<li><a href="#_android_example">4.3. Android example</a></li>
+<li><a href="#_angular_example">4.4. Angular example</a></li>
 </ul>
 </li>
-<li><a href="#_supported_languages">3. Supported languages</a></li>
-<li><a href="#_build">4. Build</a></li>
-<li><a href="#_find_a_plugin_for_your_ide">5. Find a plugin for your IDE</a></li>
-<li><a href="#_gherkin_tips">6. Gherkin tips</a>
+<li><a href="#_supported_languages">5. Supported languages</a></li>
+<li><a href="#_build">6. Build</a></li>
+<li><a href="#_find_a_plugin_for_your_ide">7. Find a plugin for your IDE</a></li>
+<li><a href="#_gherkin_tips">8. Gherkin tips</a>
 <ul class="sectlevel2">
-<li><a href="#_avoid_duplication">6.1. Avoid duplication</a></li>
-<li><a href="#_grouping_step_definitions">6.2. Grouping step definitions</a></li>
+<li><a href="#_avoid_duplication">8.1. Avoid duplication</a></li>
+<li><a href="#_grouping_step_definitions">8.2. Grouping step definitions</a></li>
+<li><a href="#_scenario_outline_template">8.3. Scenario outline (template)</a></li>
+<li><a href="#_language_support">8.4. Language support</a></li>
 </ul>
 </li>
-<li><a href="#_scenario_outline_template">7. Scenario outline (template)</a></li>
-<li><a href="#_language_support">8. Language support</a></li>
 <li><a href="#_how_to">9. How-to</a></li>
 <li><a href="#_concepts">10. Concepts</a>
 <ul class="sectlevel2">
 <li><a href="#_feature">10.1. Feature</a></li>
-<li><a href="#_background">10.2. Background</a></li>
-<li><a href="#_scenario">10.3. Scenario</a></li>
-<li><a href="#_scenario_outline">10.4. Scenario Outline</a></li>
-<li><a href="#_examples_2">10.5. Examples</a></li>
-<li><a href="#_given">10.6. Given</a></li>
-<li><a href="#_when">10.7. When</a></li>
-<li><a href="#_then">10.8. Then</a></li>
-<li><a href="#_and">10.9. And</a></li>
+<li><a href="#_rule">10.2. Rule</a></li>
+<li><a href="#_background">10.3. Background</a></li>
+<li><a href="#_scenario">10.4. Scenario</a></li>
+<li><a href="#_scenario_outline">10.5. Scenario Outline</a></li>
+<li><a href="#_examples_2">10.6. Examples</a></li>
+<li><a href="#_the_aaa_pattern">10.7. The AAA pattern</a></li>
+<li><a href="#_given">10.8. Given</a></li>
+<li><a href="#_when">10.9. When</a></li>
+<li><a href="#_then">10.10. Then</a></li>
+<li><a href="#_and">10.11. And</a></li>
 </ul>
 </li>
 <li><a href="#_links_between_us_and_feature">11. Links between US and feature</a></li>
@@ -496,7 +500,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_principles">1. Principles</h2>
+<h2 id="_tests">1. Tests</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/"><img src="images/TestingPyramid.png" alt="TestingPyramid" width="80%"></a>
+</div>
+<div class="title">Figure 1. The testing pyramid (source <a href="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/">here</a>)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/"><img src="images/TestingIceberg.png" alt="TestingIceberg" width="80%"></a>
+</div>
+<div class="title">Figure 2. The testing pyramid at work (source <a href="https://gasparnagy.com/2017/02/balancing-scenarios-and-unit-tests-case-study-with-specflow/">here</a>)</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_features">2. Features</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://github.com/xblanc33/QualiteDev/"><img src="images/artifacts-r303.svg" alt="artifacts r303" width="70%"></a>
+</div>
+<div class="title">Figure 3. Artifacts traceability (Inspired from <a href="https://github.com/xblanc33/QualiteDev/">here</a>)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://github.com/xblanc33/QualiteDev/"><img src="images/artifacts-r303-bis.png" alt="artifacts r303 bis" width="60%"></a>
+</div>
+<div class="title">Figure 4. One more artifact</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_principles">3. Principles</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -517,33 +555,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples">2. Examples</h2>
+<h2 id="_examples">4. Examples</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_some_review_activity_no_code">2.1. Some review activity (No code)</h3>
+<h3 id="_some_review_activity_no_code">4.1. Some review activity (No code)</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/featureExample.png" alt="PhD Feature">
 </div>
-<div class="title">Figure 1. Review PhD feature</div>
+<div class="title">Figure 5. Review PhD feature</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_this_course_materials_no_code">2.2. This course materials! (No code)</h3>
+<h3 id="_this_course_materials_no_code">4.2. This course materials! (No code)</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/cheklinks-feature.png" alt="PhD Feature">
 </div>
-<div class="title">Figure 2. Check URLs feature</div>
+<div class="title">Figure 6. Check URLs feature</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_android_example">2.3. Android example</h3>
+<h3 id="_android_example">4.3. Android example</h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample"><img src="images/sample_video.gif" alt="Android app"></a>
 </div>
-<div class="title">Figure 3. An Android app (source <a href="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample">here</a>)</div>
+<div class="title">Figure 7. An Android app (source <a href="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample">here</a>)</div>
 </div>
 <div class="listingblock">
 <div class="title">A feature for this app (source <a href="https://github.com/CodemateLtd/Android-Cucumber-BDD-Sample">here</a>)</div>
@@ -561,7 +599,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_angular_example">2.4. Angular example</h3>
+<h3 id="_angular_example">4.4. Angular example</h3>
 <div class="paragraph">
 <p>A "Getting Started" app</p>
 </div>
@@ -572,7 +610,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <a class="image" href="https://github.com/petermorlion/angular-getting-started"><img src="images/angular.png" alt="Angular App Example" width="50%"></a>
 </div>
-<div class="title">Figure 4. An Angular example app</div>
+<div class="title">Figure 8. An Angular example app</div>
 </div>
 <div class="paragraph">
 <p>Some feature description</p>
@@ -581,7 +619,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="images/angular-feature.png" alt="Cucumber feature">
 </div>
-<div class="title">Figure 5. Some feature example</div>
+<div class="title">Figure 9. Some feature example</div>
 </div>
 <div class="paragraph">
 <p>Running Cucumber (fail)</p>
@@ -590,7 +628,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <img src="images/cucumber-fail.png" alt="cucumber fail">
 </div>
-<div class="title">Figure 6. First run of the tests</div>
+<div class="title">Figure 10. First run of the tests</div>
 </div>
 <div class="paragraph">
 <p>Write Steps definitions</p>
@@ -621,13 +659,13 @@ Then('we should receive', function (dataTable) {
 <div class="content">
 <img src="images/cucumber-pass.png" alt="Passing tests" width="50%">
 </div>
-<div class="title">Figure 7. New run of the tests</div>
+<div class="title">Figure 11. New run of the tests</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_supported_languages">3. Supported languages</h2>
+<h2 id="_supported_languages">5. Supported languages</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Ruby (origin), Java, JavaScript,</p>
@@ -645,7 +683,7 @@ Then('we should receive', function (dataTable) {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_build">4. Build</h2>
+<h2 id="_build">6. Build</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Make sure to integrate BDD in your build.</p>
@@ -656,13 +694,13 @@ Then('we should receive', function (dataTable) {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_find_a_plugin_for_your_ide">5. Find a plugin for your IDE</h2>
+<h2 id="_find_a_plugin_for_your_ide">7. Find a plugin for your IDE</h2>
 <div class="sectionbody">
 <div class="imageblock">
 <div class="content">
 <img src="images/android-feature.png" alt="Feature in IDE">
 </div>
-<div class="title">Figure 8. Cucumber plugin in use in VS Code</div>
+<div class="title">Figure 12. Cucumber plugin in use in VS Code</div>
 </div>
 <div class="paragraph">
 <p>Example for VS Code: <a href="https://github.com/alexkrechik/VSCucumberAutoComplete" class="bare">https://github.com/alexkrechik/VSCucumberAutoComplete</a>
@@ -671,10 +709,10 @@ Then('we should receive', function (dataTable) {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_gherkin_tips">6. Gherkin tips</h2>
+<h2 id="_gherkin_tips">8. Gherkin tips</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_avoid_duplication">6.1. Avoid duplication</h3>
+<h3 id="_avoid_duplication">8.1. Avoid duplication</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/gh-bad.png" alt="gh bad">
@@ -704,7 +742,7 @@ public void i_want_to_open_page(String webpage) {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_grouping_step_definitions">6.2. Grouping step definitions</h3>
+<h3 id="_grouping_step_definitions">8.2. Grouping step definitions</h3>
 <div class="paragraph">
 <p>One file for each major domain object.</p>
 </div>
@@ -718,21 +756,19 @@ AuthenticationStepDefinitions.java</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_scenario_outline_template">7. Scenario outline (template)</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_scenario_outline_template">8.3. Scenario outline (template)</h3>
 <div class="imageblock">
 <div class="content">
 <img src="images/gh-outline.png" alt="gh outline" width="80%">
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_language_support">8.4. Language support</h3>
+<div class="paragraph">
+<p>Over 70 languages!</p>
 </div>
-<div class="sect1">
-<h2 id="_language_support">8. Language support</h2>
-<div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -747,18 +783,21 @@ Don&#8217;t forget the <code># language: fr</code>!
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/french-feature.png" alt="French feature" width="80%">
+<img src="images/french-feature.png" alt="French feature" width="60%">
 </div>
-<div class="title">Figure 9. Example of feature in French (<a href="french.feature">source</a>)</div>
+<div class="title">Figure 13. Example of feature in French (<a href="french.feature">source</a>)</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_how_to">9. How-to</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<div class="title">Discovery, Formulation and Automation (Source <a href="https://cucumber.io/docs/bdd/">here</a>)</div>
-<p>image::[link="https://cucumber.io/docs/bdd/"]</p>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://cucumber.io/docs/bdd/"><img src="images/bdd-practices-diagram.png" alt="bdd practices diagram" width="80%"></a>
+</div>
+<div class="title">Figure 14. Discovery, Formulation and Automation (Source <a href="https://cucumber.io/docs/bdd/">here</a>)</div>
 </div>
 </div>
 </div>
@@ -772,31 +811,82 @@ Don&#8217;t forget the <code># language: fr</code>!
 </div>
 </div>
 <div class="sect2">
-<h3 id="_background">10.2. Background</h3>
+<h3 id="_rule">10.2. Rule</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>represent a business rule that should be implemented</p>
+</li>
+<li>
+<p>used to group together several scenarios</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+New concept (since Gherkin v6)
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_background">10.3. Background</h3>
 <div class="paragraph">
 <p>Steps that will be ran before every scenario in the feature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_scenario">10.3. Scenario</h3>
+<h3 id="_scenario">10.4. Scenario</h3>
 <div class="paragraph">
 <p>Name or basic description of a particular scenario testing the feature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_scenario_outline">10.4. Scenario Outline</h3>
+<h3 id="_scenario_outline">10.5. Scenario Outline</h3>
 <div class="paragraph">
 <p>The scenario will run N times for every argument listed in examples explicitly passed by column name wrapped in angled brackets.</p>
 </div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+A Scenario Outline must contain one or more Examples
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_examples_2">10.5. Examples</h3>
+<h3 id="_examples_2">10.6. Examples</h3>
 <div class="paragraph">
 <p>The list of static arguments that will be passed into a scenario outline.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_given">10.6. Given</h3>
+<h3 id="_the_aaa_pattern">10.7. The AAA pattern</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// arrange
+var component = ComponentFixture&lt;UserUploadComponent&gt;;
+var user = new User(component);
+// act
+user.Save();
+// assert
+mock.Received.SomeMethod();</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_given">10.8. Given</h3>
 <div class="paragraph">
 <p>A given step, or precondition that is assumed before continuing.</p>
 </div>
@@ -814,7 +904,7 @@ In the Arrange, Act, Assert paradigm, given represents "Arrange".
 </div>
 </div>
 <div class="sect2">
-<h3 id="_when">10.7. When</h3>
+<h3 id="_when">10.9. When</h3>
 <div class="paragraph">
 <p>A when step, or the behavior that is to be asserted against.</p>
 </div>
@@ -832,7 +922,7 @@ In the Arrange, Act, Assert paradigm, given represents "Act".
 </div>
 </div>
 <div class="sect2">
-<h3 id="_then">10.8. Then</h3>
+<h3 id="_then">10.10. Then</h3>
 <div class="paragraph">
 <p>A then step, or in other words, the step in which a behavior&#8217;s result is validated.</p>
 </div>
@@ -850,7 +940,7 @@ In the Arrange, Act, Assert paradigm, given represents "Assert".
 </div>
 </div>
 <div class="sect2">
-<h3 id="_and">10.9. And</h3>
+<h3 id="_and">10.11. And</h3>
 <div class="paragraph">
 <p>Used in conjunction with any of the keywords above.</p>
 </div>
@@ -872,25 +962,64 @@ If you have two given statements, instead of explicitly calling Given twice, you
 <div class="sect1">
 <h2 id="_links_between_us_and_feature">11. Links between US and feature</h2>
 <div class="sectionbody">
-
+<div class="imageblock">
+<div class="content">
+<img src="images/artifacts-r303-bis.png" alt="artifacts r303 bis" width="60%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/artifacts-r303-ter.svg" alt="artifacts r303 ter" width="60%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/artifacts-r303-ter.png" alt="artifacts r303 ter" width="60%">
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_links_between_features_and_their_implementation">12. Links between Features and their implementation</h2>
 <div class="sectionbody">
-
+<div class="imageblock">
+<div class="content">
+<img src="images/release.png" alt="release" width="60%">
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_cicd_and_bdd">13. CI/CD and BDD</h2>
 <div class="sectionbody">
-
+<div class="imageblock">
+<div class="content">
+<img src="images/ci-bdd.png" alt="ci bdd" width="60%">
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_bdd_vs_tdd">14. BDD vs. TDD</h2>
 <div class="sectionbody">
-
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"><img src="images/mauerhan1.png" alt="mauerhan1" width="60%"></a>
+</div>
+<div class="title">Figure 15. (source <a href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right">here</a>)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"><img src="images/mauerhan2.png" alt="mauerhan2" width="60%"></a>
+</div>
+<div class="title">Figure 16. (source <a href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right">here</a>)</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"><img src="images/mauerhan3.png" alt="mauerhan3" width="60%"></a>
+</div>
+<div class="title">Figure 17. (source <a href="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right">here</a>)</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -926,8 +1055,8 @@ If you have two given statements, instead of explicitly calling Given twice, you
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 23.1 -- 2023-12-09<br>
-Last updated 2023-12-09 15:28:12 +0100
+Version 23.1 -- 2023-12-10<br>
+Last updated 2023-12-10 14:41:06 +0100
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

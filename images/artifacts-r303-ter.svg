@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="364px" preserveAspectRatio="none" style="width:417px;height:364px;background:#FFFFFF;" version="1.1" viewBox="0 0 417 364" width="417px" zoomAndPan="magnify"><defs/><g><!--MD5=[28baf592f02d17f122e91447d2aa70c9]
+class US--><g id="elem_US"><rect codeLine="3" fill="#F0F8FF" height="22" id="US" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="63" x="184" y="15.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="57" x="187" y="29.4824">User Story</text></g><!--MD5=[ea9b6de6547c3ff147b5b75930969138]
+class Requirement--><g id="elem_Requirement"><rect fill="#F0F8FF" height="22" id="Requirement" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="77" x="7" y="15.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="71" x="10" y="29.4824">Requirement</text></g><!--MD5=[82c53a10f238a1092cf5f0b044477708]
+class Feature--><g id="elem_Feature"><rect fill="#F0F8FF" height="22" id="Feature" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="48" x="191.5" y="114.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="42" x="194.5" y="128.4824">Feature</text></g><!--MD5=[70313f9481c73a9808968c254b51c052]
+class Issue--><g id="elem_Issue"><rect fill="#F0F8FF" height="22" id="Issue" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="35" x="198" y="233.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="29" x="201" y="247.4824">Issue</text></g><!--MD5=[56da932a4aa7de652c4d6857238bcda2]
+class Release--><g id="elem_Release"><rect fill="#F0F8FF" height="22" id="Release" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="52" x="62.5" y="233.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="46" x="65.5" y="247.4824">Release</text></g><!--MD5=[b34797a66dc35cbf1d65f7e3ca75530e]
+class Task--><g id="elem_Task"><rect fill="#F0F8FF" height="22" id="Task" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="32" x="316.5" y="233.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="26" x="319.5" y="247.4824">Task</text></g><!--MD5=[ba580110b1777f63e0f1dfe3fcefdac0]
+class Code--><g id="elem_Code"><rect fill="#F0F8FF" height="22" id="Code" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="36" x="196.5" y="336.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="30" x="199.5" y="350.4824">Code</text></g><!--MD5=[df38be88ccee13e832d6fafd6288a4ca]
+class Test--><g id="elem_Test"><rect fill="#F0F8FF" height="22" id="Test" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="29" x="318" y="336.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="23" x="321" y="350.4824">Test</text></g><!--MD5=[f38cdfa93a4420874a477654256d5f0f]
+class Doc--><g id="elem_Doc"><rect fill="#F0F8FF" height="22" id="Doc" rx="2.5" ry="2.5" style="stroke:#2F4F4F;stroke-width:0.5;" width="28" x="382.5" y="336.2422"/><text fill="#000000" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="22" x="385.5" y="350.4824">Doc</text></g><!--MD5=[37417e299bf94c6e0dac8d102472b21b]
+reverse link Requirement to US--><g id="link_Requirement_US"><path codeLine="5" d="M90.58,26.2422 C119.89,26.2422 157.39,26.2422 183.63,26.2422 " fill="none" id="Requirement-backto-US" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="85.59,26.2422,94.59,30.2422,90.59,26.2422,94.59,22.2422,85.59,26.2422" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="64" x="102" y="19.8105">«concern»</text></g><!--MD5=[bac56049e807a1d0c676764e016e14ec]
+reverse link US to Feature--><g id="link_US_Feature"><path codeLine="7" d="M215.5,43.9022 C215.5,64.0122 215.5,97.2122 215.5,113.9322 " fill="none" id="US-backto-Feature" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="215.5,39.1322,211.5,48.1322,215.5,44.1322,219.5,48.1322,215.5,39.1322" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="216.5" y="80.8105">«sastisfy»</text></g><!--MD5=[4ae0365e9ac62a862a64f4e0f88f3824]
+reverse link Feature to Issue--><g id="link_Feature_Issue"><path codeLine="8" d="M215.5,143.0222 C215.5,167.7922 215.5,213.3722 215.5,233.3822 " fill="none" id="Feature-backto-Issue" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="215.5,138.1422,211.5,147.1422,215.5,143.1422,219.5,147.1422,215.5,138.1422" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="216.5" y="179.8105">«sastisfy»</text></g><!--MD5=[c00707f4ea8292baa0595834cf7e1e3c]
+link Release to Issue--><g id="link_Release_Issue"><path codeLine="9" d="M114.5,244.2422 C135.44,244.2422 165.3,244.2422 186.93,244.2422 " fill="none" id="Release-to-Issue" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="196.78,244.2422,187.78,240.2422,191.78,244.2422,187.78,248.2422,196.78,244.2422" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="122.725" y="236.3938">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="183.9534" y="238.7808">*</text></g><!--MD5=[b34e219db390308839e2cd42d3dbd06d]
+link Issue to Task--><g id="link_Issue_Task"><path codeLine="10" d="M232.98,244.2422 C251.84,244.2422 283,244.2422 305.22,244.2422 " fill="none" id="Issue-to-Task" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="#000000" points="315,244.2422,306,240.2422,310,244.2422,306,248.2422,315,244.2422" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="240.819" y="233.1805">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="302.6908" y="238.7808">*</text></g><!--MD5=[a7e96ef96a3307a4ac34791bd1c7762b]
+reverse link Task to Code--><g id="link_Task_Code"><path codeLine="12" d="M305.08,268.7122 C280.31,289.9122 245.02,320.1222 226.66,335.8322 " fill="none" id="Task-backto-Code" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="300.29,263.6022,320.04,255.9122,309.39,274.2322,300.29,263.6022" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[b5ab5b65dd8bdeb3eafc28edc87ce227]
+reverse link Task to Test--><g id="link_Task_Test"><path codeLine="13" d="M332.5,276.1522 C332.5,296.5122 332.5,321.8822 332.5,335.8322 " fill="none" id="Task-backto-Test" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="325.5,276.4422,332.5,256.4422,339.5,276.4422,325.5,276.4422" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[01eee0cc37e7b5c506c8b35fa542dd00]
+reverse link Task to Doc--><g id="link_Task_Doc"><path codeLine="14" d="M349.99,272.8522 C363.2,293.6822 380.58,321.1122 389.91,335.8322 " fill="none" id="Task-backto-Doc" style="stroke:#000000;stroke-width:1.0;"/><polygon fill="none" points="344.24,276.8422,339.45,256.2022,356.06,269.3522,344.24,276.8422" style="stroke:#000000;stroke-width:1.0;"/></g><!--MD5=[6841687de89bb9f615cd55ee20f038e1]
+reverse link Code to Test--><g id="link_Code_Test"><path codeLine="16" d="M239.3,347.2422 C262.97,347.2422 297.87,347.2422 317.56,347.2422 " fill="none" id="Code-backto-Test" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="234.45,347.2422,243.45,351.2422,239.45,347.2422,243.45,343.2422,234.45,347.2422" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="250.75" y="340.8105">«verify»</text></g><!--MD5=[ac6fd5424373533094532df6ce3f0418]
+@startuml artifacts-r303-bis
+!include config-min.cfg
+
+class "User Story" as US
+
+Requirement <. US: << concern >>
+' US <.. Issue: << sastisfy >>
+US <.. Feature: << sastisfy >>
+Feature  <.. Issue: << sastisfy >>
+Release "1" -> "*" Issue
+Issue "1" -> "*" Task
+
+Task <|- - Code
+Task <|- - Test
+Task <|- - Doc
+
+Code <. Test : <<verify>>
+
+@enduml
+
+@startuml artifacts-r303-bis
+
+hide circle
+hide empty members
+hide empty methods
+
+
+skinparam classAttributeIconSize 0
+skinparam package {
+	BackgroundColor empty
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+skinparam roundcorner 5
+
+skinparam class {
+	BackgroundColor AliceBlue
+	BorderColor DarkSlateGray
+	ArrowColor Black
+	FontColor Black
+	FontSize 12
+	FontName Helvetica
+}
+
+skinparam enum {
+  	BackgroundColor LightGreen
+}
+
+skinparam arrow {
+    MessageAlign center
+}
+
+class "User Story" as US
+
+Requirement <. US: << concern >>
+US <.. Feature: << sastisfy >>
+Feature  <.. Issue: << sastisfy >>
+Release "1" -> "*" Issue
+Issue "1" -> "*" Task
+
+Task <|- - Code
+Task <|- - Test
+Task <|- - Doc
+
+Code <. Test : <<verify>>
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>

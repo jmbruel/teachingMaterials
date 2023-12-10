@@ -8,8 +8,8 @@ v23.1 -- {localdate}
 :imagesdir: images
 :revealjsdir: reveal.js
 :revealjs_slideNumber: true
-:revealjs_theme: blood
-//beige, black, league, night, serif, simple, sky, solarized, white
+:revealjs_theme: sky
+//beige, black, blood, league, night, serif, simple, sky, solarized, white
 //------------------------------------ variables de configuration
 // only used when master document
 :linkcss!:
@@ -373,14 +373,48 @@ Used in conjunction with any of the keywords above.
 
 NOTE: If you have two given statements, instead of explicitly calling Given twice, you can say, " Given A And B".
 
+// ------------------------------------------ 
 == Links between US and feature
 
+image::artifacts-r303-bis.png[width=60%,pdfwidth=60%]
+
+ifdef::slides[=== Project management]
+
+image::artifacts-r303-ter.svg[width=60%,pdfwidth=60%]
+
+ifdef::slides[=== Project management]
+
+image::artifacts-r303-ter.png[width=60%,pdfwidth=60%]
+
+// ------------------------------------------ 
 == Links between Features and their implementation
 
+image::release.png[width=60%,pdfwidth=60%]
+
+// ------------------------------------------ 
 == CI/CD and BDD
 
+image::ci-bdd.png[width=60%,pdfwidth=60%]
+
+// ------------------------------------------ 
 == BDD vs. TDD
 
+ifdef::slides[=== BDD vs. TDD]
+
+.(source https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right[here])
+image::mauerhan1.png[width=60%,pdfwidth=60%,link="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"]
+
+ifdef::slides[=== BDD vs. TDD]
+
+.(source https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right[here])
+image::mauerhan2.png[width=60%,pdfwidth=60%,link="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"]
+
+ifdef::slides[=== BDD vs. TDD]
+
+.(source https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right[here])
+image::mauerhan3.png[width=60%,pdfwidth=60%,link="https://www.slideshare.net/JessicaMauerhan/double-loop-tdd-bdd-done-right"]
+
+// ------------------------------------------ 
 [appendix]
 == Useful links
 
