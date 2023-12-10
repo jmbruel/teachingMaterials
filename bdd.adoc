@@ -1,5 +1,5 @@
 //---------------------------------
-// Cours sur BDD
+// BDD course
 // (c) JMB - 2014-2023
 //---------------------------------
 = Behavioral-Driven Development
