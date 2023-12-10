@@ -7,7 +7,6 @@ FILE: README.adoc
 [✓] https://innopolis.university/en/
 [✓] https://www.iut-blagnac.fr/
 [✓] https://jmbruel.github.io/MobileModeling
-[✓] https://www.iut-blagnac.fr/fr/formations/lp-apsio
 [✓] http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/
 [/] http://www.it-tallaght.ie/
 [/] http://www.it-tallaght.ie/index.cfm/page/course?id=128
@@ -36,4 +35,4 @@ FILE: README.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
-35 links checked.
+34 links checked.

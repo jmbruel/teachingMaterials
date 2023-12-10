@@ -1,4 +1,4 @@
-Mar 6 sep 2022 18:50:02 CEST
+Dim 10 déc 2023 14:59:46 CET
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
@@ -14,7 +14,6 @@ FILE: README.adoc
 [✓] https://innopolis.university/en/
 [✓] https://www.iut-blagnac.fr/
 [✓] https://jmbruel.github.io/MobileModeling
-[✓] https://www.iut-blagnac.fr/fr/formations/lp-apsio
 [✓] http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/
 [/] http://www.it-tallaght.ie/
 [/] http://www.it-tallaght.ie/index.cfm/page/course?id=128
@@ -43,7 +42,7 @@ FILE: README.adoc
 [✓] http://asciidoctor.org/
 [✓] http://creativecommons.org/licenses/by-sa/3.0/
 
-35 links checked.
+34 links checked.
 
 FILE: ci.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html
@@ -109,22 +108,6 @@ FILE: refactoring.adoc
 [✓] https://refactoring.guru/fr/refactoring
 [✓] https://codegym.cc/groups/posts/196-how-refactoring-works-in-java
 [✓] http://www.socrative.com/
-
-FILE: requirements.adoc
-[✓] http://jmbruel.github.io/teachingMaterials/requirements.html
-[✓] http://bit.ly/jmb-teaching
-[✓] https://www.theguardian.com/world/2021/apr/09/tui-plane-serious-incident-every-miss-on-board-child-weight-birmingham-majorca
-[/] https://abstracta.us/blog/devops/testing-driver-devops-culture/
-[✓] https://pic.twitter.com/TVlUV3cpl0
-[✓] http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf
-[✓] https://visuresolutions.com/application-lifecycle-management-alm-tool
-[✓] https://altkomsoftware.pl/en/blog/mvp-insurance/
-[✓] https://bmtoolbox.net/tools/value-network/
-[✓] https://dronology.info/traceability/
-[✓] https://www2.slideshare.net/murphygc/beyond-devops-finding-value-through-requirements
-[✓] http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
-
-12 links checked.
 
 FILE: testingCI.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html

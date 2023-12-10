@@ -115,7 +115,7 @@ ifdef::slides[=== !]
 
 Expected properties vs. description
 
-.Expected properties vs. description (source http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf[CESAM])
+.Expected properties vs. description (source https://cesames.cn/wp-content/uploads/2020/06/CESAM-Systems-Architecting-Method-Pocket-Guide-CESAMES.pdf[CESAM])
 image::expectedProperties.png[Expected properties vs. description]
 
 === Requirements in industry = ALM
@@ -200,7 +200,7 @@ image::mvp-classic.png[]
 
 === Minimal Viable Product (improved)
 
-.A more accurate representation (source https://altkomsoftware.pl/en/blog/mvp-insurance/)
+.A more accurate representation (source https://www.altkomsoftware.com/blog/mvp-insurance/)
 image::minimum-viable-product.png[]
 
 === MVP & EPICS
@@ -261,8 +261,8 @@ Images taken from:
 
 - https://abstracta.us/blog/devops/testing-driver-devops-culture/
 - http://meshfields.de/continuous-integration-testing-delivery-ionic2-hybrid-mobile-apps-buddybuild/
-- https://altkomsoftware.pl/en/blog/mvp-insurance/
-- http://www.cesames.net/wp-content/uploads/2017/05/CESAM-guide.pdf 
+- https://www.altkomsoftware.com/blog/mvp-insurance/
+- https://cesames.cn/wp-content/uploads/2020/06/CESAM-Systems-Architecting-Method-Pocket-Guide-CESAMES.pdf
 
 
 ifdef::slides[]
