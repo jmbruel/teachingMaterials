@@ -1,0 +1,30 @@
+Issue|8
+Title|Test coverage
+Body|The figure illustrating test coverage in `testingCI-uk` is old and has bad quality. Add a more recent example from your experiences.
+
+Issue|7
+Title|Testing front end
+Body|In the `testingCI-uk` file, there is a section on testing interfaces that is too small. Add a more recent example from your experiences.
+
+Issue|6
+Title|Add US template good practice
+Body|In the `github.adoc` file, the good practice of using issue templates is missing. This is a nice GitHub feature. Add a section on that good practice.
+
+Issue|5
+Title|Update build stats
+Body|In the `github.adoc` file the stats about build tools and IDE usage are outdated. Find a more recent reference.
+
+Issue|4
+Title|Add a good GitHub practice
+Body|In the `github.adoc` file, there are numerous GitHub good practices. Add one of your own experiences.
+
+Issue|3
+Title|Add Russian Feature
+Body|In the `bdd.adoc` there is a French example of Gherkin, add a Russian one. 
+
+Issue|2
+Title|Demonstrate automation of issue branches
+Body|Demonstrate the use of GitHub Action to generate automatically issue branches.
+Based on https://github.com/marketplace/actions/create-issue-branch.
+
+
