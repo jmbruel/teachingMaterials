@@ -1,0 +1,348 @@
+//---------------------------------
+// R5.A.04-Qualité Algorithmique course
+// (c) JMB - 2023
+//---------------------------------
+= Qualité Algo. (R5.A.04)
+J.-M. Bruel <jbruel@gmail.com>
+v24.1 -- {localdate}
+:imagesdir: images
+:revealjsdir: reveal.js
+:revealjs_slideNumber: true
+:revealjs_theme: sky
+//beige, black, blood, league, night, serif, simple, sky, solarized, white
+//------------------------------------ variables de configuration
+// only used when master document
+:linkcss!:
+:git-version: 2.24.3
+:icons: font
+:experimental:
+:toc: left
+:numbered:
+:status:
+:siteurl: http://jmbruel.github.io/teachingMaterials/bdd.html
+:bitlysiteurl: http://bit.ly/jmb-teaching
+//------------------------------------ Slides uniquement
+:topic:
+:intro:
+:statement:
+:incremental: %step
+:source:
+//:source-highlighter: rouge
+:source-highlighter: highlightjs
+:experimental:
+
+// Specific to GitHub
+ifdef::env-github[]
+:toc:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+// ------------------------------------------ definitions
+ifndef::definitions[]
+include::definitions.txt[]
+endif::definitions[]
+
+ifdef::slides[]
+// ------------------------------------------ disclaimer
+:numbered!:
+[{intro}]
+== Avant-propos
+
+[{topic}]
+=== Pour suivre ces slides... icon:mobile[] icon:tablet[] icon:laptop[]
+
+[{statement}]
+{bitlysiteurl}
+
+[{topic}]
+=== Pomodoro ?
+
+https://fr.wikipedia.org/wiki/Technique_Pomodoro
+
+image::pomodoro.jpeg[]
+
+endif::slides[]
+
+// ------------------------------------------ 
+== Complexité algorithmique
+
+[quote, Wikipedia]
+Étude formelle de la quantité de ressources (par exemple de temps ou d'espace) nécessaire à l'exécution de cet algorithme. 
+
+ifdef::slides[=== !]
+
+Ne pas confondre avec théorie de la complexité.
+
+[quote, Wikipedia]
+Étudie la difficulté intrinsèque des *problèmes*.
+
+=== Classe de problèmes
+
+P = NP ?
+
+image::hamiltonien.gif[]
+
+La question à $1 Million.
+
+=== Classes de problèmes
+
+- Les problèmes de décision
+- Les problèmes de recherche d'une solution
+
+
+== Complexité en temps
+
+Nombre d'étapes de calcul (borne supérieure)
+
+- Constant O(1)
+- Linéaire O(n)
+- Logarithmique O(log n)
+- Quadratique O(n^2^)
+- Polynomial 2^O(logn)^
+- Exponentiel 2^O(n)^ ou O(x^n^)
+
+ifdef::slides[=== !]
+
+image::temps.png[(Source Pascal Sotin "Programmation efficace"), width=80%]
+
+=== Complexité en temps : exemples
+
+-  O(n) : recherche du max d'un tableau de taille n
+-  O(log n) : recherche dychotomique
+-  O(n^2^) : tri par insertion
+-  2^O(log(n))^ : factorisation des entiers
+-  2^O(n)^ : voyageur de commerce (meilleur algo)
+
+=== Exemple de O(n!)
+
+image:hamiltonien.gif[Wikipedia] En recherche exhaustive :
+
+image::univers.png[Wikipedia,width=35%]
+
+ifdef::slides[=== !]
+
+En comptant qu'une opération prend 1 microseconde (10^-6^s) avec 25 villes, le temps de calcul dépasse l'âge de l'univers...
+
+=== Problèmes NP-Complets
+
+Caractéristiques :
+
+. Solution vérifiable en temps polynomial
+. Au moins aussi difficile que tous les autres problèmes de la classe NP. 
+
+Exemples :
+Pavage du plan (3 couleurs), voyageur de commerce, Sudokus généralisés
+
+=== Intérêts
+
+- Trouver un algorithme qui le résout en temps polynomial, prouverait que P = NP 
+- Démontrer qu’il est impossible de les résoudre en temps polynomial prouverait que P ≠ NP
+
+=== Algorithmes Gloutons
+
+//https://info.blaisepascal.fr/nsi-algorithmes-gloutons/
+[quote]
+L'approche gloutonne consiste à construire une solution complète par une succession de choix locaux donnant systématiquement la meilleure solution partielle.
+
+=== Rendu de monnaie
+
+Vous avez une caisse infinie, vous devez rendre 9€ de monnaie.
+Combien y a t'il de façon de rendre la monnaie.
+
+ifndef::slides[]
+[%collapsible]
+====
+8
+====
+endif::[]
+
+Quelle combinaison utilise le moins de pièces/billets ?
+
+ifndef::slides[]
+[%collapsible]
+====
+3 => 5€+2*2$
+====
+endif::[]
+
+ifdef::slides[=== !]
+
+Comment feriez-vous ?
+
+TIP: Il y a des chances que votre algorithme soit glouton!
+
+ifdef::slides[=== !]
+
+Pour le système monétaire français, la stratégie gloutonne donne *toujours* une solution optimale. 
+
+Pour cette raison, un tel système de monnaie est qualifié de *canonique*.
+
+[%step]
+NOTE: ce système ne l'est pas : {1,3,6,12,24,30}, l’algorithme glouton répond en proposant le rendu 49=30+12+6+1, soit 4 pièces alors que la solution optimale est 49=2×24+1, soit 3 pièces!
+
+== Complexité Algorithmique
+
+=== Exercice : Puissance
+
+Quelle est la complexité de cet algorithme :
+
+[source,java]
+----
+public int puissance(int n, int a) {
+int resultat = a;
+for(int i = 1 ; i < n ;i++){
+    resultat = resultat * a;
+}
+return resultat;
+}
+----
+
+ifndef::slides[]
+[%collapsible]
+====
+O(n)
+====
+endif::[]
+
+ifdef::slides[=== !]
+
+
+Pouvez-vous en trouver une version en O(log n) ?
+
+ifndef::slides[]
+[%collapsible]
+====
+[source,java]
+----
+public int puissance(int n, int a) {
+int aux = n;
+int puissanceDea = a;
+int resultat = 1;
+while ( aux != 0 ) {
+    if (aux mod 2 == 1) {
+        resultat = resultat * puissanceDea;
+    }
+    aux=aux/2;
+    puissanceDea = puissanceDea * puissanceDea;
+}
+return resultat;
+}
+----
+====
+endif::[]
+
+
+=== Exercice : le cadenas à 3 chiffres 
+
+image::cadenas.png[link="https://openclassrooms.com/fr/courses/7527306-decouvrez-le-fonctionnement-des-algorithmes/7760669-calculez-la-complexite-algorithmique"]
+
+Quelle est la complexité de cet algorithme ?
+
+ifndef::slides[]
+[%collapsible]
+====
+O(10^n^) => exponentielle!
+====
+endif::[]
+
+ifdef::slides[=== !]
+
+Et la complexité de l'algo du voleur ?
+
+ifndef::slides[]
+[%collapsible]
+====
+O(10n) => linéaire!
+====
+endif::[]
+
+=== Exercice : les algorithmes de tri
+
+Quelles sont les complexités temporelles des algorithmes de tri suivant : sélection, insertion, Quicksort ?
+
+ifndef::slides[]
+[%collapsible]
+====
+- Par sélection : O(n^2) en tout
+- Par insertion : O(n^2) au pire et en moyenne (et O(n) au mieux)
+- Quicksort : O(n^2) au pire et O(n log n) en moyenne
+====
+endif::[]
+
+// ------------------------------------------ 
+== Autres complexités
+
+=== Complexité cyclomatique
+
+[quote]
+Nombre de chemins d'exécution possibles dans un morceau de code donné.
+
+Code :
+
+- plus difficile à comprendre
+- plus difficile à maintenir
+
+=== Exemple
+
+image::cyclomatique1.png[link="https://www-igm.univ-mlv.fr/~dr/XPOSE2008/Mesure%20de%20la%20qualite%20du%20code%20source%20-%20Algorithmes%20et%20outils/complexite-cyclomatique.html", width=90%]
+
+ifdef::slides[=== !]
+
+image::cyclomatique2.png[link="https://www-igm.univ-mlv.fr/~dr/XPOSE2008/Mesure%20de%20la%20qualite%20du%20code%20source%20-%20Algorithmes%20et%20outils/complexite-cyclomatique.html", width=45%]
+
+ifdef::slides[=== !]
+
+Complexité cyclomatique de *6* => 6 tests unitaires.
+
+=== Complexité cognitive
+
+ifdef::slides[=== Même complexité ?]
+
+image::cognitive.png[link="https://www.sonarsource.com/blog/cognitive-complexity-because-testability-understandability/"]
+
+ifdef::slides[=== !]
+
+image::cognitive2.png[link="https://www.sonarsource.com/blog/cognitive-complexity-because-testability-understandability/"]
+
+ifdef::slides[=== !]
+
+image::cognitive3.png[link="https://www.sonarsource.com/blog/cognitive-complexity-because-testability-understandability/"]
+
+=== Duplication de code
+
+image::repeat1.jpeg[width=70%]
+
+=== Complexité et dette technique
+
+image::freepik.com.detteTechnique.jpeg[width=70%, link="freepik.com"]
+
+== Outils
+
+ifdef::slides[=== PMD]
+
+- https://pmd.github.io/[PMD]
+
+image::pmd.png[width=20%]
+
+ifdef::slides[=== SonarCube]
+
+- https://www.sonarsource.com/products/sonarqube/[SonarCube]
+
+image::sonarlint.png[width=50%]
+
+// ------------------------------------------ 
+[appendix]
+== Useful links
+
+- https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes[Complexité des Algorithmes]
+- https://interstices.info/p-np-un-probleme-a-un-million-de-dollars[Million de dollars]
+- https://openclassrooms.com/fr/courses/7527306-decouvrez-le-fonctionnement-des-algorithmes/7760669-calculez-la-complexite-algorithmique[Open Classroom]
+-  https://www-igm.univ-mlv.fr/~dr/XPOSE2008/Mesure%20de%20la%20qualite%20du%20code%20source%20-%20Algorithmes%20et%20outils/complexite-cyclomatique.html[Complexité cyclomatique]
+- https://www.sonarsource.com/blog/cognitive-complexity-because-testability-understandability/[Complexité cognitive]
+- Outils :
+** https://www.sonarsource.com/products/sonarqube/[SonarCube]
+** https://pmd.github.io/[PMD]
