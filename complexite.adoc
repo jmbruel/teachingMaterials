@@ -322,6 +322,9 @@ image::freepik.com.detteTechnique.jpeg[width=70%, link="freepik.com"]
 
 == Outils
 
+- Analyse statique
+- Analyse dynamique
+
 ifdef::slides[=== PMD]
 
 - https://pmd.github.io/[PMD]
@@ -333,6 +336,12 @@ ifdef::slides[=== SonarCube]
 - https://www.sonarsource.com/products/sonarqube/[SonarCube]
 
 image::sonarlint.png[width=50%]
+
+ifdef::slides[=== Dynamic tools]
+
+- https://valgrind.org/[valgrind] (C)
+
+- https://docs.python.org/3/library/profile.html[cProfile] (Python)
 
 // ------------------------------------------ 
 [appendix]
