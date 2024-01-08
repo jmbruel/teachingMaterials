@@ -339,9 +339,9 @@ image::sonarlint.png[width=50%]
 
 ifdef::slides[=== Dynamic tools]
 
-- https://valgrind.org/[valgrind] (C)
+- https://valgrind.org/[valgrind] (pour C)
 
-- https://docs.python.org/3/library/profile.html[cProfile] (Python)
+- https://docs.python.org/3/library/profile.html[cProfile] (pour Python)
 
 // ------------------------------------------ 
 [appendix]
