@@ -1,6 +1,278 @@
+= Contrôle R5.A.08 -- QualDev
+//------------- config --------
+:numbered:
+:icons: font
+:iconsdir: icons
+:experimental:
+:imagesdir: images
+:defaultwidth: 80%
+:defaultwidthmenu: 40%
+//:toc: left
+//:toc-title: Table des Matières
+:xrefstyle: short
+:section-refsig: Q.
+:source-highlighter: pygments
+:source-language: java
+:pygments-linenums-mode: inline
+
+//------------- end config --------
+//:corrige: to quickly check corrections
+
+Nom/Prénom::
++
+.....
+|
+|
+|
+.....
+
+Contrôle::
+DUT Informatique, IUT de Blagnac, 2023/2024 - 22/01/2024
+
+Conditions::
+*Durée : 1h00* - *Pas de documents* : seule feuille A4 R-V manuscrite non photocopiée. 
+
+:bareme: 1.1) 3 pts - \
+1.2) 3 pts - \
+1.3) 2 pts - \
+2.1) 3 pts - \
+2.2) 2 pts - \
+3.1) 3 pts - \
+3.2) 4 pts - \
+Total) 20 pts - \
+(modifiable pour le bien de tous)
+
+Barème::
+{bareme}
+
+
+//-----------------------------------------------
+== Questions de cours 
+//-----------------------------------------------
+
+[[recostrat1]]
+=== Concepts importants
+
+Placez les concepts suivants dans un diagramme de classe UML qui permette de comprendre les relations entre ces concepts : 
+Exigence, _User Story_, _Release_, _Issue_, Tâche, Code, Test, Documentation.
+
+TIP: Ne traitez que les concepts que vous comprenez.
+
+
+Réponse <<recostrat1>>::
+ifndef::corrige[]
+.....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.....
+endif::corrige[]
+
+
+ifdef::corrige[]
+image::artifacts-r303.svg[width=70%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
+endif::corrige[]
+
+[[recosing1]]
+=== Types de tests
+
+Placez dans la pyramide suivante les types de tests que vous connaissez.
+
+image::test-exo.svg[pdfwidth=100%]
+
+[[recostrat3]]
+=== Concepts importants (suite)
+
+Entre quels concepts (et avec quelles associations/relations) placeriez-vous le concept BDD de _Feature_ ?
+
+TIP: Ne refaites pas tout le diagramme.
+
+Réponse <<recostrat3>>::
+ifndef::corrige[]
+.....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.....
+endif::corrige[]
+
+//-----------------------------------------------
+== Gherkin
+//-----------------------------------------------
+
+[[recosing2]]
+=== Syntaxe générique
+
 Proposez une meilleure formulation des steps suivants (en 1 seul step par exemple) :  
 
+[source,gherkin]
+-----
 Scenario: Bad steps definition
     Given I go to the home page
     Given I check the about page of the website
     Given I get the contact details
+-----
+
+Réponse <<recosing2>>::
+ifndef::corrige[]
+.....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.....
+endif::corrige[]
+
+[[recosing3]]
+=== Syntaxe avec exemple
+
+Proposez une suite à cette _feature_ :  
+
+[source,gherkin]
+-----
+Scenario Outline: Eating
+    Given There are <start> cucumbers
+    When I eat <eat> cucumbers
+    Then I should have <left> cucumbers
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+-----
+
+[[recosing4]]
+//-----------------------------------------------
+== BDD en Java
+//-----------------------------------------------
+
+Soit la classe Java suivante, proposez une feature simple et l'implémentation de ses _steps_.
+
+[source,java]
+-----
+class Order {
+    private String owner;
+    private String target;
+    private List<String> cocktails;
+    private String message;
+
+    public Order() {
+        this.cocktails = new ArrayList<>();
+    }
+
+    public void declareOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public void declareTarget(String target) {
+        this.target = target;
+    }
+
+    public List<String> getCocktails() {
+        return cocktails;
+    }
+
+    public void addCocktail(String cocktailName) {
+        cocktails.add(cocktailName);
+    }
+
+    public void nbrCocktail(int numberOfCocktails) {
+        this.cocktails.clear(); // Clear existing cocktails if you only want the number specified
+        for (int i = 0; i < numberOfCocktails; i++) {
+            addCocktail("cocktail " + (i + 1)); // Add a unique name to each cocktail
+        }
+    }
+
+    public void addMessage(String message) {
+        this.message = message;
+    }
+
+    public String getTicketMessage() {
+        return "From " + owner + " to " + target + ": " + message;
+    }
+}
+-----
+
+<<<
+
+Réponse <<recosing4>>-Feature::
+ifndef::corrige[]
+.....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.....
+endif::corrige[]
+
+Réponse <<recosing4>>-Steps::
+ifndef::corrige[]
+.....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+.....
+endif::corrige[]
+
+Barème (rappel)::
+{bareme}
