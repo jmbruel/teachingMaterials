@@ -167,6 +167,8 @@ https://moodle.innopolis.university/course/view.php?id=724[Modern Application Pr
 | image:professorcat.png[width=80,link="https://github.com/edu"]
   | Through link:https://github.com/edu[GitHub Educational Account], my students have assignments repositories on {GitHub} classrooms.
 
+| image:3ds.png[width=200,link="https://www.3ds.com/"]
+  | Dassault Systemes provided us discount on https://www.3ds.com/fr/produits-et-services/catia/produits/stimulus/[Stimulus] license.
 |===
 
 
