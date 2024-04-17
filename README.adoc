@@ -1,6 +1,6 @@
 = Teaching materials 
 J.-M. Bruel <jbruel@gmail.com>
-v22.1 {localdate}
+v24.1 {localdate}
 //------------------------------------ variables de configuration
 // only used when master document
 :imagesdir: images
@@ -136,12 +136,15 @@ WARNING: Very incomplete list...
 [cols="3,2,2,5,2"]
 |===
 
+| https://www.univ-tlse2.fr/accueil/formation-insertion/master-ice-ld[Master ICE] : https://iris.univ-tlse2.fr/mod/folder/view.php?id=267013[Ingénierie du Logiciel Avancée (MI0A112T)]  | {expert} {cogs-icon} {us-icon}| link:https://drive.google.com/drive/folders/1AbOrkrl9fKL1w7PBnOK91aDIvvUGrwXz?usp=sharing[Google Drive] 
+| Spécification des exigences | since 2024
+
 | https://innopolis.university/[Innopolis University] : 
 https://moodle.innopolis.university/course/view.php?id=724[Modern Application Production]  | {advanced} {cogs-icon} {us-icon}| link:https://jmbruel.github.io/InnopolisModernApplicationProduction/[Web Page] 
-| Scrum/Tests/Git/CI/... | since 2017
+| Scrum/Tests/Git/CI/... | From 2017 to 2022
 
 | https://www.univ-cotedazur.fr[LP-DAM-IOTIA] : https://lms.univ-cotedazur.fr/course/view.php?id=16573[TLEDAM11]  | {advanced} {cogs-icon} {us-icon}| link:intro.adoc[source] link:intro.html[HTML]
-| Introduction to Software Engineering | since 2018
+| Introduction to Software Engineering | From 2018 to 2020
 
 | https://www.iut-blagnac.fr[DUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=352[BCOO (M2104)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
 | Introduction to OO design (UML) | since 2008
