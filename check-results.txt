@@ -1,10 +1,55 @@
-Lun 2 sep 2024 14:44:26 CEST
+Lun 2 sep 2024 14:50:49 CEST
 
 FILE: CONTRIBUTING.adoc
 [✓] https://github.com/jmbruel/teaching
 [✓] https://help.github.com/articles
 [✓] https://gist.github.com
 [✓] http://blog.quickpeople.co.uk/2013/07/10/useful-github-patterns
+
+FILE: README.adoc
+[✓] http://jmbruel.github.io/teachingMaterials/
+[✓] http://jmbruel.github.io/teachingMaterials
+[✓] http://github.com/jmbruel/teachingMaterials
+[✓] http://git-scm.com/
+[✓] https://innopolis.university/en/
+[✓] https://www.iut-blagnac.fr/
+[✓] https://jmbruel.github.io/MobileModeling
+[✓] http://mathsinfo.univ-tlse2.fr/accueil/formations/master-ice/
+[/] http://www.it-tallaght.ie/
+[/] http://www.it-tallaght.ie/index.cfm/page/course?id=128
+[✓] https://api.codacy.com/project/badge/Grade/550a9c47c3d6426c9122765e45097a3c
+[✓] https://app.codacy.com/gh/jmbruel/teachingMaterials?utm_source=github.com&utm_medium=referral&utm_content=jmbruel/teachingMaterials&utm_campaign=Badge_Grade
+[✓] https://sonarcloud.io/api/project_badges/measure?project=jmbruel_teachingMaterials&metric=sqale_index
+[✓] https://img.shields.io/badge/Cucumber-Report-yellowgreen
+[✓] https://reports.cucumber.io/reports/dfb48e1c-5d7e-46e0-8094-4cc06570bc7f
+[✓] https://img.shields.io/badge/License-MIT-yellow.svg
+[✓] https://opensource.org/licenses/MIT
+[✓] https://github.com/jmbruel/teachingMaterials/blob/master/images/profiles.png
+[✓] https://www.univ-tlse2.fr/accueil/formation-insertion/master-ice-ld
+[✓] https://iris.univ-tlse2.fr/mod/folder/view.php?id=267013
+[✓] https://drive.google.com/drive/folders/1AbOrkrl9fKL1w7PBnOK91aDIvvUGrwXz?usp=sharing
+[✓] https://innopolis.university/
+[✓] https://moodle.innopolis.university/course/view.php?id=724
+[✓] https://jmbruel.github.io/InnopolisModernApplicationProduction/
+[✓] https://www.univ-cotedazur.fr
+[/] https://lms.univ-cotedazur.fr/course/view.php?id=16573
+[✓] https://www.iut-blagnac.fr
+[✓] https://webetud.iut-blagnac.fr/course/view.php?id=352
+[✓] http://iut-blagnac.github.io/POO/
+[✓] https://webetud.iut-blagnac.fr/course/view.php?id=829
+[✓] https://wiki.eclipse.org/images/a/a2/Papyrus4education-logo.png
+[✓] https://wiki.eclipse.org/Papyrus_for_Education
+[✓] https://github.com/edu
+[✓] https://www.3ds.com/
+[✓] https://www.3ds.com/fr/produits-et-services/catia/produits/stimulus/
+[✓] https://www.freepik.com
+[✖] https://www.flaticon.com/
+[✓] http://creativecommons.org/licenses/by/3.0/
+[✓] http://asciidoctor.org/
+[✓] http://creativecommons.org/licenses/by-sa/3.0/
+
+40 links checked.
+[✖] https://www.flaticon.com/ → Status: 403
 
 FILE: ci.adoc
 [✓] http://jmbruel.github.io/teachingMaterials/requirements.html

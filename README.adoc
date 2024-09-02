@@ -149,6 +149,9 @@ https://moodle.innopolis.university/course/view.php?id=724[Modern Application Pr
 | https://www.iut-blagnac.fr[DUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=352[BCOO (M2104)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
 | Introduction to OO design (UML) | since 2008
 
+| https://www.iut-blagnac.fr[BUT INFO] : https://webetud.iut-blagnac.fr/course/view.php?id=829[Analyse (R3.03)]  | {beginner} {cogs-icon} {fr-icon}| link:http://iut-blagnac.github.io/POO/[Web Page] 
+| Introduction to OO design (UML) | since 2022
+
 |===
 
 

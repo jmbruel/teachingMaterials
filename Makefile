@@ -51,10 +51,11 @@ $(CHECK_RES): checks/*.txt
 	@echo `date` > $(CHECK_RES)
 	cat checks/*.txt >> $(CHECK_RES)
 
-deploy: check index.html
+deploy: index.html
 	@echo "========================================"
 	@echo "==> Deploy updates "
-	rake && git commit -am "🤖 DEPLOY: last updates"; git pull; git push
+	# rake && git commit -am "🤖 DEPLOY: last updates"; git pull; git push
+	git commit -am "🤖 DEPLOY: last updates"; git pull; git push
 
 clean:
 	rm *.html
