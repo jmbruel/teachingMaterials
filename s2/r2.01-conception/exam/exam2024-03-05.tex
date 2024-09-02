@@ -1,0 +1,159 @@
+% Options:
+% withid: adds a header line for writing the student's ID
+% We recommand to keep the twoside option as it permits to add a specific header (student' name) on each new page.
+\documentclass[a4paper,twoside,withid]{exam}
+
+% packages already loaded: graphicx, geometry, listings, lastpage, fancyhdr, xcolor, mathpazo, ifthen, xstring, qcm, enumitem, amssymb, etoolbox, multido
+
+\usepackage[final,activate={true,nocompatibility},kerning=true,spacing=true]{microtype}
+\usepackage[english,french]{babel}
+\usepackage[scaled=0.9]{DejaVuSansMono}
+\usepackage{lipsum} % For demo. To remove
+\usepackage{multicol}
+
+% You can adjust the line spread of the font used in this document (mathpazo).
+%\linespread{1.05}
+
+% You can override the default page dimensions, mainly left and right (touching the other parameters may break the template):
+%\geometry{bottom=0.5cm, top=-1cm, left=1.3cm, right=1.3cm, headheight=5cm, includefoot, includehead}
+
+% You can customise the centered footpage:
+%\cfoot[\large\thepage~~/~~\pageref{LastPage}]{\large\thepage~~/~~\pageref{LastPage}}
+% but do not change the \lhead, \rhead, \lfoot, \rfoot, and \chead as they are used for page detection and IDs
+
+\usepackage{courier} %% Sets font for listing as Courier.
+\lstset{
+tabsize = 4, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+%numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+
+\title{\vspace*{-1cm}\huge R2.01 -- Conception}
+\author{2023-2024\\[0.1cm]
+\textbf{Une seule page A4 recto/verso manuscrite autorisée.}\\[0.1cm]
+Durée : 20' -- Sujet écrit sur \pageref{LastPage} pages
+}
+\date{5 avril 2024}
+
+
+\begin{document}
+
+
+% Creates the exam header
+\begin{minipage}{\textwidth}
+   \maketitle
+\end{minipage}
+
+% The template contains several exam commands:
+% \exerciceExam{number}{title} creates a section dedicated to a given exercice. Replace 'number' by the number of points of the exam. 'title' is the title of the exercice (if no title, do not forget to put {})
+
+% \questionExam{text} creates a numbered question. Replace 'text' by the title of the question.
+
+% \begin{qcmExam}\end{qcmExam} creates a QCM environment
+
+
+\noindent\fbox{\parbox{\textwidth}{%
+Écrivez directement sur le sujet dans les zones de réponse. Ne pas déborder de ces zones.\\
+\textbf{N'oubliez pas de mettre votre nom sur chaque page.}%
+}}
+
+
+\exerciceExam{3}{Diagramme de classe UML et code Java}
+
+% \inlineAnswerBox as one argument: the length of the box (computed in number of characters). By default 10 characters.
+\questionExam{Soit le diagramme de classe suivant. Indiquez, pour chaque classe, combien son implémentation Java aura d'attributs.
+
+\includegraphics[width=0.3\textwidth]{dc1.png}
+
+\begin{itemize}
+	\item Xorg~~~~~~~~~~\inlineAnswerBox{}
+	\item Schpounz \inlineAnswerBox{}
+	\item Plunt~~~~~~~~~\inlineAnswerBox{}
+\end{itemize}
+
+}
+
+\questionExam{Donnez un exemple de constructeur de la classe \textsf{Plunt} qui respecte le diagramme de classe de la question précédente.}
+
+% First argument: color (optional, by default black). The color of the dots. Put white for no dot.
+% Second parameter: the line spacing
+% Third argument: the number of lines
+% Fourth argument: the number of columns
+\answerExam[gray]{1.5}{8}{1}
+
+%\newpage
+%-------------------------------------------------
+\exerciceExam{3}{Diagramme de classe}
+%-------------------------------------------------
+
+\questionExam{Réalisez un diagramme de classe correspondant au domaine suivant (avec les attributs et les méthodes pertinentes\footnote{Ne pas donner le code des méthodes.}):
+
+Un artisan pêcheur souhaite développer une application permettant de gérer son entreprise de pêche. 
+Son entreprise possède des bateaux, chacun étant identifié par son modèle, son nom, son numéro d’immatriculation et la date de mise en service. 
+Le nombre minimum et maximum de personnes à bord, la quantité totale maximale de stock sont des données communes à tous les bateaux d'un même modèle. 
+On ajoutera au diagramme la classe Main qui stocke dans ses attributs la liste des bateaux et des modèles.
+
+L'artisan souhaite pouvoir obtenir facilement l'âge d'un bateau, et le tonnage maximum de sa flotte actuelle (sur l'ensemble de ses bateaux).
+}
+
+% First argument: color (optional, by default black). The color of the dots. Put white for no dot.
+% Second parameter: the line spacing
+% Third argument: the number of lines
+% Fourth argument: the number of columns
+\answerExam[gray]{1.5}{14}{1}
+
+
+%-------------------------------------------------
+\exerciceExam{4}{Modeles et code}
+%-------------------------------------------------
+
+\begin{multicols}{2}
+\begin{qcmExam}
+	\item Parmi les relations suivantes, lesquelles sont des relations possibles entre cas d'utilisation (plusieurs réponses possibles) ?
+		
+		\begin{qcmExam}
+		\item $<< extend >>$
+		\item $<< include >>$
+		\item Association
+		\item Dépendance 
+		\item Héritage 
+		\item Aucune des autres réponses
+		\end{qcmExam}
+
+\item La relation d'héritage qui relie deux classes :
+		
+	\begin{qcmExam}
+	\item Ne peut pas avoir de nom
+	\item Peut se lire ``est un"
+	\item Peut se lire ``a un"
+	\item Possède des multiplicités
+	\end{qcmExam}
+
+\item Une classe Java contient tous ses objets ?
+	
+	\begin{qcmExam}
+	\item vrai
+	\item faux
+	\end{qcmExam}
+
+\item La notion de "navigation" d'une association $A \rightarrow B$ représente le fait que :
+		
+	\begin{qcmExam}
+	\item Les objets de la classe $A$ ont accès aux références d'objets de la classe $B$
+	\item Les objets de la classe $B$ ont accès aux références d'objets de la classe $A$
+	\item Les objets de la classe $B$ n'ont pas accès aux références d'objets de la classe $A$
+	\item Les objets de la classe $A$ n'ont pas accès aux références d'objets de la classe $B$
+	\end{qcmExam}
+				
+\end{qcmExam}
+\end{multicols}
+
+%-------------------------------------------------
+\end{document}
