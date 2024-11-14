@@ -18,3 +18,12 @@
 | 6 | Sérieux de l'équipe    | C6 | 20%     | Appréciations séances encadrées
 | 7 | Gestion de projet      | C6 | 20%     | Évaluation par les pairs
 |===
+
+
+1. Correspond à la note attribuée en transformant la grille d'évaluation par le client en note.
+2. Evaluation objective du code rendu (même exercice que la phase 4, mais par un enseignant)
+3. Moyenne de la note client et de la note enseignant sur le pitch
+4. Correspond à l'évaluation du rapport rendu à la phase 4
+5. Note reflétant l'écart entre l'évaluation étudiante et l'évaluation prof
+6. Synthèse des appréciations réalisées lors des séances encadrées 
+7. Évaluation par les pairs réalisée par Esther
