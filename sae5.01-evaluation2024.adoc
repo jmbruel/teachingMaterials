@@ -1,6 +1,12 @@
 = Evaluation SAÉ S5.A.01 Dév. avancé
 2024-2025
 
+
+La SAÉ S5.A.01 Développement avancé compte pour une grosse partie du S5.
+Aussi, les évaluations sont nombreuses et affectent les différentes Compétences différemment.
+Le tableau ci-dessous liste ces évaluations et leur impact sur les 
+compétences{empty}footnote:[Les pourcentages indiqués ne concernent que la SAE et permettent de préciser comment la note rapportée dans la compétence en question est constituée.]
+
 [cols="1,1,1,1,3",options="header"]
 |===
 | # | Évaluation | Compétence `C[1\|2\|6]` | Poids dans `C[1\|2\|6]` | Modalité
