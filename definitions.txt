@@ -112,6 +112,7 @@
 :sart: http://fr.wikipedia.org/wiki/Structured_Analysis_for_Real_Time[SADT/SART]
 :scrum: link:http://fr.wikipedia.org/wiki/Scrum_(m%C3%A9thode)[Scrum]
 :staruml: link:http://staruml.io/[StarUML]
+:selenide: https://selenide.org/[Selenide]
 :semco: http://www.semcomdt.org/[SEMCO]
 :simulink: http://fr.mathworks.com/products/simulink/?nocookie=true[Simulink]
 :sirius: link:https://www.eclipse.org/proposals/modeling.sirius/[Sirius]

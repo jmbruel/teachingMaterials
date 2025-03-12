@@ -1,6 +1,7 @@
 = Contrôle R5.A.08 -- QualDev
 //------------- config --------
 :numbered:
+:toc!:
 :icons: font
 :iconsdir: icons
 :experimental:
@@ -27,18 +28,17 @@ Nom/Prénom::
 .....
 
 Contrôle::
-DUT Informatique, IUT de Blagnac, 2023/2024 - 22/01/2024
+DUT Informatique, IUT de Blagnac, 2024/2025 - 23/01/2024
 
 Conditions::
-*Durée : 1h00* - *Pas de documents* : seule feuille A4 R-V manuscrite non photocopiée. 
+*Durée : 30 minutes* -- *Pas de documents* : seule feuille A4 R-V manuscrite non photocopiée. 
 
 :bareme: 1.1) 3 pts - \
 1.2) 3 pts - \
-1.3) 2 pts - \
 2.1) 3 pts - \
 2.2) 2 pts - \
-3.1) 3 pts - \
-3.2) 4 pts - \
+3.1) 4 pts - \
+3.2) 5 pts - \
 Total) 20 pts - \
 (modifiable pour le bien de tous)
 
@@ -81,7 +81,7 @@ endif::corrige[]
 
 
 ifdef::corrige[]
-image::artifacts-r303.svg[width=70%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
+image::artifacts-r303.svg[width=60%,pdfwidth=50%,link="https://github.com/xblanc33/QualiteDev/"]
 endif::corrige[]
 
 [[recosing1]]
@@ -91,28 +91,28 @@ Placez dans la pyramide suivante les types de tests que vous connaissez.
 
 image::test-exo.svg[pdfwidth=100%]
 
-[[recostrat3]]
-=== Concepts importants (suite)
+// [[recostrat3]]
+// === Concepts importants (suite)
 
-Entre quels concepts (et avec quelles associations/relations) placeriez-vous le concept BDD de _Feature_ ?
+// Entre quels concepts (et avec quelles associations/relations) placeriez-vous le concept BDD de _Feature_ ?
 
-TIP: Ne refaites pas tout le diagramme.
+// TIP: Ne refaites pas tout le diagramme.
 
-Réponse <<recostrat3>>::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
+// Réponse <<recostrat3>>::
+// ifndef::corrige[]
+// .....
+// |
+// |
+// |
+// |
+// |
+// |
+// |
+// |
+// |
+// |
+// .....
+// endif::corrige[]
 
 //-----------------------------------------------
 == Gherkin
@@ -134,9 +134,6 @@ Scenario: Bad steps definition
 Réponse <<recosing2>>::
 ifndef::corrige[]
 .....
-|
-|
-|
 |
 |
 |
@@ -222,8 +219,6 @@ class Order {
 }
 -----
 
-<<<
-
 Réponse <<recosing4>>-Feature::
 ifndef::corrige[]
 .....
@@ -239,12 +234,46 @@ ifndef::corrige[]
 |
 |
 |
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 .....
 endif::corrige[]
+
+<<<
 
 Réponse <<recosing4>>-Steps::
 ifndef::corrige[]
 .....
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
 |
 |
 |

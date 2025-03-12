@@ -441,6 +441,10 @@ image::step6.png[width=90%]
 ifdef::slides[=== Step 7: systematic checking]
 image::step7.png[width=90%]
 
+// ------------------------------------------ 
+== Example on web testing
+
+{selenide}
 
 // ------------------------------------------ 
 [appendix]
