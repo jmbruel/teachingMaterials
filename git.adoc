@@ -14,7 +14,7 @@ v22.1 {localdate}
 //------------------------------------ variables de configuration
 // only used when master document
 :linkcss!:
-:git-version: 2.32.1
+:git-version: 2.39.3
 :icons: font
 :experimental:
 :toc-title: Table des matières

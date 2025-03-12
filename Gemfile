@@ -12,3 +12,5 @@ gem 'asciidoctor-diagram'
 # for "https://github.com/asciidoctor/asciidoctor-pdf"
 # & "https://github.com/asciidoctor/asciidoctor-epub3"
 # Clone projects , use rake build and then install those gems
+gem 'tilt', '~>2.0'
+gem 'slim', '~>4.0'
