@@ -60,6 +60,7 @@ endif::slides[]
 [{intro}]
 == Les Tests
 
+[quote]
 – We don't write tests.
 – Why?
 – Because we don't have time for it.
