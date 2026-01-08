@@ -1,278 +1,117 @@
-= Contrôle R5.A.08 -- QualDev
-//------------- config --------
-:numbered:
-:icons: font
-:iconsdir: icons
-:experimental:
-:imagesdir: images
-:defaultwidth: 80%
-:defaultwidthmenu: 40%
-//:toc: left
-//:toc-title: Table des Matières
-:xrefstyle: short
-:section-refsig: Q.
+:moduleTitle: R2.01 (Conception)
+:authorDefault:  BUT/Info-S2/R2.01
+// include::lib/globals.asc[] // temporairement
+:tdnum: Exercice de contrôle
+:eleve:
+
+ifdef::eleve[]
+:doctitle:  {moduleTitle} - Sujet {tdnum}
+endif::eleve[]
+ifdef::prof[]
+:doctitle: {moduleTitle} - Support {tdnum}
+endif::prof[]
+ifdef::todoprof[]
+:doctitle: {moduleTitle} - DEROULEMENT SEANCE PROF {tdnum}
+endif::todoprof[]
+
+= {doctitle}
+:Author:  {authorDefault}
+:lang: fr
+:slideshowlocation: IUT Blagnac
+:copyright: {date={localdate}}, {slideshowlocation} *** {author} *** Powered by Asciidoctor &#169;
+:incremental:
 :source-highlighter: pygments
-:source-language: java
-:pygments-linenums-mode: inline
+:numbered: true
+:icons: font
+:imagesdir: images
 
-//------------- end config --------
-//:corrige: to quickly check corrections
+// eleve : sujet pour élèves
+// prof : support prof pour séance
+// todoprof : support AVEC EXPLICATIONS DEROULEMENT pour profs
 
-Nom/Prénom::
-+
-.....
-|
-|
-|
-.....
+//----------- définitions --------------
+:sitecours: http://webetud.iut-blagnac.fr/[Support de Cours]
+:pre: PreReq
+:objtd: ObjTD
+:duree: Durée
+:depot: À rendre
+:lien: Lien
+:img: img
 
-Contrôle::
-DUT Informatique, IUT de Blagnac, 2023/2024 - 22/01/2024
+== Rappel des concepts importants
 
-Conditions::
-*Durée : 1h00* - *Pas de documents* : seule feuille A4 R-V manuscrite non photocopiée. 
+Un artisan souhaite développer une application permettant de gérer son entreprise. 
+Son entreprise possède des bateaux, chacun étant identifié par son nom, son numéro d’immatriculation et la date de mise en service. 
+Le nombre minimum et maximum de personnes à bord, la quantité totale de stock sont liés à un modèle de bateau. 
+Tous les jours, des missions sont réalisées et les bateaux rapportent une quantité de chaque marchandise.
 
-:bareme: 1.1) 3 pts - \
-1.2) 3 pts - \
-1.3) 2 pts - \
-2.1) 3 pts - \
-2.2) 2 pts - \
-3.1) 3 pts - \
-3.2) 4 pts - \
-Total) 20 pts - \
-(modifiable pour le bien de tous)
+L’artisan souhaite pouvoir identifier le stock de chaque marchandise à bord. 
+L’artisan gère plusieurs marchandises, de différents types :
+homards, anguilles, saumons, sardines, thons, poisson-carré.
 
-Barème::
-{bareme}
+=== Réalisez le diagramme de classes métier correspondant
 
+//[%collapsible]
+.Correction
+====
 
-//-----------------------------------------------
-== Questions de cours 
-//-----------------------------------------------
+[plantuml,cd,svg]
+----
+@startuml cd
+'hide circle
+hide empty members
+hide methods
 
-[[recostrat1]]
-=== Concepts importants
-
-Placez les concepts suivants dans un diagramme de classe UML qui permette de comprendre les relations entre ces concepts : 
-Exigence, _User Story_, _Release_, _Issue_, Tâche, Code, Test, Documentation.
-
-TIP: Ne traitez que les concepts que vous comprenez.
-
-
-Réponse <<recostrat1>>::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
-
-
-ifdef::corrige[]
-image::artifacts-r303.svg[width=70%,pdfwidth=60%,link="https://github.com/xblanc33/QualiteDev/"]
-endif::corrige[]
-
-[[recosing1]]
-=== Types de tests
-
-Placez dans la pyramide suivante les types de tests que vous connaissez.
-
-image::test-exo.svg[pdfwidth=100%]
-
-[[recostrat3]]
-=== Concepts importants (suite)
-
-Entre quels concepts (et avec quelles associations/relations) placeriez-vous le concept BDD de _Feature_ ?
-
-TIP: Ne refaites pas tout le diagramme.
-
-Réponse <<recostrat3>>::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
-
-//-----------------------------------------------
-== Gherkin
-//-----------------------------------------------
-
-[[recosing2]]
-=== Syntaxe générique
-
-Proposez une meilleure formulation des steps suivants (en 1 seul step par exemple) :  
-
-[source,gherkin]
------
-Scenario: Bad steps definition
-    Given I go to the home page
-    Given I check the about page of the website
-    Given I get the contact details
------
-
-Réponse <<recosing2>>::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
-
-[[recosing3]]
-=== Syntaxe avec exemple
-
-Proposez une suite à cette _feature_ :  
-
-[source,gherkin]
------
-Scenario Outline: Eating
-    Given There are <start> cucumbers
-    When I eat <eat> cucumbers
-    Then I should have <left> cucumbers
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
------
-
-[[recosing4]]
-//-----------------------------------------------
-== BDD en Java
-//-----------------------------------------------
-
-Soit la classe Java suivante, proposez une feature simple et l'implémentation de ses _steps_.
-
-[source,java]
------
-class Order {
-    private String owner;
-    private String target;
-    private List<String> cocktails;
-    private String message;
-
-    public Order() {
-        this.cocktails = new ArrayList<>();
-    }
-
-    public void declareOwner(String owner) {
-        this.owner = owner;
-    }
-
-    public void declareTarget(String target) {
-        this.target = target;
-    }
-
-    public List<String> getCocktails() {
-        return cocktails;
-    }
-
-    public void addCocktail(String cocktailName) {
-        cocktails.add(cocktailName);
-    }
-
-    public void nbrCocktail(int numberOfCocktails) {
-        this.cocktails.clear(); // Clear existing cocktails if you only want the number specified
-        for (int i = 0; i < numberOfCocktails; i++) {
-            addCocktail("cocktail " + (i + 1)); // Add a unique name to each cocktail
-        }
-    }
-
-    public void addMessage(String message) {
-        this.message = message;
-    }
-
-    public String getTicketMessage() {
-        return "From " + owner + " to " + target + ": " + message;
-    }
+class Bateau {
+	nom
+	numeroImmat
+	dateMiseService
+	quantiteStock
 }
------
 
-<<<
+class Modele {
+	minPersonne
+	maxPersonne
+	quantiteStockMax
+}
 
-Réponse <<recosing4>>-Feature::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
+Bateau -- "1" Modele
 
-Réponse <<recosing4>>-Steps::
-ifndef::corrige[]
-.....
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-|
-.....
-endif::corrige[]
+class Marchandise {
+}
 
-Barème (rappel)::
-{bareme}
+enum TypeMarchandise {
+	homard
+	anguille
+	saumon
+	sardine
+	thon
+	poisson-carré
+}
+
+Marchandise -- "1" TypeMarchandise
+
+class Stock {
+	qté
+}
+
+Bateau "1" - Stock
+Stock - "1" Marchandise
+
+@enduml
+----
+====
+
+=== Contrainte
+
+En imaginant les classes Java de votre diagramme de classe implémentées avec tous leurs getters et setters, indiquez en Java la condition qu'il faudrait ajouter en début de la méthode `pecher(Marchandise m, int qté) {...}` (où `qté` représente la quantité d'une certaine marchandise `m` péchée) de la classe `Bateau` et qui permettrait de vérifier que la quantité totale de stock n'est pas dépassée.
+
+//[%collapsible]
+.Correction
+====
+[source,java]
+----
+if ((this.modele.getQuantiteStock() - this.quantiteStock) >= qté) {...}
+----
+====
+
